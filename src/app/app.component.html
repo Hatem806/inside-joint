@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/5.0.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <title></title>
+
+</head>
+
+<body>
+  <div class=" container-fluid main_container d-flex col-sm-12" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class=" nopadding border-right sidebar-wrapper" id="sidebar-wrapper" >
+
+      <div class="list-group list-group-flush bg-info " >
+        <div class="company-name">
+          <h3>Inside Joint</h3>
+        </div>
+        <a routerLink="home" class="list-group-item ">
+          <i class="fas fa-home fa-2x"> </i>
+        </a>
+        <a routerLink="aboutus" class="list-group-item ">
+          <i class="fas fa-info-circle fa-2x"></i>
+        </a>
+        <a routerLink="products" class="list-group-item">
+          <i class="fas fa-star fa-2x"></i>
+        </a>
+        <a routerLink="conferences" class="list-group-item">
+          <i class="fas fa-microphone-alt fa-2x"></i>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <router-outlet></router-outlet>
+
+
+
+
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+
+</body>
+
+</html>
