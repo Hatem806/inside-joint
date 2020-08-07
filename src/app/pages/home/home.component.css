@@ -6,8 +6,8 @@
   width:fit-content
 }
 .skeleton{
-  margin-top: -600px;
-  margin-left: 400px;
+  margin-top: -700px;
+  margin-left: 350px;
   transform: scale(0.6,0.6);
 }
 .logo{
@@ -27,8 +27,17 @@
 }
 .title{
   color:  #005086 ;
-  font-size: 40pt;
+  font-size: 36pt;
 }
 .title-container{
-  margin-top: 100px
+  margin-top: 120px
 }
+.description{
+  font-family: montserrant;
+  font-size: 12pt;
+  max-width: 200px;
+}
+/* .left-column{
+  margin-left: ;
+} */
+

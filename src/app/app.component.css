@@ -51,6 +51,7 @@
 max-width: 240pt;
 min-height: 100%;
 margin-left: -15rem;
+margin-right: 0px !important;
 -webkit-transition: margin .25s ease-out;
 -moz-transition: margin .25s ease-out;
 -o-transition: margin .25s ease-out;
