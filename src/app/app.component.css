@@ -1,0 +1,108 @@
+
+.sidebar-heading{
+  font-size: 19pt;
+  text-align: left;
+  font-family: 'monsterrant-black';
+  font-style: italic;
+  font: italic bold;
+  color: white;
+  padding-bottom: 75px;
+  background: #005086 ;
+  border-top-right-radius: 20pt !important;
+}
+.navbar{
+  min-width: calc(100vh);
+  margin: 0em;
+  padding: 0em;
+}
+.icons{
+  width:30px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fas{
+  color:#ACACAC;
+}
+.list-group-item{
+
+  background:  #005086;
+  align-items: center;
+   justify-content: center;
+   padding-left: 30px;
+
+}
+.company-name{
+  background: #005086 ;
+  border-top-right-radius: 20pt !important;
+}
+
+
+#wrapper {
+  overflow-x: hidden;
+}
+.logout.icons{
+    position: absolute;
+    width: 30px;
+    height: auto;
+    margin-top: 150px !important;
+}
+#sidebar-wrapper {
+max-width: 240pt;
+min-height: 100%;
+margin-left: -15rem;
+-webkit-transition: margin .25s ease-out;
+-moz-transition: margin .25s ease-out;
+-o-transition: margin .25s ease-out;
+transition: margin .25s ease-out;
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+background: #005086 ;
+border-top-right-radius: 20pt !important;
+border-bottom-right-radius:20pt !important;
+float: left;
+width: fit-content;
+align-items: center;
+justify-content: center;
+}
+
+#sidebar-wrapper .sidebar-heading {
+padding: 0.875rem 1.25rem;
+font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  max-width: 100px;
+}
+
+#page-content-wrapper {
+min-width: 100vw;
+overflow: hidden;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+margin-left: 0;
+}
+
+@media (min-width: 768px) {
+#sidebar-wrapper {
+  margin-left: 0;
+}
+
+#page-content-wrapper {
+  min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #FAFAFA;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: -15rem;
+}
+}
+.list-group-item{
+  border: 0px !important ;
+}
+
