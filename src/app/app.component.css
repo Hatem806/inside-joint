@@ -1,8 +1,8 @@
 
 .sidebar-heading{
-  font-size: 19pt;
+  font-size: 30pt;
   text-align: left;
-  font-family: 'monsterrant-black';
+  font-family: 'monsterrant-bold-italic';
   font-style: italic;
   font: italic bold;
   color: white;
@@ -35,6 +35,9 @@
 .company-name{
   background: #005086 ;
   border-top-right-radius: 20pt !important;
+  font-size: 10pt;
+  text-align: left;
+  font-family: 'monsterrant-bold-italic';
 }
 
 
@@ -49,7 +52,7 @@
 }
 #sidebar-wrapper {
 max-width: 240pt;
-min-height: 100%;
+min-height: 100vh;
 margin-left: -15rem;
 margin-right: 0px !important;
 -webkit-transition: margin .25s ease-out;
@@ -71,7 +74,6 @@ justify-content: center;
 
 #sidebar-wrapper .sidebar-heading {
 padding: 0.875rem 1.25rem;
-font-size: 1.2rem;
 }
 
 #sidebar-wrapper .list-group {
@@ -105,5 +107,17 @@ margin-left: 0;
 }
 .list-group-item{
   border: 0px !important ;
+}
+.no-gutters{
+  padding-right: 0px !important ;
+  padding-left: 0px !important ;
+  margin-left: 0px !important;
+  margin-left: 0px !important;
+}
+.wrapper{
+  padding-right: 0px !important ;
+  padding-left: 0px !important ;
+  margin-left: 0px !important;
+  margin-left: 0px !important;
 }
 
