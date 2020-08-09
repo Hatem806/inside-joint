@@ -31,29 +31,31 @@
       </div>
      </div>
     </div>
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="products" *ngFor="let product of products">
+    <div class="no-gutters container products-container">
+        <div class="col-md-12">
+            <div class="products">
+             <div class="row">
+              <div class="col-md-3 border my-product " *ngFor="let product of products">
               <div class="row">
-                <div class="col ">
+                <div class="col product-image">
                   <img src="../../../assets/item-photo/hyalgan-logo-color.png" alt="">
                 </div>
               </div>
-                <div class="row">
-                    <div class="col ">
-                      <img class="product-icons"src="../../../assets/icons/128.png" alt="Video">
+                <div class="row product-icons">
+                    <div class="col-4 no-gutters">
+                      <img class="no-gutters product-icon video-icon"src="../../../assets/icons/128.png" alt="Video">
                     </div>
-                    <div class="col">
-                      <img class="product-icons" src="../../../assets/signup/82.png" alt="Link">
+                    <div (click)="goToLink( product.websiteLink )"class="col-4">
+                      <img class="product-icon  web-icon" src="../../../assets/signup/82.png" alt="Link">
                     </div>
-                    <div class="col">
-                      <img class="product-icons" src="../../../assets/icons/pdf.png" alt="">
+                    <div class="col-4">
+                      <img class="product-icon pdf-icon" src="../../../assets/icons/pdf.png" alt="">
                     </div>
                   </div>
              </div>
+             </div>
+             </div>
           </div>
-        </div>
       </div>
     </div>
 

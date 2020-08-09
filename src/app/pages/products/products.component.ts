@@ -20,5 +20,8 @@ export class ProductsComponent implements OnInit {
     })
 
   }
+  goToLink(link){
+    window.location.href = link ;
+  }
 
 }
