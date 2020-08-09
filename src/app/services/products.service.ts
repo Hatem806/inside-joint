@@ -12,7 +12,7 @@ import { IProduct } from '../models/Product';
 })
 export class ProductsService
 {
-  _endPoint: String = "/api/v1/products";
+  _endPoint: String = "api/v1/products";
   constructor(private http: HttpClient) { }
 
   public getProducts(): Observable<IProductsResponse>

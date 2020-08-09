@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../services/api.service";
 import { RouterModule } from '@angular/router';
+import { IProduct } from 'src/app/models/Product';
 
 @Component({
   selector: 'app-products',
@@ -8,13 +9,15 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-
-  constructor(  private router : RouterModule ) { }
+  products: IProduct[]
+  constructor( public apiService : ApiService , private router : RouterModule ) { }
 
   ngOnInit(): void {
-    // this.apiService.getProductsService().getProducts().subscribe( products => {
-    //   console.log(products);
-    // })
+    this.apiService.getProductsService().getProducts().subscribe( data => {
+      console.log(data);
+      this.products = data.products.slice(0,4) ;
+
+    })
 
   }
 

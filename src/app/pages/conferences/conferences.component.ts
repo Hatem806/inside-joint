@@ -10,12 +10,12 @@ import { RouterModule } from '@angular/router';
 export class ConferencesComponent implements OnInit {
 
 
-  constructor( private router : RouterModule ) { }
+  constructor( public apiService : ApiService , private router : RouterModule ) { }
 
   ngOnInit(): void {
-    // this.apiService.getconferenceServices().getConferences().subscribe( conference => {
-    //   console.log(conference);
-    // })
+    this.apiService.getconferenceServices().getConferences().subscribe( conference => {
+      console.log(conference);
+    })
 
   }
 }

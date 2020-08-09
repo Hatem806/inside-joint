@@ -11,7 +11,7 @@ import { IEvent } from '../models/Event';
 })
 export class ConferencesService
 {
-  _endPoint: String = "/api/v1/events";
+  _endPoint: String = "api/v1/events";
 
   constructor(private http: HttpClient) { }
 
@@ -22,7 +22,7 @@ export class ConferencesService
 
   public getConference(id : string): Observable<IEventResponse>
   {
-    const params = new HttpParams().set('id','productId'  )
+
     return this.http.get<IEventResponse>(`${environment.baseUrl}/${this._endPoint}/${id}`);
   }
 
