@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from "../../services/products.service";
+import { ApiService } from "../../services/api.service";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -8,12 +9,12 @@ import { ProductsService } from "../../services/products.service";
 })
 export class ProductsComponent implements OnInit {
 
-  constructor( public productService : ProductsService) { }
+  constructor(  private router : RouterModule ) { }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe( products => {
-      console.log(products);
-    })
+    // this.apiService.getProductsService().getProducts().subscribe( products => {
+    //   console.log(products);
+    // })
 
   }
 

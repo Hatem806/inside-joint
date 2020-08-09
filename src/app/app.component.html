@@ -12,10 +12,10 @@
 </head>
 
 <body>
-  <div class=" container main_container d-flex col-sm-12" id="wrapper">
+  <div class="no-gutters container-fluid w-100 main_container d-flex col-sm-12" id="wrapper">
 
     <!-- Sidebar -->
-    <div class=" nopadding border-right sidebar-wrapper" id="sidebar-wrapper" >
+    <div class="no-gutters no-padding border-right sidebar flex-fill flex-column sidebar-wrapper" id="sidebar-wrapper" >
 
       <div class="list-group list-group-flush bg-info " >
         <div class="company-name sidebar-heading">
@@ -27,7 +27,7 @@
         <a routerLink="aboutus" class="list-group-item ">
           <img class="icons"src="../assets/mainNav/information.png" alt="About Us">
         </a>
-        <a routerLink="products" class="list-group-item">
+          <a routerLink="products" routerLinkActive="active" class="list-group-item">
           <img class="icons" src="../assets/mainNav/Group 1658.png" alt="Products">
         </a>
         <a routerLink="conferences" class="list-group-item">
@@ -41,7 +41,7 @@
     </div>
 
     <!-- Page Content -->
-    <div id="page-content-wrapper no-gutters">
+    <div class="w-100 myclass"id="page-content-wrapper no-gutters">
 
       <router-outlet></router-outlet>
 

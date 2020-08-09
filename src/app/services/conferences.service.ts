@@ -15,15 +15,15 @@ export class ConferencesService
 
   constructor(private http: HttpClient) { }
 
-  public getProducts(): Observable<any>
-
+  public getConferences(): Observable<IEventsResponse>
   {
-    return this.http.get(`${environment.baseUrl}/${this._endPoint}`+'');
+    return this.http.get<IEventsResponse>(`${environment.baseUrl}/${this._endPoint}`);
   }
 
-  public getProduct(productId): Observable<any> {
+  public getConference(id : string): Observable<IEventResponse>
+  {
     const params = new HttpParams().set('id','productId'  )
-    return this.http.get(`${environment.baseUrl}/${this._endPoint}`, { params } );
+    return this.http.get<IEventResponse>(`${environment.baseUrl}/${this._endPoint}/${id}`);
   }
 
 }

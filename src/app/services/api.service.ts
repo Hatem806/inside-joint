@@ -7,6 +7,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiService {
-  constructor(private productService : ProductsService, private conferenceServices : ConferencesService) {}
+  constructor(private productService : ProductsService, private conferenceService : ConferencesService) {}
 
+  public getProductsService(): ProductsService
+  {
+    return this.productService;
+  }
+  public getconferenceServices() : ConferencesService
+  {
+    return this.conferenceService;
+  }
 }

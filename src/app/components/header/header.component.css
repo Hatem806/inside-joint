@@ -1,0 +1,15 @@
+.logo{
+  margin-top: 20px;
+  transform: scale(0.6,0.6);
+}
+.info{
+  font-family: montserrant;
+  font-size: 14pt;
+  color:#6B6C6F;
+  position: absolute;
+  top: 35px;
+  right: 10px ;
+}
+.page-header{
+  padding-left:160px;
+}

@@ -37,8 +37,8 @@
 }
 .title-description{
   margin-left:120px ;
-  height : 100%
-
+  min-height : 100% !important ;
+  float: left;
 }
 .details{
   font-family:montserrat ;
@@ -47,5 +47,12 @@
   color: #6B6C6F;
 }
 .wrapper{
-  height:100%
+  min-height:100% !important
+
+}
+.details-section{
+  float: right;
+}
+.widget{
+  border: 5px;
 }

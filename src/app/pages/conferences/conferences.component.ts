@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-conferences',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConferencesComponent implements OnInit {
 
-  constructor() { }
+
+  constructor( private router : RouterModule ) { }
 
   ngOnInit(): void {
-  }
+    // this.apiService.getconferenceServices().getConferences().subscribe( conference => {
+    //   console.log(conference);
+    // })
 
+  }
 }

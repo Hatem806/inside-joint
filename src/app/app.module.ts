@@ -8,6 +8,8 @@ import { ConferencesComponent } from '../app/pages/conferences/conferences.compo
 import { AboutUsComponent } from '../app/pages/about-us/about-us.component';
 import { HomeComponent } from '../app/pages/home/home.component';
 import { ProductComponent } from '../app/pages/products/product/product.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ConferenceComponent } from './pages/conferences/conference/conference.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ProductComponent } from '../app/pages/products/product/product.componen
     ConferencesComponent,
     AboutUsComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    HeaderComponent,
+    ConferenceComponent
   ],
   imports: [
     BrowserModule,
