@@ -25,3 +25,43 @@
   text-align: left;
   margin-left: 150px ;
 }
+
+.conferences{
+  border: 5px;
+}
+.pdf-icon{
+  transform: scale(0.6,0.6);
+
+}
+.video-icon{
+  transform: scale(0.7,0.7);
+}
+.web-icon{
+  transform: scale(0.8,0.8);
+}
+.conference-icon{
+  height: 50px !important ;
+  width: 50px !important;
+  display: block;
+  margin:auto ;
+  padding-right: 0px  !important ;
+  padding-left: 0px !important;
+}
+.conferences-container{
+  min-height: 100vh;
+  margin-left: 120px;
+}
+.conference-icons{
+  padding:5px
+}
+.conference-image{
+  transform: scale(0.8,0.8);
+}
+.my-conference{
+  flex: 25%;
+
+}
+/* .row::after {
+  display: flex;
+} */
+

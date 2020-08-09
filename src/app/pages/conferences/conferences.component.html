@@ -14,12 +14,13 @@
         </div>
       </div>
     </div>
+  </div>
     <div class="container-fluid">
      <div class="row">
       <div class="col md-12 ">
         <div class="row ">
           <div class="col">
-              <img class="image"src="../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" alt="">
+            <img class="image"src="../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" alt="">
           </div>
         </div>
         <div class="row ">
@@ -28,9 +29,37 @@
           </div>
         </div>
       </div>
+     </div>
     </div>
-  </div>
+    <div class="no-gutters container conferences-container">
+        <div class="col-md-12">
+            <div class="conferences">
+             <div class="row">
+              <div class="col-md-3 border my-conference " *ngFor="let conference of conferences">
+              <div class="row">
+                <div class="col conference-image">
+                  <img src="../../../assets/item-photo/hyalgan-logo-color.png" alt="">
+                </div>
+              </div>
+                <div class="row conference-icons">
+                    <div class="col-4 no-gutters">
+                      <img class="no-gutters conference-icon video-icon"src="../../../assets/icons/128.png" alt="Video">
+                    </div>
+                    <div (click)="goToLink( conference.websiteLink  )"class="col-4">
+                      <img class="conference-icon  web-icon" src="../../../assets/signup/82.png" alt="Link">
+                    </div>
+                    <div class="col-4">
+                      <img class="conference-icon pdf-icon" src="../../../assets/icons/pdf.png" alt="">
+                    </div>
+                  </div>
+             </div>
+             </div>
+             </div>
+          </div>
+      </div>
+    </div>
 
 
-  </div>
+
+
 
