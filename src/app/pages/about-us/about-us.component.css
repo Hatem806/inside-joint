@@ -40,9 +40,12 @@
   min-height : 100% !important ;
   float: left;
 }
+.my-container{
+  margin-left: 150px !important ;
+}
 .details{
   font-family:montserrat-bold ;
-  font-size: 22px ;
+  font-size: 30px ;
   text-align: left;
   color: #6B6C6F;
   padding-bottom: 25px;
@@ -55,16 +58,13 @@
   float: right;
   padding-bottom: 20px;
 }
-.widget{
-  width: fit-content !important;
-
-}
-.bottom-part{
+/* .bottom-part{
   margin-left: 200px;
-}
+} */
 .widgets-row{
-  width: fit-content;
+  width: 100%;
 }
 .hover{
   background-color:  #005086;
 }
+

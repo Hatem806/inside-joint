@@ -51,16 +51,13 @@
   min-height: 100vh;
   margin-left: 120px;
 }
-.conference-icons{
-  padding:5px
-}
 .conference-image{
-  transform: scale(0.8,0.8);
+  transform: scale(0.6,0.6);
+  font-family: montserrant-italic;
+  font-size: 14px;
+  color:  #6B6C6F ;
 }
-.my-conference{
-  flex: 25%;
 
-}
 /* .row::after {
   display: flex;
 } */
