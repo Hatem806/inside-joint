@@ -33,9 +33,12 @@
     </div>
     <div class="no-gutters container products-container">
         <div class="col-md-12">
-            <div class="products">
+          <div class="products">
              <div class="row">
-              <div class="col-md-3 border my-product " *ngFor="let product of products">
+              <div class="col md-1">
+                <img (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
+              </div>
+              <div class="col-md-2 border my-product " *ngFor="let product of products">
               <div class="row">
                 <div class="col product-image">
                   <img src="../../../assets/item-photo/hyalgan-logo-color.png" alt="">
@@ -52,7 +55,13 @@
                       <img class="product-icon pdf-icon" src="../../../assets/icons/pdf.png" alt="">
                     </div>
                   </div>
+                  <div>
+                    {{ product._id }}
+                  </div>
              </div>
+             <div class="col md-1">
+              <img (click)="onRightArrow()"class="arrow-right" src="../../../assets/arrows/Path 1677.png" alt="">
+            </div>
              </div>
              </div>
           </div>

@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
-
-  constructor() { }
+  changeQuestionIcon : boolean ;
+  changeVideoIcon : boolean ;
+  changePdfIcon : boolean ;
+  constructor() {
+    this.changePdfIcon=false ;
+    this.changeQuestionIcon=false ;
+    this.changePdfIcon=false ;
+  }
 
   ngOnInit(): void {
   }

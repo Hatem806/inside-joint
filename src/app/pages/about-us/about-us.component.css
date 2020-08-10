@@ -60,8 +60,11 @@
 
 }
 .bottom-part{
-  margin-left: 120px;
+  margin-left: 200px;
 }
 .widgets-row{
   width: fit-content;
+}
+.hover{
+  background-color:  #005086;
 }

@@ -19,7 +19,7 @@
 
       <div class="list-group list-group-flush bg-info " >
         <div class="company-name sidebar-heading">
-          <h3>Inside Joint</h3>
+          InsideJoints
         </div>
         <a routerLink="home" class="list-group-item ">
           <img class="icons" src="../assets/mainNav/135.png" alt="Home">
@@ -28,7 +28,8 @@
           <img class="icons"src="../assets/mainNav/information.png" alt="About Us">
         </a>
           <a routerLink="products" routerLinkActive="active" class="list-group-item">
-          <img class="icons" src="../assets/mainNav/Group 1658.png" alt="Products">
+          <img *ngIf="!(currentRoute=='/products')" class="icons" src="../assets/mainNav/Group 1658.png" alt="Products">
+          <img *ngIf="currentRoute=='/products'" class="icons" src="../assets/mainNav/135.png" alt="Products">
         </a>
         <a routerLink="conferences" class="list-group-item">
           <img class="icons" src="../assets/mainNav/22.png" alt="Conferences">

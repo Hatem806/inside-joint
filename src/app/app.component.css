@@ -4,17 +4,6 @@ html,body {
   width: 100% !important;
   min-width: 320px !important ;
   }
-.sidebar-heading{
-  font-size: 30pt;
-  text-align: left;
-  font-family: 'monsterrant-bold-italic';
-  font-style: italic;
-  font: italic bold;
-  color: white;
-  padding-bottom: 75px;
-  background: #005086 ;
-  border-top-right-radius: 20pt !important;
-}
 .navbar{
   min-width: calc(100vh);
   margin: 0em;
@@ -25,6 +14,8 @@ html,body {
   height: auto;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom:20px;
+  display: block
 }
 .fas{
   color:#ACACAC;
@@ -39,10 +30,11 @@ html,body {
 }
 .company-name{
   background: #005086 ;
-  border-top-right-radius: 20pt !important;
-  font-size: 10pt;
+  padding-bottom: 50px;
+  font-size: 12pt;
   text-align: left;
   font-family: 'monsterrant-bold-italic';
+  color: #FAFAFA;
 }
 
 
@@ -53,10 +45,12 @@ html,body {
     position: absolute;
     width: 30px;
     height: auto;
-    margin-top: 150px !important;
-}
+    padding-top: 100px;
+    display: block;
+  }
 #sidebar-wrapper {
 max-width: 240pt !important;
+min-width:120px !important ;
 min-height: 100vh !important;
 margin-left: -15rem;
 margin-right: 0px !important;
@@ -78,7 +72,8 @@ justify-content: center;
 }
 
 #sidebar-wrapper .sidebar-heading {
-padding: 0.875rem 1.25rem;
+padding: 2rem 1.25rem;
+padding-bottom: 60px;
 }
 
 #sidebar-wrapper .list-group {

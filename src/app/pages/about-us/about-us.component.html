@@ -27,12 +27,18 @@
           </div>
         </div>
           <div class="row widgets-row">
-            <div class="col widget border">
-              <img src="../../../assets/icons/pdf.png" alt="Download pdf">
+            <div class="col widget border" (mouseover)="changePdfIcon=true" (mouseout)="changePdfIcon=false">
+              <img *ngIf="!changePdfIcon"src="../../../assets/icons/pdf.png" alt="Download pdf">
+              <img class="hover"*ngIf="changePdfIcon"src="../../../assets/icons/pdf-1.png" alt="Download pdf">
             </div>
-            <div class="col widget border">
-              <img src="../../../assets/icons/128.png" alt="Video">
+            <div class="col widget border"  (mouseover)="changeVideoIcon=true" (mouseout)="changeVideoIcon=false">
+              <img *ngIf="!changeVideoIcon" src="../../../assets/icons/128.png" alt="Video">
+              <img class="hover" *ngIf="changeVideoIcon" src="../../../assets/icons/asset-1.png" alt="">
             </div>
+            <!-- <div class="col widget border"  (mouseover)="changeQuestionIcon=true" (mouseout)="changeQuestionIcon=false">
+              <img *ngIf="!changeQuestionIcon"src="../../../assets/icons/87.png" alt="Questions">
+              <img class="hover" *ngIf="changeQuestionIcon" src="../../../assets/icons/asset-2.png" alt="Questions">
+            </div> -->
           </div>
       </div>
     </div>
