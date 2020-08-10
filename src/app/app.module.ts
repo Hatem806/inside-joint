@@ -11,7 +11,7 @@ import { ProductComponent } from '../app/pages/products/product/product.componen
 import { HeaderComponent } from './components/header/header.component';
 import { ConferenceComponent } from './pages/conferences/conference/conference.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { DatePipe } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,6 +12,7 @@ import { IEvent } from '../models/Event';
 export class ConferencesService
 {
   _endPoint: String = "api/v1/events";
+  chosenConference : IEvent ;
 
   constructor(private http: HttpClient) { }
 

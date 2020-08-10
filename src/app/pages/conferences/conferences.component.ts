@@ -55,4 +55,11 @@ export class ConferencesComponent implements OnInit {
       this.lastProductIndex=3 ;
      }
   }
+  public goToConference(conference): void
+  {
+    this.apiService.getconferenceServices().chosenConference = conference ;
+   // this.router.navigate()
+
+  }
+
 }

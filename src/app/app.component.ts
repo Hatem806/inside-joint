@@ -20,6 +20,8 @@ export class AppComponent {
     this.routesMap['/home'] = "Home";
     this.routesMap['/conferences'] = "Conferences";
     this.routesMap['/aboutus'] = 'About Us';
+    this.routesMap['/conferences/:conferenceId'] = 'Conference'
+
 
     this.router.events.subscribe((event) => {
       if(event instanceof NavigationEnd)

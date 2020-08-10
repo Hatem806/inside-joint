@@ -38,7 +38,7 @@
                <div class="col-md-1">
                 <img (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
                </div>
-              <div class="col-md-2 border my-conference " *ngFor="let conference of conferences">
+              <div (click)="goToConference( conference )"routerLink="{{conference._id}}"class="col-md-2 border my-conference" *ngFor="let conference of conferences">
               <div class="row">
                 <div class="col conference-image">
                   <img src="../../../assets/item-photo/hyalgan-logo-color.png" alt="">
