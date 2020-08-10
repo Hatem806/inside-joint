@@ -35,7 +35,10 @@
         <div class="col-md-12">
             <div class="conferences">
              <div class="row">
-              <div class="col-md-3 border my-conference " *ngFor="let conference of conferences">
+               <div class="col-md-1">
+                <img (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
+               </div>
+              <div class="col-md-2 border my-conference " *ngFor="let conference of conferences">
               <div class="row">
                 <div class="col conference-image">
                   <img src="../../../assets/item-photo/hyalgan-logo-color.png" alt="">
@@ -44,6 +47,9 @@
                 <div class="row conference-icons">
                    {{ conference.description }}
                   </div>
+             </div>
+             <div class="col-md-1">
+              <img (click)="onRightArrow()"class="arrow-right" src="../../../assets/arrows/Path 1677.png" alt="">
              </div>
              </div>
              </div>
