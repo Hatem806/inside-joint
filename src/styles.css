@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'montserrant';
+  src: url('assets/fidiaWebFonts/Montserrat-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrant-black';
+  src: url('assets/fidiaWebFonts/Montserrat-Black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrant-bold';
+  src: url('assets/fidiaWebFonts/Montserrat-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrant-italic';
+  src: url('assets/fidiaWebFonts/Montserrat-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrant-bold-italic';
+  src: url('assets/fidiaWebFonts/Montserrat-BoldItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrant-extra-bold';
+  src: url('assets/fidiaWebFonts/Montserrat-ExtraBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montserrant-medium';
+  src: url('assets/fidiaWebFonts/Montserrat-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.arrow-left{
+  padding-right: 0px !important;
+  padding-left: 0px !important ;
+  padding-top: 20px !important;
+}
+.arrow-right{
+  padding-right: 0px !important;
+  padding-left: 80px !important ;
+  padding-top: 20px !important;
+}
+
+.options{
+  padding-right: 15px ;
+  padding-left: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  border-right: 3px solid #00000029;
+  border-left: 3px solid #00000029;
+  border-bottom: 3px solid #00000029 ;
+  border-top: 0px ;
+  box-shadow: 3px 3px 2px #00000029 ;
+  margin: auto;
+}
+.option-details{
+  font-family: montserrant-bold;
+  color: #005086 ;
+  font-size: 12pt;
+  padding-top: 20px ;
+  display: block;
+  margin:auto ;
+  padding-left: 10px ;
+}
+.option-image{
+  display: block;
+  margin:auto ;
+}
+

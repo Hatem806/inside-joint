@@ -1,0 +1,64 @@
+.image{
+   max-height:250px !important;
+   width: 100vw !important;
+  object-fit: cover;
+}
+.logo{
+  margin-top: 20px;
+  transform: scale(0.6,0.6);
+}
+.conferences{
+  font-family: montserrant;
+  font-size: 14pt;
+  color:#6B6C6F;
+  position: absolute;
+  top: 35px;
+  right: 10px ;
+}
+.page-header{
+  padding-left:160px;
+}
+.page-title{
+  font-family: montserrant-extra-bold;
+  color :  #005086 ;
+  font-size: 59px;
+  text-align: left;
+  margin-left: 150px ;
+}
+
+.conferences{
+  border: 5px;
+}
+.pdf-icon{
+  transform: scale(0.6,0.6);
+
+}
+.video-icon{
+  transform: scale(0.7,0.7);
+}
+.web-icon{
+  transform: scale(0.8,0.8);
+}
+.conference-icon{
+  height: 50px !important ;
+  width: 50px !important;
+  display: block;
+  margin:auto ;
+  padding-right: 0px  !important ;
+  padding-left: 0px !important;
+}
+.conferences-container{
+  min-height: 100vh;
+  margin-left: 120px;
+}
+.conference-image{
+  transform: scale(0.6,0.6);
+  font-family: montserrant-italic;
+  font-size: 14px;
+  color:  #6B6C6F ;
+}
+
+/* .row::after {
+  display: flex;
+} */
+

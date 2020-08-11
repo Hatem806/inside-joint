@@ -1,0 +1,76 @@
+.image{
+  max-height:250px !important;
+  width: 100vw !important;
+ object-fit: cover;
+}
+.logo{
+ margin-top: 20px;
+ transform: scale(0.6,0.6);
+}
+.conferences{
+ font-family: montserrant;
+ font-size: 14pt;
+ color:#6B6C6F;
+ position: absolute;
+ top: 35px;
+ right: 10px ;
+}
+.page-header{
+ padding-left:160px;
+}
+.page-title{
+ font-family: montserrant-extra-bold;
+ color :  #005086 ;
+ font-size: 59px;
+ text-align: left;
+}
+.my-container{
+  margin-left: 140px ;
+}
+.calendar{
+  background-color: #EFB747;
+  transform: scale(0.6,0.6);
+  padding-right: 5px ;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.calendar-text{
+  font-family: montserrant-medium;
+  color: #6B6C6F;
+  font-size: 16pt;
+  padding-top: 8px ;
+}
+.about-conference{
+  font-family: montserrant-bold;
+  color: #6B6C6F ;
+  font-size: 22pt;
+  padding-bottom: 40px;
+  padding-top: 20px ;
+}
+.options{
+  padding-right: 15px ;
+  padding-left: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  border-right: 3px solid #00000029;
+  border-left: 3px solid #00000029;
+  border-bottom: 3px solid #00000029 ;
+  border-top: 0px ;
+  box-shadow: 3px 3px 2px #00000029 ;
+  margin: auto;
+}
+.option-details{
+  font-family: montserrant-bold;
+  color: #005086 ;
+  font-size: 12pt;
+  padding-top: 20px ;
+  display: block;
+  margin:auto ;
+  padding-left: 10px ;
+}
+.option-image{
+  display: block;
+  margin:auto ;
+}

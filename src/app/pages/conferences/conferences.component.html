@@ -1,0 +1,63 @@
+<div class=" no-gutters">
+  <div class="container-fluid w-100 no-gutters">
+    <div class="row w-100 page-header">
+      <div class="col-md-12">
+        <div class="float-left ">
+          <div class="float-left logo">
+            <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo">
+          </div>
+        </div>
+        <div class="float-right conferences ">
+          <div class=" float-right">
+            Conferences
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container-fluid">
+     <div class="row">
+      <div class="col md-12 ">
+        <div class="row ">
+          <div class="col">
+            <img class="image"src="../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" alt="">
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col page-title">
+            Our Conferences
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+    <div class="no-gutters container conferences-container">
+        <div class="col-md-12">
+            <div class="conferences">
+             <div class="row">
+               <div class="col-md-1">
+                <img (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
+               </div>
+              <div (click)="goToConference( conference )"routerLink="{{conference._id}}"class="col-md-2 border options" *ngFor="let conference of conferences">
+              <div class="row">
+                <div class="col conference-image option-image">
+                  <img src="../../../assets/item-photo/hyalgan-logo-color.png" alt="">
+                </div>
+              </div>
+                <div class="row conference-icons">
+                   {{ conference.description }}
+                  </div>
+             </div>
+             <div class="col-md-1">
+              <img (click)="onRightArrow()"class="arrow-right" src="../../../assets/arrows/Path 1677.png" alt="">
+             </div>
+             </div>
+             </div>
+          </div>
+      </div>
+    </div>
+
+
+
+
+
