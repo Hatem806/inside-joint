@@ -13,6 +13,7 @@ import { IProduct } from '../models/Product';
 export class ProductsService
 {
   _endPoint: String = "api/v1/products";
+  private static _imagesUrl: string = `${environment.baseUrl}/uploads/images/`;
   constructor(private http: HttpClient) { }
 
   public getProducts(): Observable<IProductsResponse>
@@ -24,6 +25,11 @@ export class ProductsService
   {
     return this.http.get<IProductResponse>(`${environment.baseUrl}/${this._endPoint}/${id}`);
   }
+  public getImagesUrl(): string
+  {
+    return ProductsService._imagesUrl;
+  }
+
 
 
 }

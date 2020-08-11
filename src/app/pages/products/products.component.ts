@@ -9,6 +9,7 @@ import { IProduct } from 'src/app/models/Product';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  pageTitle="Products"
   allProducts : IProduct[]
   products: IProduct[]
   lastProductIndex : number
@@ -29,6 +30,9 @@ export class ProductsComponent implements OnInit {
   }
   goToLink(link){
     window.location.href = link ;
+  }
+  goToVideoLink(product){
+    window.location.href = this.apiService.getAssetsService().getVideosUrl() + product.videoPath ;
   }
   onRightArrow(){
 
