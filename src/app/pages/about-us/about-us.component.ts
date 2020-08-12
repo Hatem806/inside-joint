@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
-  pageTitle = "About Us"
   changeQuestionIcon : boolean ;
   changeVideoIcon : boolean ;
   changePdfIcon : boolean ;
+
+  pageTitle : string = 'About Us'
   constructor() {
     this.changePdfIcon=false ;
     this.changeQuestionIcon=false ;
