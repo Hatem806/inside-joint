@@ -10,6 +10,7 @@ import { IEvent } from 'src/app/models/Event';
   styleUrls: ['./conferences.component.css']
 })
 export class ConferencesComponent implements OnInit {
+  pageTitle = "Conferences"
   allConferences : IEvent[]
   conferences:IEvent[]
   lastProductIndex : number
@@ -18,7 +19,7 @@ export class ConferencesComponent implements OnInit {
   constructor( public apiService : ApiService , private router : RouterModule ) { }
 
   ngOnInit(): void {
-    this.apiService.getconferenceServices().getConferences().subscribe( data => {
+    this.apiService.getConferenceServices().getConferences().subscribe( data => {
       console.log(data);
       this.conferences = data.events.slice(0,4) ;
       this.allConferences = data.events ;
@@ -57,7 +58,7 @@ export class ConferencesComponent implements OnInit {
   }
   public goToConference(conference): void
   {
-    this.apiService.getconferenceServices().chosenConference = conference ;
+    this.apiService.getConferenceServices().chosenConference = conference ;
    // this.router.navigate()
 
   }

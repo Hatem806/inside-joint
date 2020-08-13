@@ -1,20 +1,5 @@
 <div class=" no-gutters">
-  <div class="container-fluid w-100 no-gutters">
-    <div class="row w-100 page-header">
-      <div class="col-md-12">
-        <div class="float-left ">
-          <div class="float-left logo">
-            <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo">
-          </div>
-        </div>
-        <div class="float-right conferences ">
-          <div class=" float-right">
-            Conferences
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-header [pageName]="pageTitle"></app-header>
     <div class="container-fluid">
      <div class="row">
       <div class="col md-12 ">
@@ -36,15 +21,15 @@
             <div class="conferences">
              <div class="row">
                <div class="col-md-1">
-                <img (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
+                <img  role="button" (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
                </div>
-              <div (click)="goToConference( conference )"routerLink="{{conference._id}}"class="col-md-2 border options" *ngFor="let conference of conferences">
+              <div  role="button" (click)="goToConference( conference )"routerLink="{{conference._id}}"class="col-md-2 border options" *ngFor="let conference of conferences">
               <div class="row">
-                <div class="col conference-image option-image">
-                  <img src="../../../assets/item-photo/hyalgan-logo-color.png" alt="">
+                <div  role="button" class="col mx-auto d-block image-cont">
+                  <img class="conference-image option-image mx-auto d-block"src="{{apiService.getProductsService().getImagesUrl() + conference.imagePath}}" alt="">
                 </div>
               </div>
-                <div class="row conference-icons">
+                <div class="row conference-details">
                    {{ conference.description }}
                   </div>
              </div>

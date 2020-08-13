@@ -1,20 +1,5 @@
 <div class=" no-gutters">
-  <div class="container-fluid w-100 no-gutters">
-    <div class="row w-100 page-header">
-      <div class="col-md-12">
-        <div class="float-left ">
-          <div class="float-left logo">
-            <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo">
-          </div>
-        </div>
-        <div class="float-right products ">
-          <div class=" float-right">
-            Products
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-header [pageName]="pageTitle"></app-header>
     <div class="container-fluid">
      <div class="row">
       <div class="col md-12 ">
@@ -35,28 +20,28 @@
         <div class="col-md-12">
           <div class="products">
              <div class="row">
-              <div class="col md-1">
+              <div role="button" class="col md-1">
                 <img (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
               </div>
               <div class="col-md-2 my-product border options " *ngFor="let product of products">
               <div class="row">
-                <div class="col product-image option-image ">
-                  <img src="../../../assets/item-photo/hyalgan-logo-color.png" alt="">
+                <div  role="button" class="col product-image-cont mx-auto d-block ">
+                  <img class="mx-auto d-block product-image" src="{{apiService.getProductsService().getImagesUrl() + product.imagePath}}" alt="">
                 </div>
               </div>
                 <div class="row product-icons">
-                    <div class="col-4 no-gutters">
+                    <div  role="button" (click)="goToVideoLink(product)" class="col-4 no-gutters">
                       <img class="no-gutters product-icon video-icon"src="../../../assets/icons/128.png" alt="Video">
                     </div>
-                    <div (click)="goToLink( product.websiteLink  )"class="col-4">
+                    <div  role="button" (click)="goToLink( product.websiteLink  )"class="col-4">
                       <img class="product-icon  web-icon" src="../../../assets/signup/82.png" alt="Link">
                     </div>
-                    <div class="col-4">
+                    <div  role="button" class="col-4">
                       <img class="product-icon pdf-icon" src="../../../assets/icons/pdf.png" alt="">
                     </div>
                   </div>
              </div>
-             <div class="col md-1">
+             <div role="button" class="col md-1">
               <img (click)="onRightArrow()"class="arrow-right" src="../../../assets/arrows/Path 1677.png" alt="">
             </div>
              </div>

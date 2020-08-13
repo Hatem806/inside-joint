@@ -9,6 +9,8 @@ export class AboutUsComponent implements OnInit {
   changeQuestionIcon : boolean ;
   changeVideoIcon : boolean ;
   changePdfIcon : boolean ;
+
+  pageTitle : string = 'About Us'
   constructor() {
     this.changePdfIcon=false ;
     this.changeQuestionIcon=false ;
