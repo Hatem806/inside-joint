@@ -4,6 +4,7 @@ import { RouterModule, ActivatedRoute } from '@angular/router';
 import { IEvent } from 'src/app/models/Event';
 import { DatePipe } from '@angular/common';
 import { IEventResponse } from 'src/app/models/responses/EventResponse';
+import { IQuestion } from 'src/app/models/Question';
 
 @Component({
   selector: 'app-conference',
@@ -11,9 +12,11 @@ import { IEventResponse } from 'src/app/models/responses/EventResponse';
   styleUrls: ['./conference.component.css']
 })
 export class ConferenceComponent implements OnInit {
+  pageTitle = "Conferences"
   chosenConference : IEvent
   displayedStartDate : String ;
   displayedEndDate : String ;
+  questions : IQuestion[]
   conference_id
   constructor( public apiService : ApiService , private router : RouterModule,
     public datepipe : DatePipe, private route : ActivatedRoute ) { }
@@ -27,11 +30,18 @@ export class ConferenceComponent implements OnInit {
         this.chosenConference = data.event ;
         this.displayedStartDate= this.datepipe.transform(data.event.startDate,'dd MM yyyy') ;
         this.displayedEndDate= this.datepipe.transform(data.event.endDate,'dd MM yyyy') ;
-
-
-    })
+        this.questions = data.event.questions ;
 
     })
+
+    })
+  }
+
+  public goToQuestions(questions): void
+  {
+    console.log( window.location.href)
+    this.apiService.getConferenceServices().questions = questions ;
+
   }
 
 

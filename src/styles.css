@@ -41,6 +41,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'montserrant-semi-bold';
+  src: url('assets/fidiaWebFonts/Montserrat-SemiBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 .arrow-left{
   padding-right: 0px !important;
   padding-left: 0px !important ;
@@ -76,4 +82,6 @@
   display: block;
   margin:auto ;
 }
-
+body{
+  background-color: #FAFAFA;
+}

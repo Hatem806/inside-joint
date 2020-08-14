@@ -1,0 +1,27 @@
+.image{
+  max-height:20vh !important;
+  width: 100vw !important;
+ object-fit: cover;
+}
+.thank-you-container{
+  margin-left: 12vw ;
+  padding-left: 30vw;
+  padding-right: 30vw;
+  background-color: white;
+}
+.thank-you-image{
+  padding-top:10vh
+}
+.thank-you{
+  font-family: montserrant-extra-bold;
+  font-size: 15vh;
+  color:  #005086 ;
+  display: block;
+  margin:auto ;
+  margin-left : -10vw !important ;
+}
+.description{
+  font-family: montserrant;
+  font-size: 2vh;
+  color: #6B6C6F;
+}
