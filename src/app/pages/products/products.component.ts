@@ -10,6 +10,8 @@ import { IProduct } from 'src/app/models/Product';
 })
 export class ProductsComponent implements OnInit {
   pageTitle="Products"
+  pageImageSrc = "../../../assets/products-photo/xfidia-slide4.jpg.pagespeed.ic.x0C8HaECKd.png" ;
+
   allProducts : IProduct[]
   products: IProduct[]
   lastProductIndex : number
@@ -33,6 +35,9 @@ export class ProductsComponent implements OnInit {
   }
   goToVideoLink(product){
     window.location.href = this.apiService.getAssetsService().getVideosUrl() + product.videoPath ;
+  }
+  goToPdfLink(documentPath){
+    window.location.href = this.apiService.getAssetsService().getDocumentsUrl() + documentPath ;
   }
   onRightArrow(){
 

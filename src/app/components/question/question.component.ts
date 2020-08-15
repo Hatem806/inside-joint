@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-question',
@@ -11,9 +12,12 @@ export class QuestionComponent implements OnInit {
   @Input() answers : [] ;
   @Input() answerName : string ;
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }

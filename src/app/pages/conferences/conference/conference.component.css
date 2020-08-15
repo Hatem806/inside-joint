@@ -61,15 +61,7 @@
   box-shadow: 3px 3px 2px #00000029 ;
   margin: auto;
 }
-.option-details{
-  font-family: montserrant-bold;
-  color: #005086 ;
-  font-size: 12pt;
-  padding-top: 20px ;
-  display: block;
-  margin:auto ;
-  padding-left: 10px ;
-}
+
 .option-image{
   display: block;
   margin:auto ;

@@ -1,26 +1,7 @@
-.logo{
-  margin-top: 20px;
-  transform: scale(0.6,0.6);
-}
-.about-us{
-  font-family: montserrant;
-  font-size: 14pt;
-  color:#6B6C6F;
-  position: absolute;
-  top: 35px;
-  right: 10px ;
-}
-.page-header{
-  padding-left:160px;
-}
-.image{
-  height:350px ;
-  width: auto ;
-  background-size: cover;
-}
+
 .title{
   font-family: montserrant-extra-bold;
-  font-size: 65px;
+  font-size: 8vh;
   color:  #005086 ;
 }
 .no-gutters{
@@ -30,8 +11,8 @@
   margin-left: 0px !important;
 }
 .desription{
-  font-family:montserrat ;
-  font-size: 18px ;
+  font-family:montserrant ;
+  font-size: 3vh ;
   text-align: left;
   color:#6B6C6F ;
 }
@@ -41,14 +22,15 @@
   float: left;
 }
 .my-container{
-  margin-left: 150px !important ;
+  margin-left: 12vw !important ;
 }
 .details{
-  font-family:montserrat-bold ;
-  font-size: 30px ;
+  font-family:montserrant-bold ;
+  font-size: 4vh ;
   text-align: left;
   color: #6B6C6F;
-  padding-bottom: 25px;
+  padding-bottom: 3vh;
+  padding-top: 2vh;
 }
 .wrapper{
   min-height:100% !important
@@ -67,4 +49,20 @@
 .hover{
   background-color:  #005086;
 }
-
+.options:hover{
+  background-color:  #005086;
+}
+.no-gutters{
+  min-height: 100vh;
+}
+.option-image{
+  padding-top: 5vh;
+  padding-left: 3vw;
+  display: block;
+  margin: auto;
+  height: 70%;
+  width: auto ;
+}
+.options{
+  height:40vh ;
+}

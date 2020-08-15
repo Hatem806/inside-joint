@@ -11,6 +11,7 @@ export class AboutUsComponent implements OnInit {
   changePdfIcon : boolean ;
 
   pageTitle : string = 'About Us'
+  pageImageSrc = "../../../assets/about-us-photo/ezgif.com-webp-to-jpg.png" ;
   constructor() {
     this.changePdfIcon=false ;
     this.changeQuestionIcon=false ;

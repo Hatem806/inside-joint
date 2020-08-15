@@ -11,6 +11,7 @@ import { IEvent } from 'src/app/models/Event';
 })
 export class ConferencesComponent implements OnInit {
   pageTitle = "Conferences"
+  pageImageSrc = "../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" ;
   allConferences : IEvent[]
   conferences:IEvent[]
   lastProductIndex : number

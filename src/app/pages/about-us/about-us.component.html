@@ -1,10 +1,5 @@
 <div class=" no-gutters">
-  <app-header [pageName]="pageTitle"></app-header>
-  <div class="row">
-    <div class="col  image">
-        <img class="w-100" style="background-size: cover;" src="../../../assets/about-us-photo/ezgif.com-webp-to-jpg.png" alt="">
-    </div>
-  </div>
+  <app-header [pageImageSource]="pageImageSrc"[pageName]="pageTitle"></app-header>
   <div class="no-gutters no-padding w-100">
    <div class="col-md-12 w-100 bottom-part">
     <div class="row w-100">
@@ -33,9 +28,9 @@
               <img class="option-image"*ngIf="!changePdfIcon"src="../../../assets/icons/pdf.png" alt="Download pdf">
               <img class="hover option-image"*ngIf="changePdfIcon"src="../../../assets/icons/pdf-1.png" alt="Download pdf">
             </div>
-            <div class="col-md-5 offset-1 options"  (mouseover)="changeVideoIcon=true" (mouseout)="changeVideoIcon=false">
-              <img class="option-image"*ngIf="!changeVideoIcon" src="../../../assets/icons/128.png" alt="Video">
-              <img class="hover option-image" *ngIf="changeVideoIcon" src="../../../assets/icons/asset-1.png" alt="">
+            <div class="col-md-5 offset-1 options"  (mouseover)="changeVideoIcon=true;" (mouseout)="changeVideoIcon=false">
+              <img class="video-icon option-image"*ngIf="!changeVideoIcon" src="../../../assets/icons/128.png" alt="Video">
+              <img class="video-icon hover option-image" *ngIf="changeVideoIcon" src="../../../assets/icons/asset-1.png" alt="">
             </div>
             <!-- <div class="col widget border"  (mouseover)="changeQuestionIcon=true" (mouseout)="changeQuestionIcon=false">
               <img *ngIf="!changeQuestionIcon"src="../../../assets/icons/87.png" alt="Questions">

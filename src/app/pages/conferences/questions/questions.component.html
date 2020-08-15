@@ -8,7 +8,7 @@
         <app-question [questionNumber]="indexOfElements+1"[answerName]="indexOfElements" class="w-100"[title]="question.title" [answers]="question.answers"></app-question>
       </div>
 
-          <button routerLink="thank-you" type="button" class="btn btn-primary"> Submit </button>
+          <button (results)="submitResults($event)" routerLink="thank-you" type="button" class="btn btn-primary"> Submit </button>
 
   </div>
 </div>

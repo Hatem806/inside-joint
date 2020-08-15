@@ -25,5 +25,8 @@ export class QuestionsComponent implements OnInit {
 
     })
   }
+  submitResults(results){
+    console.log(results)
+  }
 
 }
