@@ -12,11 +12,13 @@ import { ApiService } from 'src/app/services/api.service';
 export class QuestionsComponent implements OnInit {
   pageTitle = "Conferences"
   questions : IQuestion[] ;
+
+  conferenceId : string  ;
   constructor( public apiService: ApiService, private route : ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe( params =>{
-      console.log(params)
+      this.conferenceId = params.conferenceId ;
       this.apiService.getConferenceServices().getConference(params.conferenceId).subscribe( data => {
        console.log(data);
         this.questions = data.event.questions ;
@@ -25,8 +27,15 @@ export class QuestionsComponent implements OnInit {
 
     })
   }
-  submitResults(results){
-    console.log(results)
+  submitResults(){
+    console.log(this.apiService.getQuestionsAnswersService().answers)
+    this.apiService.
+      getQuestionsAnswersService().
+          addSubmission(this.conferenceId,this.apiService.getQuestionsAnswersService().answers).subscribe( data =>{
+            console.log(data),
+            err => {
+              console.log(err);
+            }
+          }) ;
   }
-
 }

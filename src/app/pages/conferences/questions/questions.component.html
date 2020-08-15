@@ -5,10 +5,9 @@
   </div>
   <div class="questions-container">
       <div class="row w-100" *ngFor="let question of questions; let indexOfElements=index ;">
-        <app-question [questionNumber]="indexOfElements+1"[answerName]="indexOfElements" class="w-100"[title]="question.title" [answers]="question.answers"></app-question>
+        <app-question [questionNumber]="indexOfElements+1"[questionIndex]="indexOfElements" class="w-100"[title]="question.title" [answers]="question.answers"></app-question>
       </div>
-
-          <button (results)="submitResults($event)" routerLink="thank-you" type="button" class="btn btn-primary"> Submit </button>
+       <button (click)="submitResults()" routerLink="thank-you" type="button" class="btn btn-primary"> Submit </button>
 
   </div>
 </div>
