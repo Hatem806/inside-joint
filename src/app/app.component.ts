@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { ApiService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   routesMap = [];
 
   currentRoute: string = "";
-  constructor( public router: Router)
+  constructor( public router: Router,public ApiService:ApiService)
   {
 
 
@@ -37,5 +38,8 @@ export class AppComponent {
     });
 
   }
-
+  logout(){
+    this.ApiService.getAuthenticationService().logout();
+    this.router.navigateByUrl('');
+  }
 }

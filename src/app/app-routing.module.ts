@@ -6,6 +6,9 @@ import { ConferencesComponent } from '../app/pages/conferences/conferences.compo
 import { HomeComponent } from '../app/pages/home/home.component'
 import { AboutUsComponent } from '../app/pages/about-us/about-us.component'
 import { ConferenceComponent} from '../app/pages/conferences/conference/conference.component'
+import { LoginComponent } from './Pages/login/login.component';
+import {SignupComponent} from'./Pages/signup/signup.component'
+import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
 
 
 const routes: Routes = [
@@ -15,6 +18,11 @@ const routes: Routes = [
   { path: "conferences/:conferenceId", component: ConferenceComponent},
   { path: "home", component: HomeComponent },
   { path: "aboutus", component: AboutUsComponent },
+  {path:'signup',component:SignupComponent},
+  {path:'signup-data',component:SignupDataComponent},
+  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
+  { path: '**', component: LoginComponent }
 
 ];
 @NgModule({
