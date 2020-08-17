@@ -1,21 +1,11 @@
 <div class=" no-gutters">
-  <app-header [pageName]="pageTitle"></app-header>
-    <div class="container-fluid">
-     <div class="row">
-      <div class="col md-12 ">
-        <div class="row ">
-          <div class="col">
-              <img class="image"src="../../../assets/products-photo/xfidia-slide4.jpg.pagespeed.ic.x0C8HaECKd.png" alt="">
-          </div>
-        </div>
+  <app-header [pageImageSource]="pageImageSrc"[pageName]="pageTitle"></app-header>
+
         <div class="row ">
           <div class="col page-title">
             Our Products
           </div>
         </div>
-      </div>
-     </div>
-    </div>
     <div class="no-gutters container products-container">
         <div class="col-md-12">
           <div class="products">
@@ -23,20 +13,20 @@
               <div role="button" class="col md-1">
                 <img (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
               </div>
-              <div class="col-md-2 my-product border options " *ngFor="let product of products">
+              <div class="col-md-2 no-gutters my-product options " *ngFor="let product of products">
               <div class="row">
-                <div  role="button" class="col product-image-cont mx-auto d-block ">
-                  <img class="mx-auto d-block product-image" src="{{apiService.getProductsService().getImagesUrl() + product.imagePath}}" alt="">
+                <div  role="button" class="col product-image-cont ">
+                  <img class="product-image" src="{{apiService.getProductsService().getImagesUrl() + product.imagePath}}" alt="">
                 </div>
               </div>
                 <div class="row product-icons">
-                    <div  role="button" (click)="goToVideoLink(product)" class="col-4 no-gutters">
+                    <div  data-toggle="Go To Video" data-placement="top" title="Go To Video" role="button" (click)="goToVideoLink(product)" class="col-4 no-gutters">
                       <img class="no-gutters product-icon video-icon"src="../../../assets/icons/128.png" alt="Video">
                     </div>
-                    <div  role="button" (click)="goToLink( product.websiteLink  )"class="col-4">
+                    <div   data-toggle="Go To Website" data-placement="top" title="Go To Website" role="button" (click)="goToLink( product.websiteLink  )"class="col-4">
                       <img class="product-icon  web-icon" src="../../../assets/signup/82.png" alt="Link">
                     </div>
-                    <div  role="button" class="col-4">
+                    <div   data-toggle="Go To Document" data-placement="top" title="Go To Document" role="button"  (click)="goToPdfLink( product.documentPath  )"class="col-4">
                       <img class="product-icon pdf-icon" src="../../../assets/icons/pdf.png" alt="">
                     </div>
                   </div>

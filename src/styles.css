@@ -41,27 +41,47 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'montserrant-semi-bold';
+  src: url('assets/fidiaWebFonts/Montserrat-SemiBold.otf  ') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 .arrow-left{
   padding-right: 0px !important;
-  padding-left: 0px !important ;
-  padding-top: 20px !important;
+  padding-left: 1vw !important ;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
 }
 .arrow-right{
   padding-right: 0px !important;
-  padding-left: 80px !important ;
-  padding-top: 20px !important;
+  padding-left: 0vw !important ;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 
 .options{
   /* padding-right: 15px ;
   padding-left: 15px; */
   border-radius: 10px;
-  border-right: 3px solid #00000029;
-  border-left: 3px solid #00000029;
-  border-bottom: 3px solid #00000029 ;
+  border-right: 1px solid #00000029;
+  border-left: 1px solid #00000029;
+  border-bottom: 1px solid #00000029 ;
   border-top: 0px ;
-  box-shadow: 3px 3px 2px #00000029 ;
+  box-shadow: 4px 4px 4px 4px #00000029 ;
   margin: auto;
+  width: min-content !important;
 }
 .option-details{
   font-family: montserrant-bold;
@@ -74,6 +94,14 @@
 }
 .option-image{
   display: block;
-  margin:auto ;
-}
+  margin: 0px 0px 0px 0px !important ;
 
+}
+.image{
+  height:35vh ;
+  width: 100vw ; ;
+  background-size: cover;
+}
+body{
+  background-color: #FAFAFA;
+}

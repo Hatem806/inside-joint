@@ -3,6 +3,7 @@ html,body {
   padding: 0 !important;
   width: 100% !important;
   min-width: 320px !important ;
+  height: 100% !important;
   }
 .navbar{
   min-width: calc(100vh);
@@ -10,11 +11,11 @@ html,body {
   padding: 0em;
 }
 .icons{
-  width:30px;
+  width:2.5vw;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom:20px;
+  padding-bottom:2vh;
   display: block
 }
 .fas{
@@ -25,13 +26,13 @@ html,body {
   background:  #005086;
   align-items: center;
    justify-content: center;
-   padding-left: 30px;
+   padding-left: 3vw;
 
 }
 .company-name{
   background: #005086 ;
-  padding-bottom: 50px;
-  font-size: 12pt;
+  padding-bottom:5vh;
+  font-size: 3vh;
   text-align: left;
   font-family: 'monsterrant-bold-italic';
   color: #FAFAFA;
@@ -43,14 +44,14 @@ html,body {
 }
 .logout.icons{
     position: absolute;
-    width: 30px;
+    width: 2.5;
     height: auto;
-    padding-top: 100px;
+    padding-top: 10vh;
     display: block;
   }
 #sidebar-wrapper {
-max-width: 240pt !important;
-min-width:120px !important ;
+max-width: 20vw !important;
+min-width:10vw !important ;
 min-height: 100vh !important;
 margin-left: -15rem;
 margin-right: 0px !important;
@@ -96,6 +97,7 @@ margin-left: 0;
 
 #page-content-wrapper {
   min-width: 100 !important ;
+  max-height: 100%;
   width: 100% !important ;
   overflow: hidden !important ;
   background-color: #FAFAFA !important ;

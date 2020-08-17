@@ -1,0 +1,14 @@
+<div class="no-gutters">
+  <app-header [pageName]="pageTitle"></app-header>
+  <div class="row w-100">
+    <img class="image"src="../../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" alt="">
+  </div>
+  <div class="questions-container">
+      <div class="row w-100" *ngFor="let question of questions; let indexOfElements=index ;">
+        <app-question [questionNumber]="indexOfElements+1"[questionIndex]="indexOfElements" class="w-100"[title]="question.title" [answers]="question.answers"></app-question>
+      </div>
+       <button (click)="submitResults()" routerLink="thank-you" type="button" class="btn btn-primary"> Submit </button>
+
+  </div>
+</div>
+
