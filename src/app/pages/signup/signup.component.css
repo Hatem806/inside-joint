@@ -3,19 +3,20 @@ html {
 }
 
 
-.container{
-  height: 100vh;
+.container {
+height: 105vh;
+transform:translate(-110px,0);
   background: #004472;
-  clip-path: polygon(38% 0, 69% 50%, 38% 100%, 0 100%, 0 0);
+  clip-path: polygon(34% 0, 60% 50%, 34% 100%, 0 100%, 0 0);
 }
 
 .logo{
-  margin: 10pt 40pt 0 0;
   transform: scale(0.7,0.7);
 }
 .inline{
   display: inline-block;
   margin-right: 70pt;
+  margin-bottom: 10pt;
 }
 .inlineRadio{
   display: inline-block;
@@ -85,8 +86,9 @@ html {
 
 
 h1.login-text2{
-  color: #6B6C6F;
+  color: hsl(225, 2%, 43%);
   margin: left;
+  margin-bottom: 15pt;
   font-family: montserrant,Bold;
   font-size: 18pt;
   font-weight: bolder;
@@ -95,19 +97,19 @@ h1.login-text2{
 h1.welcome{
   color: #FAFAFA;
   font-size: 40pt;
-  font-family: montserrant;
+  font-family: montserrant,Bold;
   font-weight: bolder;
-  width: 40%;
-  transform: translate(10%, -260%);
+  width: 30%;
+  transform: translate(40%, -240%);
 }
 
 .centered {
 
-  overflow-x: hidden;
+
   width: 30%;
   position: fixed;
-  z-index: 1;
-  transform: translate(190%, -180%);
+
+  transform: translate(200%, -170%);
 }
 
 
