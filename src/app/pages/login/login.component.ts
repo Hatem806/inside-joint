@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit, OnDestroy
       this.error=true
       this.errorMessage="Password is required"
     }
-
+else{
     this.ApiService.getAuthenticationService().login(this.email, this.password).subscribe(data => {
     console.log(data)
 
@@ -72,6 +72,7 @@ export class LoginComponent implements OnInit, OnDestroy
         this.errorMessage="Invalid email/password"
       }
     })
+  }
   }
 register(){
   this.router.navigateByUrl('/signup');

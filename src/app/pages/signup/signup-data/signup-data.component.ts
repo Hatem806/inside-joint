@@ -23,6 +23,9 @@ export class SignupDataComponent implements OnInit, OnDestroy
   public contactNumber :string;
   private user
   private date:Date
+  public errorMessage:string;
+  public error :boolean
+
 
 
   constructor(  private data:Data,public ApiService: ApiService, public router: Router,public SessionStorageService:SessionStorageService,public route: ActivatedRoute)
@@ -47,10 +50,7 @@ this.country='Egypt'
 
   }
 
-  onError(errorNumber)
-  {
 
-  }
   goBack()
   {
     console.log("hello")
@@ -64,13 +64,12 @@ this.country='Egypt'
     this.user={city:this.city,firstname:this.firstName,lastname:this.lastName,email:this.email,mobileNumber:this.contactNumber,password:this.password
       ,country:this.country,language:null,workplace:this.workPlace,isUsingIAHA:this.data.storage.isUsingIaha,whichJoints:this.data.storage.whichJoints,rangeOfInjectionsPerMonth:this.data.storage.rangeOfInjectionsPerMonth,createdAt:this.date,updatedAt:this.date}
 
-      console.log(this.user)
       this.ApiService.getUsersService().create(this.user).subscribe(data => {
-      console.log(data)
+
       if(data.success == true )
       {
         this.ApiService.getAuthenticationService().login(this.email, this.password).subscribe(data => {
-          console.log(data)
+
 
             if(data.success == true)
             {
@@ -80,13 +79,13 @@ this.country='Egypt'
             }
             else
             {
-              this.onError('error_1');
+
             }
           })
       }
       else
       {
-        this.onError('error_1');
+
       }
     })
   }

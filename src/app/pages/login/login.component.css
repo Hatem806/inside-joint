@@ -138,8 +138,8 @@ h1.welcome{
   transform: translate(-50%, -50%);
   text-align: center;
 }
-h4.error
+
+h6.error
 {
  color: #ff0000;
- 
 }

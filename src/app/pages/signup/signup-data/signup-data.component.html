@@ -58,6 +58,7 @@
        <input class="login-input" [(ngModel)]="password" type="password" class="login-input" placeholder="password" required/>
       </div>
        <div>
+        <h6 *ngIf="error" class="error" >{{errorMessage}}</h6>
          <button (click)="signUp()" type="submit" class="login-button">Sign Up</button>
        </div>
        </div>

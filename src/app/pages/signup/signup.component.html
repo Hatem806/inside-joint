@@ -43,7 +43,7 @@
                      <input type="radio" [(ngModel)]="injectionsSelected" name="injections" value="{{item.value}}" />
                      {{item.name}}
              </div>
-
+             <h6 *ngIf="error" class="error" >{{errorMessage}}</h6>
              <button (click)="next()" type="submit" class="login-button">NEXT</button>
   </div>
 

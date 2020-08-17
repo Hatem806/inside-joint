@@ -28,6 +28,8 @@ export class SignupComponent implements OnInit, OnDestroy
   public injections=[]
   public joints=[]
   public userData
+  public errorMessage:string;
+  public error :boolean
 
   constructor(  private data:Data ,public ApiService: ApiService, public router: Router,public SessionStorageService:SessionStorageService)
   {
@@ -65,9 +67,15 @@ if (element.checked==true)
   });
 
   this.data.storage={isUsingIaha:this.iahaSelected,rangeOfInjectionsPerMonth:this.injectionsSelected,whichJoints:chosenJoints}
-  console.log(this.data)
-
+  if(this.data.storage.isUsingIaha==null ||this.data.storage.rangeOfInjectionsPerMonth==null ||this.data.storage.whichJoints==null)
+  {
+    this.error=true
+    this.errorMessage="Please make sure you answer all questions."
+  }
+else{
   this.router.navigateByUrl('signup-data');
+}
+
 }
 
 
