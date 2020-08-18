@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from '../app/pages/products/products.component';
@@ -14,6 +14,10 @@ import { DatePipe } from '@angular/common';
 import { QuestionComponent } from './components/question/question.component';
 import { QuestionsComponent } from './pages/conferences/questions/questions.component';
 import { ThankYouComponent } from './pages/conferences/thank-you/thank-you.component'
+import { LoginComponent } from './Pages/login/login.component';
+import {SignupComponent} from'./Pages/signup/signup.component'
+import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
+import {Data} from './models/Data'
 
 @NgModule({
   declarations: [
@@ -26,14 +30,19 @@ import { ThankYouComponent } from './pages/conferences/thank-you/thank-you.compo
     ConferenceComponent,
     QuestionComponent,
     QuestionsComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    SignupComponent,
+    SignupDataComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [DatePipe],
+  providers: [DatePipe,Data],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

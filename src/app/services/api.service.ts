@@ -3,6 +3,8 @@ import { ConferencesService } from './conferences.service';
 import { Injectable } from '@angular/core';
 import { AssetsService } from './assets.service';
 import { questionsAnswersService } from './questionsAnswers.service';
+import { UsersService } from './users.service';
+import { AuthenticationService } from './authentication.service';
 
 
 @Injectable({
@@ -10,7 +12,8 @@ import { questionsAnswersService } from './questionsAnswers.service';
 })
 export class ApiService {
   constructor(private productService : ProductsService, private conferenceService : ConferencesService,
-    private assetsService : AssetsService, private questionsAnswersService : questionsAnswersService) {}
+    private assetsService : AssetsService, private questionsAnswersService : questionsAnswersService,
+    private authenticationService: AuthenticationService,private usersService: UsersService) {}
 
   public getProductsService(): ProductsService
   {
@@ -28,4 +31,17 @@ export class ApiService {
   {
     return this.questionsAnswersService;
   }
+
+  public getUsersService(): UsersService
+  {
+    return this.usersService;
+  }
+
+
+
+  public getAuthenticationService(): AuthenticationService
+  {
+    return this.authenticationService;
+  }
+
 }

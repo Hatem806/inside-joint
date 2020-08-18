@@ -1,0 +1,52 @@
+
+<div class="container ">
+  <div class="logo">
+    <img src="../../../assets/fidiaLogo/Group -1.png" alt="Fidia Logo">
+  </div>
+  </div>
+
+  <h1 class="welcome">
+    Please, answer the following questions.
+ </h1>
+
+
+
+  <div class="centered">
+   <h1 class="login-text2">
+     Are you using IAHA?
+    </h1>
+   <div  class="inlineRadio" *ngFor="let item of iaha">
+   <input type="radio" [(ngModel)]="iahaSelected" name="iahaselect" value="{{item.value}}" />
+             {{item.name}}
+   </div>
+<br>
+<br>
+   <h1 class="login-text2">
+     In Which Joint(s)?
+    </h1>
+    <div class="inline" *ngFor="let joint of joints">
+     <label>
+        <input type="checkbox"
+           [name]="joint.name"
+           [(ngModel)]="joint.checked"
+           value="{{joint.id}}"
+           >
+           {{joint.name}}
+    </label>
+    </div>
+    <br>
+    <br>
+   <h1 class="login-text2">
+             How many injections do you perform per month?
+            </h1>
+             <div class="inlineRadio" *ngFor="let item of injections">
+                     <input type="radio" [(ngModel)]="injectionsSelected" name="injections" value="{{item.value}}" />
+                     {{item.name}}
+             </div>
+             <h6 *ngIf="error" class="error" >{{errorMessage}}</h6>
+             <button (click)="next()" type="submit" class="login-button">NEXT</button>
+  </div>
+
+
+
+
