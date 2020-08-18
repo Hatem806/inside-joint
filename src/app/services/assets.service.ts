@@ -5,6 +5,7 @@ import { IAssetsResponse } from '../models/responses/AssetsResponse';
 import { environment } from '../../environments/environment.prod';
 import { IAsset } from '../models/Asset';
 import { IAssetResponse } from '../models/responses/AssetResponse';
+import { ConferencesService } from './conferences.service';
 
 @Injectable({
   providedIn: 'root'
@@ -76,3 +77,4 @@ export class AssetsService {
   }
 
 }
+

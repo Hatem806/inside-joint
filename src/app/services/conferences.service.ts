@@ -13,6 +13,7 @@ import { IQuestion } from '../models/Question';
 export class ConferencesService
 {
   _endPoint: String = "api/v1/events";
+  private static _schedulesUrl: string = `${environment.baseUrl}/uploads/schedules/`;
   chosenConference : IEvent ;
   questions :IQuestion[]
 
@@ -29,4 +30,9 @@ export class ConferencesService
     return this.http.get<IEventResponse>(`${environment.baseUrl}/${this._endPoint}/${id}`);
   }
 
+  public getSchedulesUrl(): string
+  {
+    return ConferencesService._schedulesUrl;
+  }
 }
+

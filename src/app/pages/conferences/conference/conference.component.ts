@@ -43,7 +43,7 @@ export class ConferenceComponent implements OnInit {
 
   public goToQuestions(questions): void
   {
-    console.log( window.location.href)
+
     this.apiService.getConferenceServices().questions = questions ;
 
   }
@@ -52,7 +52,7 @@ export class ConferenceComponent implements OnInit {
     window.location.href = this.apiService.getAssetsService().getVideosUrl() + videoPath ;
   }
   goToPdfLink(documentPath){
-    window.location.href = this.apiService.getAssetsService().getDocumentsUrl() + documentPath ;
+    window.location.href = this.apiService.getConferenceServices().getSchedulesUrl() + documentPath ;
   }
 
 }

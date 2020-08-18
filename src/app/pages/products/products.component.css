@@ -1,8 +1,4 @@
-.image{
-  max-height:250px !important;
-  width: 100vw !important;
- object-fit: cover;
-}
+
 .page-title{
  font-family: montserrant-extra-bold;
  color :  #005086 ;
@@ -64,7 +60,7 @@
 }
 .arrow-right{
   padding-right: 0px !important;
-  padding-left: 20px !important ;
+  padding-left: 0px !important ;
 }
 .col-md-2{
   padding: 0px 0px 0px 0px !important ;
