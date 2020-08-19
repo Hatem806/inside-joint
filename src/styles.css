@@ -81,7 +81,7 @@
   border-top: 0px ;
   box-shadow: 4px 4px 4px 4px #00000029 ;
   margin: auto;
-  width: min-content !important;
+  /* width: min-content !important; */
 }
 .option-details{
   font-family: montserrant-bold;
@@ -104,4 +104,5 @@
 }
 body{
   background-color: #FAFAFA;
+  max-height: 100vh !important ;
 }

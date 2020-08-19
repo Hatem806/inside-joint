@@ -17,12 +17,15 @@
   transform: scale(0.8,0.8);
 }
 .product-icon{
-  height: 3vh !important ;
-  width: 3vh !important;
+  height: 7vh !important ;
+  width: auto !important;
   display: block;
   margin:auto ;
   padding-right: 1vw  !important ;
   padding-left: 0px !important;
+}
+.options:hover{
+  background-color:  #005086;
 }
 .product-icons{
   flex-shrink: 0;
@@ -31,6 +34,7 @@
   text-align: center;
   margin: 0px 0px 0px 0px !important;
   padding-bottom: 1vh !important;
+  padding-right:1vw ;
 }
 .products-container{
   min-height: 100vh;

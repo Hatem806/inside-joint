@@ -16,6 +16,9 @@ export class ProductsComponent implements OnInit {
   products: IProduct[]
   lastProductIndex : number
   firstProductIndex : number
+
+  videoIconBooleanArray : Boolean[]=[] ;
+  pdfIconBooleanArray : Boolean[] =[];
   constructor( public apiService : ApiService , private router : RouterModule ) { }
 
   ngOnInit(): void {
@@ -23,9 +26,13 @@ export class ProductsComponent implements OnInit {
       console.log(data);
       this.products = data.products.slice(0,4) ;
       this.allProducts = data.products ;
+      this.allProducts.forEach( product => {
+        this.pdfIconBooleanArray.push(false) ;
+        this.videoIconBooleanArray.push(false) ;
+      })
+      console.log(this.videoIconBooleanArray)
       this.firstProductIndex=0 ;
       this.lastProductIndex=3 ;
-
     })
 
 

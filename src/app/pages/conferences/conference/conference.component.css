@@ -64,3 +64,6 @@
 .questions-image{
   padding-left : 0vw !important;
 }
+.container-fluid{
+  height:25vmax !important;
+}

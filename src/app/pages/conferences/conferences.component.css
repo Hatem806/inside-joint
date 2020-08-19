@@ -82,3 +82,10 @@
   text-align: center;
   padding-bottom: 1vh;
 }
+.options:hover{
+  background-color:  #005086;
+}
+.options:hover .option-details{
+  background-color:  #005086;
+  color: #EFB747;
+}
