@@ -1,13 +1,8 @@
 <div class=" no-gutters">
- <app-header [pageName]="pageTitle"></app-header>
+ <app-header [pageImageSource]="pageImageSrc" [pageName]="pageTitle"></app-header>
     <div class="container-fluid">
      <div class="row">
       <div class="col md-12 ">
-        <div class="row ">
-          <div class="col">
-            <img class="image"src="../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" alt="">
-          </div>
-        </div>
         <div class="no-gutters col-md-12 ">
           <div class="row">
           <div class="col-md-6 title-description">
@@ -42,7 +37,7 @@
               Conference Details
             </div>
             <div class="row w-100 ">
-              <div (click)="goToPdfLink( chosenConference.schedulePath )" role="button" (mouseover)="changeProgramIcon=true;" (mouseout)="changeProgramIcon=false"class="col-md-3 offset-1 options" >
+              <div (click)="goToPdfLink( chosenConference.schedulePath )" role="button" (mouseover)="changeProgramIcon=true;" (mouseout)="changeProgramIcon=false"class="col-md-3 offset-1 options no-gutters" >
                 <img *ngIf="!changeProgramIcon"class="option-image" src="../../../assets/icons/37.png" alt="Download pdf">
                 <img *ngIf="changeProgramIcon"class="option-image" src="../../../assets/icons/asset-3.png" alt="Download pdf">
                 <div class="row option-details">

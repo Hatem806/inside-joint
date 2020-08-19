@@ -17,8 +17,8 @@
   transform: scale(0.8,0.8);
 }
 .product-icon{
-  height: 50px !important ;
-  width: 50px !important;
+  height: 3vh !important ;
+  width: 3vh !important;
   display: block;
   margin:auto ;
   padding-right: 1vw  !important ;
