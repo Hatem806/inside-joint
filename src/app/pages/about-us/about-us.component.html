@@ -24,11 +24,11 @@
           </div>
         </div>
           <div class="row widgets-row">
-            <div class="col-md-5 offset-1 options" (mouseover)="changePdfIcon=true" (mouseout)="changePdfIcon=false">
+            <div role ="button" class="col-md-5 offset-1 options" (mouseover)="changePdfIcon=true" (mouseout)="changePdfIcon=false">
               <img class="option-image"*ngIf="!changePdfIcon"src="../../../assets/icons/pdf.png" alt="Download pdf">
               <img class="hover option-image"*ngIf="changePdfIcon"src="../../../assets/icons/pdf-1.png" alt="Download pdf">
             </div>
-            <div class="col-md-5 offset-1 options"  (mouseover)="changeVideoIcon=true;" (mouseout)="changeVideoIcon=false">
+            <div role="button" class="col-md-5 offset-1 options"  (mouseover)="changeVideoIcon=true;" (mouseout)="changeVideoIcon=false">
               <img class="video-icon option-image"*ngIf="!changeVideoIcon" src="../../../assets/icons/128.png" alt="Video">
               <img class="video-icon hover option-image" *ngIf="changeVideoIcon" src="../../../assets/icons/asset-1.png" alt="">
             </div>

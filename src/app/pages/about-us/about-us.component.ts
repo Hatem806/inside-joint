@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-about-us',
@@ -12,7 +13,7 @@ export class AboutUsComponent implements OnInit {
 
   pageTitle : string = 'About Us'
   pageImageSrc = "../../../assets/about-us-photo/ezgif.com-webp-to-jpg.png" ;
-  constructor() {
+  constructor(public apiService : ApiService) {
     this.changePdfIcon=false ;
     this.changeQuestionIcon=false ;
     this.changePdfIcon=false ;
@@ -21,4 +22,10 @@ export class AboutUsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToVideoLink(videoPath){
+    window.location.href = this.apiService.getAssetsService().getVideosUrl() + videoPath ;
+  }
+  goToPdfLink(documentPath){
+    window.location.href = this.apiService.getConferenceServices().getSchedulesUrl() + documentPath ;
+  }
 }

@@ -7,6 +7,10 @@ import { AboutUsComponent } from '../app/pages/about-us/about-us.component'
 import { ConferenceComponent } from '../app/pages/conferences/conference/conference.component'
 import { QuestionsComponent } from '../app/pages/conferences/questions/questions.component'
 import { ThankYouComponent } from '../app/pages/conferences/thank-you/thank-you.component'
+import { LoginComponent } from './Pages/login/login.component';
+import {SignupComponent} from'./Pages/signup/signup.component'
+import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
+
 
 const routes: Routes = [
   { path: "products", component: ProductsComponent },
@@ -15,7 +19,13 @@ const routes: Routes = [
   { path: "conferences/:conferenceId/questions", component: QuestionsComponent},
   { path: "conferences/:conferenceId/questions/thank-you", component: ThankYouComponent},
   { path: "home", component: HomeComponent },
-  { path: "aboutus", component: AboutUsComponent }
+  { path: "aboutus", component: AboutUsComponent },
+  {path:'signup',component:SignupComponent},
+  {path:'signup-data',component:SignupDataComponent},
+  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
+  { path: '**', component: LoginComponent }
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

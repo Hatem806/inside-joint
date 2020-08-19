@@ -18,6 +18,10 @@ export class ConferenceComponent implements OnInit {
   displayedEndDate : String ;
   questions : IQuestion[]
   conference_id
+
+  changeVideoIcon : boolean = false  ;
+  changeQuestionsIcon : boolean = false;
+  changeProgramIcon : boolean = false ;
   constructor( public apiService : ApiService , private router : RouterModule,
     public datepipe : DatePipe, private route : ActivatedRoute ) { }
 
@@ -39,10 +43,16 @@ export class ConferenceComponent implements OnInit {
 
   public goToQuestions(questions): void
   {
-    console.log( window.location.href)
+
     this.apiService.getConferenceServices().questions = questions ;
 
   }
 
+  goToVideoLink(videoPath){
+    window.location.href = this.apiService.getAssetsService().getVideosUrl() + videoPath ;
+  }
+  goToPdfLink(documentPath){
+    window.location.href = this.apiService.getConferenceServices().getSchedulesUrl() + documentPath ;
+  }
 
 }
