@@ -2,8 +2,8 @@ html,body {
   margin: 0 !important;
   padding: 0 !important;
   width: 100% !important;
-  min-width: 320px !important ;
-  height: 100vh !important;
+  /* min-width: 320px !important ; */
+  height: 90vh !important;
   }
 .icons{
   width:2.5vw;

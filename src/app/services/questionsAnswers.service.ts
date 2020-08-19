@@ -16,7 +16,8 @@ export class questionsAnswersService
    }
 
   public addSubmission(eventId : string, submission: IAnswer[]){
-      return this.http.patch<IAnswer>(`${environment.baseUrl}/${this._endPoint}/${eventId}`, submission);
+      const params = new HttpParams().set('id', eventId )
+      return this.http.patch<IAnswer>(`${environment.baseUrl}/${this._endPoint}/${eventId}`, submission, {params});
  }
 
 

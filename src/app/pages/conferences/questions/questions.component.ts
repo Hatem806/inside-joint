@@ -29,6 +29,7 @@ export class QuestionsComponent implements OnInit {
   }
   submitResults(){
     console.log(this.apiService.getQuestionsAnswersService().answers)
+    console.log(this.conferenceId)
     this.apiService.
       getQuestionsAnswersService().
           addSubmission(this.conferenceId,this.apiService.getQuestionsAnswersService().answers).subscribe( data =>{
