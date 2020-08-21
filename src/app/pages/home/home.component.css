@@ -19,7 +19,7 @@
 }
 .title{
   color:  #005086 ;
-  font-size: 8vh;
+  font-size: 10vh;
 }
 .title-container{
   padding-top: 15vh
@@ -27,7 +27,8 @@
 .description{
   font-family: montserrant;
   font-size: 2.2vh;
-  /* max-width: 200px; */
+  color:#6B6C6F ;
+  max-width: 30vw;
 }
 /* .left-column{
   margin-left: ;

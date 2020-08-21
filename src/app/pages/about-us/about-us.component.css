@@ -12,7 +12,7 @@
 }
 .description{
   font-family:montserrant ;
-  font-size: 3vh ;
+  font-size: 2vh ;
   text-align: left;
   color:#6B6C6F ;
 }
@@ -40,7 +40,7 @@
 .details-section{
   float: right;
   padding-bottom: 2vh;
-  padding-left:5vw
+  padding-left:10vw
 }
 /* .bottom-part{
   margin-left: 200px;
@@ -59,14 +59,14 @@
 }
 .option-image{
   padding-top: 6vh;
-  padding-left: 3.5vw;
+  padding-left: 2.5vw;
   display: block;
   margin: auto;
   height: 80%;
   width: auto ;
 }
 .options{
-  height:25vh ;
+  height:23vh ;
   padding-bottom: 3vh;
   width:fit-content !important
 }
