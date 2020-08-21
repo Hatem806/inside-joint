@@ -44,7 +44,7 @@
   height: auto !important;
 }
 .conferences-container{
-  min-height: 100vh;
+  height: 40vh;
   margin-left: 10vw;
 }
 .conference-image{

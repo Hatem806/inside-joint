@@ -5,20 +5,22 @@
 }
 .thank-you-container{
   margin-left: 12vw ;
-  padding-left: 30vw;
+  padding-left: 33vw;
   padding-right: 30vw;
   background-color: white;
+  padding-bottom: 13vh;
 }
 .thank-you-image{
-  padding-top:3vh
+  padding-top:3vh ;
+  transform: scale(0.8,0.8)
 }
 .thank-you{
   font-family: montserrant-extra-bold;
-  font-size: 15vh;
+  font-size: 10vh;
   color:  #005086 ;
   display: block;
   margin:auto ;
-  margin-left : -10vw !important ;
+  margin-left : -5vw !important ;
 }
 .description{
   font-family: montserrant;

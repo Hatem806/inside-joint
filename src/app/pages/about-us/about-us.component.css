@@ -43,7 +43,7 @@
   padding-left:10vw
 }
 /* .bottom-part{
-  margin-left: 200px;
+  height:40vh
 } */
 .widgets-row{
   width: 100%;
@@ -54,9 +54,9 @@
 .options:hover{
   background-color:  #005086;
 }
-.no-gutters{
+/* .no-gutters{
   min-height: 100vh;
-}
+} */
 .option-image{
   padding-top: 6vh;
   padding-left: 2.5vw;

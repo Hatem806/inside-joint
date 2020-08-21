@@ -5,6 +5,7 @@
 }
 .my-container{
   padding-left: 15vw ;
+  max-height: fit-content;
 }
 .welcome{
   font-family:montserrant-bold ;

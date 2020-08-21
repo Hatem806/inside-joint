@@ -37,7 +37,7 @@
   padding-right:1vw ;
 }
 .products-container{
-  min-height: 100vh;
+  /* min-height: 100vh; */
   margin-left: 12vw;
 }
 .product-image{
