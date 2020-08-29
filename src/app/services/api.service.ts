@@ -5,6 +5,7 @@ import { AssetsService } from './assets.service';
 import { questionsAnswersService } from './questionsAnswers.service';
 import { UsersService } from './users.service';
 import { AuthenticationService } from './authentication.service';
+import { JointService } from './joints.service';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ import { AuthenticationService } from './authentication.service';
 export class ApiService {
   constructor(private productService : ProductsService, private conferenceService : ConferencesService,
     private assetsService : AssetsService, private questionsAnswersService : questionsAnswersService,
-    private authenticationService: AuthenticationService,private usersService: UsersService) {}
+    private authenticationService: AuthenticationService,private usersService: UsersService, private jointService : JointService) {}
 
   public getProductsService(): ProductsService
   {
@@ -44,4 +45,8 @@ export class ApiService {
     return this.authenticationService;
   }
 
+  public getJointService(): JointService
+  {
+    return this.jointService ;
+  }
 }

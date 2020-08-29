@@ -1,0 +1,17 @@
+
+:host-context(#sidebar-wrapper) {
+  background: #F2F2F2 ;
+  }
+.company-name{
+   color: #005086 ;
+   background-color: #005086 ;
+}
+.no-gutters{
+  background-color: #005086 ;
+  padding-left: 13vh;
+  height:100%
+}
+.container{
+  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+  background-color: #FFFFFF;
+}

@@ -10,6 +10,7 @@ import { ThankYouComponent } from '../app/pages/conferences/thank-you/thank-you.
 import { LoginComponent } from './Pages/login/login.component';
 import {SignupComponent} from'./Pages/signup/signup.component'
 import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
+import { JointPageComponent } from './components/joint-page/joint-page.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,8 @@ const routes: Routes = [
   { path: "conferences/:conferenceId/questions/thank-you", component: ThankYouComponent},
   { path: "home", component: HomeComponent },
   { path: "aboutus", component: AboutUsComponent },
+  {path: "joint/:jointName", component: JointPageComponent},
+  {path: "joint", component: JointPageComponent},
   {path:'signup',component:SignupComponent},
   {path:'signup-data',component:SignupDataComponent},
   { path: 'login', component: LoginComponent },

@@ -16,44 +16,44 @@
   <div class="no-gutters" id="wrapper">
 
     <!-- Sidebar -->
-    <div  class="no-gutters no-padding border-right sidebar flex-fill flex-column sidebar-wrapper" id="sidebar-wrapper" >
+    <div [style.background]="sidebarColor"class="no-gutters no-padding border-right sidebar flex-fill flex-column sidebar-wrapper" id="sidebar-wrapper" >
 
       <div class="list-group list-group-flush bg-info " >
-        <div class="company-name sidebar-heading">
+        <div [style.background]="companyNameBackground"[style.color]="companyNameColor" class="company-name sidebar-heading">
           InsideJoints
         </div>
-        <a routerLink="home" class="list-group-item ">
+        <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
           <img  *ngIf="!(currentRoute=='Home')"class="icons" src="../assets/mainNav/135.png" alt="Home">
           <img  *ngIf="(currentRoute=='Home')"class="icons" src="../assets/mainNav/Active/135.png" alt="Home">
         </a>
-        <a routerLink="aboutus" class="list-group-item ">
+        <a  [style.background]="listItemBackground" routerLink="aboutus" class="list-group-item ">
           <img  *ngIf="!(currentRoute=='About Us')"class="icons"src="../assets/mainNav/information.png" alt="About Us">
           <img  *ngIf="(currentRoute=='About Us')"class="icons"src="../assets/mainNav/Active/information.png" alt="About Us">
         </a>
-          <a routerLink="products" routerLinkActive="active" class="list-group-item">
+          <a  [style.background]="listItemBackground" routerLink="products" routerLinkActive="active" class="list-group-item">
           <img *ngIf="!(currentRoute=='Products')" class="icons" src="../assets/mainNav/Group 1658.png" alt="Products">
           <img *ngIf="currentRoute=='Products'" class="icons" src="../assets/mainNav/Active/Group 1658.png" alt="Products">
         </a>
-        <a routerLink="conferences" class="list-group-item">
+        <a  [style.background]="listItemBackground" routerLink="conferences" class="list-group-item">
           <img  *ngIf="!(currentRoute=='Conferences')"class="icons" src="../assets/mainNav/22.png" alt="Conferences">
           <img  *ngIf="(currentRoute=='Conferences')"class="icons" src="../assets/mainNav/Active/22.png" alt="Conferences">
         </a>
-        <a  role="button"(click)="logout()" class="list-group-item">
+        <a  [style.background]="listItemBackground"role="button"(click)="logout()" class="list-group-item">
           <img class="icons logout" src="../assets/mainNav/logout.png" alt="logout">
         </a>
 
       </div>
     </div>
+    <div   *ngIf="ApiService.getAuthenticationService().isAuthenticated();">
+
+    </div>
 
     <!-- Page Content -->
-    <div  *ngIf="ApiService.getAuthenticationService().isAuthenticated();" class="myclass"id="page-content-wrapper no-gutters">
+    <div class="myclass"id="page-content-wrapper no-gutters">
 
       <router-outlet></router-outlet>
     </div>
-     <!-- Page Content -->
-     <div  *ngIf="!ApiService.getAuthenticationService().isAuthenticated();" class="myclass"id="page-content-wrapper no-gutters">
-       <app-login></app-login>
-    </div>
+
     <!-- /#page-content-wrapper -->
 
   </div>

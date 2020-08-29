@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-joint-page',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./joint-page.component.css']
 })
 export class JointPageComponent implements OnInit {
+  @Input() jointName : string  ;
+  @Input() jointImageSrc: string ;
+  constructor(private route : ActivatedRoute ,private apiService : ApiService ) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit( ): void {
+    this.jointName = this.apiService.getJointService().jointName ;
+    this.jointImageSrc = this.apiService.getJointService().jointImageSrc ;
   }
+
+
 
 }
