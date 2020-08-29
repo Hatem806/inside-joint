@@ -40,6 +40,9 @@ export class AppComponent {
   }
   logout(){
     this.ApiService.getAuthenticationService().logout();
-    this.router.navigateByUrl('');
+    this.router.navigateByUrl('login');
+  }
+  goToLogin(){
+    this.router.navigateByUrl('login');
   }
 }

@@ -38,21 +38,21 @@
           <img  *ngIf="!(currentRoute=='Conferences')"class="icons" src="../assets/mainNav/22.png" alt="Conferences">
           <img  *ngIf="(currentRoute=='Conferences')"class="icons" src="../assets/mainNav/Active/22.png" alt="Conferences">
         </a>
-        <a  (click)="logout()" class="list-group-item">
-          <img class="icons logout" src="../assets/mainNav/logout.png" alt="Conferences">
+        <a  role="button"(click)="logout()" class="list-group-item">
+          <img class="icons logout" src="../assets/mainNav/logout.png" alt="logout">
         </a>
 
       </div>
     </div>
 
     <!-- Page Content -->
-    <div class="myclass"id="page-content-wrapper no-gutters">
+    <div  *ngIf="ApiService.getAuthenticationService().isAuthenticated();" class="myclass"id="page-content-wrapper no-gutters">
 
       <router-outlet></router-outlet>
-
-
-
-
+    </div>
+     <!-- Page Content -->
+     <div  *ngIf="!ApiService.getAuthenticationService().isAuthenticated();" class="myclass"id="page-content-wrapper no-gutters">
+       <app-login></app-login>
     </div>
     <!-- /#page-content-wrapper -->
 

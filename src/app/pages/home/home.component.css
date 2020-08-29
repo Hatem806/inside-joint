@@ -5,7 +5,6 @@
 }
 .my-container{
   padding-left: 15vw ;
-  max-height: fit-content;
 }
 .welcome{
   font-family:montserrant-bold ;
@@ -23,13 +22,81 @@
   font-size: 10vh;
 }
 .title-container{
-  padding-top: 15vh
+  padding-top: 15vh;
+}
+.col-md-6{
+  height: min-content;
 }
 .description{
   font-family: montserrant;
   font-size: 2.2vh;
   color:#6B6C6F ;
   max-width: 30vw;
+}
+.knee{
+  position: absolute;
+  left: 37%;
+  top:66% ;
+}
+.desc{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: -150% ;
+  top:10% ;
+  color:#005086 ;
+  transition: opacity .2s, visibility .2s;
+}
+.shoulder-desc{
+  left: 150% ;
+}
+.hip-desc{
+  left: 150% ;
+}
+.ankle-desc{
+  left:150%
+}
+.dot-container:hover .desc{
+  visibility: visible;
+  opacity: 1;
+  font-family: montserrant-medium-italic;
+  font-size:5vh
+}
+.hand{
+  position: absolute;
+  left: 23%;
+  top:49% ;
+}
+.elbow{
+  position: absolute;
+  left: 26%;
+  top:35.5% ;
+}
+
+.ankle{
+  position: absolute;
+  bottom:10% ;
+  right:37%
+}
+.foot{
+  position: absolute;
+  bottom:8% ;
+  left:38%
+}
+.neck{
+  position: absolute;
+  top:18% ;
+  left:44.5%
+}
+.shoulder{
+  position: absolute;
+  top:21% ;
+  right:28.5%
+}
+.hip{
+  position: absolute;
+  top:45% ;
+  right:35%
 }
 /* .left-column{
   margin-left: ;

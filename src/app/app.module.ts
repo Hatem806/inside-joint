@@ -17,7 +17,8 @@ import { ThankYouComponent } from './pages/conferences/thank-you/thank-you.compo
 import { LoginComponent } from './Pages/login/login.component';
 import {SignupComponent} from'./Pages/signup/signup.component'
 import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
-import {Data} from './models/Data'
+import {Data} from './models/Data';
+import { JointPageComponent } from './components/joint-page/joint-page.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {Data} from './models/Data'
     ThankYouComponent,
     SignupComponent,
     SignupDataComponent,
-    LoginComponent
+    LoginComponent,
+    JointPageComponent
   ],
   imports: [
     BrowserModule,
