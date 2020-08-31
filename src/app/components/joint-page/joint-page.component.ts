@@ -15,6 +15,7 @@ export class JointPageComponent implements OnInit {
   ngOnInit( ): void {
     this.jointName = this.apiService.getJointService().jointName ;
     this.jointImageSrc = this.apiService.getJointService().jointImageSrc ;
+    console.log(this.jointName)
   }
 
 

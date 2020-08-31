@@ -48,6 +48,7 @@ export class AppComponent {
             this.sidebarColor = "#005086"
             this.companyNameBackground = "#005086"
             this.listItemBackground = "#005086"
+            this.companyNameColor = "#F2F2F2"
           }
           this.currentRoute = this.routesMap[this.router.url];
 

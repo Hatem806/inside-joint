@@ -1,17 +1,85 @@
-
-:host-context(#sidebar-wrapper) {
-  background: #F2F2F2 ;
-  }
-.company-name{
-   color: #005086 ;
-   background-color: #005086 ;
+.joint-name{
+  padding-left: 16vw;
+  font-family: montserrant-bold;
+  color: white ;
+  font-size:4vh ;
+  padding-top:3vh ;
+}
+.joint-container{
+  background-color: #FFFFFF;
+  height: 45vh ;
+  width: 23vw ;
+  border-radius: 2vw;
+}
+.joint-image{
+  display: block;
+  margin:auto!important ;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  transform: translateY(40%);
 }
 .no-gutters{
-  background-color: #005086 ;
-  padding-left: 13vh;
-  height:100%
+  background:  #005086!important;
+  height:100vh
 }
-.container{
-  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+.content-container{
+  margin-left:14vw ;
+  margin-top: 27vh ;
+
+}
+.my-container{
+  margin-top: 10vh ;
+  clip-path: circle();
   background-color: #FFFFFF;
+  padding: 4vw;
+  margin-left:-0.5vw ;
+}
+.horizontal-divider{
+  /* padding-top:13vh ; */
+  margin-top:21vh ;
+  background-color: #FFFFFF;
+  height:3vh ;
+
+}
+.col-md-1{
+  padding: 0px!important;
+  margin: 0px!important;
+  width:fit-content !important
+}
+.col-md-4{
+  padding: 0px!important;
+  margin: 0px!important;
+}
+.my-image{
+  display: block;
+  justify-content: center;
+  align-content: center;
+  margin-left: -1.5vw ;
+}
+.option-desc{
+  padding-left: 1.5vw;
+  font-family: montserrant;
+  color: white ;
+  font-size:3vh ;
+  margin-top:-1vh ;
+  opacity:1!important;
+  visibility: visible;
+}
+.manuals{
+  margin-top:3vh ;
+  margin-right:2vw ;
+}
+.ellipse{
+  clip-path: ellipse(43% 3% at 50% 50%);
+  opacity: 48% !important;
+  visibility: visible !important;
+}
+.joint-name-2{
+  font-family: montserrant-bold;
+  color:  #005086;
+  font-size:4vh ;
+  display:block ;
+  margin-top:15vh ;
+  margin-left:9vw ;
 }
