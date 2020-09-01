@@ -111,3 +111,15 @@
 body{
   background-color: #FAFAFA;
 }
+.ellipse{
+  color: #ACACAC ;
+  background: #ACACAC;
+  opacity:48% ;
+  border-radius: 50% ;
+  height:1vh ;
+  max-width:9vw!important ;
+  display: block;
+  margin: auto;
+  position: absolute;
+  left:2vw ;
+}

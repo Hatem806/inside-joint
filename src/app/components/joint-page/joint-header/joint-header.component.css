@@ -1,0 +1,47 @@
+.joint-name{
+  font-family: montserrant-bold;
+  color: white ;
+  font-size:4vh ;
+  padding-top:3vh ;
+  padding-left: 6vw ;
+}
+.my-header{
+  padding-left:10vw ;
+  padding-top:3vh ;
+}
+.menu-options{
+  background: #FFFFFF ;
+  width:90% ;
+  border-radius: 3vw;
+  height:7.5vh ;
+  margin-top:2vh ;
+}
+.no-gutters{
+  background:  #005086!important;
+}
+
+.menu-icons{
+  transform: scale(0.5,0.5);
+  display:block ;
+  margin: auto;
+}
+
+.my-desc{
+  padding-top:2.5vh ;
+  padding-left:2vw;
+  color: #6B6C6F ;
+  font-size:2vh ;
+  font-family:montserrant-bold;
+  visibility: true;
+}
+.desc-active{
+  padding-top:2.5vh ;
+  padding-left:2vw;
+  color: #005086 ;
+  font-size:2vh ;
+  font-family:montserrant-bold;
+  visibility: true;
+}
+.ev{
+  padding-left: 0.75vw!important ;
+}

@@ -75,6 +75,9 @@ export class AssetsService {
   {
     return this.http.get<IAssetResponse>(`${environment.baseUrl}/${AssetsService._endPoint}/${id}`);
   }
+  public getByPartAndType(part : string, type : string) :Observable<any> {
+    return this.http.get(`${environment.baseUrl}/${AssetsService._endPoint}/part/${part}/type/${type}`);
+  }
 
 }
 

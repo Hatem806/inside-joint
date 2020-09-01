@@ -19,5 +19,10 @@ export class JointPageComponent implements OnInit {
   }
 
 
+  goToJoint(jointName: string, jointImgSource : string){
+    this.apiService.getJointService().jointName = jointName  ;
+    this.apiService.getJointService().jointImageSrc = jointImgSource  ;
+  }
+
 
 }

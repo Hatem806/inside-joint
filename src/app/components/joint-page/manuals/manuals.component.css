@@ -1,0 +1,57 @@
+.no-gutters{
+  background:  #005086!important;
+  height:100vh
+}
+.my-container{
+ background: #FFFFFF ;
+ margin-top: 10vh ;
+ margin-right: 5vw ;
+ height:77% ;
+ border-radius: 4% ;
+ margin-left: 15vw ;
+ padding-left: 0vw!important ;
+}
+.title{
+  height: 20vh ;
+  color: #005086 ;
+  font-family:montserrant-bold ;
+  font-size: 6vh ;
+  padding-left: 6vw ;
+  padding-top:8vh ;
+}
+.joint-image{
+
+  flex-wrap: wrap;
+  transform: translateY(90%);
+}
+.description{
+  font-family:montserrant ;
+  font-size: 3vh ;
+  padding-left: 3vw ;
+  padding-top:4vh ;
+  color: #6B6C6F ;
+  min-width: 100% !important; ;
+  margin: 0px!important;
+}
+.ellipse{
+  color: #ACACAC ;
+  background: #ACACAC;
+  opacity:48% ;
+  border-radius: 50% ;
+  height:1vh ;
+  max-width:9vw!important ;
+  display: block;
+  margin: auto;
+  position: absolute;
+  left:2vw ;
+}
+.joint-image-container{
+  padding-bottom:20vh ;
+}
+.joint-image-name{
+  font-family: montserrant-bold;
+  font-size: 4vh ;
+  color:  #005086 ;
+  padding-top: 5vh ;
+  padding-left: 4vw ;
+}
