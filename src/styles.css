@@ -123,3 +123,50 @@ body{
   position: absolute;
   left:2vw ;
 }
+.joint-white-container{
+    background: #FFFFFF ;
+    margin-top: 10vh ;
+    margin-right: 5vw ;
+    height:77% ;
+    border-radius: 4% ;
+    margin-left: 15vw ;
+    padding-left: 0vw!important ;
+
+}
+.elements-row{
+  height:12.7vh ;
+  margin-top: 7.5vh ;
+  padding-top:7.5vh ;
+  padding-left: 2.8vw ;
+  padding-right: 2.8vw ;
+}
+.element-thumbnail{
+  height: 12.7vh;
+  width: 8vw ;
+  display: block;
+  margin: auto;
+}
+.element-title{
+  font-family: montserrant-bold;
+  font-size:2.5vh ;
+  color: #005086 ;
+  text-align: left;
+  justify-content: left;
+  line-height: 3vh ;;
+  padding-left:1vw ;
+  padding-bottom:1vh;
+  padding-top:0.5vh;
+}
+.element-description{
+  font-family: montserrant;
+  font-size:1.6vh ;
+  color: #6B6C6F;
+  padding: 0px!important;
+}
+.element-number{
+  font-family: montserrant-bold;
+  font-size:2vh ;
+  color: #6B6C6F;
+  transform: translateY(40%);
+  height:12.7vh ;
+}

@@ -37,7 +37,7 @@ export class AssetsService {
 
   public getThumbnailsUrl(): string
   {
-    return AssetsService._videosUrl;
+    return AssetsService._thumbnailsUrl;
   }
 
   public getDocumentsUrl(): string

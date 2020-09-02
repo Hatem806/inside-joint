@@ -12,6 +12,8 @@ import {SignupComponent} from'./Pages/signup/signup.component'
 import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
 import { JointPageComponent } from './components/joint-page/joint-page.component';
 import { ManualsComponent } from './components/joint-page/manuals/manuals.component';
+import { VideosComponent } from './components/joint-page/videos/videos.component';
+import { EvidencesComponent } from './components/joint-page/evidences/evidences.component';
 
 
 const routes: Routes = [
@@ -22,7 +24,9 @@ const routes: Routes = [
   { path: "conferences/:conferenceId/questions/thank-you", component: ThankYouComponent},
   { path: "home", component: HomeComponent },
   { path: "aboutus", component: AboutUsComponent },
-  {path: "joint/:part/manuals", component: ManualsComponent},
+  {path: "joint/manuals", component: ManualsComponent},
+  {path: "joint/videos", component: VideosComponent},
+  {path: "joint/evidences", component: EvidencesComponent},
   {path: "joint/:part", component: JointPageComponent},
   {path: "joint", component: JointPageComponent},
   {path:'signup',component:SignupComponent},

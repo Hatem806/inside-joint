@@ -2,15 +2,7 @@
   background:  #005086!important;
   height:100vh
 }
-.my-container{
- background: #FFFFFF ;
- margin-top: 10vh ;
- margin-right: 5vw ;
- height:77% ;
- border-radius: 4% ;
- margin-left: 15vw ;
- padding-left: 0vw!important ;
-}
+
 .title{
   height: 20vh ;
   color: #005086 ;
@@ -53,5 +45,5 @@
   font-size: 4vh ;
   color:  #005086 ;
   padding-top: 5vh ;
-  padding-left: 4vw ;
+  padding-left: 3vw ;
 }

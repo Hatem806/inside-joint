@@ -13,7 +13,9 @@ export class JointPageComponent implements OnInit {
   constructor(private route : ActivatedRoute ,private apiService : ApiService ) { }
 
   ngOnInit( ): void {
-    this.jointName = this.apiService.getJointService().jointName ;
+    this.route.queryParams.subscribe(data => {
+     this.jointName = data.bodyPart
+    })
     this.jointImageSrc = this.apiService.getJointService().jointImageSrc ;
     console.log(this.jointName)
   }

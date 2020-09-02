@@ -10,13 +10,14 @@ import { ApiService } from 'src/app/services/api.service';
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
-
+  bodyPart : string ;
   constructor(public apiService : ApiService) { }
 
   ngOnInit(): void {
   }
 
   goToJoint(jointName: string, jointImgSource : string){
+    this.bodyPart = jointName ;
     this.apiService.getJointService().jointName = jointName  ;
     this.apiService.getJointService().jointImageSrc = jointImgSource  ;
   }
