@@ -58,8 +58,9 @@ export class LoginComponent implements OnInit, OnDestroy
     }
 else{
     this.ApiService.getAuthenticationService().login(this.email, this.password).subscribe(data => {
-    console.log(data)
 
+      console.log(data)
+      this.ApiService.getAuthenticationService().setUserId(data.user._id) ;
       if(data.success == true)
       {
 

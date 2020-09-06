@@ -9,8 +9,7 @@ import { environment } from '../../environments/environment.prod';
 })
 export class JointService {
   private static _endPoint: string = "v1/joints";
-  public jointName : string  ;
-  public jointImageSrc : string ;
+  public jointsImagePath = '../../../assets/joints/' ;
 
   constructor(private http: HttpClient) { }
 

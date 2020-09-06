@@ -11,6 +11,7 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class QuestionsComponent implements OnInit {
   pageTitle = "Conferences"
+  pageImageSrc = "../../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png"
   questions : IQuestion[] ;
 
   conferenceId : string  ;

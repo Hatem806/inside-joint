@@ -21,8 +21,8 @@
          <div class="col-md-3"  style="padding-left: 2vw;">
           <div class="row">
             <div class="col-md-4" >
-             <img *ngIf="router.url.substring(7,13)!='videos'"class="menu-icons" src="../../../../assets/secondaryNav/Active/85.png" alt="">
-             <img *ngIf="router.url.substring(7,13)=='videos'"class="menu-icons" src="../../../../assets/secondaryNav/85.png" alt="">
+             <img *ngIf="router.url.substring(7,13)=='videos'"class="menu-icons" src="../../../../assets/secondaryNav/Active/85.png" alt="">
+             <img *ngIf="router.url.substring(7,13)!='videos'"class="menu-icons" src="../../../../assets/secondaryNav/85.png" alt="">
             </div>
             <div class="col-md-8"  [ngClass]="router.url.substring(7,13)=='videos' ? 'desc-active' : 'my-desc'">
              Videos

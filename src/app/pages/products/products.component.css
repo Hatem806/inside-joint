@@ -4,18 +4,22 @@
  color :  #005086 ;
  font-size: 8vh;
  text-align: left;
- margin-left: 150px ;
+ margin-left: 13vw ;
+ padding-left: 2vw ;
+ /* padding-bottom: 13.5vh ; */
+ padding-top:1vh ;
 }
 .pdf-icon{
-  transform: scale(0.6,0.6);
+  transform: scale(0.5,0.5);
 
 }
 .video-icon{
-  transform: scale(0.7,0.7);
+  transform: scale(0.6,0.6);
 }
 .web-icon{
-  transform: scale(0.8,0.8);
+  transform: scale(0.67,0.67);
 }
+
 .product-icon{
   height: 7vh !important ;
   width: auto !important;
@@ -30,44 +34,34 @@
 .product-icons{
   flex-shrink: 0;
   width: 100%;
-  height: 100% ;
   text-align: center;
-  margin: 0px 0px 0px 0px !important;
-  padding-bottom: 1vh !important;
+  padding-left: 5%  ;
+  margin-top:2vh ;
   padding-right:1vw ;
 }
 .products-container{
   /* min-height: 100vh; */
   margin-left: 12vw;
+  height:40vh ;
 }
-.product-image{
-  transform: scale(0.75,0.75);
-  flex-shrink: 0;
-    width: 100%;
-    height: 100% ;
-    padding: 0px 0px 0px 0px !important;
-    margin: 0px 0px 0px 0px  !important;
 
-}
-.product-image-cont{
-  justify-content: center;
-  align-items: center;
-  overflow: hidden ;
-  width: min-content ;
-  padding: 0px 0px 0px 0px !important;
-  margin: 0px 0px 0px 0px  !important;
-  max-height: 30vh;
-}
 .my-product{
   margin-right:3vw
 
 }
+
 .arrow-right{
   padding-right: 0px !important;
   padding-left: 0px !important ;
 }
 .col-md-2{
   padding: 0px 0px 0px 0px !important ;
+}
+.ellipse{
+  margin-top:1vh ;
+  margin-left:10%;
+  width: 50% ;
+  height: 2.5% ;
 }
 /* .row::after {
   display: flex;

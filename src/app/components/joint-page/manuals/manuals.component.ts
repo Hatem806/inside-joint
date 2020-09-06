@@ -16,9 +16,9 @@ export class ManualsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(data => {
-      this.jointName = data.bodyPart
+      this.jointName = data.bodyPart ;
+      this.jointImageSrc = this.apiService.getJointService().jointsImagePath + data.imgSrc ;
      })
-    this.jointImageSrc = this.apiService.getJointService().jointImageSrc ;
 
     this.apiService.getAssetsService().getByPartAndType(this.jointName.toLowerCase(),'manual').subscribe( data => {
       console.log(data.assets[0])

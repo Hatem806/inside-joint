@@ -55,7 +55,7 @@
   display: block;
   justify-content: center;
   align-content: center;
-  margin-left: -1.5vw ;
+  margin-left: -1vw ;
 }
 .option-desc{
   padding-left: 1.5vw;
@@ -81,5 +81,5 @@
   font-size:4vh ;
   display:block ;
   margin-top:15vh ;
-  margin-left:9vw ;
+  margin-left:7.5vw ;
 }

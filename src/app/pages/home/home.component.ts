@@ -16,10 +16,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  goToJoint(jointName: string, jointImgSource : string){
-    this.bodyPart = jointName ;
-    this.apiService.getJointService().jointName = jointName  ;
-    this.apiService.getJointService().jointImageSrc = jointImgSource  ;
-  }
+
 
 }

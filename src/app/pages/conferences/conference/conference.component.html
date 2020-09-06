@@ -39,6 +39,10 @@
               <div (click)="goToPdfLink( chosenConference.schedulePath )" role="button" (mouseover)="changeProgramIcon=true;" (mouseout)="changeProgramIcon=false"class="col-md-3 offset-1 options no-gutters" >
                 <img *ngIf="!changeProgramIcon"class="option-image" src="../../../assets/icons/37.png" alt="Download pdf">
                 <img *ngIf="changeProgramIcon"class="option-image" src="../../../assets/icons/asset-3.png" alt="Download pdf">
+                <div class="row">
+                  <div class="col ellipse">
+                  </div>
+                </div>
                 <div class="row option-details">
                   Program
                 </div>
@@ -46,6 +50,10 @@
               <div (click)="goToVideoLink( chosenConference.videoPath )" role="button" (mouseover)="changeVideoIcon=true;" (mouseout)="changeVideoIcon=false" class="col-md-3 offset-1 options" >
                 <img *ngIf="!changeVideoIcon"class="option-image"src="../../../assets/icons/128.png" alt="">
                 <img *ngIf="changeVideoIcon"class="option-image"src="../../../../assets/icons/asset-1.png" alt="">
+                <div class="row">
+                  <div class="col ellipse">
+                  </div>
+                </div>
                 <div class="row option-details">
                   Video
                 </div>
@@ -53,6 +61,10 @@
               <div  role="button" (mouseover)="changeQuestionsIcon=true;" (mouseout)="changeQuestionsIcon=false"(click)="goToQuestions( chosenConference.questions )" routerLink="questions"class="col-md-3 offset-1 options questions-image" >
                 <img  *ngIf="!changeQuestionsIcon"class="option-image " src="../../../assets/icons/87.png" alt="">
                 <img *ngIf="changeQuestionsIcon"class="option-image " style="padding-bottom:0px!important; transform: scale(0.7,0.7);" src="../../../assets/icons/asset-2.png" alt="">
+                <div class="row">
+                  <div class="col ellipse">
+                  </div>
+                </div>
                 <div class="row option-details">
                   Questions
                 </div>

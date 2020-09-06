@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div *ngIf="router.url!='/home'" class="row">
       <div class="col">
           <img class="w-100 image" style="background-size: cover;" src="{{ pageImageSource }}" alt="">
       </div>

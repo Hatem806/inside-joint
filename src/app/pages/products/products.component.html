@@ -10,16 +10,22 @@
         <div class="col-md-12">
           <div class="products">
              <div class="row">
-              <div role="button" class="col md-1">
+              <div role="button" class="col md-2">
                 <img (click)="onLeftArrow()"class="arrow-left" src="../../../assets/arrows/Path 1809.png" alt="">
               </div>
-              <div class="col-md-2 no-gutters my-product options " *ngFor="let product of products; let indexOfElement = index"
+              <div class="col-md-2  " *ngFor="let product of products; let indexOfElement = index"
               (mouseover)="videoIconBooleanArray[indexOfElement]=true" (mouseout)="videoIconBooleanArray[indexOfElement]=false"
               (mouseover)="pdfIconBooleanArray[indexOfElement]=true" (mouseout)="pdfIconBooleanArray[indexOfElement]=false"
               >
+              <div class="options">
               <div class="row">
-                <div  role="button" class="col product-image-cont ">
-                  <img class="product-image" src="{{apiService.getProductsService().getImagesUrl() + product.imagePath}}" alt="">
+                <div  role="button" class="col  ">
+                  <img class="option-image" src="{{apiService.getProductsService().getImagesUrl() + product.imagePath}}" alt="">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col ellipse">
+
                 </div>
               </div>
                 <div class="row product-icons">
@@ -32,11 +38,12 @@
                     </div>
                     <div   data-toggle="Go To Document" data-placement="top" title="Go To Document" role="button"  (click)="goToPdfLink( product.documentPath  )"class="col-4">
                       <img *ngIf="!pdfIconBooleanArray[indexOfElement]"class="product-icon pdf-icon" src="../../../assets/icons/pdf.png" alt="">
-                      <img *ngIf="pdfIconBooleanArray[indexOfElement]"class="product-icon video-icon"src="../../../assets/icons/pdf-1.png" alt="Video">
+                      <img *ngIf="pdfIconBooleanArray[indexOfElement]"class="product-icon pdf-icon"src="../../../assets/icons/pdf-1.png" alt="Video">
                     </div>
                   </div>
+                </div>
              </div>
-             <div role="button" class="col md-1">
+             <div role="button" class="col md-2">
               <img (click)="onRightArrow()"class="arrow-right" src="../../../assets/arrows/Path 1677.png" alt="">
             </div>
              </div>

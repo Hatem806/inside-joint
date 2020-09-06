@@ -68,10 +68,9 @@
   padding-right: 0px !important;
   padding-left: 0vw !important ;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -81,26 +80,30 @@
   /* padding-right: 15px ;
   padding-left: 15px; */
   border-radius: 10px;
-  border-right: 1px solid #00000029;
-  border-left: 1px solid #00000029;
-  border-bottom: 1px solid #00000029 ;
-  border-top: 0px ;
-  box-shadow: 4px 4px 4px 4px #00000029 ;
+  border-width: 1px 1px ;
+  box-shadow: 0px 1px 20px 1px #ACACAC;
+  border-top: 0px !important;
+  border-bottom:0px !important ;
   margin: auto;
+  width:12vw ;
+  height:26.6vh ;
+  padding: 0px !important;
   /* width: min-content !important; */
 }
 .option-details{
   font-family: montserrant-bold;
   color: #005086 ;
   font-size: 12pt;
-  padding-top: 20px ;
   display: block;
   margin:auto ;
   padding-left: 10px ;
 }
 .option-image{
   display: block;
-  margin: 0px 0px 0px 0px !important ;
+  margin: auto;
+  margin-top: 15% ;
+  max-width: 10.5vw ;
+  max-height: 14vh
 
 }
 .image{

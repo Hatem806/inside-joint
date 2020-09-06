@@ -35,24 +35,17 @@
   font-size: 3vh;
   padding-bottom: 4vh;
 }
-.options{
-  padding-right: 15px ;
-  padding-left: 15px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  border-radius: 10px;
-  border-right: 3px solid #00000029;
-  border-left: 3px solid #00000029;
-  border-bottom: 3px solid #00000029 ;
-  border-top: 0px ;
-  box-shadow: 3px 3px 2px #00000029 ;
-  margin: auto;
+.option-details{
+  padding-top: 20% ;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
 }
-
-.option-image{
-  display: block;
-  margin:auto ;
-  padding-left: 2vw ;
+.ellipse{
+  margin-top: 10% ;
+  margin-left:7.5% ;
+  width: 50% !important ;
+  height:2.5% !important ;
 }
 .options:hover .option-details{
   background-color:  #005086;

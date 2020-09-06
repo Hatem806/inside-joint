@@ -15,6 +15,7 @@
   font-size: 2vh ;
   text-align: left;
   color:#6B6C6F ;
+  padding-top: 1vw ;
 }
 .title-description{
 
@@ -23,14 +24,16 @@
 }
 .my-container{
   margin-left: 12vw !important ;
+  padding-left: 3vw !important ;
+  padding-top:2vw ;
 }
 .details{
   font-family:montserrant-bold ;
   font-size: 4vh ;
   text-align: left;
   color: #6B6C6F;
-  padding-bottom: 5vh;
-  padding-top: 3vh;
+  padding-bottom: 6vh;
+  padding-top: 4vh;
   padding-left: 4vw;
 }
 .wrapper{
@@ -58,15 +61,7 @@
   min-height: 100vh;
 } */
 .option-image{
-  padding-top: 6vh;
-  padding-left: 2.5vw;
-  display: block;
-  margin: auto;
-  height: 80%;
-  width: auto ;
+  padding-top: 5vh;
+  /* padding-left: vw; */
 }
-.options{
-  height:23vh ;
-  padding-bottom: 3vh;
-  width:fit-content !important
-}
+

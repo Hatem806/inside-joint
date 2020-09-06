@@ -10,21 +10,20 @@ import { ApiService } from 'src/app/services/api.service';
 export class JointPageComponent implements OnInit {
   @Input() jointName : string  ;
   @Input() jointImageSrc: string ;
+  jointImageToManuals : string ;
   constructor(private route : ActivatedRoute ,private apiService : ApiService ) { }
 
   ngOnInit( ): void {
     this.route.queryParams.subscribe(data => {
-     this.jointName = data.bodyPart
+     this.jointName = data.bodyPart ;
+     this.jointImageSrc = this.apiService.getJointService().jointsImagePath + data.imgSrc ;
+     this.jointImageToManuals = data.imgSrc ;
     })
-    this.jointImageSrc = this.apiService.getJointService().jointImageSrc ;
     console.log(this.jointName)
   }
 
 
-  goToJoint(jointName: string, jointImgSource : string){
-    this.apiService.getJointService().jointName = jointName  ;
-    this.apiService.getJointService().jointImageSrc = jointImgSource  ;
-  }
+
 
 
 }
