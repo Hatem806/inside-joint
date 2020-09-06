@@ -9,8 +9,12 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class JointPageComponent implements OnInit {
   @Input() jointName : string  ;
-  @Input() jointImageSrc: string ;
-  jointImageToManuals : string ;
+  public jointImageSrc: string ;
+  public jointImageToManuals : string ;
+
+  manualsChangeIcon : boolean ;
+  videosChangeIcon : boolean ;
+  evidencesChangeIcon : boolean ;
   constructor(private route : ActivatedRoute ,private apiService : ApiService ) { }
 
   ngOnInit( ): void {
@@ -23,7 +27,9 @@ export class JointPageComponent implements OnInit {
   }
 
 
+  doShit(){
 
+  }
 
 
 }

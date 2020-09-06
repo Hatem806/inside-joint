@@ -1,4 +1,4 @@
-
+<div class="my-cont">
   <app-header></app-header>
     <div class="my-container row">
       <div class="col-md-6 title-container">
@@ -13,7 +13,8 @@
           on the planet.
         </div>
       </div>
-    <div class="col-md-6 skeleton">
+    <div class="col-md-6" style="max-height:87vh ">
+      <div class="skeleton">
       <img src="../../../assets/skeleton/tr.png" alt="Skeleton">
       <div [routerLink]="['/joint']"[queryParams]="{bodyPart:'Neck',imgSrc:'Joints-10.png' }"class="dot-container neck">
         <img role="button"src="../../../assets/redSpot/Group 1654.png" alt="">
@@ -48,8 +49,9 @@
         <p class="desc"> Knee</p>
       </div>
     </div>
+    </div>
   </div>
-
+</div>
 
 
 

@@ -173,3 +173,15 @@ body{
   transform: translateY(40%);
   height:12.7vh ;
 }
+.page-title{
+  font-family: montserrant-extra-bold;
+  color :  #005086 ;
+  font-size: 3.5vw;
+  text-align: left;
+  padding-top:1vh ;
+  padding-left: 5vh ;
+  padding-bottom: 1vh ;
+}
+.page-cont{
+  margin-left:12vw ;
+}

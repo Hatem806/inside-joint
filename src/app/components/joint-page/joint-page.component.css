@@ -35,6 +35,14 @@
   padding: 4vw;
   margin-left:-0.5vw ;
 }
+.my-container:hover{
+  margin-top: 5vh ;
+  clip-path: circle();
+  background-color: #FFFFFF;
+  padding: 6vw;
+  margin-left:-2vw ;
+}
+
 .horizontal-divider{
   /* padding-top:13vh ; */
   margin-top:21vh ;
@@ -57,6 +65,13 @@
   align-content: center;
   margin-left: -1vw ;
 }
+.my-container:hover .my-image{
+  margin-left:-2vw ;
+
+}
+.manuals-image{
+  margin-left:-1.5vw  ;
+}
 .option-desc{
   padding-left: 1.5vw;
   font-family: montserrant;
@@ -66,10 +81,7 @@
   opacity:1!important;
   visibility: visible;
 }
-.manuals{
-  margin-top:3vh ;
-  margin-right:2vw ;
-}
+
 .ellipse{
   clip-path: ellipse(43% 3% at 50% 50%);
   opacity: 48% !important;

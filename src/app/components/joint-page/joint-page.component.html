@@ -25,10 +25,12 @@
     </div>
     <div class="col horizontal-divider">
     </div>
-    <div role="button" [routerLink]="['manuals']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}"class="col-md-1 ">
+    <div role="button" [routerLink]="['manuals']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}"class="col-md-1 "
+        (mouseover)="manualsChangeIcon = true"(mouseout)="manualsChangeIcon=false">
       <div class="row ">
-        <div class="col my-container">
-          <img class="my-image"src="../../../assets/secondaryNav/books-stack-of-three.png" alt="">
+        <div class="col my-container manuals">
+          <img *ngIf="!manualsChangeIcon"class="my-image manuals-image"src="../../../assets/secondaryNav/books-stack-of-three.png" alt="">
+          <img *ngIf="manualsChangeIcon"class="my-image manuals-image"src="../../../assets/secondaryNav/Active/books-stack-of-three.png" alt="">
         </div>
       </div>
         <div class="row">
@@ -39,10 +41,12 @@
     </div>
     <div class="col horizontal-divider">
     </div>
-    <div role="button" [routerLink]="['videos']"[queryParams]="{bodyPart:jointName }" class="col-md-1">
+    <div role="button" [routerLink]="['videos']"[queryParams]="{bodyPart:jointName }" class="col-md-1"
+        (mouseover)="videosChangeIcon = true"(mouseout)="videosChangeIcon=false">
       <div class="row">
-        <div class="col my-container">
-          <img class="my-image" src="../../../assets/secondaryNav/85.png" alt="">
+        <div class="col my-container videos">
+          <img *ngIf="!videosChangeIcon" class="my-image" src="../../../assets/secondaryNav/85.png" alt="">
+          <img *ngIf="videosChangeIcon" class="my-image" src="../../../assets/secondaryNav/Active/85.png" alt="">
         </div>
       </div>
       <div class="row">
@@ -53,10 +57,12 @@
     </div>
     <div class="col horizontal-divider ">
     </div>
-    <div role="button" [routerLink]="['evidences']"[queryParams]="{bodyPart:jointName }" class="col-md-1 ">
+    <div role="button" [routerLink]="['evidences']"[queryParams]="{bodyPart:jointName }" class="col-md-1 "
+        (mouseover)="evidencesChangeIcon = true"(mouseout)="evidencesChangeIcon=false">
       <div class="row">
-        <div class="col my-container">
-          <img class="my-image" src="../../../assets/secondaryNav/document.png" alt="">
+        <div class="col my-container evidences">
+          <img *ngIf="!evidencesChangeIcon" class="my-image" src="../../../assets/secondaryNav/document.png" alt="">
+          <img *ngIf="evidencesChangeIcon" class="my-image" src="../../../assets/secondaryNav/Active/document.png" alt="">
         </div>
        </div>
       <div class="row">

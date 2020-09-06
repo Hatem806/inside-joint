@@ -7,9 +7,9 @@
     </div>
     <div class="col">
        <div class="row menu-options">
-         <div class="col-md-3" >
+         <div class="col-md-3 "  [routerLink]="['/joint/manuals']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" >
            <div class="row">
-             <div class="col-md-4 ">
+             <div class="col-md-4" >
               <img *ngIf="router.url.substring(7,14)=='manuals'"class="menu-icons" src="../../../../assets/secondaryNav/Active/books-stack-of-three.png" alt="">
               <img *ngIf="router.url.substring(7,14)!='manuals'"class="menu-icons" src="../../../../assets/secondaryNav/books-stack-of-three.png" alt="">
              </div>
@@ -18,7 +18,7 @@
              </div>
            </div>
          </div>
-         <div class="col-md-3"  style="padding-left: 2vw;">
+         <div class="col-md-3"  [routerLink]="['/joint/videos']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" style="padding-left: 2vw;">
           <div class="row">
             <div class="col-md-4" >
              <img *ngIf="router.url.substring(7,13)=='videos'"class="menu-icons" src="../../../../assets/secondaryNav/Active/85.png" alt="">
@@ -29,7 +29,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-5"  style="padding-left: 2vw;">
+        <div class="col-md-5"  [routerLink]="['/joint/evidences']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" style="padding-left: 2vw;">
           <div class="row">
             <div class="col-md-3 ">
               <img *ngIf="router.url.substring(7,16)=='evidences'"class="menu-icons" src="../../../../assets/secondaryNav/Active/document.png" alt="">

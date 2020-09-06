@@ -11,16 +11,7 @@
 .page-header{
   padding-left:160px;
 }
-.page-title{
-  font-family: montserrant-extra-bold;
-  color :  #005086 ;
-  font-size: 8vh;
-  text-align: left;
-  margin-left: 13vw ;
-  padding-top:1vh ;
-  padding-left: 5vh ;
-  padding-bottom: 1vh ;
-}
+
 
 .conferences{
   border: 5px;

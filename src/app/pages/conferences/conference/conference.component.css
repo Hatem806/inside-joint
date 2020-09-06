@@ -1,12 +1,7 @@
 
-.page-title{
- font-family: montserrant-extra-bold;
- color :  #005086 ;
- font-size: 8vh;
- text-align: left;
-}
-.my-container{
-  margin-left: 140px ;
+
+.my-cont{
+  margin-left: 13vw ;
 }
 .calendar{
   background-color: #EFB747;
@@ -54,9 +49,7 @@
 .options:hover{
   background-color:  #005086;
 }
-.questions-image{
-  padding-left : 0vw !important;
-}
+
 .container-fluid{
   height:25vmax !important;
 }

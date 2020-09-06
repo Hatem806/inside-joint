@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-joint-header',
@@ -8,10 +10,17 @@ import { Router } from '@angular/router';
 })
 export class JointHeaderComponent implements OnInit {
   @Input() jointName : string ;
-  constructor( public router: Router) { }
+
+  bodyPart : string
+  jointImageToManuals : string
+  constructor( public router: Router, public route : ActivatedRoute ,public apiService : ApiService) { }
 
   ngOnInit(): void {
-    console.log(this.router.url.substring(this.router.url.length-7,this.router.url.length))
+    this.route.queryParams.subscribe(data => {
+      this.jointName = data.bodyPart ;
+      this.jointImageToManuals = data.imgSrc ;
+     })
+
   }
 
 }
