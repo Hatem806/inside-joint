@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ApiService } from "../../services/api.service";
 import { RouterModule } from '@angular/router';
 import { IProduct } from 'src/app/models/Product';
@@ -17,6 +17,9 @@ export class ProductsComponent implements OnInit {
   lastProductIndex : number
   firstProductIndex : number
 
+  innerWidth : any ;
+  rowOfTwo : boolean ;
+
   videoIconBooleanArray : Boolean[]=[] ;
   pdfIconBooleanArray : Boolean[] =[];
   constructor( public apiService : ApiService , private router : RouterModule ) { }
@@ -24,19 +27,41 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.apiService.getProductsService().getProducts().subscribe( data => {
       console.log(data);
-      this.products = data.products.slice(0,4) ;
+      if(window.innerWidth>1024){
+        this.products = data.products.slice(0,4) ;
+      }
+      else{
+        this.products = data.products.slice(0,2)
+      }
+
       this.allProducts = data.products ;
       this.allProducts.forEach( product => {
         this.pdfIconBooleanArray.push(false) ;
         this.videoIconBooleanArray.push(false) ;
       })
       console.log(this.videoIconBooleanArray)
+
       this.firstProductIndex=0 ;
-      this.lastProductIndex=3 ;
+      this.innerWidth = window.innerWidth ;
     })
 
 
   }
+  @HostListener('window:resize', ['$event'])
+    onResize(event) {
+    this.innerWidth = window.innerWidth;
+    if (this.innerWidth <=1024) {
+      this.products = this.allProducts.slice(0,2)
+      console.log(this.products)
+      this.lastProductIndex = 1 ;
+      this.rowOfTwo = true ;
+    } else {
+      this.products = this.allProducts.slice(0,4)
+      console.log(this.products)
+      this.rowOfTwo = false ;
+      this.lastProductIndex=3 ;
+    }
+}
   goToLink(link){
     window.location.href = link ;
   }
@@ -47,27 +72,51 @@ export class ProductsComponent implements OnInit {
     window.location.href = this.apiService.getAssetsService().getDocumentsUrl() + documentPath ;
   }
   onRightArrow(){
-
-    if(this.allProducts[this.lastProductIndex+4]){
-     this.products= this.allProducts.slice(this.lastProductIndex,this.lastProductIndex+4);
-     this.lastProductIndex+=4 ;
-     this.firstProductIndex+=4 ;
-    }else{
-      this.products= this.allProducts.slice(this.allProducts.length-4,this.allProducts.length)
-      this.lastProductIndex= this.allProducts.length-1 ;
-      this.firstProductIndex= this.lastProductIndex-4 ;
-    }
+    if(!this.rowOfTwo){
+      if(this.allProducts[this.lastProductIndex+4]){
+      this.products= this.allProducts.slice(this.lastProductIndex,this.lastProductIndex+4);
+      this.lastProductIndex+=4 ;
+      this.firstProductIndex+=4 ;
+      }else{
+        this.products= this.allProducts.slice(this.allProducts.length-4,this.allProducts.length)
+        this.lastProductIndex= this.allProducts.length-1 ;
+        this.firstProductIndex= this.lastProductIndex-4 ;
+      }}
+      else{
+        if(this.allProducts[this.lastProductIndex+2]){
+          this.products= this.allProducts.slice(this.lastProductIndex,this.lastProductIndex+2);
+          this.lastProductIndex+=2 ;
+          this.firstProductIndex+=2 ;
+          }else{
+            this.products= this.allProducts.slice(this.allProducts.length-2,this.allProducts.length)
+            this.lastProductIndex= this.allProducts.length-1 ;
+            this.firstProductIndex= this.lastProductIndex-2 ;
+          }}
   }
+
   onLeftArrow(){
-    if(this.allProducts[this.firstProductIndex-4]){
-      this.products= this.allProducts.slice(this.firstProductIndex-4,this.lastProductIndex+4)
-      this.firstProductIndex-=4 ;
-      this.lastProductIndex-=4 ;
-     }else{
-       this.products= this.allProducts.slice(0,4)
-       this.firstProductIndex=0 ;
-      this.lastProductIndex=3 ;
-     }
+    if(!this.rowOfTwo){
+      if(this.allProducts[this.firstProductIndex-4]){
+        this.products= this.allProducts.slice(this.firstProductIndex-4,this.lastProductIndex+4)
+        this.firstProductIndex-=4 ;
+        this.lastProductIndex-=4 ;
+      }else{
+        this.products= this.allProducts.slice(0,4)
+        this.firstProductIndex=0 ;
+        this.lastProductIndex=3 ;
+      }
+    }else{
+      if(this.allProducts[this.firstProductIndex-2]){
+        this.products= this.allProducts.slice(this.firstProductIndex-2,this.lastProductIndex+2)
+        this.firstProductIndex-=2 ;
+        this.lastProductIndex-=2 ;
+      }else{
+        this.products= this.allProducts.slice(0,2)
+        this.firstProductIndex=0 ;
+        this.lastProductIndex=1 ;
+      }
+    }
+
   }
 
 }

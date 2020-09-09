@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,8 +8,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./videos.component.css']
 })
 export class VideosComponent implements OnInit {
-  jointName : string ;
+
+  jointName : string
   videos2DArray = [] ;
+
+  videos = [] ;
+  twoElementsARow : boolean ;
+  innerWidth : any ;
   constructor(public apiService : ApiService, public route : ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -17,31 +22,70 @@ export class VideosComponent implements OnInit {
       this.jointName = data.bodyPart
      })
 
-    this.apiService.getAssetsService().getVideos().subscribe( data => {
+    this.innerWidth = window.innerWidth ;
+
+     this.apiService.getAssetsService().getVideos().subscribe( data => {
       console.log(data) ;
-      let videos = [] ;
-      data.assets.forEach( video => {
-        if(video.bodyPart==this.jointName.toLowerCase()){
-          videos.push(video) ;
+
+      data.assets.forEach( document => {
+        if(document.bodyPart==this.jointName.toLowerCase()){
+          this.videos.push(document) ;
         }
       })
-      console.log(videos)
+      console.log(this.videos)
 
-      let row ;
-      for(let i =0; i< videos.length ; i++){
-        row = [] ;
-        row.push(videos[i]);
-        if(videos[i+1]){
-          row.push(videos[i+1]);
-        }
-        this.videos2DArray.push(row) ;
-        i++ ;
+      this.init2DArray() ;
+
+      if( this.innerWidth < 1024 ){
+        this.twoElementsARow = true ;
+        this.init1DArrayThatIsActually2D()
       }
+      else{
+        this.twoElementsARow = false ;
+      }
+
       console.log(this.videos2DArray)
     })
   }
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+  this.innerWidth = window.innerWidth;
+  if (this.innerWidth <=1024) {
+    this.twoElementsARow = false ;
+   this.init2DArray() ;
+  } else {
+    this.twoElementsARow = true ;
+    this.init1DArrayThatIsActually2D() ;
+  }
+}
+
+
   goToVideoLink(element){
     window.location.href = this.apiService.getAssetsService().getVideosUrl() + element.path ;
   }
-
+  init2DArray(){
+    console.log(this.videos)
+    this.videos2DArray = []
+    let row ;
+    for(let i =0; i< this.videos.length ; i++){
+      row = [] ;
+      row.push(this.videos[i]);
+      if(this.videos[i+1]){
+        row.push(this.videos[i+1]);
+      }
+      this.videos2DArray.push(row) ;
+      i++ ;
+    }
+  }
+  init1DArrayThatIsActually2D(){
+    let arr = [] ;
+    for(let i =0 ; i< this.videos2DArray.length ; i++){
+      arr.push([this.videos2DArray[i][0]]) ;
+      arr.push([this.videos2DArray[i][1]]) ;
+    }
+    this.videos2DArray=  arr
+  }
 }
+
+
+

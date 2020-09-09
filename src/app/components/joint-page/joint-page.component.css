@@ -7,8 +7,8 @@
 }
 .joint-container{
   background-color: #FFFFFF;
-  height: 45vh ;
-  width: 23vw ;
+  width:120% ;
+  height:45vh ;
   border-radius: 2vw;
 }
 .joint-image{
@@ -29,27 +29,47 @@
 
 }
 .my-container{
-  margin-top: 10vh ;
+
   clip-path: circle();
   background-color: #FFFFFF;
-  padding: 4vw;
-  margin-left:-0.5vw ;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  padding: 70% ;
+  /* margin: auto 0 ; */
+  height:100% ;
 }
 .my-container:hover{
-  margin-top: 5vh ;
-  clip-path: circle();
-  background-color: #FFFFFF;
-  padding: 6vw;
-  margin-left:-2vw ;
+  padding: 90% ;
+}
+.my-container:hover .manuals-image{
+  margin-left: -3.2em ;
 }
 
 .horizontal-divider{
   /* padding-top:13vh ; */
-  margin-top:21vh ;
+  /* margin-top:21vh ; */
   background-color: #FFFFFF;
   height:3vh ;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
 
 }
+.vertical-divider{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  background-color : red;
+  width:5%  ;
+  height: 100% ;
+  padding-top: 5%;
+
+}
+
 .col-md-1{
   padding: 0px!important;
   margin: 0px!important;
@@ -63,15 +83,12 @@
   display: block;
   justify-content: center;
   align-content: center;
-  margin-left: -1vw ;
+  margin-left: -2.5em ;
 }
-.my-container:hover .my-image{
-  margin-left:-2vw ;
 
-}
-.manuals-image{
+/* .manuals-image{
   margin-left:-1.5vw  ;
-}
+} */
 .option-desc{
   padding-left: 1.5vw;
   font-family: montserrant;
@@ -92,6 +109,17 @@
   color:  #005086;
   font-size:4vh ;
   display:block ;
-  margin-top:15vh ;
-  margin-left:7.5vw ;
+  align-items: center;
+  margin-top:50% ;
+  align-self: center;
+  text-align: center;
+}
+@media(max-width:1024px){
+  .joint-container{
+    width:80% ;
+    height: auto ;
+  }
+  .content-container{
+    margin-top: 5% ;
+  }
 }

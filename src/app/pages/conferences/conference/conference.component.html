@@ -4,20 +4,19 @@
       <div class="col md-12 ">
         <div class="no-gutters col-md-12 ">
           <div class="row">
-          <div class="col-md-6 title-description">
+          <div class="col-md-6 col-sm-12 col-xs-12 title-description">
             <div class=" my-cont">
             <div class="row ">
               <div class="col page-title">
                 {{ chosenConference.title}}
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-2">
-                <img class="calendar"src="../../../../assets/icons/141.png" alt="">
-              </div>
-              <div class="col-md-10 calendar-text">
+            <div class="row no-gutters">
+
+              <img class="calendar"src="../../../../assets/icons/141.png" alt="Calendar Icon">
+              <h3 class="calendar-text">
               {{ displayedStartDate }}    -    {{ displayedEndDate }}
-              </div>
+              </h3>
             </div>
             <div class="row">
               <div class="col about-conference">
@@ -31,12 +30,12 @@
             </div>
           </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-xs-12 col-sm-12">
             <div class="row about-conference">
               Conference Details
             </div>
             <div class="row w-100 ">
-              <div (click)="goToPdfLink( chosenConference.schedulePath )" role="button" (mouseover)="changeProgramIcon=true;" (mouseout)="changeProgramIcon=false"class="col-md-3 offset-1 options no-gutters" >
+              <div (click)="goToPdfLink( chosenConference.schedulePath )" role="button" (mouseover)="changeProgramIcon=true;" (mouseout)="changeProgramIcon=false"class="col-md-3 col-xs-3 col-sm-3 offset-1 options no-gutters" >
                 <img *ngIf="!changeProgramIcon"class="option-image" src="../../../assets/icons/37.png" alt="Download pdf">
                 <img *ngIf="changeProgramIcon"class="option-image" src="../../../assets/icons/asset-3.png" alt="Download pdf">
                 <div class="row">
@@ -47,7 +46,7 @@
                   Program
                 </div>
               </div>
-              <div (click)="goToVideoLink( chosenConference.videoPath )" role="button" (mouseover)="changeVideoIcon=true;" (mouseout)="changeVideoIcon=false" class="col-md-3 offset-1 options" >
+              <div (click)="goToVideoLink( chosenConference.videoPath )" role="button" (mouseover)="changeVideoIcon=true;" (mouseout)="changeVideoIcon=false" class="col-md-3 col-xs-3 col-sm-3 offset-1 options" >
                 <img *ngIf="!changeVideoIcon"class="option-image"src="../../../assets/icons/128.png" alt="">
                 <img *ngIf="changeVideoIcon"class="option-image"src="../../../../assets/icons/asset-1.png" alt="">
                 <div class="row">
@@ -58,7 +57,7 @@
                   Video
                 </div>
               </div>
-              <div  role="button" (mouseover)="changeQuestionsIcon=true;" (mouseout)="changeQuestionsIcon=false"(click)="goToQuestions( chosenConference.questions )" routerLink="questions"class="col-md-3 offset-1 options questions-image" >
+              <div  role="button" (mouseover)="changeQuestionsIcon=true;" (mouseout)="changeQuestionsIcon=false"(click)="goToQuestions( chosenConference.questions )" routerLink="questions"class="col-md-3 col-xs-3 col-sm-3 offset-1 options questions-image" >
                 <img  *ngIf="!changeQuestionsIcon"class="option-image " src="../../../assets/icons/87.png" alt="">
                 <img *ngIf="changeQuestionsIcon"class="option-image " style="transform: scale(0.8,0.8);" src="../../../assets/icons/asset-2.png" alt="">
                 <div class="row">

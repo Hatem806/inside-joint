@@ -1,15 +1,15 @@
 html,body {
   margin: 0 !important;
   padding: 0 !important;
-  width: 100% !important;
+  /* width: 100% !important; */
   /* min-width: 320px !important ; */
-  height: 90vh !important;
+  /* height: 90vh !important; */
   }
 .icons{
-  width:2vw;
+  /* padding-left:4vw ; */
+  width:55%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-bottom:2vh;
   display: block
 }
@@ -21,13 +21,13 @@ html,body {
   /* background:  #005086; */
   align-items: center;
    justify-content: center;
-   padding-left: 3.5vw;
+   /* padding-left: 3.5vw; */
 
 }
 .company-name{
   /* background: #005086 ; */
   padding-bottom:5vh;
-  font-size: 1.5vw;
+  font-size: 100%;
   text-align: left;
   font-family: 'monsterrant-bold-italic';
   color: #FAFAFA;
@@ -39,13 +39,11 @@ html,body {
 }
 .logout.icons{
     position: absolute;
-    width: 2.5;
-    height: auto;
-    padding-top: 10vh;
-    display: block;
+    margin-top:60% ;
+    width:40%
   }
 #sidebar-wrapper {
-width:10vw !important ;
+width:10% !important ;
 min-height: 100vh !important;
 margin-left: -15rem;
 margin-right: 0px !important;
@@ -120,6 +118,17 @@ margin-left: 0;
 .myclass{
   /* min-width: 100vw !important; */
   max-height: 100vh !important;
+}
+@media(max-width:768){
+
+  .icons{
+    width:5%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:2vh;
+    display: block
+  }
 }
 
 

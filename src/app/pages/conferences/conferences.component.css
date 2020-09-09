@@ -12,10 +12,6 @@
   padding-left:160px;
 }
 
-
-.conferences{
-  border: 5px;
-}
 .pdf-icon{
   transform: scale(0.6,0.6);
 
@@ -27,44 +23,24 @@
   transform: scale(0.8,0.8);
 }
 
-.conferences-container{
-  height: 40vh;
-  margin-left: 10vw;
-}
-.conference-image{
-  transform: scale(0.8,0.8);
-    flex-shrink: 0;
-      width: 100%;
-      height: 30vh ;
-      max-height:30vh ;
-    /* padding-right: 15px ;
-    margin-left : -20px !important; */
-}
-
-.conference-details{
-  font-family: montserrant-italic;
-  font-size: 14px;
-  color:  #6B6C6F ;
-  display: block;
-  margin:auto ;
-
+.image-cont{
+  margin-bottom: 0.5em ;
 }
 
 /* .row::after {
   display: flex;
 } */
 .ellipse{
-  margin-top: 5% ;
-  margin-left:12.5% ;
-  width: 50% !important ;
-  height:2.5% !important ;
+padding:0.4% ;
+max-width : 40% !important ;
 }
 .option-details{
 
-  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
   text-align: center;
-  padding-bottom: 1vh;
-  padding-top:15% ;
+  padding-top:5% ;;
 }
 .options:hover{
   background-color:  #005086;
@@ -73,3 +49,8 @@
   background-color:  #005086;
   color: #EFB747;
 }
+
+
+/* @media (max-width:1024px and min-width:768px){
+
+} */

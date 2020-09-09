@@ -1,43 +1,37 @@
 <div class="no-gutters">
   <div role="button" class="row my-header">
-    <div class="col">
+    <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
       <div class="joint-name">
         {{ jointName }}
       </div>
     </div>
-    <div class="col">
-       <div class="row menu-options">
-         <div class="col-md-3 "  [routerLink]="['/joint/manuals']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" >
-           <div class="row">
-             <div class="col-md-4" >
+    <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+       <div class="row menu-options ">
+         <div class="col-md-3 col-sm-3 col-xs-3 fit-col"   [routerLink]="['/joint/manuals']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" >
+           <div  [ngClass]="innerWidth>767 ? 'row' : 'col'"style=" padding:0.5em" >
               <img *ngIf="router.url.substring(7,14)=='manuals'"class="menu-icons" src="../../../../assets/secondaryNav/Active/books-stack-of-three.png" alt="">
               <img *ngIf="router.url.substring(7,14)!='manuals'"class="menu-icons" src="../../../../assets/secondaryNav/books-stack-of-three.png" alt="">
-             </div>
-             <div class="col-md-8" [ngClass]="router.url.substring(7,14)=='manuals' ? 'desc-active' : 'my-desc'">
-              Manuals
-             </div>
+             <h3  [ngClass]="router.url.substring(7,14)=='manuals' ? 'desc-active' : 'my-desc'">
+              Manual
+             </h3>
            </div>
          </div>
-         <div class="col-md-3"  [routerLink]="['/joint/videos']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" style="padding-left: 2vw;">
-          <div class="row">
-            <div class="col-md-4" >
+         <div class="col-md-3 col-sm-3 col-xs-3  fit-col"    [routerLink]="['/joint/videos']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" >
+          <div  [ngClass]="innerWidth>767 ? 'row' : 'col'" style=" padding:0.5em" >
              <img *ngIf="router.url.substring(7,13)=='videos'"class="menu-icons" src="../../../../assets/secondaryNav/Active/85.png" alt="">
              <img *ngIf="router.url.substring(7,13)!='videos'"class="menu-icons" src="../../../../assets/secondaryNav/85.png" alt="">
-            </div>
-            <div class="col-md-8"  [ngClass]="router.url.substring(7,13)=='videos' ? 'desc-active' : 'my-desc'">
+            <h3 [ngClass]="router.url.substring(7,13)=='videos' ? 'desc-active' : 'my-desc'">
              Videos
-            </div>
+            </h3>
           </div>
         </div>
-        <div class="col-md-5"  [routerLink]="['/joint/evidences']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" style="padding-left: 2vw;">
-          <div class="row">
-            <div class="col-md-3 ">
+        <div class="col-md-6 col-sm-6 col-xs-6 fit-col"  [routerLink]="['/joint/evidences']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}" >
+          <div  [ngClass]="innerWidth>767 ? 'row' : 'col'"style="padding:0.5em"  >
               <img *ngIf="router.url.substring(7,16)=='evidences'"class="menu-icons" src="../../../../assets/secondaryNav/Active/document.png" alt="">
               <img *ngIf="router.url.substring(7,16)!='evidences'"class="menu-icons" src="../../../../assets/secondaryNav/document.png" alt="">
-              </div>
-            <div class="col-md-9  ev" [ngClass]="router.url.substring(7,16)=='evidences' ? 'desc-active' : 'my-desc'">
+            <h3  [ngClass]="router.url.substring(7,16)=='evidences' ? 'desc-active' : 'my-desc'">
              Scientific Evidence
-            </div>
+            </h3>
           </div>
         </div>
        </div>

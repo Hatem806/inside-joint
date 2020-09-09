@@ -17,6 +17,8 @@ export class AppComponent {
   listItemBackground :string
   routesMap = [];
 
+  innerWidth : any = window.innerWidth ;
+
   currentRoute: string = "";
   constructor( public router: Router,public ApiService:ApiService)
   {

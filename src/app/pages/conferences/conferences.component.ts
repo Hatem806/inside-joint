@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { RouterModule } from '@angular/router';
 import { IEventResponse } from 'src/app/models/responses/EventResponse';
 import { IEvent } from 'src/app/models/Event';
+import { link } from 'fs';
 
 @Component({
   selector: 'app-conferences',
@@ -14,48 +15,133 @@ export class ConferencesComponent implements OnInit {
   pageImageSrc = "../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" ;
   allConferences : IEvent[]
   conferences:IEvent[]
-  lastProductIndex : number
-  firstProductIndex : number
+  lastConferenceIndex : number
+  firstConferenceIndex : number
 
+  rowOfTwo : boolean ;
+  rowOfOne : boolean ;
+  innerWidth : any ;
   constructor( public apiService : ApiService , private router : RouterModule ) { }
 
   ngOnInit(): void {
     this.apiService.getConferenceServices().getConferences().subscribe( data => {
       console.log(data);
-      this.conferences = data.events.slice(0,4) ;
+      if(window.innerWidth>1024){
+        this.conferences = data.events.slice(0,4) ;
+        this.firstConferenceIndex=0 ;
+        this.lastConferenceIndex=3 ;
+        this.rowOfTwo = false ;
+      }
+      else{
+        if(window.innerWidth>=768){
+          this.conferences = data.events.slice(0,2) ;
+          this.firstConferenceIndex=0 ;
+          this.lastConferenceIndex=1 ;
+          this.rowOfTwo = true ;
+        }
+        else{
+          this.conferences = data.events.slice(0,1) ;
+          this.rowOfOne = true ;
+        }
+
+      }
       this.allConferences = data.events ;
-      this.firstProductIndex=0 ;
-      this.lastProductIndex=3 ;
+
 
     })
 
 
   }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+  this.innerWidth = window.innerWidth;
+  if (this.innerWidth <=1024) {
+    if(this.innerWidth>=768){
+      this.conferences = this.allConferences.slice(0,2)
+      console.log(this.conferences)
+      this.lastConferenceIndex = 1 ;
+      this.rowOfTwo = true ;
+    }
+    else{
+      this.conferences = this.allConferences.slice(0,1)
+      console.log(this.conferences)
+      this.lastConferenceIndex = 0 ;
+      this.rowOfTwo = true ;
+    }
+  } else {
+    this.conferences = this.allConferences.slice(0,4)
+    console.log(this.conferences)
+    this.rowOfTwo = false ;
+    this.lastConferenceIndex=3 ;
+  }
+}
   goToLink(link){
     window.location.href = link ;
   }
   onRightArrow(){
+    //row of 4
+    if(!this.rowOfTwo && !this.rowOfOne){
+      if(this.allConferences[this.lastConferenceIndex+4]){
+      this.conferences= this.allConferences.slice(this.lastConferenceIndex,this.lastConferenceIndex+4);
+      this.lastConferenceIndex+=4 ;
+      this.firstConferenceIndex+=4 ;
+      }else{
+        this.conferences= this.allConferences.slice(this.allConferences.length-4,this.allConferences.length)
+        this.lastConferenceIndex= this.allConferences.length-1 ;
+        this.firstConferenceIndex= this.lastConferenceIndex-4 ;
+      }}
+      else{
+        // row of 2
+        if(!this.rowOfOne){
+          if(this.allConferences[this.lastConferenceIndex+2]){
+            this.conferences= this.allConferences.slice(this.lastConferenceIndex,this.lastConferenceIndex+2);
+            this.lastConferenceIndex+=2 ;
+            this.firstConferenceIndex+=2 ;
+            }else{
+              this.conferences= this.allConferences.slice(this.allConferences.length-2,this.allConferences.length)
+              this.lastConferenceIndex= this.allConferences.length-1 ;
+              this.firstConferenceIndex= this.lastConferenceIndex-2 ;
+            }}
+            else{
+              //row of 1
+              if(this.allConferences[this.lastConferenceIndex+2]){
+                this.conferences= this.allConferences.slice(this.lastConferenceIndex,this.lastConferenceIndex+2);
+                this.lastConferenceIndex+=2 ;
+                this.firstConferenceIndex+=2 ;
+                }else{
+                  this.conferences= this.allConferences.slice(this.allConferences.length-2,this.allConferences.length)
+                  this.lastConferenceIndex= this.allConferences.length-1 ;
+                  this.firstConferenceIndex= this.lastConferenceIndex-2 ;
+                }
+            }
+        }
 
-    if(this.allConferences[this.lastProductIndex+4]){
-     this.conferences= this.allConferences.slice(this.lastProductIndex,this.lastProductIndex+4);
-     this.lastProductIndex+=4 ;
-     this.firstProductIndex+=4 ;
-    }else{
-      this.conferences= this.allConferences.slice(this.allConferences.length-4,this.allConferences.length)
-      this.lastProductIndex= this.allConferences.length-1 ;
-      this.firstProductIndex= this.lastProductIndex-4 ;
-    }
   }
+
   onLeftArrow(){
-    if(this.allConferences[this.firstProductIndex-4]){
-      this.conferences= this.allConferences.slice(this.firstProductIndex-4,this.lastProductIndex+4)
-      this.firstProductIndex-=4 ;
-      this.lastProductIndex-=4 ;
-     }else{
-       this.conferences= this.allConferences.slice(0,4)
-       this.firstProductIndex=0 ;
-      this.lastProductIndex=3 ;
-     }
+    if(!this.rowOfTwo){
+      if(this.allConferences[this.firstConferenceIndex-4]){
+        this.conferences= this.allConferences.slice(this.firstConferenceIndex-4,this.lastConferenceIndex+4)
+        this.firstConferenceIndex-=4 ;
+        this.lastConferenceIndex-=4 ;
+      }else{
+        this.conferences= this.allConferences.slice(0,4)
+        this.firstConferenceIndex=0 ;
+        this.lastConferenceIndex=3 ;
+      }
+    }else{
+      if(this.allConferences[this.firstConferenceIndex-2]){
+        this.conferences= this.allConferences.slice(this.firstConferenceIndex-2,this.lastConferenceIndex+2)
+        this.firstConferenceIndex-=2 ;
+        this.lastConferenceIndex-=2 ;
+      }else{
+        this.conferences= this.allConferences.slice(0,2)
+        this.firstConferenceIndex=0 ;
+        this.lastConferenceIndex=1 ;
+      }
+    }
+
   }
   public goToConference(conference): void
   {

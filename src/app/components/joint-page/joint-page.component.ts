@@ -15,6 +15,8 @@ export class JointPageComponent implements OnInit {
   manualsChangeIcon : boolean ;
   videosChangeIcon : boolean ;
   evidencesChangeIcon : boolean ;
+
+  innerWidth : any = window.innerWidth ;
   constructor(private route : ActivatedRoute ,private apiService : ApiService ) { }
 
   ngOnInit( ): void {

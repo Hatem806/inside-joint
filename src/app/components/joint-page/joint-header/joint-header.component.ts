@@ -13,6 +13,7 @@ export class JointHeaderComponent implements OnInit {
 
   bodyPart : string
   jointImageToManuals : string
+  innerWidth: number  = window.innerWidth ;
   constructor( public router: Router, public route : ActivatedRoute ,public apiService : ApiService) { }
 
   ngOnInit(): void {

@@ -1,20 +1,25 @@
 .joint-name{
   font-family: montserrant-bold;
   color: white ;
-  font-size:4vh ;
-  padding-top:3vh ;
-  padding-left: 6vw ;
+  font-size: 2rem ;
+ display: block;
+ margin: auto;
+ width: 100% ;
+ text-align: center;
+ align-items: center;
+ align-content: center;
 }
-.my-header{
-  padding-left:10vw ;
-  padding-top:3vh ;
+ .my-header{
+
+  padding-top:1% ;
 }
 .menu-options{
+  margin: 0 auto ;
   background: #FFFFFF ;
   width:90% ;
-  border-radius: 3vw;
-  height:7.5vh ;
-  margin-top:2vh ;
+  border-radius: 5%;
+  height:70% ;
+  margin-top:1% ;
 }
 .no-gutters{
   background:  #005086!important;
@@ -22,26 +27,96 @@
 
 .menu-icons{
   transform: scale(0.5,0.5);
-  display:block ;
-  margin: auto;
+
+  /* margin:auto auto;
+  align-content: center;
+  align-self: center;
+  text-align: center; */
+
 }
 
 .my-desc{
-  padding-top:2.5vh ;
-  padding-left:2vw;
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
   color: #6B6C6F ;
-  font-size:2vh ;
+  font-size:1rem ;
   font-family:montserrant-bold;
   visibility: true;
 }
 .desc-active{
-  padding-top:2.5vh ;
-  padding-left:2vw;
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
   color: #005086 ;
-  font-size:2vh ;
+  font-size: 1rem ;
   font-family:montserrant-bold;
   visibility: true;
 }
-.ev{
-  padding-left: 0.75vw!important ;
+
+
+@media(max-width:769px){
+  .menu-options{
+    margin: 0 auto ;
+    background: #FFFFFF ;
+    width:90% ;
+    margin-left:10vw ;
+    border-radius: 3%;
+    height:90%;
+  }
+  .fit-col{
+    width:fit-content !important ;
+    padding: 0px !important;
+  }
+  .menu-icons{
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+  }
 }
+@media(min-width:768){
+
+
+.my-desc{
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  color: #6B6C6F ;
+  font-size:1rem ;
+  font-family:montserrant-bold;
+  visibility: true;
+}
+.desc-active{
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  color: #005086 ;
+  font-size: 1rem ;
+  font-family:montserrant-bold;
+  visibility: true;
+}
+}
+@media(min-width:1023px){
+  .menu-options{
+    margin: 0 auto ;
+    background: #FFFFFF ;
+    width:100% ;
+    border-radius: 10%;
+    height:80% ;
+    margin-top:1% ;
+
+    /* margin-right: 2vw ; */
+  }
+
+}
+
+

@@ -8,7 +8,7 @@
 }
 .description{
   font-family:montserrant ;
-  font-size: 2vh ;
+  font-size: 0.8rem ;
   text-align: left;
   color:#6B6C6F ;
   padding-top: 1vw ;
@@ -19,18 +19,18 @@
   float: left;
 }
 .my-container{
-  margin-left: 12vw !important ;
-  padding-left: 3vw !important ;
-  padding-top:2vw ;
+  margin-left: 15% !important ;
+  padding-left: 10% !important ;
+  padding-top:2em ;
 }
 .details{
   font-family:montserrant-bold ;
-  font-size: 4vh ;
+  font-size: 2rem ;
   text-align: left;
   color: #6B6C6F;
-  padding-bottom: 6vh;
-  padding-top: 4vh;
-  padding-left: 4vw;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 1.5em;
 }
 .wrapper{
   min-height:100% !important
@@ -61,3 +61,28 @@
   /* padding-left: vw; */
 }
 
+@media(max-width:767px){
+  .details-section{
+    margin-left:15% ;
+  }
+.details{
+  padding-left: 0px!important;
+  padding-bottom:5% ;
+  padding-top:5% ;
+  align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+}
+.title-description{
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+}
+.page-title{
+  font-size: 3rem ;
+}
+
+}
