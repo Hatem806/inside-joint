@@ -14,21 +14,22 @@ import { JointPageComponent } from './components/joint-page/joint-page.component
 import { ManualsComponent } from './components/joint-page/manuals/manuals.component';
 import { VideosComponent } from './components/joint-page/videos/videos.component';
 import { EvidencesComponent } from './components/joint-page/evidences/evidences.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 const routes: Routes = [
-  { path: "products", component: ProductsComponent },
-  { path: "conferences", component: ConferencesComponent },
-  { path: "conferences/:conferenceId", component: ConferenceComponent},
-  { path: "conferences/:conferenceId/questions", component: QuestionsComponent},
-  { path: "conferences/:conferenceId/questions/thank-you", component: ThankYouComponent},
-  { path: "home", component: HomeComponent },
-  { path: "aboutus", component: AboutUsComponent },
-  {path: "joint/manuals", component: ManualsComponent},
-  {path: "joint/videos", component: VideosComponent},
-  {path: "joint/evidences", component: EvidencesComponent},
-  {path: "joint/:part", component: JointPageComponent},
-  {path: "joint", component: JointPageComponent},
+  { path: "products", component: ProductsComponent, canActivate: [AuthGuardService] },
+  { path: "conferences", component: ConferencesComponent, canActivate: [AuthGuardService] },
+  { path: "conferences/:conferenceId", component: ConferenceComponent, canActivate: [AuthGuardService]},
+  { path: "conferences/:conferenceId/questions", component: QuestionsComponent, canActivate: [AuthGuardService]},
+  { path: "conferences/:conferenceId/questions/thank-you", component: ThankYouComponent, canActivate: [AuthGuardService]},
+  { path: "home", component: HomeComponent, canActivate: [AuthGuardService] },
+  { path: "aboutus", component: AboutUsComponent, canActivate: [AuthGuardService] },
+  {path: "joint/manuals", component: ManualsComponent, canActivate: [AuthGuardService]},
+  {path: "joint/videos", component: VideosComponent, canActivate: [AuthGuardService]},
+  {path: "joint/evidences", component: EvidencesComponent, canActivate: [AuthGuardService]},
+  {path: "joint/:part", component: JointPageComponent, canActivate: [AuthGuardService]},
+  {path: "joint", component: JointPageComponent, canActivate: [AuthGuardService]},
   {path:'signup',component:SignupComponent},
   {path:'signup-data',component:SignupDataComponent},
   { path: 'login', component: LoginComponent },

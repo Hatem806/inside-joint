@@ -46,9 +46,9 @@
 .my-container:hover{
   padding: 5rem ;
 }
-/* .my-container:hover {
-  margin-left: 1rem  ;
-} */
+.my-container:hover .my-image{
+  margin-left: -3rem  ;
+}
 
 .horizontal-divider{
   /* padding-top:13vh ; */
@@ -87,8 +87,12 @@
 .option-desc{
   /* padding-left: 1.5vw; */
   font-family: montserrant;
+  text-align: left!important;
+  justify-content: left;
+  justify-items: left;
   color: white ;
   font-size:1.5rem ;
+  margin-left: -0.5rem;
   margin-top:-1vh ;
   opacity:1!important;
   visibility: visible;
@@ -132,6 +136,7 @@
   }
   .joint-name{
     padding: 0!important;
+    margin-top: 1rem;
     align-items: center;
     align-content: center;
     align-self: center;
@@ -144,6 +149,7 @@
   }
   .my-container{
     padding: 1rem ;
+    margin-top: 1rem;
   }
   .vid{
     padding: 0.5rem ;

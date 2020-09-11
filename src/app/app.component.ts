@@ -35,6 +35,7 @@ export class AppComponent {
     this.routesMap['/joint/:part/manuals'] = 'JointManual'
     this.routesMap['/login'] = 'Login'
     this.routesMap['/signup'] = 'SignUp'
+    this.routesMap['/signup-data'] = 'SignUp Data'
 
 
 
