@@ -44,6 +44,7 @@
   font-size: 2rem ;
   color:  #005086 ;
   padding-top: 5% ;
+  margin-left: 1rem;
 
 
 }
@@ -52,6 +53,7 @@
   align-content: center;
   align-self: center;
   text-align: center;
+  margin-left:7.55em
 
 }
 @media(max-width:700px){
@@ -62,4 +64,15 @@
     margin-bottom: 13% ;
   }
 }
+@media(max-width:1024px) and (min-width:700px){
+  .ellipse{
+    margin-left:5em
+  }
+}
+@media(max-width: 699px){
+  .ellipse{
+    padding: 0.5em 2em;
+    margin-left:10em
+  }
 
+}

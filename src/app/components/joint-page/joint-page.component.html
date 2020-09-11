@@ -45,8 +45,8 @@
         (mouseover)="videosChangeIcon = true"(mouseout)="videosChangeIcon=false">
       <div class="row my-container">
         <div class="col  videos">
-          <img *ngIf="!videosChangeIcon" class="my-image" src="../../../assets/secondaryNav/85.png" alt="">
-          <img *ngIf="videosChangeIcon" class="my-image" src="../../../assets/secondaryNav/Active/85.png" alt="">
+          <img *ngIf="!videosChangeIcon" class="my-image vid" src="../../../assets/secondaryNav/85.png" alt="">
+          <img *ngIf="videosChangeIcon" class="my-image vid" src="../../../assets/secondaryNav/Active/85.png" alt="">
         </div>
       </div>
       <div [ngClass]="innerWidth>1024 ? '' : 'row'">
@@ -59,10 +59,10 @@
     </div>
     <div role="button" [routerLink]="['evidences']"[queryParams]="{bodyPart:jointName }" class="col-md-1 col-xs-3 col-sm-3"
         (mouseover)="evidencesChangeIcon = true"(mouseout)="evidencesChangeIcon=false">
-      <div class="row my-container">
+      <div class="row my-container ev">
         <div class="col  evidences">
-          <img *ngIf="!evidencesChangeIcon" class="my-image" src="../../../assets/secondaryNav/document.png" alt="">
-          <img *ngIf="evidencesChangeIcon" class="my-image" src="../../../assets/secondaryNav/Active/document.png" alt="">
+          <img *ngIf="!evidencesChangeIcon" class="my-image ev-image" src="../../../assets/secondaryNav/document.png" alt="">
+          <img *ngIf="evidencesChangeIcon" class="my-image ev-image " src="../../../assets/secondaryNav/Active/document.png" alt="">
         </div>
        </div>
       <div [ngClass]="innerWidth>1024 ? '' : 'row'">

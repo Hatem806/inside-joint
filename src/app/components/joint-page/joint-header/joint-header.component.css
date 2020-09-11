@@ -91,6 +91,7 @@
 @media(max-width:1000px) and (min-width:700px){
   .menu-options{
     margin: 0 auto ;
+    margin-left: 10%;
     background: #FFFFFF ;
     width:90% ;
     /* margin-left:10vw ; */
