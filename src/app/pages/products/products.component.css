@@ -35,11 +35,13 @@
   margin-right:3vw
 
 }
-.col-md-2{
+/* .col-md-2{
   padding: 0px 0px 0px 0px !important ;
-}
+} */
 .ellipse{
-  padding: 1% ;
+  padding:0.4% ;
+  max-width : 40% !important ;
+
 }
 /* .row::after {
   display: flex;
@@ -54,5 +56,28 @@
     text-align: center;
    display: block;
    margin: auto;
+  }
+}
+
+@media (max-width:768px){
+  .options{
+    width:60% ;
+    height: 10rem ;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto ;
+  }
+  .options-container{
+    margin: 0!important ;
+  }
+  .option-image{
+    max-width: 50% ;
+
+  }
+  .option-details{
+    font-size: 0.8rem;
+
   }
 }

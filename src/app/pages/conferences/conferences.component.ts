@@ -29,22 +29,22 @@ export class ConferencesComponent implements OnInit {
       if(window.innerWidth>1024){
         this.conferences = data.events.slice(0,4) ;
         this.firstConferenceIndex=0 ;
-        this.lastConferenceIndex=3 ;
         this.rowOfTwo = false ;
       }
       else{
-        if(window.innerWidth>=768){
+        if(window.innerWidth>=700){
           this.conferences = data.events.slice(0,2) ;
-          this.firstConferenceIndex=0 ;
           this.lastConferenceIndex=1 ;
           this.rowOfTwo = true ;
         }
         else{
           this.conferences = data.events.slice(0,1) ;
+          this.lastConferenceIndex = 0;
           this.rowOfOne = true ;
         }
 
       }
+      this.firstConferenceIndex=0 ;
       this.allConferences = data.events ;
 
 
@@ -56,6 +56,7 @@ export class ConferencesComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
   this.innerWidth = window.innerWidth;
+  this.firstConferenceIndex = 0 ;
   if (this.innerWidth <=1024) {
     if(this.innerWidth>=768){
       this.conferences = this.allConferences.slice(0,2)
@@ -67,12 +68,13 @@ export class ConferencesComponent implements OnInit {
       this.conferences = this.allConferences.slice(0,1)
       console.log(this.conferences)
       this.lastConferenceIndex = 0 ;
-      this.rowOfTwo = true ;
+      this.rowOfOne = true ;
     }
   } else {
     this.conferences = this.allConferences.slice(0,4)
     console.log(this.conferences)
     this.rowOfTwo = false ;
+    this.rowOfOne=true ;
     this.lastConferenceIndex=3 ;
   }
 }
@@ -81,6 +83,8 @@ export class ConferencesComponent implements OnInit {
   }
   onRightArrow(){
     //row of 4
+    console.log(this.firstConferenceIndex)
+    console.log(this.lastConferenceIndex)
     if(!this.rowOfTwo && !this.rowOfOne){
       if(this.allConferences[this.lastConferenceIndex+4]){
       this.conferences= this.allConferences.slice(this.lastConferenceIndex,this.lastConferenceIndex+4);
@@ -105,14 +109,14 @@ export class ConferencesComponent implements OnInit {
             }}
             else{
               //row of 1
-              if(this.allConferences[this.lastConferenceIndex+2]){
-                this.conferences= this.allConferences.slice(this.lastConferenceIndex,this.lastConferenceIndex+2);
-                this.lastConferenceIndex+=2 ;
-                this.firstConferenceIndex+=2 ;
+              if(this.allConferences[this.lastConferenceIndex+1]){
+                this.conferences= this.allConferences.slice(this.lastConferenceIndex,this.lastConferenceIndex+1);
+                this.lastConferenceIndex+=1 ;
+                this.firstConferenceIndex+=1 ;
                 }else{
-                  this.conferences= this.allConferences.slice(this.allConferences.length-2,this.allConferences.length)
+                  this.conferences= this.allConferences.slice(this.allConferences.length-1,this.allConferences.length)
                   this.lastConferenceIndex= this.allConferences.length-1 ;
-                  this.firstConferenceIndex= this.lastConferenceIndex-2 ;
+                  this.firstConferenceIndex= this.lastConferenceIndex ;
                 }
             }
         }
@@ -120,9 +124,12 @@ export class ConferencesComponent implements OnInit {
   }
 
   onLeftArrow(){
-    if(!this.rowOfTwo){
+    console.log(this.firstConferenceIndex)
+    console.log(this.lastConferenceIndex)
+    if(!this.rowOfTwo && !this.rowOfOne){
+      // row of 4
       if(this.allConferences[this.firstConferenceIndex-4]){
-        this.conferences= this.allConferences.slice(this.firstConferenceIndex-4,this.lastConferenceIndex+4)
+        this.conferences= this.allConferences.slice(this.firstConferenceIndex-4,this.lastConferenceIndex-4)
         this.firstConferenceIndex-=4 ;
         this.lastConferenceIndex-=4 ;
       }else{
@@ -131,15 +138,30 @@ export class ConferencesComponent implements OnInit {
         this.lastConferenceIndex=3 ;
       }
     }else{
-      if(this.allConferences[this.firstConferenceIndex-2]){
-        this.conferences= this.allConferences.slice(this.firstConferenceIndex-2,this.lastConferenceIndex+2)
-        this.firstConferenceIndex-=2 ;
-        this.lastConferenceIndex-=2 ;
+      if(!this.rowOfOne){
+        // row of 2
+        if(this.allConferences[this.firstConferenceIndex-2]){
+          this.conferences= this.allConferences.slice(this.firstConferenceIndex-2,this.lastConferenceIndex-2)
+          this.firstConferenceIndex-=2 ;
+          this.lastConferenceIndex-=2 ;
+        }else{
+          this.conferences= this.allConferences.slice(0,2)
+          this.firstConferenceIndex=0 ;
+          this.lastConferenceIndex=1 ;
+        }
       }else{
-        this.conferences= this.allConferences.slice(0,2)
-        this.firstConferenceIndex=0 ;
-        this.lastConferenceIndex=1 ;
-      }
+        //row of 1
+        if(this.allConferences[this.firstConferenceIndex-1]){
+
+          this.conferences= this.allConferences.slice(this.firstConferenceIndex-1,this.lastConferenceIndex)
+          this.firstConferenceIndex-=1 ;
+          this.lastConferenceIndex-=1 ;
+        }else{
+          this.conferences= this.allConferences.slice(0,1)
+          this.firstConferenceIndex=0 ;
+          this.lastConferenceIndex=0 ;
+        }
+        }
     }
 
   }

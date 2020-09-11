@@ -2,7 +2,7 @@
   padding-left: 16vw;
   font-family: montserrant-bold;
   color: white ;
-  font-size:4vh ;
+  font-size:3rem ;
   padding-top:3vh ;
 }
 .joint-container{
@@ -21,11 +21,11 @@
 }
 .no-gutters{
   background:  #005086!important;
-  height:100vh
+  height:100vh ;
 }
 .content-container{
   margin-left:14vw ;
-  margin-top: 27vh ;
+  margin-top: 22vh ;
 
 }
 .my-container{
@@ -36,15 +36,15 @@
   align-content: center;
   align-self: center;
   text-align: center;
-  padding: 70% ;
+  padding: 3em ;
   /* margin: auto 0 ; */
   height:100% ;
 }
 .my-container:hover{
   padding: 90% ;
 }
-.my-container:hover .manuals-image{
-  margin-left: -3.2em ;
+.my-container:hover {
+  margin-left: -100%  ;
 }
 
 .horizontal-divider{
@@ -56,17 +56,6 @@
   align-content: center;
   align-self: center;
   text-align: center;
-
-}
-.vertical-divider{
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  text-align: center;
-  background-color : red;
-  width:5%  ;
-  height: 100% ;
-  padding-top: 5%;
 
 }
 
@@ -83,7 +72,7 @@
   display: block;
   justify-content: center;
   align-content: center;
-  margin-left: -2.5em ;
+  margin-left: -1em ;
 }
 
 /* .manuals-image{
@@ -93,7 +82,7 @@
   padding-left: 1.5vw;
   font-family: montserrant;
   color: white ;
-  font-size:3vh ;
+  font-size:1.5rem ;
   margin-top:-1vh ;
   opacity:1!important;
   visibility: visible;
@@ -107,19 +96,46 @@
 .joint-name-2{
   font-family: montserrant-bold;
   color:  #005086;
-  font-size:4vh ;
+  font-size:2rem ;
   display:block ;
   align-items: center;
-  margin-top:50% ;
+  margin-top:40% ;
   align-self: center;
   text-align: center;
 }
-@media(max-width:1024px){
+@media(max-width:1024px) and (min-width:768px){
   .joint-container{
-    width:80% ;
+    width:120% ;
     height: auto ;
   }
   .content-container{
     margin-top: 5% ;
   }
 }
+@media(max-width:767px){
+  .joint-container{
+    width:70% ;
+    height: auto ;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .joint-name{
+    padding: 0!important;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+  }
+  .content-container{
+    margin-left: 5%;
+    margin-top: 10% ;
+
+  }
+  .my-container{
+    padding: 1.5rem ;
+  }
+}
+/* @media(max-width-) */

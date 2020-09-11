@@ -62,5 +62,13 @@ max-width: 50% !important;
   .calendar-text{
     padding: 0px !important ;
   }
+  .options-container{
+    margin-bottom:30% !important ;
+  }
+
+.options{
+
+ height: 80% ;
+}
 }
 

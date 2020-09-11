@@ -54,7 +54,12 @@
   text-align: center;
 
 }
-.w-100{
-  width:100% ;
-  margin: 0 auto ;
+@media(max-width:700px){
+  .joint-white-container{
+
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 13% ;
+  }
 }
+

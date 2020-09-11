@@ -180,6 +180,21 @@
 
   }
 }
+@media (max-width: 700px){
+
+.home-container {
+width: 100%
+}
+.text-area {
+  width: 100%;
+
+}
+
+.skeleton-container {
+ width: 100%
+
+}
+}
 /* /.skeleton-container{
   transform: scale(0.6,0.6);
   display: block;

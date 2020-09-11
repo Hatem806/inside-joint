@@ -26,6 +26,8 @@ export class SignupDataComponent implements OnInit, OnDestroy
   public errorMessage:string;
   public error :boolean
 
+  innerWidth : any = window.innerWidth
+
 
 
   constructor(  private data:Data,public ApiService: ApiService, public router: Router,public SessionStorageService:SessionStorageService,public route: ActivatedRoute)

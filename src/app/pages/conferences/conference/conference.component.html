@@ -34,8 +34,8 @@
             <div class="row about-conference">
               Conference Details
             </div>
-            <div class="row w-100 ">
-              <div (click)="goToPdfLink( chosenConference.schedulePath )" role="button" (mouseover)="changeProgramIcon=true;" (mouseout)="changeProgramIcon=false"class="col-md-3 col-xs-3 col-sm-3 offset-1 options no-gutters" >
+            <div class="row options-container">
+              <div (click)="goToPdfLink( chosenConference.schedulePath )" role="button" (mouseover)="changeProgramIcon=true;" (mouseout)="changeProgramIcon=false"class="col-md-3 col-xs-3 col-sm-3 options no-gutters" >
                 <img *ngIf="!changeProgramIcon"class="option-image" src="../../../assets/icons/37.png" alt="Download pdf">
                 <img *ngIf="changeProgramIcon"class="option-image" src="../../../assets/icons/asset-3.png" alt="Download pdf">
                 <div class="row">
@@ -67,6 +67,9 @@
                 <div class="row option-details">
                   Questions
                 </div>
+              </div>
+              <div class="offset-1">
+
               </div>
           </div>
         </div>

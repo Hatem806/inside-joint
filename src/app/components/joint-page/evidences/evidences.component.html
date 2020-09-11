@@ -6,16 +6,16 @@
     <div *ngFor="let row of documents2DArray; let indexOfElement=index ;"class="row elements-row">
       <div *ngFor="let element of row; let rowIndex=index"class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
         <div role="button" (click)="goToDocumentLink(element)" class="row">
-          <div *ngIf="!twoElementsARow"class="col-md-1 col-lg-1 col-sm-1 col-xs-1 element-number">
+          <div *ngIf="!twoElementsARow"class="col col-1 element-number">
             {{indexOfElement+indexOfElement+rowIndex + 1}}
           </div>
-          <div *ngIf="twoElementsARow"class="col-md-1 col-lg-1 col-sm-1 col-xs-1 element-number">
+          <div *ngIf="twoElementsARow"class="col col-1 element-number">
             {{indexOfElement + 1}}
           </div>
-          <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
+          <div class="col col-3">
             <img class=" element-thumbnail" src="{{../../../../assets/secondaryNav/document@2x.png" alt="">
           </div>
-          <div class="col-md-8 col-lg-8 col-sm-8 col-xs-8">
+          <div class="col col-8">
             <div class="row">
               <h3 class=" element-title">
                 {{element.title}}

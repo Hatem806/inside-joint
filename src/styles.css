@@ -150,25 +150,25 @@ body{
 }
 
 .element-thumbnail{
-  height: 5rem;
-  width: 4rem ;
+  height: 7rem;
+  width: 6rem ;
   /* display: block;
   margin: auto; */
 }
 .element-title{
   font-family: montserrant-bold;
-  font-size:1rem ;
+  font-size:0.9rem ;
   color: #005086 ;
   text-align: left;
   justify-content: left;
   line-height: 1rem ;;
-  padding-left:1em ;
+  /* padding-left:1em ; */
   padding-bottom :1em;;
   padding-top:1em;
 }
 .element-description{
   font-family: montserrant;
-  font-size:0.7em ;
+  font-size:0.6em ;
   color: #6B6C6F;
   padding: 0px!important;
 }
@@ -190,25 +190,24 @@ body{
   color :  #005086 ;
   font-size: 3rem;
   text-align: left;
-  padding-top:1vh ;
-  padding-left: 5vh ;
-  padding-bottom: 1vh ;
+  padding-top:0.1em ;
+  padding-left: 0.8em ;
+  padding-bottom: 0.05em ;
 }
 .page-cont{
-  margin-left:12vw ;
+  margin-left:10% ;
 }
 .options-container{
   padding-top: 3vh ;
-  margin-left: 5vw ;
-  height:40vh;
+  height:40%;
 }
-@media (max-width:1024px){
+/* @media (max-width:1024px){
   .option-image{
     display: block;
-    /* margin: 0 auto; */
-    /* margin-top: 15% ; */
-    /* max-width: 50% ;
-    max-height: 50% ; */
+    margin: 0 auto;
+    margin-top: 15% ;
+    max-width: 50% ;
+    max-height: 50% ;
     height: 5em ;
     align-items: center;
     align-content: center;
@@ -226,16 +225,16 @@ body{
     border-radius: 50% ;
     height:1vh ;
     max-width:9vw!important ;
-    /* display: block;
+    display: block;
     margin: auto;
     position: absolute;
-    left: 8vw  ; */
+    left: 8vw  ;
   }
   .page-title{
     padding: 0px ;
 
   }
-}
+} */
 @media (max-width: 768px){
   /* .elements-row{
     padding-left: 0px ;
@@ -265,19 +264,38 @@ body{
   }
 }
 /* phone sizes */
-@media (max-width:575px){
+@media (max-width:700px){
   .options{
     border-radius: 10px;
     border-width: 1px 1px ;
-    box-shadow: 0px 1px 20px 1px #ACACAC;
+    box-shadow: 5px 1px 20px 1px #ACACAC;
     border-top: 0px !important;
     border-bottom:1px !important ;
-    width:70% ;
+    width:25% ;
+    height: 10rem ;
     padding: 0px !important;
   }
+  .options-container{
+    margin: 0!important ;
+  }
+  .option-image{
+    display: block;
+    margin: auto;
+    margin-top: 15% ;
+    max-width: 10.5vw ;
+    max-height: 14vh
 
+  }
+  .option-details{
+    font-size: 0.8rem;
 
-
+  }
+  .page-cont{
+    margin: 0px !important ;
+  }
+  .page-title{
+    padding-left: 0.5em ;
+  }
 
 
 

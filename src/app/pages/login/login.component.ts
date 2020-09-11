@@ -18,6 +18,8 @@ export class LoginComponent implements OnInit, OnDestroy
   public errorMessage:string;
   public error :boolean
 
+  innerWidth : any = window.innerWidth ;
+
   constructor(  public ApiService: ApiService, public router: Router,public SessionStorageService:SessionStorageService)
   {
 

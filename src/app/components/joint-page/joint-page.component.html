@@ -23,9 +23,9 @@
           </div>
       </div>
     </div>
-    <div [ngClass]="innerWidth>1024 ? 'col horizontal-divider' : 'row vertical-divider'">
+    <div *ngIf="innerWidth>=768" class= 'col horizontal-divider' >
     </div>
-    <div role="button" [routerLink]="['manuals']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}"class="col-md-1 col-xs-12 col-sm-12 "
+    <div role="button" [routerLink]="['manuals']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageToManuals}"class="col-md-1 col-xs-3 col-sm-3 "
         (mouseover)="manualsChangeIcon = true"(mouseout)="manualsChangeIcon=false">
       <div class="row my-container ">
         <div class="col  manuals">
@@ -34,14 +34,14 @@
         </div>
       </div>
         <div [ngClass]="innerWidth>1024 ? '' : 'row'">
-          <div class="col-md-12 option-desc">
+          <div class="col option-desc">
              Manuals
           </div>
         </div>
     </div>
-    <div [ngClass]="innerWidth>1024 ? 'col horizontal-divider' : 'row vertical-divider'">
+    <div [ngClass]="innerWidth>=768 ? 'col horizontal-divider' : 'offset-1' " >
     </div>
-    <div role="button" [routerLink]="['videos']"[queryParams]="{bodyPart:jointName }" class=" col-md-1 col-xs-12 col-sm-12"
+    <div role="button" [routerLink]="['videos']"[queryParams]="{bodyPart:jointName }" class=" col-md-1 col-xs-3 col-sm-3"
         (mouseover)="videosChangeIcon = true"(mouseout)="videosChangeIcon=false">
       <div class="row my-container">
         <div class="col  videos">
@@ -55,9 +55,9 @@
         </div>
       </div>
     </div>
-    <div [ngClass]="innerWidth>1024 ? 'col horizontal-divider' : 'row vertical-divider'">
+    <div [ngClass]="innerWidth>=768 ? 'col horizontal-divider' : 'offset-1' " >
     </div>
-    <div role="button" [routerLink]="['evidences']"[queryParams]="{bodyPart:jointName }" class="col-md-1 col-xs-12 col-sm-12"
+    <div role="button" [routerLink]="['evidences']"[queryParams]="{bodyPart:jointName }" class="col-md-1 col-xs-3 col-sm-3"
         (mouseover)="evidencesChangeIcon = true"(mouseout)="evidencesChangeIcon=false">
       <div class="row my-container">
         <div class="col  evidences">
@@ -71,7 +71,7 @@
         </div>
       </div>
     </div>
-    <div [ngClass]="innerWidth>1024 ? 'col horizontal-divider' : 'row vertical-divider'">
+    <div *ngIf="innerWidth>=768" class= 'col horizontal-divider' >
     </div>
   </div>
 </div>

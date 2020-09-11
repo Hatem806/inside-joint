@@ -18,6 +18,7 @@ export class ManualsComponent implements OnInit {
     this.route.queryParams.subscribe(data => {
       this.jointName = data.bodyPart ;
       this.jointImageSrc = this.apiService.getJointService().jointsImagePath + data.imgSrc ;
+      console.log(this.jointImageSrc)
      })
 
     this.apiService.getAssetsService().getByPartAndType(this.jointName.toLowerCase(),'manual').subscribe( data => {
@@ -25,9 +26,6 @@ export class ManualsComponent implements OnInit {
       this.description = data.assets[0].description ;
       this.title = data.assets[0].title
     })
-
-
-
 
   }
 

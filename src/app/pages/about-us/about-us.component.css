@@ -63,7 +63,7 @@
 
 @media(max-width:767px){
   .details-section{
-    margin-left:15% ;
+    margin-left:0% ;
   }
 .details{
   padding-left: 0px!important;
@@ -81,8 +81,35 @@
   align-self: center;
   text-align: center;
 }
-.page-title{
+/* .page-title{
   font-size: 3rem ;
+} */
+.my-container{
+  margin-left: 0% !important ;
+  padding-left: 10% !important ;
+  padding-top:2em ;
+}
+.options-container{
+  margin-bottom:30% !important ;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+}
+.options{
+  margin: 0 auto ;
+  width: 30% ;
+  height: 8em ;
+}
+.option-image{
+  width:60% ;
+  padding-top: 50%;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  margin: auto auto;
+
 }
 
 }
