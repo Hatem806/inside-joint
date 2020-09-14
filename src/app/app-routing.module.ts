@@ -7,9 +7,9 @@ import { AboutUsComponent } from '../app/pages/about-us/about-us.component'
 import { ConferenceComponent } from '../app/pages/conferences/conference/conference.component'
 import { QuestionsComponent } from '../app/pages/conferences/questions/questions.component'
 import { ThankYouComponent } from '../app/pages/conferences/thank-you/thank-you.component'
-import { LoginComponent } from './Pages/login/login.component';
-import {SignupComponent} from'./Pages/signup/signup.component'
-import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
+import { LoginComponent } from './pages/login/login.component';
+import {SignupComponent} from'./pages/signup/signup.component'
+import {SignupDataComponent} from'./pages/signup/signup-data/signup-data.component';
 import { JointPageComponent } from './components/joint-page/joint-page.component';
 import { ManualsComponent } from './components/joint-page/manuals/manuals.component';
 import { VideosComponent } from './components/joint-page/videos/videos.component';

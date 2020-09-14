@@ -14,9 +14,9 @@ import { DatePipe } from '@angular/common';
 import { QuestionComponent } from './components/question/question.component';
 import { QuestionsComponent } from './pages/conferences/questions/questions.component';
 import { ThankYouComponent } from './pages/conferences/thank-you/thank-you.component'
-import { LoginComponent } from './Pages/login/login.component';
-import {SignupComponent} from'./Pages/signup/signup.component'
-import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
+import { LoginComponent } from './pages/login/login.component';
+import {SignupComponent} from'./pages/signup/signup.component'
+import {SignupDataComponent} from'./pages/signup/signup-data/signup-data.component';
 import {Data} from './models/Data';
 import { JointPageComponent } from './components/joint-page/joint-page.component';
 import { ManualsComponent } from './components/joint-page/manuals/manuals.component';
