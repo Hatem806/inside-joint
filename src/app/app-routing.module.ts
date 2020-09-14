@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: "aboutus", component: AboutUsComponent},
   {path: "joint/manuals", component: ManualsComponent},
   {path: "joint/videos", component: VideosComponent},
-  {path: "joint/evidences", component: EvidencesComponent,
+  {path: "joint/evidences", component: EvidencesComponent},
   {path: "joint/:part", component: JointPageComponent},
   {path: "joint", component: JointPageComponent},
   {path:'signup',component:SignupComponent},
