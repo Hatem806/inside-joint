@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <nav *ngIf="innerWidth<700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login'"  [style.background]="navbarColor"class="navbar fixed-bottom navbar-light">
+    <nav *ngIf="innerWidth<700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login' && router.url!=''"  [style.background]="navbarColor"class="navbar fixed-bottom navbar-light">
       <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
         <img  *ngIf="!(currentRoute=='Home')"class="icons" src="../assets/mainNav/135.png" alt="Home">
         <img  *ngIf="(currentRoute=='Home')"class="icons" src="../assets/mainNav/Active/135.png" alt="Home">
