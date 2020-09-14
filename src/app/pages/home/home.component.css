@@ -22,8 +22,8 @@
 }
 .knee{
   position: absolute;
-  left: 35%;
-  top:64% ;
+  left: 34%;
+  top:63% ;
 }
 .desc{
   visibility: hidden;
@@ -55,33 +55,33 @@
 .hand{
   position: absolute;
   left: 23%;
-  top:48% ;
+  top:46% ;
 }
 .elbow{
   position: absolute;
-  left: 26%;
-  top:33% ;
+  left: 25%;
+  top:32% ;
 }
 
 .ankle{
   position: absolute;
-  bottom:9% ;
-  right:37%
+  bottom:8% ;
+  right:36%
 }
 .foot{
   position: absolute;
-  bottom:6.5% ;
-  left:36%
+  bottom:6% ;
+  left:35%
 }
 .neck{
   position: absolute;
   top:16% ;
-  left:41%
+  left:39.75%
 }
 .shoulder{
   position: absolute;
-  top:19% ;
-  right:30%
+  top:18.5% ;
+  right:29.5%
 }
 .hip{
   position: absolute;
