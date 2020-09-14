@@ -61,7 +61,8 @@ export class EvidencesComponent implements OnInit {
 
 
   goToDocumentLink(element){
-    window.location.href = this.apiService.getAssetsService().getVideosUrl() + element.path ;
+    window.location.href = this.apiService.getAssetsService().getDocumentsUrl() + element.path ;
+    console.log(window.location.href)
   }
   init2DArray(){
     console.log(this.documents)

@@ -1,4 +1,6 @@
-
+*{
+  box-sizing: border-box;
+}
 .welcome{
   font-family:montserrant-bold ;
   font: italic ;
@@ -131,8 +133,8 @@
   }
 
   .skeleton-container {
-      width: 33.5%;
-      max-height: 70%;
+      width: 32%;
+      max-height: 65%;
       position: relative;
 
   }

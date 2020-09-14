@@ -21,14 +21,14 @@
 .my-container{
   margin-left: 15% !important ;
   padding-left: 10% !important ;
-  padding-top:2em ;
+  padding-top:1em ;
 }
 .details{
   font-family:montserrant-bold ;
   font-size: 2rem ;
   text-align: left;
   color: #6B6C6F;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   padding-top: 1em;
   padding-left: 1.5em;
 }
@@ -38,7 +38,7 @@
 }
 .details-section{
   float: right;
-  padding-bottom: 2vh;
+  padding-bottom:0.5em;
   padding-left:10vw
 }
 /* .bottom-part{
