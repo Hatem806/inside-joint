@@ -1,20 +1,17 @@
 
-.title{
-  font-family: montserrant-extra-bold;
-  font-size: 8vh;
-  color:  #005086 ;
-}
+
 .no-gutters{
   padding-right: 0px !important ;
   padding-left: 0px !important ;
   margin-left: 0px !important;
   margin-left: 0px !important;
 }
-.desription{
+.description{
   font-family:montserrant ;
-  font-size: 3vh ;
+  font-size: 0.8rem ;
   text-align: left;
   color:#6B6C6F ;
+  padding-top: 1vw ;
 }
 .title-description{
 
@@ -22,15 +19,18 @@
   float: left;
 }
 .my-container{
-  margin-left: 12vw !important ;
+  margin-left: 15% !important ;
+  padding-left: 10% !important ;
+  padding-top:1em ;
 }
 .details{
   font-family:montserrant-bold ;
-  font-size: 4vh ;
+  font-size: 2rem ;
   text-align: left;
   color: #6B6C6F;
-  padding-bottom: 3vh;
-  padding-top: 2vh;
+  padding-bottom: 0.5em;
+  padding-top: 1em;
+  padding-left: 1.5em;
 }
 .wrapper{
   min-height:100% !important
@@ -38,10 +38,11 @@
 }
 .details-section{
   float: right;
-  padding-bottom: 20px;
+  padding-bottom:0.5em;
+  padding-left:10vw
 }
 /* .bottom-part{
-  margin-left: 200px;
+  height:40vh
 } */
 .widgets-row{
   width: 100%;
@@ -52,17 +53,63 @@
 .options:hover{
   background-color:  #005086;
 }
-.no-gutters{
+/* .no-gutters{
   min-height: 100vh;
-}
+} */
 .option-image{
   padding-top: 5vh;
-  padding-left: 3vw;
-  display: block;
-  margin: auto;
-  height: 70%;
-  width: auto ;
+  /* padding-left: vw; */
+}
+
+@media(max-width:767px){
+  .details-section{
+    margin-left:0% ;
+  }
+.details{
+  padding-left: 0px!important;
+  padding-bottom:5% ;
+  padding-top:5% ;
+  align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+}
+.title-description{
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+}
+/* .page-title{
+  font-size: 3rem ;
+} */
+.my-container{
+  margin-left: 0% !important ;
+  padding-left: 10% !important ;
+  padding-top:2em ;
+}
+.options-container{
+  margin-bottom:30% !important ;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
 }
 .options{
-  height:40vh ;
+  margin: 0 auto ;
+  width: 30% ;
+  height: 8em ;
+}
+.option-image{
+  width:60% ;
+  padding-top: 50%;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  margin: auto auto;
+
+}
+
 }

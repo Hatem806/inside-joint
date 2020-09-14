@@ -1,21 +1,19 @@
-<div class=" no-gutters w-100">
-  <div class=" w-100 no-gutters">
-    <div class="row w-100 page-header">
-      <div class="col-md-12">
-        <div class="float-left ">
-          <div class="float-left logo">
-            <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo">
-          </div>
+
+      <div class="header-container">
+        <div class="logo">
+          <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo">
         </div>
-        <div class="float-right info ">
+
+        <div class="page-name">
           {{ pageName }}
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
+
+
+    <div *ngIf="router.url!='/home'" class="row">
+        <div class="col">
           <img class="w-100 image" style="background-size: cover;" src="{{ pageImageSource }}" alt="">
       </div>
     </div>
-  </div>
-</div>
+  <!-- </div> -->
+

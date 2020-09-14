@@ -19,6 +19,8 @@ export class ConferenceComponent implements OnInit {
   questions : IQuestion[]
   conference_id
 
+  pageImageSrc = "../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" ;
+
   changeVideoIcon : boolean = false  ;
   changeQuestionsIcon : boolean = false;
   changeProgramIcon : boolean = false ;

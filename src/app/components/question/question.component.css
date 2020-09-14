@@ -21,3 +21,9 @@
 .form-check input[type="radio"]:checked+label {
   color: #005086;
 }
+@media(max-width: 700px){
+  .question-container{
+    width: 90% ;
+    margin: 3% auto;
+  }
+}

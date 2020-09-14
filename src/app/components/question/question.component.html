@@ -8,7 +8,7 @@
     <div class="row w-100">
       <div class="col " *ngFor="let answer of answers; let indexOfElement = index">
         <div class="form-check">
-          <input (change)="registerChange($event)"class="form-check-input" id="{{questionIndex}}"name = "{{title}}"  type="radio" value="{{ answer }}" >
+          <input role="button"(change)="registerChange($event)"class="form-check-input" id="{{questionIndex}}"name = "{{title}}"  type="radio" value="{{ answer }}" >
           <label class="form-check-label choice">
              {{ answer }}
           </label>

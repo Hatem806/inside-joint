@@ -1,34 +1,10 @@
-.image{
-   max-height:250px !important;
-   width: 100vw !important;
-  object-fit: cover;
-}
-.logo{
-  margin-top: 20px;
-  transform: scale(0.6,0.6);
-}
-.conferences{
-  font-family: montserrant;
-  font-size: 14pt;
-  color:#6B6C6F;
-  position: absolute;
-  top: 35px;
-  right: 10px ;
-}
+
+
+
 .page-header{
   padding-left:160px;
 }
-.page-title{
-  font-family: montserrant-extra-bold;
-  color :  #005086 ;
-  font-size: 8vh;
-  text-align: left;
-  margin-left: 13vw ;
-}
 
-.conferences{
-  border: 5px;
-}
 .pdf-icon{
   transform: scale(0.6,0.6);
 
@@ -39,45 +15,67 @@
 .web-icon{
   transform: scale(0.8,0.8);
 }
-.options{
-  width: fit-content !important;
-  height: auto !important;
-}
-.conferences-container{
-  min-height: 100vh;
-  margin-left: 10vw;
-}
-.conference-image{
-  transform: scale(0.7,0.7);
-    flex-shrink: 0;
-    width: 100%;
-    height: 30vh ;
-    max-height:30vh ;
-    /* padding-right: 15px ;
-    margin-left : -20px !important; */
-}
-.image-cont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden ;
-    width: fit-content ;
-}
-.conference-details{
-  font-family: montserrant-italic;
-  font-size: 14px;
-  color:  #6B6C6F ;
-  display: block;
-  margin:auto ;
 
+.image-cont{
+  margin-bottom: 0.5em ;
 }
+
 /* .row::after {
   display: flex;
 } */
-
+.ellipse{
+padding:0.4% ;
+max-width : 40% !important ;
+}
 .option-details{
-  padding-top:0vh !important ;
-  justify-content: center;
+
+  align-items: center;
+  align-content: center;
+  align-self: center;
   text-align: center;
-  padding-bottom: 1vh;
+  padding-top:5% ;;
+}
+.options:hover{
+  background-color:  #005086;
+}
+.options:hover .option-details{
+  background-color:  #005086;
+  color: #EFB747;
+}
+
+@media (max-width:1024px){
+  .options{
+    width:100% ;
+    height: 120% ;
+
+  }
+  .options-container{
+    padding-bottom:20% ;
+  }
+  .option-image{
+    max-width: 50% ;
+  }
+}
+@media (max-width:700px){
+  .options{
+    width:80% ;
+    height: 120% ;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto ;
+  }
+  .options-container{
+    margin: 0!important ;
+    margin-bottom: 10% !important;
+  }
+  .option-image{
+    max-width: 60% ;
+
+  }
+  .option-details{
+    font-size: 0.8rem;
+
+  }
 }

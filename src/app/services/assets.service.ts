@@ -37,7 +37,7 @@ export class AssetsService {
 
   public getThumbnailsUrl(): string
   {
-    return AssetsService._videosUrl;
+    return AssetsService._thumbnailsUrl;
   }
 
   public getDocumentsUrl(): string
@@ -74,6 +74,9 @@ export class AssetsService {
   public getById(id: string): Observable<IAssetResponse>
   {
     return this.http.get<IAssetResponse>(`${environment.baseUrl}/${AssetsService._endPoint}/${id}`);
+  }
+  public getByPartAndType(part : string, type : string) :Observable<any> {
+    return this.http.get(`${environment.baseUrl}/${AssetsService._endPoint}/part/${part}/type/${type}`);
   }
 
 }

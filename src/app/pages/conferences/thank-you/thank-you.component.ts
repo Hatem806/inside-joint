@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThankYouComponent implements OnInit {
   pageTitle = "Thank You"
+  pageImageSrc = "../../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png" ;
   constructor() { }
 
   ngOnInit(): void {

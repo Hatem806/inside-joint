@@ -10,6 +10,7 @@ import {IUserResponse} from  '../models/responses/UserResponse'
 })
 export class AuthenticationService {
   private static _endPoint: string = "v1/auth";
+  private userId : string ;
 
   constructor(private sessionStorageService: SessionStorageService,private http: HttpClient) { }
 
@@ -29,4 +30,10 @@ export class AuthenticationService {
     this.sessionStorageService.removeUserSession();
   }
 
+  public getUserId(){
+    return this.userId ;
+  }
+  public setUserId(userId : string){
+    this.userId = userId ;
+  }
 }

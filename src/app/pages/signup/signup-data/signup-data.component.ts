@@ -26,6 +26,8 @@ export class SignupDataComponent implements OnInit, OnDestroy
   public errorMessage:string;
   public error :boolean
 
+  innerWidth : any = window.innerWidth
+
 
 
   constructor(  private data:Data,public ApiService: ApiService, public router: Router,public SessionStorageService:SessionStorageService,public route: ActivatedRoute)
@@ -63,9 +65,9 @@ this.country='Egypt'
     this.date= new Date();
     this.user={city:this.city,firstname:this.firstName,lastname:this.lastName,email:this.email,mobileNumber:this.contactNumber,password:this.password
       ,country:this.country,language:null,workplace:this.workPlace,isUsingIAHA:this.data.storage.isUsingIaha,whichJoints:this.data.storage.whichJoints,rangeOfInjectionsPerMonth:this.data.storage.rangeOfInjectionsPerMonth,createdAt:this.date,updatedAt:this.date}
-
+      console.log(this.user)
       this.ApiService.getUsersService().create(this.user).subscribe(data => {
-
+        console.log(data)
       if(data.success == true )
       {
         this.ApiService.getAuthenticationService().login(this.email, this.password).subscribe(data => {

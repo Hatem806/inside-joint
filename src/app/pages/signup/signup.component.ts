@@ -29,19 +29,22 @@ export class SignupComponent implements OnInit, OnDestroy
   public joints=[]
   public userData
   public errorMessage:string;
-  public error :boolean
+  public error :boolean ;
+
+  innerWidth :any = window.innerWidth ;
 
   constructor(  private data:Data ,public ApiService: ApiService, public router: Router,public SessionStorageService:SessionStorageService)
   {
     this.iaha=[{name:'Yes',value:true},{name:'No',value:false}]
     this.injections=[{name:'0-10',value:'0-10'},{name:'10-30',value:'10-30'},{name:'30-50',value:'30-50'},{name:'50+',value:'50+'}]
     this.joints=[
+      [
     {value: 'TMJ', name: "TMJ     ", checked: false},
-    {value: 'Hand', name: "Hand", checked: false},
-    {value: 'Knee', name: "Knee    ", checked: false},
-    {value: 'Ankle', name: "Ankle", checked: false},
-    {value: 'Shoulder', name: "Shoulder", checked: false},
-    {value: 'Hip', name: "Hip", checked: false}]
+    {value: 'Hand', name: "Hand", checked: false}],
+    [{value: 'Knee', name: "Knee    ", checked: false},
+    {value: 'Ankle', name: "Ankle", checked: false}],
+    [{value: 'Shoulder', name: "Shoulder", checked: false},
+    {value: 'Hip', name: "Hip", checked: false}]]
   }
 
 

@@ -17,7 +17,12 @@ import { ThankYouComponent } from './pages/conferences/thank-you/thank-you.compo
 import { LoginComponent } from './Pages/login/login.component';
 import {SignupComponent} from'./Pages/signup/signup.component'
 import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
-import {Data} from './models/Data'
+import {Data} from './models/Data';
+import { JointPageComponent } from './components/joint-page/joint-page.component';
+import { ManualsComponent } from './components/joint-page/manuals/manuals.component';
+import { JointHeaderComponent } from './components/joint-page/joint-header/joint-header.component';
+import { VideosComponent } from './components/joint-page/videos/videos.component';
+import { EvidencesComponent } from './components/joint-page/evidences/evidences.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import {Data} from './models/Data'
     ThankYouComponent,
     SignupComponent,
     SignupDataComponent,
-    LoginComponent
+    LoginComponent,
+    JointPageComponent,
+    ManualsComponent,
+    JointHeaderComponent,
+    VideosComponent,
+    EvidencesComponent
   ],
   imports: [
     BrowserModule,

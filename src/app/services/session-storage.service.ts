@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class SessionStorageService {
 
   private static USER_KEY = "user";
 
-  constructor() { }
+  constructor(public router : Router) { }
 
 
   public saveUserSession(username: string): void
@@ -18,7 +19,13 @@ export class SessionStorageService {
 
   public isUserSaved(): boolean
   {
-    return window.sessionStorage.getItem(SessionStorageService.USER_KEY) != null;
+
+    let flag = window.sessionStorage.getItem(SessionStorageService.USER_KEY) != null;
+    if(flag){
+      return flag ;
+    }
+//    this.router.navigateByUrl('login');
+    return flag ;
   }
 
   public removeUserSession(): void
