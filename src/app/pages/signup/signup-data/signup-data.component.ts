@@ -13,7 +13,7 @@ import {Data} from '../../../models/Data'
 })
 export class SignupDataComponent implements OnInit, OnDestroy
 {
-  public email: string;
+  public email: string ;
   public password: string;
   public lastName:string;
   public firstName:string;
@@ -61,7 +61,12 @@ this.country='Egypt'
 
   public signUp(): void
   {
-
+    console.log(this.city)
+    if(this.city == undefined || this.firstName == undefined || this.lastName == undefined || this.email == undefined || this.country == undefined ||
+      this.workPlace == undefined || this.password == undefined || this.contactNumber == undefined ){
+        this.error = true ;
+        this.errorMessage = "Please fill all fields"
+      }
     this.date= new Date();
     this.user={city:this.city,firstname:this.firstName,lastname:this.lastName,email:this.email,mobileNumber:this.contactNumber,password:this.password
       ,country:this.country,language:null,workplace:this.workPlace,isUsingIAHA:this.data.storage.isUsingIaha,whichJoints:this.data.storage.whichJoints,rangeOfInjectionsPerMonth:this.data.storage.rangeOfInjectionsPerMonth,createdAt:this.date,updatedAt:this.date}
