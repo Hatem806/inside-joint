@@ -204,3 +204,92 @@ width: 100%
   margin-top: -55vh;
   margin-bottom:0vh ;
 }  */
+@media(max-width:768px) and (min-width:500px){
+  .hand{
+    position: absolute;
+    left: 25%;
+    top:48% ;
+  }
+  .elbow{
+    position: absolute;
+    left: 27%;
+    top:34% ;
+  }
+
+  .ankle{
+    position: absolute;
+    bottom:10% ;
+    right:39%
+  }
+  .foot{
+    position: absolute;
+    bottom:7.5% ;
+    left:37%
+  }
+  .neck{
+    position: absolute;
+    top:18% ;
+    left:42.75%
+  }
+  .shoulder{
+    position: absolute;
+    top:20.5% ;
+    right:31.5%
+  }
+  .hip{
+    position: absolute;
+    top:45% ;
+    right:36%
+  }
+  .knee{
+    position: absolute;
+    left: 37%;
+    top:65% ;
+  }
+
+}
+
+@media(max-width:2600px) and (min-width:1700px){
+  .hand{
+    position: absolute;
+    left: 26%;
+    top:49% ;
+  }
+  .elbow{
+    position: absolute;
+    left: 29%;
+    top:35% ;
+  }
+
+  .ankle{
+    position: absolute;
+    bottom:11% ;
+    right:41%
+  }
+  .foot{
+    position: absolute;
+    bottom:8.5% ;
+    left:38%
+  }
+  .neck{
+    position: absolute;
+    top:19% ;
+    left:43.75%
+  }
+  .shoulder{
+    position: absolute;
+    top:21.5% ;
+    right:32.5%
+  }
+  .hip{
+    position: absolute;
+    top:45% ;
+    right:36%
+  }
+  .knee{
+    position: absolute;
+    left: 37%;
+    top:65.5% ;
+  }
+
+}

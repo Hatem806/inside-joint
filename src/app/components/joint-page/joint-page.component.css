@@ -148,17 +148,21 @@
 
   }
   .my-container{
-    padding: 1rem ;
-    margin-top: 1rem;
+    padding: 0rem ;
+    margin-top: 6.5rem;
+    height:50% ;
   }
   .vid{
-    padding: 0.5rem ;
+    padding: 0rem ;
     padding-left: 2em!important ;
   }
-  .ev{
+  .horizontal-divider{
+    margin-top: 6.5rem;
+  }
+  /* .ev{
     padding: 0.2rem;
 
-  }
+  } */
   .ev-image{
     padding-left: 3em!important;
   }
