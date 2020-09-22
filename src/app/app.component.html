@@ -16,34 +16,99 @@
   <div class="no-gutters" id="wrapper">
     <app-header *ngIf="router.url=='/home'"></app-header>
     <!-- Sidebar -->
-    <div *ngIf="innerWidth>=700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login'"[style.background]="sidebarColor"class="no-gutters no-padding border-right sidebar flex-fill flex-column sidebar-wrapper" id="sidebar-wrapper" >
+    <div *ngIf="innerWidth>1024 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login'"[style.background]="sidebarColor"class=" sidebar flex-fill flex-column sidebar-wrapper" id="sidebar-wrapper" >
 
-      <div class="list-group list-group-flush bg-info " >
+      <div class="list-group list-group-flush " >
         <div [style.background]="companyNameBackground"[style.color]="companyNameColor" class="company-name sidebar-heading">
           InsideJoints
         </div>
         <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
-          <img  *ngIf="!(currentRoute=='Home')"class="icons" src="../assets/mainNav/135.png" alt="Home">
-          <img  *ngIf="(currentRoute=='Home')"class="icons" src="../assets/mainNav/Active/135.png" alt="Home">
+         <div class="row">
+            <img  *ngIf="!(currentRoute=='Home')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">
+            <img  *ngIf="(currentRoute=='Home')"class="icons col col-7" src="../assets/mainNav/Active/135.png" alt="Home">
+            <h3 [style.color]="companyNameColor" class="col col-5 icon-name">
+              Home
+            </h3>
+          </div>
         </a>
         <a  [style.background]="listItemBackground" routerLink="aboutus" class="list-group-item ">
-          <img  *ngIf="!(currentRoute=='About Us')"class="icons"src="../assets/mainNav/information.png" alt="About Us">
-          <img  *ngIf="(currentRoute=='About Us')"class="icons"src="../assets/mainNav/Active/information.png" alt="About Us">
+          <div class="row">
+            <img  *ngIf="!(currentRoute=='About Us')"class="col col-7 icons"src="../assets/mainNav/information.png" alt="About Us">
+            <img  *ngIf="(currentRoute=='About Us')"class="col col-7 icons"src="../assets/mainNav/Active/information.png" alt="About Us">
+            <h3 [style.color]="companyNameColor" class=" col col-5 icon-name">
+              About Us
+            </h3>
+          </div>
         </a>
           <a  [style.background]="listItemBackground" routerLink="products" routerLinkActive="active" class="list-group-item">
-          <img *ngIf="!(currentRoute=='Products')" class="icons" src="../assets/mainNav/Group 1658.png" alt="Products">
-          <img *ngIf="currentRoute=='Products'" class="icons" src="../assets/mainNav/Active/Group 1658.png" alt="Products">
+           <div class="row">
+            <img *ngIf="!(currentRoute=='Products')" class="icons col col-7" src="../assets/mainNav/Group 1658.png" alt="Products">
+            <img *ngIf="currentRoute=='Products'" class="icons col col-7" src="../assets/mainNav/Active/Group 1658.png" alt="Products">
+            <h3 [style.color]="companyNameColor" class="col col-5 icon-name">
+              Products
+            </h3>
+          </div>
         </a>
         <a  [style.background]="listItemBackground" routerLink="conferences" class="list-group-item">
-          <img  *ngIf="!(currentRoute=='Conferences')"class="icons" src="../assets/mainNav/22.png" alt="Conferences">
-          <img  *ngIf="(currentRoute=='Conferences')"class="icons" src="../assets/mainNav/Active/22.png" alt="Conferences">
+          <div class="row ">
+            <img  *ngIf="!(currentRoute=='Conferences')"class="icons col col-7" src="../assets/mainNav/22.png" alt="Conferences">
+            <img  *ngIf="(currentRoute=='Conferences')"class="icons col col-7" src="../assets/mainNav/Active/22.png" alt="Conferences">
+            <h3 [style.color]="companyNameColor" class="col col-5  icon-name">
+              Events
+            </h3>
+          </div>
         </a>
-        <a  [style.background]="listItemBackground"role="button"(click)="logout()" class="list-group-item">
-          <img class="icons logout" src="../assets/mainNav/logout.png" alt="logout">
+        <a  [style.background]="listItemBackground"role="button"(click)="logout()" class="list-group-item logout">
+          <div class="row ">
+            <img class="icons col col-7" src="../assets/mainNav/logout.png" alt="logout">
+            <h3 [style.color]="companyNameColor" class="col col-5  icon-name">
+              Logout
+            </h3>
+        </div>
         </a>
 
       </div>
     </div>
+
+      <!-- Sidebar -->
+      <div *ngIf="innerWidth<=1024 && innerWidth>=700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login'"[style.background]="sidebarColor"class=" sidebar flex-fill flex-column sidebar-wrapper" id="sidebar-wrapper" >
+
+        <div class="list-group list-group-flush " >
+          <div [style.background]="companyNameBackground"[style.color]="companyNameColor" class="company-name sidebar-heading">
+            InsideJoints
+          </div>
+          <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
+           <div class="row">
+              <img  *ngIf="!(currentRoute=='Home')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">
+              <img  *ngIf="(currentRoute=='Home')"class="icons col col-7" src="../assets/mainNav/Active/135.png" alt="Home">
+            </div>
+          </a>
+          <a  [style.background]="listItemBackground" routerLink="aboutus" class="list-group-item ">
+            <div class="row">
+              <img  *ngIf="!(currentRoute=='About Us')"class="col col-7 icons"src="../assets/mainNav/information.png" alt="About Us">
+              <img  *ngIf="(currentRoute=='About Us')"class="col col-7 icons"src="../assets/mainNav/Active/information.png" alt="About Us">
+            </div>
+          </a>
+            <a  [style.background]="listItemBackground" routerLink="products" routerLinkActive="active" class="list-group-item">
+             <div class="row">
+              <img *ngIf="!(currentRoute=='Products')" class="icons col col-7" src="../assets/mainNav/Group 1658.png" alt="Products">
+              <img *ngIf="currentRoute=='Products'" class="icons col col-7" src="../assets/mainNav/Active/Group 1658.png" alt="Products">
+            </div>
+          </a>
+          <a  [style.background]="listItemBackground" routerLink="conferences" class="list-group-item">
+            <div class="row ">
+              <img  *ngIf="!(currentRoute=='Conferences')"class="icons col col-7" src="../assets/mainNav/22.png" alt="Conferences">
+              <img  *ngIf="(currentRoute=='Conferences')"class="icons col col-7" src="../assets/mainNav/Active/22.png" alt="Conferences">
+            </div>
+          </a>
+          <a  [style.background]="listItemBackground"role="button"(click)="logout()" class="list-group-item logout">
+            <div class="row ">
+              <img class="icons col col-7" src="../assets/mainNav/logout.png" alt="logout">
+          </div>
+          </a>
+
+        </div>
+      </div>
 
     <nav *ngIf="innerWidth<700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login' && router.url!=''"  [style.background]="navbarColor"class="navbar fixed-bottom navbar-light">
       <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">

@@ -64,8 +64,8 @@ html {
   /* padding: 20px; */
   width: 90%;
   height: 2rem;
-  margin-bottom: 5%;
-  border: 1px solid #DFE2E6;
+  margin-bottom: 5% !important ;
+  border: 1px solid #9fa0a1;
 
   box-sizing: border-box;
   background: #FFFFFF;
@@ -78,12 +78,31 @@ html {
 
   text-align: center!important;
 }
+.number-input{
+  position: relative;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+
+}
+.country-code{
+  padding: 0!important;
+  height: 2rem;
+}
+.number{
+
+  padding: 0!important;
+  margin-left: 1%!important;
+  height: 2rem;
+  margin-bottom: 5%;
+}
 .login-input:focus {
   color:#005086;
   background: #FFFFFF ;
   border-color: #E37F00 ;
   /* border: 1px solid #E37F00 ; */
-  box-shadow: 1px 1px 10px 1px #E37F00 ;
+
 
 }
 

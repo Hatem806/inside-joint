@@ -22,8 +22,9 @@ import { JointPageComponent } from './components/joint-page/joint-page.component
 import { ManualsComponent } from './components/joint-page/manuals/manuals.component';
 import { JointHeaderComponent } from './components/joint-page/joint-header/joint-header.component';
 import { VideosComponent } from './components/joint-page/videos/videos.component';
-import { EvidencesComponent } from './components/joint-page/evidences/evidences.component'
-
+import { EvidencesComponent } from './components/joint-page/evidences/evidences.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {Ng2TelInputModule} from 'ng2-tel-input'
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,8 @@ import { EvidencesComponent } from './components/joint-page/evidences/evidences.
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    Ng2TelInputModule
   ],
   providers: [DatePipe,Data],
   bootstrap: [AppComponent]

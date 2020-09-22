@@ -201,40 +201,7 @@ body{
   padding-top: 3vh ;
   height:40%;
 }
-/* @media (max-width:1024px){
-  .option-image{
-    display: block;
-    margin: 0 auto;
-    margin-top: 15% ;
-    max-width: 50% ;
-    max-height: 50% ;
-    height: 5em ;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    text-align: center;
-    padding: 0!important;
-    margin-top:10%!important;
-    margin-bottom: 10% !important;
 
-  }
-  .ellipse{
-    color: #ACACAC ;
-    background: #ACACAC;
-    opacity:48% ;
-    border-radius: 50% ;
-    height:1vh ;
-    max-width:9vw!important ;
-    display: block;
-    margin: auto;
-    position: absolute;
-    left: 8vw  ;
-  }
-  .page-title{
-    padding: 0px ;
-
-  }
-} */
 @media (max-width: 768px){
   /* .elements-row{
     padding-left: 0px ;
