@@ -26,6 +26,7 @@ export class SignupDataComponent implements OnInit, OnDestroy
   public errorMessage:string;
   public error :boolean
 
+
   innerWidth : any = window.innerWidth
 
 
@@ -68,6 +69,7 @@ this.country='Egypt'
         this.errorMessage = "Please fill all fields"
       }
     this.date= new Date();
+    console.log(this.contactNumber)
     this.user={city:this.city,firstname:this.firstName,lastname:this.lastName,email:this.email,mobileNumber:this.contactNumber,password:this.password
       ,country:this.country,language:null,workplace:this.workPlace,isUsingIAHA:this.data.storage.isUsingIaha,whichJoints:this.data.storage.whichJoints,rangeOfInjectionsPerMonth:this.data.storage.rangeOfInjectionsPerMonth,createdAt:this.date,updatedAt:this.date}
       console.log(this.user)

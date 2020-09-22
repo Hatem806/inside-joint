@@ -47,7 +47,17 @@
                   </div>
 
                   <div class="col" >
-                  <h1 class=login-text2>
+                    <h1 class=login-text2>
+                      Contact Number
+                    </h1>
+                  <input  style=" border: 1px solid #9fa0a1;height:2rem" [(ngModel)]="contactNumber" type="text" ng2TelInput />
+
+                      <h1 style="margin-top: 5%;"class=login-text2>
+                      Password
+                      </h1>
+                    <input class="login-input" [(ngModel)]="password" type="password" class="login-input" placeholder="password" required/>
+
+                    <h1 class=login-text2>
                     City
                   </h1>
                   <input class="login-input" [(ngModel)]="city" type="string" placeholder="City"  required />
@@ -55,16 +65,7 @@
                     Work Place
                   </h1>
                   <input class="login-input" [(ngModel)]="workPlace" type="string" placeholder="Work Place"  required />
-                  <h1 class=login-text2>
-                    Contact Number
-                  </h1>
-                  <input class="login-input" [(ngModel)]="contactNumber" type="string" placeholder="Contact Number"  required />
-                  <h1 class=login-text2>
-                  Password
-                  </h1>
-
-              <input class="login-input" [(ngModel)]="password" type="password" class="login-input" placeholder="password" required/>
-              </div>
+            </div>
             </div>
              <div>
               <h6 *ngIf="error" class="error" >{{errorMessage}}</h6>
