@@ -66,12 +66,12 @@
         </div>
        </div>
       <div [ngClass]="innerWidth>1024 ? '' : 'row'">
-        <div class="col option-desc">
+        <div class="col option-desc option-desc-ev">
            Scientific <br> Evidence
         </div>
       </div>
     </div>
-    <div  class= 'col horizontal-divider' >
+    <div  *ngIf="innerWidth>767"class= 'col horizontal-divider' >
     </div>
   </div>
 </div>
