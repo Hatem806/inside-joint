@@ -88,13 +88,15 @@ this.country='Egypt'
             }
             else
             {
-
+              this.error=true
+              this.errorMessage="You already have an account"
             }
           })
       }
       else
       {
-
+        this.error=true
+        this.errorMessage="You already have an account"
       }
     })
   }
