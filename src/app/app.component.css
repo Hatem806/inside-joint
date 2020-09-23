@@ -2,6 +2,7 @@ html,body {
   margin: 0 !important;
   padding: 0 !important;
   font-family: montserrant-bold ;
+  text-decoration: none;
   }
 .icons{
   /* padding-left:4vw ; */
@@ -157,6 +158,7 @@ margin-left: 0;
 }
 .list-group-item:hover .icon-name{
   color: #EFB747 !important;
+  text-decoration: none!important ;
 
 }
 /* .list-group-item:hover .icons{
