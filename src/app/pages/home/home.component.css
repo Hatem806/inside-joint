@@ -197,13 +197,7 @@ width: 100%
 
 }
 }
-/* /.skeleton-container{
-  transform: scale(0.6,0.6);
-  display: block;
-  margin: auto;
-  margin-top: -55vh;
-  margin-bottom:0vh ;
-}  */
+
 @media(max-width:768px) and (min-width:500px){
   .hand{
     position: absolute;
@@ -292,4 +286,9 @@ width: 100%
     top:65.5% ;
   }
 
+}
+@media(min-width:1300px){
+  .skeleton-container{
+    margin-top: 0!important;
+  }
 }
