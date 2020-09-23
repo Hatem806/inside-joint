@@ -62,10 +62,10 @@ else{
     this.ApiService.getAuthenticationService().login(this.email, this.password).subscribe(data => {
 
       console.log(data)
-      this.ApiService.getAuthenticationService().setUserId(data.user._id) ;
+
       if(data.success == true)
       {
-
+        this.ApiService.getAuthenticationService().setUserId(data.user._id) ;
         this.SessionStorageService.saveUserSession(this.email);
         this.router.navigateByUrl('/home');
       }
