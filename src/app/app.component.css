@@ -1,15 +1,14 @@
 html,body {
   margin: 0 !important;
   padding: 0 !important;
-  /* width: 100% !important; */
-  /* min-width: 320px !important ; */
-  /* height: 90vh !important; */
+  font-family: montserrant-bold ;
   }
 .icons{
   /* padding-left:4vw ; */
-  width:1rem;
+  max-width:4rem;
   height: auto;
   margin: 0 auto;
+
 
 
 }
@@ -31,15 +30,15 @@ html,body {
 .company-name{
   /* background: #005086 ; */
   padding-bottom:5vh;
-  font-size: 120%;
+  font-size: 100%;
   text-align: left;
-  font-family: 'monsterrant-bold-italic';
+  font-family: montserrant-bold-italic;
   color: #FAFAFA;
 }
 .icon-name{
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   text-align: center;
-  font-family: 'monsterrant-extra-bold';
+  font-family: montserrant-bold-italic !important;
   margin-left: 0px !important;
   padding-left: 0px!important;
   margin: auto auto ;
@@ -72,7 +71,7 @@ justify-content: center;
 }
 
 #sidebar-wrapper .sidebar-heading {
-padding: 2rem 1.25rem;
+padding: 2rem 0.5rem;
 }
 
 #sidebar-wrapper .list-group {
@@ -142,6 +141,8 @@ margin-left: 0;
     align-items: center;
      justify-content: center;
      padding: 0!important;
+     margin: auto auto;
+     width: auto;
 
   }
 }
@@ -162,3 +163,21 @@ margin-left: 0;
 
   background:  #EFB747  !important ;
 } */
+@media(min-width: 1400px){
+  .icon-name{
+    font-size: 0.9rem;
+  }
+}
+@media(min-width:1450px){
+  .icons{
+    max-width:5rem
+  }
+}
+@media(max-width:1235px)and (min-width:1024px){
+  .icons{
+    padding: 0 0.4em !important;
+  }
+  .icon-name{
+    font-size: 0.7rem ;
+  }
+}

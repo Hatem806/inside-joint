@@ -26,7 +26,7 @@ html {
   position: relative;
   border-radius: 2em;
   background: #EFB747;
-  font-family: montserrant;
+  font-family: montserrant-bold;
   font-size: 0.8rem;
   font-weight: 500;
   color: #FAFAFA;
@@ -165,6 +165,10 @@ h1.welcome{
 h6.error
 {
  color: #ff0000;
+}
+.error{
+  font-size: 1rem ;
+  color: #ff0000;
 }
 @media(max-width:767px){
   .side-img-container{
