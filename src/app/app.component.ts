@@ -37,9 +37,6 @@ export class AppComponent {
     this.routesMap['/signup'] = 'SignUp'
     this.routesMap['/signup-data'] = 'SignUp Data'
 
-
-    console.log(this.router.url.substring(0,5)) ;
-
     this.router.events.subscribe((event) => {
       console.log(this.router.url.substring(0,6))
 

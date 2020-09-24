@@ -85,7 +85,7 @@
           <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
            <div class="row">
               <img  *ngIf="!(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">
-              <img  *ngIf="(currentRoute=='Home')"class="icons col col-7" src="../assets/mainNav/Active/135.png" alt="Home">
+              <img  *ngIf="(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/Active/135.png" alt="Home">
               <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Home' )"class="icons"src="../assets/icons/135.png" alt="Home">
             </div>
           </a>
