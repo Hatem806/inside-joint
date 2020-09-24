@@ -22,9 +22,10 @@ export class ManualsComponent implements OnInit {
      })
 
     this.apiService.getAssetsService().getByPartAndType(this.jointName.toLowerCase(),'manual').subscribe( data => {
-      console.log(data.assets[0])
+      console.log(data.assets)
       this.description = data.assets[0].description ;
       this.title = data.assets[0].title
+
     })
 
   }
