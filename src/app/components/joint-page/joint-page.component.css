@@ -163,8 +163,6 @@
   }
   .ev{
     margin-left:-35% ;
-
-
   }
   .ev-image{
     padding-left: 3em!important;
@@ -180,3 +178,13 @@
   }
 }
 /* @media(max-width-) */
+@media(min-width:1800px){
+  .my-image{
+    margin-left: 0!important;
+  }
+}
+@media(min-width:1400px){
+  .my-image{
+    margin-left: -1em!important;
+  }
+}
