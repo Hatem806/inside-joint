@@ -24,7 +24,8 @@ import { JointHeaderComponent } from './components/joint-page/joint-header/joint
 import { VideosComponent } from './components/joint-page/videos/videos.component';
 import { EvidencesComponent } from './components/joint-page/evidences/evidences.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import {Ng2TelInputModule} from 'ng2-tel-input'
+import {Ng2TelInputModule} from 'ng2-tel-input';
+import { ManualsPageComponent } from './components/joint-page/manuals-page/manuals-page.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import {Ng2TelInputModule} from 'ng2-tel-input'
     ManualsComponent,
     JointHeaderComponent,
     VideosComponent,
-    EvidencesComponent
+    EvidencesComponent,
+    ManualsPageComponent
   ],
   imports: [
     BrowserModule,

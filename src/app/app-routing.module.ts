@@ -12,6 +12,7 @@ import {SignupComponent} from'./pages/signup/signup.component'
 import {SignupDataComponent} from'./pages/signup/signup-data/signup-data.component';
 import { JointPageComponent } from './components/joint-page/joint-page.component';
 import { ManualsComponent } from './components/joint-page/manuals/manuals.component';
+import {ManualsPageComponent} from './components/joint-page/manuals-page/manuals-page.component'
 import { VideosComponent } from './components/joint-page/videos/videos.component';
 import { EvidencesComponent } from './components/joint-page/evidences/evidences.component';
 import { AuthGuardService } from './services/auth-guard.service';
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: "conferences/:conferenceId/questions/thank-you", component: ThankYouComponent, canActivate: [AuthGuardService]},
   { path: "home", component: HomeComponent, canActivate: [AuthGuardService]},
   { path: "aboutus", component: AboutUsComponent, canActivate: [AuthGuardService]},
-  {path: "joint/manuals", component: ManualsComponent, canActivate: [AuthGuardService]},
+  {path: "joint/manuals", component: ManualsPageComponent, canActivate: [AuthGuardService]},
+  {path: "joint/manuals/manual", component: ManualsComponent, canActivate: [AuthGuardService]},
   {path: "joint/videos", component: VideosComponent, canActivate: [AuthGuardService]},
   {path: "joint/evidences", component: EvidencesComponent, canActivate: [AuthGuardService]},
   {path: "joint/:part", component: JointPageComponent, canActivate: [AuthGuardService]},
