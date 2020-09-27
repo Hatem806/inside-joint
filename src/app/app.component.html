@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 <title></title>
 
@@ -19,14 +21,15 @@
     <div *ngIf="innerWidth>1024 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login'"[style.background]="sidebarColor"class=" sidebar flex-fill flex-column sidebar-wrapper" id="sidebar-wrapper" >
 
       <div class="list-group list-group-flush " >
-        <div [style.background]="companyNameBackground"[style.color]="companyNameColor" class="company-name sidebar-heading">
-          InsideJoints
+        <div class=" sidebar-heading">
+          <img *ngIf="(router.url.substring(0,6)=='/joint') " class="company-name"src="../assets/icons/InsideJointsLogo.png" alt="">
+          <img *ngIf="!(router.url.substring(0,6)=='/joint')" class="company-name"src="../assets/icons/InsideJointsLogoWhite.png" alt="">
         </div>
-        <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
+        <a [style.background]="listItemBackground" routerLink="home" class="list-group-item ">
          <div class="row">
-            <img  *ngIf="!(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">
-            <img  *ngIf="(currentRoute=='Home')"class="icons col col-7" src="../assets/mainNav/Active/135.png" alt="Home">
-            <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Home' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Home">
+            <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">home</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Home')"class="material-icons md-36 icons col col-7" alt="Home"> home</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Home' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Home">home </mat-icon>
             <h3 [style.color]="companyNameColor" class="col col-5 icon-name">
               Home
             </h3>
@@ -34,19 +37,19 @@
         </a>
         <a  [style.background]="listItemBackground" routerLink="aboutus" class="list-group-item ">
           <div class="row">
-            <img  *ngIf="!(currentRoute=='About Us') && !(router.url.substring(0,6)=='/joint')"class="col col-7 icons"src="../assets/mainNav/information.png" alt="About Us">
-            <img  *ngIf="(currentRoute=='About Us')"class="col col-7 icons"src="../assets/mainNav/Active/information.png" alt="About Us">
-            <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='About Us' )"class="col col-7 icons"src="../assets/icons/information.png" alt="About Us">
+            <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='About Us') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="About Us">info</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='About Us')"class="material-icons icons col col-7" alt="About Us"> info</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='About Us' )"class="col col-7 icons"src="../assets/icons/135.png" alt="About Us">info </mat-icon>
             <h3 [style.color]="companyNameColor" class=" col col-5 icon-name">
-              About Us
+              About Fidia
             </h3>
           </div>
         </a>
           <a  [style.background]="listItemBackground" routerLink="products" routerLinkActive="active" class="list-group-item">
            <div class="row">
-            <img *ngIf="!(currentRoute=='Products') && !(router.url.substring(0,6)=='/joint')" class="icons col col-7" src="../assets/mainNav/Group 1658.png" alt="Products">
-            <img *ngIf="currentRoute=='Products'" class="icons col col-7" src="../assets/mainNav/Active/Group 1658.png" alt="Products">
-            <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Products' )"class="col col-7 icons"src="../assets/icons/Group 1658.png" alt="Products">
+            <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Products') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Products">category</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Products')"class="material-icons icons col col-7" alt="Products"> category</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Products' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Products">category </mat-icon>
             <h3 [style.color]="companyNameColor" class="col col-5 icon-name">
               Products
             </h3>
@@ -54,23 +57,15 @@
         </a>
         <a  [style.background]="listItemBackground" routerLink="conferences" class="list-group-item">
           <div class="row ">
-            <img  *ngIf="!(currentRoute=='Conferences') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/22.png" alt="Conferences">
-            <img  *ngIf="(currentRoute=='Conferences')"class="icons col col-7" src="../assets/mainNav/Active/22.png" alt="Conferences">
-            <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Conferences' )"class="col col-7 icons"src="../assets/icons/22.png" alt="Conferences">
+            <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Conferences') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Conferences">event</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Conferences')"class="material-icons icons col col-7" alt="Conferences"> event</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Conferences' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Conferences">event </mat-icon>
             <h3 [style.color]="companyNameColor" class="col col-5  icon-name">
               Events
             </h3>
           </div>
         </a>
-        <a  [style.background]="listItemBackground"role="button"(click)="logout()" class="list-group-item logout">
-          <div class="row ">
-            <img *ngIf="!(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/logout.png" alt="logout">
-            <img  *ngIf="(router.url.substring(0,6)=='/joint')" class="col col-7 icons"src="../assets/icons/Group 1868.png" alt="Logout">
-            <h3 [style.color]="companyNameColor" class="col col-5  icon-name">
-              Logout
-            </h3>
-        </div>
-        </a>
+
 
       </div>
     </div>
@@ -79,72 +74,64 @@
       <div *ngIf="innerWidth<=1024 && innerWidth>=700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login'"[style.background]="sidebarColor"class=" sidebar flex-fill flex-column sidebar-wrapper" id="sidebar-wrapper" >
 
         <div class="list-group list-group-flush " >
-          <div [style.background]="companyNameBackground"[style.color]="companyNameColor" class="company-name sidebar-heading">
-            InsideJoints
+          <div class="company-name sidebar-heading">
+            <img src="../assets/icons/InsideJointsLogo.png" alt="">
           </div>
           <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
            <div class="row">
-              <img  *ngIf="!(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">
-              <img  *ngIf="(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/Active/135.png" alt="Home">
-              <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Home' )"class="icons"src="../assets/icons/135.png" alt="Home">
+            <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">home</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Home')"class="material-icons md-36 icons col col-7" alt="Home"> home</mat-icon>
+            <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Home' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Home">home </mat-icon>
             </div>
           </a>
           <a  [style.background]="listItemBackground" routerLink="aboutus" class="list-group-item ">
             <div class="row">
-              <img  *ngIf="!(currentRoute=='About Us') && !(router.url.substring(0,6)=='/joint')"class="col col-7 icons"src="../assets/mainNav/information.png" alt="About Us">
-              <img  *ngIf="(currentRoute=='About Us')"class="col col-7 icons"src="../assets/mainNav/Active/information.png" alt="About Us">
-              <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='About Us' )"class="icons"src="../assets/icons/information.png" alt="About Us">
+              <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='About Us') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="About Us">info</mat-icon>
+              <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='About Us')"class="material-icons icons col col-7" alt="About Us"> info</mat-icon>
+              <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='About Us' )"class="col col-7 icons"src="../assets/icons/135.png" alt="About Us">info </mat-icon>
             </div>
           </a>
             <a  [style.background]="listItemBackground" routerLink="products" routerLinkActive="active" class="list-group-item">
              <div class="row">
-              <img *ngIf="!(currentRoute=='Products') && !(router.url.substring(0,6)=='/joint')" class="icons col col-7" src="../assets/mainNav/Group 1658.png" alt="Products">
-              <img *ngIf="currentRoute=='Products'" class="icons col col-7" src="../assets/mainNav/Active/Group 1658.png" alt="Products">
-              <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Products' )"class="icons"src="../assets/icons/Group 1658.png" alt="Products">
+              <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Products') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Products">category</mat-icon>
+              <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Products')"class="material-icons icons col col-7" alt="Products"> category</mat-icon>
+              <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Products' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Products">category </mat-icon>
             </div>
           </a>
           <a  [style.background]="listItemBackground" routerLink="conferences" class="list-group-item">
             <div class="row ">
-              <img  *ngIf="!(currentRoute=='Conferences') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/22.png" alt="Conferences">
-              <img  *ngIf="(currentRoute=='Conferences')"class="icons col col-7" src="../assets/mainNav/Active/22.png" alt="Conferences">
-              <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Conferences' )"class="icons"src="../assets/icons/22.png" alt="About Us">
+              <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Conferences') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Conferences">event</mat-icon>
+              <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Conferences')"class="material-icons icons col col-7" alt="Conferences"> event</mat-icon>
+              <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Conferences' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Conferences">event </mat-icon>
             </div>
           </a>
-          <a  [style.background]="listItemBackground"role="button"(click)="logout()" class="list-group-item logout">
-            <div class="row ">
-              <img *ngIf="(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/logout.png" alt="logout">
-              <img  *ngIf="(router.url.substring(0,6)=='/joint') "class="icons"src="../assets/icons/Group 1868.png" alt="logout">
-          </div>
-          </a>
+
 
         </div>
       </div>
 
     <nav *ngIf="innerWidth<700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login' && router.url!=''"  [style.background]="navbarColor"class="navbar fixed-bottom navbar-light">
       <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
-        <img  *ngIf="!(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons" src="../assets/mainNav/135.png" alt="Home">
-        <img  *ngIf="(currentRoute=='Home')"class="icons" src="../assets/mainNav/Active/135.png" alt="Home">
-        <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Home' )"class="icons"src="../assets/icons/135.png" alt="Home">
+        <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">home</mat-icon>
+        <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Home')"class="material-icons md-36 icons col col-7" alt="Home"> home</mat-icon>
+        <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Home' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Home">home </mat-icon>
       </a>
       <a  [style.background]="listItemBackground" routerLink="aboutus" class="list-group-item ">
-        <img  *ngIf="!(currentRoute=='About Us') && (router.url.substring(0,6)!='/joint')"class="icons"src="../assets/mainNav/information.png" alt="About Us">
-        <img  *ngIf="(currentRoute=='About Us')"class="icons"src="../assets/mainNav/Active/information.png" alt="About Us">
-        <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='About Us' )"class="icons"src="../assets/icons/information.png" alt="About Us">
+        <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='About Us') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="About Us">info</mat-icon>
+        <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='About Us')"class="material-icons icons col col-7" alt="About Us"> info</mat-icon>
+        <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='About Us' )"class="col col-7 icons"src="../assets/icons/135.png" alt="About Us">info </mat-icon>
       </a>
         <a  [style.background]="listItemBackground" routerLink="products" routerLinkActive="active" class="list-group-item">
-        <img *ngIf="!(currentRoute=='Products') && !(router.url.substring(0,6)=='/joint')" class="icons" src="../assets/mainNav/Group 1658.png" alt="Products">
-        <img *ngIf="currentRoute=='Products'" class="icons" src="../assets/mainNav/Active/Group 1658.png" alt="Products">
-        <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Products' )"class="icons"src="../assets/icons/Group 1658.png" alt="Products">
+          <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Products') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Products">category</mat-icon>
+          <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Products')"class="material-icons icons col col-7" alt="Products"> category</mat-icon>
+          <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Products' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Products">category </mat-icon>
       </a>
       <a  [style.background]="listItemBackground" routerLink="conferences" class="list-group-item">
-        <img  *ngIf="!(currentRoute=='Conferences')&& !(router.url.substring(0,6)=='/joint')"class="icons" src="../assets/mainNav/22.png" alt="Conferences">
-        <img  *ngIf="(currentRoute=='Conferences')"class="icons" src="../assets/mainNav/Active/22.png" alt="Conferences">
-        <img  *ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Conferences' )"class="icons"src="../assets/icons/22.png" alt="Conferences">
+        <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Conferences') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Conferences">event</mat-icon>
+        <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Conferences')"class="material-icons icons col col-7" alt="Conferences"> event</mat-icon>
+        <mat-icon [style.color]="companyNameColor"*ngIf="(router.url.substring(0,6)=='/joint') && !( currentRoute=='Conferences' )"class="col col-7 icons"src="../assets/icons/135.png" alt="Conferences">event </mat-icon>
       </a>
-      <a  [style.background]="listItemBackground"role="button"(click)="logout()" class="list-group-item">
-        <img *ngIf="!(router.url.substring(0,6)=='/joint')"class="icons" src="../assets/mainNav/logout.png" alt="logout">
-        <img  *ngIf="(router.url.substring(0,6)=='/joint') "class="icons"src="../assets/icons/Group 1868.png" alt="logout">
-      </a>
+
 
     </nav>
 

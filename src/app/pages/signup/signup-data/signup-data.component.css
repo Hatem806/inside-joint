@@ -60,17 +60,17 @@ html {
 }
 
 .login-input {
-  position: relative;
+  position: relative !important;
   /* padding: 20px; */
-  width: 90%;
-  height: 2rem;
+  width: 100% !important;
+  height: 2rem !important;
   margin-bottom: 5% !important ;
   border: 1px solid #9fa0a1;
 
   box-sizing: border-box;
   background: #FFFFFF;
   font-size: 0.8rem;
-  font-family: montserrant-bold;
+  font-family: montserrant-bold !important;
   font-weight: 500;
   opacity: 1;
   animation: input_opacity 0.8s cubic-bezier(.55, 0, .1, 1);
@@ -79,12 +79,36 @@ html {
   text-align: center!important;
 }
 .number-input{
-  position: relative;
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  text-align: center;
+  position: relative !important;
+  /* padding: 20px; */
+  width: 100% !important;
+  height: 2rem !important;
+  margin-bottom: 5% !important ;
+  border: 1px solid #9fa0a1;
 
+  box-sizing: border-box;
+  background: #FFFFFF;
+  font-size: 0.8rem;
+  font-family: montserrant-bold !important;
+  font-weight: 500;
+  opacity: 1;
+  animation: input_opacity 0.8s cubic-bezier(.55, 0, .1, 1);
+  transition: border-bottom 0.2s cubic-bezier(.55, 0, .1, 1);
+
+  text-align: center!important;
+  /* margin-left: !important; */
+  padding:0!important ;
+
+
+}
+.password-conatiner {
+ width:100%
+}
+.iti{
+  width:90% !important
+}
+.iti--allow-dropdown{
+  width:90% !important
 }
 .country-code{
   padding: 0!important;
