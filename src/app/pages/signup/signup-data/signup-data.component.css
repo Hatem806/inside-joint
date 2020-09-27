@@ -101,18 +101,31 @@ html {
 
 
 }
-.password-conatiner {
+::ng-deep .password-conatiner {
  width:100%
 }
-.iti{
-  width:90% !important
+::ng-deep .iti .iti--allow-dropdown{
+  width:100% !important ;
+  display: block !important ;
 }
-.iti--allow-dropdown{
-  width:90% !important
+::ng-deep .iti{
+  width:100% !important ;
+  display: block !important ;
 }
+::ng-deep .iti--allow-dropdown{
+  width:100% !important ;
+  display: block !important ;
+}
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix
 .country-code{
-  padding: 0!important;
-  height: 2rem;
+  width: 100%;
+}
+::ng-deep .mat-form-field-appearance-legacy{
+  width: 100%;
+}
+::ng-deep .mat-form-field-infix
+.country-code{
+  width: 100%;
 }
 .number{
 
