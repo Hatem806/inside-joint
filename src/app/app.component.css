@@ -16,7 +16,7 @@ html,body {
 .list-group-item{
 
   /* background:  #005086; */
-  margin: 10% auto ;
+  margin: 12% auto ;
   width:9.7vw ;
    /* padding-left: 3.5vw; */
 }
@@ -124,7 +124,7 @@ margin-left: 0;
 @media(max-width:700px){
 
   .icons{
-    width:50%;
+
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -160,7 +160,7 @@ margin-left: 0;
 } */
 @media(min-width: 1400px){
   .icon-name{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -168,6 +168,23 @@ margin-left: 0;
 
   .icon-name{
     font-size: 0.7rem ;
-    margin-left: -15% !important;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+  }
+}
+@media(min-width:1700px){
+  .icon-name{
+    font-size: 1rem;
+  }
+  .icons{
+    justify-content: right;
+    justify-self: right;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    transform: scale(2,2);
   }
 }

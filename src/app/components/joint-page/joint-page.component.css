@@ -44,7 +44,7 @@
   height:100% ;
 }
 .my-container:hover{
-  padding: 5rem ;
+  padding: 4.2rem ;
 }
 .my-container:hover .my-image{
   margin-left: -3rem  ;

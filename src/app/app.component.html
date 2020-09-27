@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body >
   <div class="no-gutters" id="wrapper">
     <app-header *ngIf="router.url=='/home'"></app-header>
     <!-- Sidebar -->
@@ -110,7 +110,7 @@
         </div>
       </div>
 
-    <nav *ngIf="innerWidth<700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login' && router.url!=''"  [style.background]="navbarColor"class="navbar fixed-bottom navbar-light">
+    <nav *ngIf="innerWidth<700 && router.url!='/signup' && router.url!='/signup-data' && router.url!='/login' && router.url!='/'"  [style.background]="navbarColor"class="navbar fixed-bottom navbar-light">
       <a  [style.background]="listItemBackground"routerLink="home" class="list-group-item ">
         <mat-icon [style.color]="companyNameColor" *ngIf="!(currentRoute=='Home') && !(router.url.substring(0,6)=='/joint')"class="icons col col-7" src="../assets/mainNav/135.png" alt="Home">home</mat-icon>
         <mat-icon [style.color]="companyNameColor"*ngIf="(currentRoute=='Home')"class="material-icons md-36 icons col col-7" alt="Home"> home</mat-icon>
