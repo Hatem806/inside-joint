@@ -6,12 +6,9 @@ html,body {
   }
 .icons{
   /* padding-left:4vw ; */
-  max-width:4rem;
   height: auto;
   margin: 0 auto;
-
-
-
+  transform: scale(1.5,1.5);
 }
 .fas{
   color:#ACACAC;
@@ -30,11 +27,9 @@ html,body {
 }
 .company-name{
   /* background: #005086 ; */
-  padding-bottom:5vh;
-  font-size: 100%;
-  text-align: left;
-  font-family: montserrant-bold-italic;
-  color: #FAFAFA;
+  /* padding-bottom:5vh; */
+  width:80% ;
+  margin: 2rem 0.5rem ;
 }
 .icon-name{
   font-size: 0.7rem;
@@ -43,7 +38,7 @@ html,body {
   margin-left: 0px !important;
   padding-left: 0px!important;
   margin: auto auto ;
-  padding-right: 0px!important ;
+
 }
 #wrapper {
   overflow-x: hidden;
@@ -72,12 +67,12 @@ justify-content: center;
 }
 
 #sidebar-wrapper .sidebar-heading {
-padding: 2rem 0.5rem;
+min-width:10vh
 }
 
-#sidebar-wrapper .list-group {
+/* #sidebar-wrapper .list-group {
   max-width: 100px;
-}
+} */
 
 #page-content-wrapper {
 min-width: 100vw !important ;
@@ -134,7 +129,8 @@ margin-left: 0;
     margin-left: auto;
     margin-right: auto;
     padding-bottom:2vh;
-    display: block
+    display: block ;
+    transform: scale(1,1);
   }
   .list-group-item{
 
@@ -147,16 +143,13 @@ margin-left: 0;
 
   }
 }
-@media(max-width:1024px){
-  .company-name{
-    font-size: 0%;
-  }
-  .icons{
-    width: 2rem;
-    padding:0 0;
-  }
-}
+
 .list-group-item:hover .icon-name{
+  color: #EFB747 !important;
+  text-decoration: none!important ;
+
+}
+.list-group-item:hover .icons{
   color: #EFB747 !important;
   text-decoration: none!important ;
 
@@ -170,16 +163,11 @@ margin-left: 0;
     font-size: 0.9rem;
   }
 }
-@media(min-width:1450px){
-  .icons{
-    max-width:5rem
-  }
-}
+
 @media(max-width:1235px)and (min-width:1024px){
-  .icons{
-    padding: 0 0.4em !important;
-  }
+
   .icon-name{
     font-size: 0.7rem ;
+    margin-left: -15% !important;
   }
 }

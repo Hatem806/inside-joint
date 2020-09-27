@@ -25,7 +25,9 @@ import { VideosComponent } from './components/joint-page/videos/videos.component
 import { EvidencesComponent } from './components/joint-page/evidences/evidences.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {Ng2TelInputModule} from 'ng2-tel-input';
-import { ManualsPageComponent } from './components/joint-page/manuals-page/manuals-page.component'
+import { ManualsPageComponent } from './components/joint-page/manuals-page/manuals-page.component';
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +57,9 @@ import { ManualsPageComponent } from './components/joint-page/manuals-page/manua
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    Ng2TelInputModule
+    Ng2TelInputModule,
+    MatSelectCountryModule,
+    MatIconModule
   ],
   providers: [DatePipe,Data],
   bootstrap: [AppComponent]

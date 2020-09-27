@@ -41,7 +41,7 @@ html {
   background: #EFB747;
   font-family: montserrant-bold ;
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #FAFAFA;
   cursor: pointer;
@@ -83,8 +83,7 @@ h1.welcome{
   font-size: 3.2rem;
   font-family: montserrant-bold;
   width: 50%;
-  margin-left: 30% ;
-  margin-top: 15% ;
+  margin : 10% auto
 
   /* transform: translate(40%, -240%); */
 }
@@ -132,3 +131,9 @@ h6.error
 }
 
 
+@media(min-width:1500px){
+  h1.welcome{
+    margin: 20% auto;
+    font-size:4rem ;
+  }
+}
