@@ -37,10 +37,8 @@ export class AppComponent {
     this.routesMap['/signup'] = 'SignUp'
     this.routesMap['/signup-data'] = 'SignUp Data'
 
-
-
     this.router.events.subscribe((event) => {
-      console.log(this.router.url)
+      console.log(this.router.url.substring(0,6))
 
 
       if(event instanceof NavigationEnd)

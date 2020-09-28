@@ -5,6 +5,7 @@
   background-color: #FAFAFA;
   padding-right: 5vw ;
   padding-left: 5vw ;
+
 }
 .image{
   max-height:20vh !important;
@@ -16,17 +17,29 @@
   padding-left:3vw ;
   background-color: #EFB747;
   border-radius: 15%;
-  position: absolute;
-  right:10vw ;
-  bottom: 7vh;
   font-family: montserrant-semi-bold;
   font-size:2.3vh ;
   border-color:  #EFB747;
+  margin-bottom:5% ;
+  justify-content: right;
+  float: right;
+  margin-right: 5%;
+}
+h6.error
+{
+ color: #ff0000;
 }
 @media(max-width: 700px){
   .questions-container{
     width: 100% ;
-    margin: 0 auto;
+    margin: auto auto;
     padding: 0!important;
+    height: fit-content;
+  }
+  .btn-primary{
+    margin-bottom: 35%;
   }
 }
+/* .no-gutters{
+  height: 100vh;
+} */

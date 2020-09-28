@@ -14,16 +14,20 @@ import { DatePipe } from '@angular/common';
 import { QuestionComponent } from './components/question/question.component';
 import { QuestionsComponent } from './pages/conferences/questions/questions.component';
 import { ThankYouComponent } from './pages/conferences/thank-you/thank-you.component'
-import { LoginComponent } from './Pages/login/login.component';
-import {SignupComponent} from'./Pages/signup/signup.component'
-import {SignupDataComponent} from'./Pages/signup/signup-data/signup-data.component';
+import { LoginComponent } from './pages/login/login.component';
+import {SignupComponent} from'./pages/signup/signup.component'
+import {SignupDataComponent} from'./pages/signup/signup-data/signup-data.component';
 import {Data} from './models/Data';
 import { JointPageComponent } from './components/joint-page/joint-page.component';
 import { ManualsComponent } from './components/joint-page/manuals/manuals.component';
 import { JointHeaderComponent } from './components/joint-page/joint-header/joint-header.component';
 import { VideosComponent } from './components/joint-page/videos/videos.component';
-import { EvidencesComponent } from './components/joint-page/evidences/evidences.component'
-
+import { EvidencesComponent } from './components/joint-page/evidences/evidences.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {Ng2TelInputModule} from 'ng2-tel-input';
+import { ManualsPageComponent } from './components/joint-page/manuals-page/manuals-page.component';
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +47,8 @@ import { EvidencesComponent } from './components/joint-page/evidences/evidences.
     ManualsComponent,
     JointHeaderComponent,
     VideosComponent,
-    EvidencesComponent
+    EvidencesComponent,
+    ManualsPageComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +56,10 @@ import { EvidencesComponent } from './components/joint-page/evidences/evidences.
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    Ng2TelInputModule,
+    MatSelectCountryModule,
+    MatIconModule
   ],
   providers: [DatePipe,Data],
   bootstrap: [AppComponent]
