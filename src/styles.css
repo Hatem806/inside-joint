@@ -1,61 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @font-face {
-  font-family: 'montserrant';
-  src: url('assets/fidiaWebFonts/Montserrat-Regular.otf') format('opentype');
+  font-family: "montserrant";
+  src: url("assets/fidiaWebFonts/Montserrat-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'montserrant-black';
-  src: url('assets/fidiaWebFonts/Montserrat-Black.otf') format('opentype');
+  font-family: "montserrant-black";
+  src: url("assets/fidiaWebFonts/Montserrat-Black.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'montserrant-bold';
-  src: url('assets/fidiaWebFonts/Montserrat-Bold.otf') format('opentype');
+  font-family: "montserrant-bold";
+  src: url("assets/fidiaWebFonts/Montserrat-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'montserrant-italic';
-  src: url('assets/fidiaWebFonts/Montserrat-Italic.otf') format('opentype');
+  font-family: "montserrant-italic";
+  src: url("assets/fidiaWebFonts/Montserrat-Italic.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'montserrant-bold-italic';
-  src: url('assets/fidiaWebFonts/Montserrat-BoldItalic.otf') format('opentype');
+  font-family: "montserrant-bold-italic";
+  src: url("assets/fidiaWebFonts/Montserrat-BoldItalic.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'montserrant-extra-bold';
-  src: url('assets/fidiaWebFonts/Montserrat-ExtraBold.otf') format('opentype');
+  font-family: "montserrant-extra-bold";
+  src: url("assets/fidiaWebFonts/Montserrat-ExtraBold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'montserrant-medium';
-  src: url('assets/fidiaWebFonts/Montserrat-Medium.otf') format('opentype');
+  font-family: "montserrant-medium";
+  src: url("assets/fidiaWebFonts/Montserrat-Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'montserrant-semi-bold';
-  src: url('assets/fidiaWebFonts/Montserrat-SemiBold.otf  ') format('opentype');
+  font-family: "montserrant-semi-bold";
+  src: url("assets/fidiaWebFonts/Montserrat-SemiBold.otf  ") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'montserrant-medium-italic';
-  src: url('assets/fidiaWebFonts/Montserrat-MediumItalic.otf  ') format('opentype');
+  font-family: "montserrant-medium-italic";
+  src: url("assets/fidiaWebFonts/Montserrat-MediumItalic.otf  ")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
-.arrow-left{
+.arrow-left {
   padding-right: 0px !important;
   padding-left: 1vw !important ;
   margin-right: auto;
@@ -65,7 +66,7 @@
   transform: translateY(50%);
   display: block;
 }
-.arrow-right{
+.arrow-right {
   padding-right: 0px !important;
   padding-left: 0vw !important ;
   -ms-transform: translateY(50%);
@@ -76,216 +77,224 @@
   display: block;
 }
 
-.options{
-
+.options {
   border-radius: 10px;
-  border-width: 1px 1px ;
-  box-shadow: 0px 1px 20px 1px #ACACAC;
+  border-width: 1px 1px;
+  box-shadow: 0px 1px 20px 1px #acacac;
   border-top: 0px !important;
-  border-bottom:1px !important ;
-  width:12vw ;
-  height:26.6vh ;
+  border-bottom: 1px !important ;
+  width: 12vw;
+  height: 26.6vh;
   padding: 0px !important;
 }
 
-.option-details{
+.option-details {
   font-family: montserrant-bold;
-  color: #005086 ;
+  color: #005086;
   font-size: 1rem;
-  display: block;
-  margin:auto ;
-  align-items: center;
-    align-content: center;
-    align-self: center;
-    text-align: center;
-}
-.option-image{
-  display: block;
-  margin: auto;
-  margin-top: 15% ;
-  max-width: 10.5vw ;
-  max-height: 14vh
-
-}
-.image{
-  height:35vh ;
-  width: 100vw ; ;
-  background-size: cover;
-}
-body{
-  background-color: #FAFAFA;
-}
-/* To customise ellipse, set padding */
-.ellipse{
-  color: #ACACAC ;
-  background: #ACACAC;
-  opacity:48% ;
-  border-radius: 50% ;
-  height:1vh ;
-  max-width:9vw!important ;
   display: block;
   margin: auto;
   align-items: center;
   align-content: center;
   align-self: center;
   text-align: center;
-
-
 }
-.joint-white-container{
-    background: #FFFFFF ;
-    margin-top: 3%;
-    margin-right: 5% ;
-    height:fit-content ;
-    min-height:77vh ;
-    border-radius: 8% ;
-    margin-left: 15% ;
-    padding-left: 0vw!important ;
-
-
+.option-image {
+  display: block;
+  margin: auto;
+  margin-top: 15%;
+  max-width: 10.5vw;
+  max-height: 14vh;
 }
-.elements-row{
- height:20% ;
- padding-top:1em ;
- padding-bottom: 1em ;
- padding-left:1em ;
- padding-right: 1em;
+.image {
+  background-size: cover;
+}
+body {
+  background-color: #fafafa;
+}
+/* To customise ellipse, set padding */
+.ellipse {
+  color: #acacac;
+  background: #acacac;
+  opacity: 48%;
+  border-radius: 50%;
+  height: 1vh;
+  max-width: 9vw !important ;
+  display: block;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+}
+.joint-white-container {
+  background: #ffffff;
+  margin-top: 3%;
+  margin-right: 5%;
+  height: fit-content;
+  min-height: 77vh;
+  border-radius: 75px;
+  margin-left: 15%;
+  padding-left: 0vw !important ;
+}
+.elements-row {
+  height: 20%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
-.element-thumbnail{
+.element-thumbnail {
   height: auto;
-  width: 100% ;
+  width: 100%;
   /* display: block;
   margin: auto; */
 }
-.element-title{
+.element-title {
   font-family: montserrant-bold;
-  font-size:0.9rem ;
-  color: #005086 ;
+  font-size: 0.9rem;
+  color: #005086;
   text-align: left;
   justify-content: left;
-  line-height: 1rem ;;
+  line-height: 1rem;
   /* padding-left:1em ; */
-  padding-bottom :1em;;
-  padding-top:1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
-.element-description{
+.element-description {
   font-family: montserrant;
-  font-size:0.6em ;
-  color: #6B6C6F;
-  padding: 0px!important;
+  font-size: 0.6em;
+  color: #6b6c6f;
+  padding: 0px !important;
 }
-.element-number{
+.element-number {
   font-family: montserrant-bold;
-  font-size:1rem ;
-  color: #6B6C6F;
+  font-size: 1rem;
+  color: #6b6c6f;
   transform: translateY(40%);
   text-align: center;
-
 }
-@media(min-width:1024px){
-  .elements-row{
-    height:25% ;
-    padding-left:2em ;
-   }
+@media (min-width: 1024px) {
+  .elements-row {
+    height: 25%;
+    padding-left: 2em;
+  }
 }
-.page-title{
+.page-title {
   font-family: montserrant-extra-bold;
-  color :  #005086 ;
+  color: #005086;
   font-size: 3rem;
   text-align: left;
-  padding-top:0.1em ;
-  padding-left: 0.8em ;
-  padding-bottom: 0.05em ;
+  padding-top: 0.1em;
+  padding-left: 0.8em;
+  padding-bottom: 0.05em;
 }
-.page-cont{
-  margin-left:10% ;
+.page-cont {
+  margin-left: 10%;
 }
-.options-container{
-  padding-top: 3vh ;
-  height:40%;
+.options-container {
+  padding-top: 3vh;
+  height: 40%;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   /* .elements-row{
     padding-left: 0px ;
   } */
-  .element-number{
+  .element-number {
     padding: 0px;
     transform: 80%;
   }
-  .element-description{
+  .element-description {
     padding: 0px;
   }
-  .element-title{
+  .element-title {
     padding: 0px !important ;
+  }
+  .joint-white-container {
+    border-radius: 25px;
+    margin-bottom: 18% !important;
   }
 }
 /* tablet sizes */
-@media (max-width:1024px) and (min-width: 768px){
-  .options{
+@media (max-width: 1024px) and (min-width: 768px) {
+  .options {
     border-radius: 10px;
-    border-width: 1px 1px ;
-    box-shadow: 0px 1px 20px 1px #ACACAC;
+    border-width: 1px 1px;
+    box-shadow: 0px 1px 20px 1px #acacac;
     border-top: 0px !important;
-    border-bottom:1px !important ;
-    width:12em ;
-    height:12em;
+    border-bottom: 1px !important ;
+    width: 12em;
+    height: 12em;
     padding: 0px !important;
   }
 }
 /* phone sizes */
-@media (max-width:700px){
-  .options{
+@media (max-width: 700px) {
+  .options {
     border-radius: 10px;
-    border-width: 1px 1px ;
-    box-shadow: 5px 1px 20px 1px #ACACAC;
+    border-width: 1px 1px;
+    box-shadow: 5px 1px 20px 1px #acacac;
     border-top: 0px !important;
-    border-bottom:1px !important ;
-    width:25% ;
-    height: 10rem ;
+    border-bottom: 1px !important ;
+    width: 25%;
+    height: 10rem;
     padding: 0px !important;
   }
-  .options-container{
-    margin: 0!important ;
+  .options-container {
+    margin: 0 !important ;
   }
-  .option-image{
+  .option-image {
     display: block;
     margin: auto;
-    margin-top: 15% ;
-    max-width: 10.5vw ;
-    max-height: 14vh
-
+    margin-top: 15%;
+    max-width: 10.5vw;
+    max-height: 14vh;
   }
-  .option-details{
+  .option-details {
     font-size: 0.8rem;
-
   }
-  .page-cont{
+  .page-cont {
     margin: 0px !important ;
   }
-  .page-title{
-    padding-left: 0.5em ;
+  .page-title {
+    padding-left: 0.5em;
+  }
+}
+@media (min-width: 1600px) {
+  .element-thumbnail {
+    height: auto;
+    width: 100%;
+  }
+  .element-title {
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+  }
+  .element-description {
+    font-size: 0.9rem;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.image2 {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .image1 {
+    display: none;
   }
 
-
-
+  .image2 {
+    display: block;
+  }
 }
-@media(min-width:1600px){
-
-.element-thumbnail{
-  height: auto;
-  width: 100% ;
-}
-.element-title{
-  font-size:1.3rem ;
-  line-height: 1.4rem;
-}
-.element-description{
-  font-size:0.9rem ;
-}
-
-}
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

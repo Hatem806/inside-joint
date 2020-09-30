@@ -1,82 +1,127 @@
-
-
-
-
-     <div  [ngClass]="innerWidth>767 ? '' : 'row'">
-      <div  [ngClass]="innerWidth>767 ? 'split right' : 'col col-12 side-img-container'">
-
-        <img class="side-img"src="../../../assets/login/sideimage.png" >
-        <h1 class="welcome">
-        <img src="../../../../assets/icons/InsideJointsLogoWhite.png" alt="Sign Up To Inside Joints">
-        </h1>
+<div [ngClass]="innerWidth > 767 ? '' : 'row'">
+  <div
+    [ngClass]="
+      innerWidth > 767 ? 'split right' : 'col col-12 side-img-container'
+    "
+  >
+    <img class="side-img" src="../../../assets/login/sideimage.png" />
+    <h1 class="welcome">
+      <img
+        src="../../../../assets/icons/InsideJointsLogoWhite.png"
+        alt="Sign Up To Inside Joints"
+      />
+    </h1>
+  </div>
+  <div [ngClass]="innerWidth > 767 ? 'split left' : 'col col-12'">
+    <div class="row header-cont">
+      <div role="button" class="col col-2">
+        <img
+          (click)="goBack()"
+          class="back-arrow"
+          src="../../../assets/icons/back-arrow.png"
+          alt=""
+        />
       </div>
-          <div  [ngClass]="innerWidth>767 ? 'split left' : 'col col-12'">
-            <div class="row header-cont">
-              <div role="button" class="col col-2">
-                <img (click)="goBack()" class="back-arrow"src="../../../assets/icons/back-arrow.png" alt="">
-              </div>
-              <div class="col col-2">
-                <img src="../../../assets/fidiaLogo/Group 1689.png" alt="">
-              </div>
-            </div>
+      <div class="col col-2">
+        <img src="../../../assets/fidiaLogo/Group 1689.png" alt="" />
+      </div>
+    </div>
 
+    <div class="centered px-5 p-lg-0">
+      <div class="login-text">Sign Up to new account.</div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <h1 class="login-text2">First Name</h1>
+          <input
+            class="login-input"
+            [(ngModel)]="firstName"
+            type="text"
+            placeholder="First Name"
+            required
+          />
+          <h1 class="login-text2">Last Name</h1>
+          <input
+            class="login-input"
+            [(ngModel)]="lastName"
+            type="text"
+            placeholder="Last Name"
+            required
+          />
+          <h1 class="login-text2">E-mail</h1>
+          <input
+            class="login-input"
+            [(ngModel)]="email"
+            type="text"
+            placeholder="someone@email.com"
+            required
+          />
+          <h1 class="login-text2">Password</h1>
+          <input
+            class="login-input"
+            [(ngModel)]="password"
+            type="password"
+            class="login-input"
+            placeholder="password"
+            required
+          />
+        </div>
 
-            <div class="centered">
-              <div class="login-text">
-                Sign Up to new account.
-               </div>
-               <br>
-               <div class="row">
-                <div class="col" >
-                <h1 class=login-text2>
-                First Name
-                </h1>
-                <input class="login-input" [(ngModel)]="firstName" type="text" placeholder="First Name"  required />
-                <h1 class=login-text2>
-                  Last Name
-                </h1>
-                  <input class="login-input" [(ngModel)]="lastName" type="text" placeholder="Last Name"  required />
-                <h1 class=login-text2>
-                  E-mail
-                </h1>
-                  <input class="login-input" [(ngModel)]="email" type="text" placeholder="someone@email.com"  required />
-                  <h1 class=login-text2>
-                    Password
-                    </h1>
-                  <input class="login-input" [(ngModel)]="password" type="password" class="login-input" placeholder="password" required/>
-                </div>
-
-                  <div class="col" >
-                    <h1 class=login-text2>
-                      Contact Number
-                    </h1>
-                    <div class="password-container">
-                      <input override class="iti" style="height:2rem ;display: grid; width: 100%; margin: auto auto; border: 1px solid #9fa0a1;"[(ngModel)]="contactNumber" type="text" ng2TelInput />
-
-                      </div>
-                  <div class="country-container" style=" width: 100%; margin-top: 8.15%!important; padding-bottom: 0!important;">
-                    <mat-select-country   >
-                    </mat-select-country>
-                  </div>
-                  <!-- <input class="login-input" [(ngModel)]="country" type="text" placeholder="Country"  required /> -->
-
-                    <h1 class=login-text2>
-                    City
-                  </h1>
-                  <input class="login-input" [(ngModel)]="city" type="string" placeholder="City"  required />
-                  <h1 class=login-text2>
-                    Work Place
-                  </h1>
-                  <input class="login-input" [(ngModel)]="workPlace" type="string" placeholder="Work Place"  required />
-            </div>
-            </div>
-             <div>
-              <h6 *ngIf="error" class="error" >{{errorMessage}}</h6>
-               <button (click)="signUp()" type="submit" class="login-button">SIGN UP</button>
-             </div>
-            </div>
+        <div class="col">
+          <h1 class="login-text2">Contact Number</h1>
+          <div class="password-container">
+            <input
+              override
+              class="iti"
+              style="
+                height: 2rem;
+                display: grid;
+                width: 100%;
+                margin: auto auto;
+                border: 1px solid #9fa0a1;
+              "
+              [(ngModel)]="contactNumber"
+              type="text"
+              ng2TelInput
+            />
           </div>
-      <!-- mz, -->
+          <div
+            class="country-container"
+            style="
+              width: 100%;
+              margin-top: 8.15% !important;
+              padding-bottom: 0 !important;
+            "
+          >
+            <mat-select-country> </mat-select-country>
+          </div>
+          <!-- <input class="login-input" [(ngModel)]="country" type="text" placeholder="Country"  required /> -->
+
+          <h1 class="login-text2">City</h1>
+          <input
+            class="login-input"
+            [(ngModel)]="city"
+            type="string"
+            placeholder="City"
+            required
+          />
+          <h1 class="login-text2">Work Place</h1>
+          <input
+            class="login-input"
+            [(ngModel)]="workPlace"
+            type="string"
+            placeholder="Work Place"
+            required
+          />
+        </div>
       </div>
-
-
+      <div>
+        <h6 *ngIf="error" class="error">{{ errorMessage }}</h6>
+        <button (click)="signUp()" type="submit" class="login-button">
+          SIGN UP
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- mz, -->
+</div>
