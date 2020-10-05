@@ -12,10 +12,8 @@ import { link } from 'fs';
 })
 export class ConferencesComponent implements OnInit {
   pageTitle = 'Conferences';
-  pageImageSrc1 =
-    '../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png';
-  pageImageSrc2 =
-    '../../../assets/conferences-photo/man-speaker-eusic-2017-conference-1.png';
+  pageImageSrc1 = '../../../assets/conferences-photo/con1.jpg';
+  pageImageSrc2 = '../../../assets/conferences-photo/con2.jpg';
 
   allConferences: IEvent[];
   conferences: IEvent[];
