@@ -7,13 +7,15 @@
         </div>
       </div>
       <div class="col-sm-12 col-lg-6">
-        <div class="row menu-options justify-content-center mb-5 mb-lg-0">
+        <div
+          class="row menu-options justify-content-center align-items-center mb-5 mb-lg-0 pr-4 pl-2 p-md-0"
+        >
           <div
-            class="col-sm-6 col-md-4 text-center"
+            class="col-4 text-left"
             [routerLink]="['/joint/manuals']"
             [queryParams]="{ bodyPart: jointName, imgSrc: jointImageToManuals }"
           >
-            <div>
+            <div class="row align-items-center justify-content-center">
               <img
                 *ngIf="router.url.substring(7, 14) == 'manuals'"
                 class="menu-icons"
@@ -26,6 +28,7 @@
                 src="../../../../assets/secondaryNav/books-stack-of-three.png"
                 alt=""
               />
+
               <h3
                 [ngClass]="
                   router.url.substring(7, 14) == 'manuals'
@@ -39,11 +42,11 @@
             </div>
           </div>
           <div
-            class="col-sm-6 col-md-4 text-center"
+            class="col-4 text-center"
             [routerLink]="['/joint/videos']"
             [queryParams]="{ bodyPart: jointName, imgSrc: jointImageToManuals }"
           >
-            <div>
+            <div class="row align-items-center justify-content-center">
               <img
                 *ngIf="router.url.substring(7, 13) == 'videos'"
                 class="menu-icons"
@@ -69,11 +72,11 @@
             </div>
           </div>
           <div
-            class="ev col-sm-6 col-md-4 text-center"
+            class="ev col-4 text-center"
             [routerLink]="['/joint/evidences']"
             [queryParams]="{ bodyPart: jointName, imgSrc: jointImageToManuals }"
           >
-            <div style="padding: 0px">
+            <div class="row align-items-center justify-content-center">
               <img
                 *ngIf="router.url.substring(7, 16) == 'evidences'"
                 class="menu-icons ev-icon"
