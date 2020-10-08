@@ -1,19 +1,27 @@
+<div class="header-container">
+  <div class="logo">
+    <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo" />
+  </div>
 
-      <div class="header-container">
-        <div class="logo">
-          <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo">
-        </div>
+  <div class="page-name">
+    {{ pageName }}
+  </div>
+</div>
 
-        <div class="page-name">
-          {{ pageName }}
-        </div>
-      </div>
-
-
-    <div *ngIf="router.url!='/home'" class="row">
-        <div class="col">
-          <img class="w-100 image" style="background-size: cover;" src="{{ pageImageSource }}" alt="">
-      </div>
-    </div>
-  <!-- </div> -->
-
+<div *ngIf="router.url != '/home'" class="row">
+  <div class="col">
+    <img
+      class="w-100 image1"
+      style="background-size: contain"
+      src="{{ pageImageSource1 }}"
+      alt=""
+    />
+    <img
+      class="w-100 image2"
+      style="background-size: contain"
+      src="{{ pageImageSource2 }}"
+      alt=""
+    />
+  </div>
+</div>
+<!-- </div> -->
