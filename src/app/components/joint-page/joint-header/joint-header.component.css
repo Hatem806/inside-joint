@@ -1,103 +1,90 @@
-
-.joint-name{
+.joint-name {
   font-family: montserrant-bold;
-  color: white ;
-  font-size: 2rem ;
- display: block;
- margin: auto;
- width: 100% ;
- text-align: center;
- align-items: center;
- align-content: center;
+  color: white;
+  font-size: 2rem;
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  align-content: center;
 }
- .my-header{
-
-  padding-top:1% ;
+.my-header {
+  padding-top: 1%;
 }
-.menu-options{
-  margin: 0 auto ;
-  background: #FFFFFF ;
-  width:85% ;
+.menu-options {
+  margin: 0 auto;
+  background: #ffffff;
+  width: 85%;
   border-radius: 3em;
-  height:75% ;
-  margin-top:1% ;
+  height: 75%;
+  margin-top: 1%;
 }
-.no-gutters{
-  background:  #005086!important;
+.no-gutters {
+  background: #005086 !important;
 }
 
-.menu-icons{
-  transform: scale(0.5,0.5);
+.menu-icons {
+  transform: scale(0.5, 0.5);
   /* padding-top: 0.3em ; */
   /* margin:auto auto;
   align-content: center;
   align-self: center;
   text-align: center; */
-
 }
 
-.my-desc{
-
+.my-desc {
   align-items: center;
   align-content: center;
   align-self: center;
   text-align: center;
-  color: #6B6C6F ;
-  font-size:0.8rem ;
-  font-family:montserrant-bold;
+  color: #6b6c6f;
+  font-size: 0.8rem;
+  font-family: montserrant-bold;
   visibility: true;
 }
-.desc-active{
-
+.desc-active {
   align-items: center;
   align-content: center;
   align-self: center;
   text-align: center;
-  color: #005086 ;
-  font-size: 0.9rem ;
-  font-family:montserrant-bold;
+  color: #005086;
+  font-size: 0.9rem;
+  font-family: montserrant-bold;
   visibility: true;
 }
 
-
-@media(max-width:700px){
-  .menu-options{
-    margin: 0 auto ;
-    background: #FFFFFF ;
-    width:100% ;
+@media (max-width: 700px) {
+  .menu-options {
+    margin: 0 auto;
+    background: #ffffff;
+    width: 100%;
     /* margin-left:10vw ; */
     border-radius: 3%;
-    height:90%;
+    height: 90%;
   }
-  .fit-col{
-    width:fit-content !important ;
+  .fit-col {
+    width: fit-content !important ;
     padding: 0px !important;
   }
-  .menu-icons{
+  .menu-icons {
     align-items: center;
     align-content: center;
     align-self: center;
     text-align: center;
-    margin: 0 auto ;
   }
-  .ev{
-    padding: 0!important;
-  }
-  .ev-icon{
-    margin-left:25% ;
+  .ev {
+    padding: 0 !important;
   }
 }
-@media(max-width:1000px) and (min-width:700px){
-  .menu-options{
-    margin: 0 auto ;
+@media (max-width: 1000px) and (min-width: 700px) {
+  .menu-options {
+    margin: 0 auto;
     margin-left: 10%;
-    background: #FFFFFF ;
-    width:90% ;
+    background: #ffffff;
+    width: 90%;
     /* margin-left:10vw ; */
     border-radius: 3%;
-    height:90%;
+    height: 90%;
   }
 }
-
-
-

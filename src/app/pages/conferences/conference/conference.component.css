@@ -1,34 +1,35 @@
+.custom-height {
+  height: 34vh;
+}
 
-
-
-.calendar{
-  background-color: #EFB747;
-  transform: scale(0.6,0.6);
+.calendar {
+  background-color: #efb747;
+  transform: scale(0.6, 0.6);
   align-items: center;
-    align-content: center;
-    align-self: center;
-    text-align: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
   /* padding-bottom: 5px; */
 }
-.calendar-text{
+.calendar-text {
   font-family: montserrant-medium;
-  color: #6B6C6F;
+  color: #6b6c6f;
   font-size: 1rem;
   align-items: center;
-    align-content: center;
-    align-self: center;
-    text-align: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
 }
-.about-conference{
+.about-conference {
   font-family: montserrant-bold;
-  color: #6B6C6F ;
+  color: #6b6c6f;
   font-size: 3rem;
   padding-bottom: 0.2em;
-  padding-top: 0.5em ;
+  padding-top: 0.5em;
 }
-.description{
+.description {
   font-family: montserrant;
-  color: #6B6C6F ;
+  color: #6b6c6f;
   font-size: 1rem;
 }
 /* .option-details{
@@ -37,39 +38,35 @@
   justify-content: center;
   text-align: center;
 } */
-.option-image{
-  padding-bottom: 10% ;
+.option-image {
+  padding-bottom: 10%;
 }
-.option-details{
-  padding-top: 15% ;
+.option-details {
+  padding-top: 15%;
 }
-.ellipse{
-padding: 1%;
-max-width: 50% !important;
+.ellipse {
+  padding: 1%;
+  max-width: 50% !important;
 }
-.options:hover .option-details{
-  background-color:  #005086;
-  color: #EFB747;
+.options:hover .option-details {
+  background-color: #005086;
+  color: #efb747;
 }
-.options:hover{
-  background-color:  #005086;
+.options:hover {
+  background-color: #005086;
 }
-@media(max-width:767px){
-  .calendar{
-
-   padding:0px !important ;
-  }
-  .calendar-text{
+@media (max-width: 767px) {
+  .calendar {
     padding: 0px !important ;
   }
-  .options-container{
-    margin-bottom:30% !important ;
+  .calendar-text {
+    padding: 0px !important ;
+  }
+  .options-container {
+    margin-bottom: 30% !important ;
   }
 
-
-.options{
-
- height: 80% ;
+  .options {
+    height: 80%;
+  }
 }
-}
-
