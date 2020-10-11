@@ -153,18 +153,18 @@ body {
 }
 .element-title {
   font-family: montserrant-bold;
-  font-size: 0.9rem;
+  
   color: #005086;
   text-align: left;
   justify-content: left;
-  line-height: 1rem;
+  
   /* padding-left:1em ; */
-  padding-bottom: 1em;
-  padding-top: 1em;
+ 
+  
 }
 .element-description {
   font-family: montserrant;
-  font-size: 0.6em;
+  
   color: #6b6c6f;
   padding: 0px !important;
 }
@@ -172,7 +172,7 @@ body {
   font-family: montserrant-bold;
   font-size: 1rem;
   color: #6b6c6f;
-  transform: translateY(40%);
+ 
   text-align: center;
 }
 @media (min-width: 1024px) {

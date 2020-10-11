@@ -1,9 +1,13 @@
+
 .no-gutters{
-  background:  #005086!important;
-  height: 100vh;
+  background: #005086!important;
+  height: 100vh !important;
 
 }
 @media(max-width:700px){
+  .no-gutters {
+    height: 105vh !important;
+  }
   .joint-white-container{
 
     width: 95%;
