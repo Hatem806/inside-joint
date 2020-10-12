@@ -39,11 +39,9 @@
   /* margin: auto 0 ; */
   transition: all 0.2s;
 }
-
 .my-container:hover {
   background-color: #efb747;
 }
-
 .horizontal-divider {
   /* padding-top:13vh ; */
   /* margin-top:21vh ; */
