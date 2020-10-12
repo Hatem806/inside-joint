@@ -40,11 +40,9 @@
   transition: all 0.2s;
 }
 .my-container:hover {
-  padding: 2rem;
+  background-color: #efb747;
 }
-.my-container:hover .my-image {
-  transform: scale(1.2);
-}
+
 
 .horizontal-divider {
   /* padding-top:13vh ; */
@@ -130,11 +128,7 @@
   .my-container {
     transition: all 0.2s;
   }
-  .my-container :hover {
-    padding-left: 1rem;
-
-    height: 50%;
-  }
+ 
 
   .horizontal-divider {
     margin-top: 0rem;
