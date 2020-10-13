@@ -167,7 +167,15 @@
   .text-area {
     width: 100%;
   }
-
+  .welcome {
+    font-size: 2rem;
+  }
+  .inside-joints {
+    font-family: montserrant-bold-italic;
+    font: italic;
+    color: #005086;
+    font-size: 2rem;
+  }
   .skeleton-container {
     width: 100%;
     margin-bottom: 5%;
@@ -175,6 +183,34 @@
   }
   .text-area {
     text-align: center;
+  }
+  .neck {
+    top: 6%;
+    left: 38%;
+  }
+  .elbow {
+    left: 23%;
+    top: 32%;
+  }
+  .hand {
+    position: absolute;
+    left: 20%;
+    top: 45%;
+  }
+  .knee {
+    position: absolute;
+    left: 32%;
+    top: 63%;
+  }
+  .ankle {
+    position: absolute;
+    bottom: 7%;
+    right: 35%;
+  }
+  .foot {
+    position: absolute;
+    bottom: 5%;
+    left: 33%;
   }
 }
 

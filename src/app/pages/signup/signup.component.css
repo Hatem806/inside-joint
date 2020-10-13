@@ -105,10 +105,13 @@ h6.error {
     height: 115%;
   }
   h1.welcome {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     text-align: center;
 
     /* transform: translate(40%, -240%); */
+  }
+  h1.login-text2 {
+    font-size: 1.1rem;
   }
 }
 

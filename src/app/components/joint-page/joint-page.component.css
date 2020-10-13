@@ -123,6 +123,10 @@
     text-align: center;
   }
 
+  .my-container {
+    transition: all 0.2s;
+  }
+
   .horizontal-divider {
     margin-top: 0rem;
     margin-right: 0;
@@ -141,6 +145,23 @@
     width: auto;
   }
   .no-gutters {
-    height: 140vh !important;
+    height: 175vh !important;
+  }
+}
+
+@media (max-height: 813px) {
+  .no-gutters {
+    height: 145vh !important;
+  }
+}
+@media (max-height: 668px) {
+  .no-gutters {
+    height: 170vh !important;
+  }
+}
+@media (max-width: 321px) {
+  .no-gutters {
+    height: 200vh !important;
+    margin-bottom: 30px;
   }
 }
