@@ -74,9 +74,7 @@
     align-self: center;
     text-align: center;
   }
-  .ev {
-    padding: 0 !important;
-  }
+  
 }
 @media (max-width: 1000px) and (min-width: 700px) {
   .menu-options {
