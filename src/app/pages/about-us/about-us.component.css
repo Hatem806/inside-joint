@@ -19,6 +19,10 @@
   margin-left: 15% !important ;
   padding-top: 1em;
 }
+
+.my-container .description {
+  font-size: 1.2rem;
+}
 .details {
   font-family: montserrant-bold;
   font-size: 2rem;
@@ -40,7 +44,10 @@
     padding-left: 0px;
   }
   .my-container {
-    margin-left: 28% !important ;
+    margin-left: 24% !important ;
+  }
+  .my-container .description {
+    font-size: 1.75rem;
   }
 }
 /* .bottom-part{
