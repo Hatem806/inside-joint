@@ -8,6 +8,8 @@
   "city": "City",
   "workplace" : "Workplace",
   "login": "Login",
-  "register": "Register"
+  "register": "Register",
+  "head" : "Head"
+
 
 }
