@@ -20,7 +20,7 @@
       <div class="login-text">Log in to your account</div>
       <h1 class="login-text2">{{ 'email' | translate}}</h1>
       <input
-        class="login-input form-control"
+        class="login-input form-control w-100"
         [(ngModel)]="email"
         type="text"
         placeholder="someone@email.com"
@@ -30,7 +30,7 @@
       <input
         [(ngModel)]="password"
         type="password"
-        class="login-input form-control"
+        class="login-input form-control w-100"
         required
       />
       <h4 *ngIf="error" class="error">{{ errorMessage }}</h4>
