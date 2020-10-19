@@ -13,6 +13,7 @@ import { IQuestion } from 'src/app/models/Question';
 })
 export class ConferenceComponent implements OnInit {
   pageTitle = 'Conferences';
+  pageTitleFr = 'Conférences'
   chosenConference: IEvent;
   displayedStartDate: String;
   displayedEndDate: String;

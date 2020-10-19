@@ -12,6 +12,7 @@ import { Route } from '@angular/compiler/src/core';
 })
 export class QuestionsComponent implements OnInit {
   pageTitle = 'Conferences';
+  pageTitleFr = 'Des questions'
   pageImageSrc1 =
     '../../../../assets/conferences-photo/man-speaker-eusic-2017-conference.png';
   pageImageSrc2 =

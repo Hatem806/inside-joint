@@ -12,6 +12,7 @@ export class AboutUsComponent implements OnInit {
   changePdfIcon: boolean;
 
   pageTitle: string = 'About Fidia';
+  pageTitleFr : string = 'À propos de Fidia'
   pageImageSrc1 = '../../../assets/about-us-photo/ezgif.com-webp-to-jpg.png';
   pageImageSrc2 = '../../../assets/about-us-photo/ezgif.com-webp-to-jpg-2.png';
 

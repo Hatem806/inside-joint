@@ -28,11 +28,11 @@
     </div>
 
     <div class="centered px-5 p-lg-0">
-      <div class="login-text">Sign Up to new account.</div>
+      <div class="login-text">{{ 'signUpToNewAccount' | translate }}</div>
       <br />
       <div class="row">
         <div class="col">
-          <h1 class="login-text2">First Name</h1>
+          <h1 class="login-text2">{{ 'firstName' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="firstName"
@@ -40,7 +40,7 @@
             placeholder="First Name"
             required
           />
-          <h1 class="login-text2">Last Name</h1>
+          <h1 class="login-text2">{{ 'lastName' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="lastName"
@@ -48,7 +48,7 @@
             placeholder="Last Name"
             required
           />
-          <h1 class="login-text2">E-mail</h1>
+          <h1 class="login-text2">{{ 'email' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="email"
@@ -56,7 +56,7 @@
             placeholder="someone@email.com"
             required
           />
-          <h1 class="login-text2">Password</h1>
+          <h1 class="login-text2">{{ 'passowrd' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="password"
@@ -68,7 +68,7 @@
         </div>
 
         <div class="col">
-          <h1 class="login-text2">Contact Number</h1>
+          <h1 class="login-text2">{{ 'contactNumber' | translate }}</h1>
           <div class="password-container">
             <input
               override
@@ -97,7 +97,7 @@
           </div>
           <!-- <input class="login-input" [(ngModel)]="country" type="text" placeholder="Country"  required /> -->
 
-          <h1 class="login-text2">City</h1>
+          <h1 class="login-text2">{{ 'city' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="city"
@@ -105,7 +105,7 @@
             placeholder="City"
             required
           />
-          <h1 class="login-text2">Work Place</h1>
+          <h1 class="login-text2">{{ 'workPlace' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="workPlace"
@@ -118,7 +118,7 @@
       <div>
         <h6 *ngIf="error" class="error">{{ errorMessage }}</h6>
         <button (click)="signUp()" type="submit" class="login-button">
-          SIGN UP
+          {{ 'signUp' | translate }}
         </button>
       </div>
     </div>

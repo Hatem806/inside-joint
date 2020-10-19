@@ -8,8 +8,11 @@ html {
   margin-bottom: 1em;
   transform: scale(0.8, 0.8);
 }
+
 .languages{
-  padding: 1.6em ;
+ height: auto ;
+  margin:100%  auto;
+  float: left;
   cursor: pointer;
 }
 .buttons {
