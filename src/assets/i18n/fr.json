@@ -1,0 +1,12 @@
+{
+  "firstName" : "Prenom",
+  "lastName" : "Nom" ,
+  "email": "E-mail",
+  "country" : "Pays",
+  "mobile" : "Mobile",
+  "password": "Mot de passe",
+  "city": "Ville",
+  "workplace" : "Lieu de trevail",
+  "login" : "S'identifier",
+  "register": "S'inscrire"
+}

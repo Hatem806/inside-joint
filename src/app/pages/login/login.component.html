@@ -9,14 +9,16 @@
   </div>
   <div [ngClass]="innerWidth > 767 ? 'split left' : 'col col-12'">
     <div class="row">
-      <div class="rounded float-left logo">
+      <div class="col col-3 rounded float-left logo">
         <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo" />
       </div>
+        <img (click)="ApiService.getLangService().changeLang('en')"class=" languages "src="../assets/languages/united-kingdom (1).png" alt="">
+        <img (click)="ApiService.getLangService().changeLang('fr')"class=" languages"src="../assets/languages/france (1).png" alt="">
     </div>
 
     <div class="centered">
       <div class="login-text">Log in to your account</div>
-      <h1 class="login-text2">E-mail</h1>
+      <h1 class="login-text2">{{ 'email' | translate}}</h1>
       <input
         class="login-input form-control"
         [(ngModel)]="email"
@@ -24,7 +26,7 @@
         placeholder="someone@email.com"
         required
       />
-      <h1 class="login-text2">Password</h1>
+      <h1 class="login-text2">{{ 'password' | translate}}</h1>
       <input
         [(ngModel)]="password"
         type="password"

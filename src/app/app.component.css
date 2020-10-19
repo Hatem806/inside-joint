@@ -5,6 +5,13 @@ body {
   font-family: montserrant-bold;
   text-decoration: none;
 }
+
+.languages-container{
+  padding-right: 1em ;
+  padding-left:1em ;
+  padding-bottom: 0;
+  padding-top: 0.5em;
+}
 .icons {
   /* padding-left:4vw ; */
   height: auto;
@@ -79,7 +86,7 @@ body {
   width: fit-content;
   align-items: center;
   justify-content: center;
-  
+
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -102,7 +109,7 @@ body {
 @media (min-width: 700px) {
   #sidebar-wrapper {
     margin-left: 0;
-    
+
   }
 
   #page-content-wrapper {
