@@ -64,7 +64,7 @@ body {
 }
 #wrapper {
   overflow-x: hidden;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 #sidebar-wrapper {
@@ -86,7 +86,6 @@ body {
   width: fit-content;
   align-items: center;
   justify-content: center;
-
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -109,7 +108,6 @@ body {
 @media (min-width: 700px) {
   #sidebar-wrapper {
     margin-left: 0;
-
   }
 
   #page-content-wrapper {
@@ -124,7 +122,6 @@ body {
     margin-left: -15rem;
   }
 }
-
 
 .no-gutters {
   padding-right: 0px !important ;
