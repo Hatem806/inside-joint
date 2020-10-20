@@ -51,12 +51,22 @@ export class LoginComponent implements OnInit, OnDestroy
     if(this.email == null || this.email == "")
     {
       this.error=true
-      this.errorMessage="Email address is required"
+      if(this.ApiService.getLangService().lang == 'en'){
+        this.errorMessage="Email address is required"
+      }
+      else{
+        this.errorMessage = "Adresse e-mail est nécessaire"
+      }
     }
     else if(this.password == null || this.password == "")
     {
-      this.error=true
-      this.errorMessage="Password is required"
+      if(this.ApiService.getLangService().lang == 'en'){
+        this.errorMessage="Password is required"
+      }
+      else{
+        this.errorMessage = "Mot de passe requis"
+      }
+
     }
 else{
     this.ApiService.getAuthenticationService().login(this.email, this.password).subscribe(data => {

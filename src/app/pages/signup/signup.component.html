@@ -2,25 +2,27 @@
   <div [ngClass]="innerWidth > 520 ? 'col col-6' : 'col col-12'">
     <div class="container">
       <div class="row header-cont">
-        <div class="col col-2">
-          <img
-            role="button"
-            [routerLink]="['/login']"
-            src="../../../assets/icons/back-arrow.png"
-            alt=""
-          />
-        </div>
-        <div class="col col-2">
-          <img src="../../../assets/fidiaLogo/Group -1.png" alt="" />
+        <div class="col-12 col-md-3 col-lg-2">
+          <div class="row py-3 mt-md-5 align-items-center">
+            <div class="col-3 col-md-6">
+              <img
+                role="button"
+                [routerLink]="['/login']"
+                src="../../../assets/icons/back-arrow.png"
+                alt=""
+              />
+            </div>
+            <div class="col-9 col-md-6">
+              <img src="../../../assets/fidiaLogo/Group -1.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
       <div
-        class="row justify-content-center align-items-center full-height-desktop"
+        class="row justify-content-center align-items-center full-height-desktop h-75"
       >
-        <div class="col-12">
-          <h1 class="welcome pt-3 pb-5 mb-5 p-lg-0 m-lg-0">
-            Please, answer the following questions
-          </h1>
+        <div class="col-12 pt-4 pb-5">
+          <h1 class="welcome pb-4">Please, answer the following questions</h1>
         </div>
       </div>
     </div>

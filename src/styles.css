@@ -56,6 +56,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+* {
+  outline: none !important;
+}
 img {
   -khtml-user-select: none;
   -o-user-select: none;
@@ -91,7 +95,7 @@ img {
   box-shadow: 0px 1px 20px 1px #acacac;
   border-top: 0px !important;
   border-bottom: 1px !important ;
-
+  height: 25vh;
   padding: 0px !important;
 }
 
@@ -106,13 +110,7 @@ img {
   align-self: center;
   text-align: center;
 }
-.option-image {
-  display: block;
-  margin: auto;
-  margin-top: 15%;
-  max-width: 10.5vw;
-  max-height: 14vh;
-}
+
 .image {
   background-size: cover;
 }
@@ -229,8 +227,8 @@ body {
     box-shadow: 0px 1px 20px 1px #acacac;
     border-top: 0px !important;
     border-bottom: 1px !important ;
-    width: 12em;
-    height: 12em;
+
+    height: 16em;
     padding: 0px !important;
   }
 }
@@ -249,13 +247,7 @@ body {
   .options-container {
     margin: 0 !important ;
   }
-  .option-image {
-    display: block;
-    margin: auto;
-    margin-top: 15%;
-    max-width: 10.5vw;
-    max-height: 14vh;
-  }
+
   .option-details {
     font-size: 0.8rem;
   }

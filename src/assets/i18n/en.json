@@ -1,0 +1,15 @@
+{
+  "firstName" : "First Name",
+  "lastName" : "Last Name" ,
+  "email": "Email",
+  "country" : "Country",
+  "mobile" : "Mobile",
+  "password": "Password",
+  "city": "City",
+  "workplace" : "Workplace",
+  "login": "Login",
+  "register": "Register",
+  "head" : "Head"
+
+
+}

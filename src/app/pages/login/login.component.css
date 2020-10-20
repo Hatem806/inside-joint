@@ -8,7 +8,10 @@ html {
   margin-bottom: 1em;
   transform: scale(0.8, 0.8);
 }
-
+.languages{
+  padding: 1.6em ;
+  cursor: pointer;
+}
 .buttons {
   margin: 0 auto;
 }
@@ -152,7 +155,7 @@ h6.error {
   font-size: 1rem;
   color: #ff0000;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .side-img-container {
     height: 30vh;
   }
