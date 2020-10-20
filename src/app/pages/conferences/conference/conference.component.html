@@ -1,8 +1,13 @@
 <div class="">
-  <app-header
+  <app-header *ngIf = "apiService.getLangService().lang=='en'"
     [pageImageSource1]="pageImageSrc1"
     [pageImageSource1]="pageImageSrc1"
     [pageName]="pageTitle"
+  ></app-header>
+    <app-header *ngIf = "apiService.getLangService().lang!='en'"
+    [pageImageSource1]="pageImageSrc1"
+    [pageImageSource1]="pageImageSrc1"
+    [pageName]="pageTitleFr"
   ></app-header>
   <div class="row page-cont">
     <div class="col md-12">

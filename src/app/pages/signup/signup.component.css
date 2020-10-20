@@ -12,6 +12,12 @@ html {
   overflow: hidden;
 }
 
+.languages{
+  height: auto ;
+   margin:auto auto;
+   cursor: pointer;
+ }
+
 .logo {
   transform: scale(0.7, 0.7);
 }

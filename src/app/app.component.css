@@ -6,15 +6,17 @@ body {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
+
 .languages-container{
-  padding-right: 1em ;
-  padding-left:1em ;
-  padding-bottom: 0;
-  padding-top: 0.5em;
+  margin: auto auto
 }
-=======
->>>>>>> e4609305f98145a5b4e7e312bd1a342549f0adc2
+
+.languages{
+  height: auto ;
+   margin: auto auto;
+   cursor: pointer;
+ }
+
 .icons {
   /* padding-left:4vw ; */
   height: auto;
@@ -89,10 +91,6 @@ body {
   width: fit-content;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-
-=======
->>>>>>> e4609305f98145a5b4e7e312bd1a342549f0adc2
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -115,10 +113,6 @@ body {
 @media (min-width: 700px) {
   #sidebar-wrapper {
     margin-left: 0;
-<<<<<<< HEAD
-
-=======
->>>>>>> e4609305f98145a5b4e7e312bd1a342549f0adc2
   }
 
   #page-content-wrapper {

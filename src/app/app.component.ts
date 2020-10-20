@@ -82,8 +82,5 @@ export class AppComponent {
   goToLogin(){
     this.router.navigateByUrl('login');
   }
-  changeLang(language : string){
-    localStorage.setItem('locale', language) ;
-    this.translate.use(language) ;
-  }
+
 }

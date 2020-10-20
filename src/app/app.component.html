@@ -29,9 +29,9 @@
         id="sidebar-wrapper"
       >
         <div class="list-group list-group-flush">
-          <div class="row languages-container">
-            <img class="col col-6 "src="../assets/languages/united-kingdom.png" alt="">
-            <img class="col col-6 "src="../assets/languages/france.png" alt="">
+          <div class="languages-container">
+            <img role="button"(click)= "ApiService.getLangService().changeLang('en')"class="languages "src="../assets/languages/united-kingdom (1).png" alt="">
+            <img role="button"(click)= "ApiService.getLangService().changeLang('fr')"class="languages"src="../assets/languages/france (1).png" alt="">
           </div>
           <div class="sidebar-heading">
             <img
@@ -84,7 +84,7 @@
                 >home
               </mat-icon>
               <h3 [style.color]="companyNameColor" class="col col-5 icon-name">
-                Home
+                {{ 'home' | translate }}
               </h3>
             </div>
           </a>
@@ -125,7 +125,7 @@
                 >info
               </mat-icon>
               <h3 [style.color]="companyNameColor" class="col col-5 icon-name">
-                About Fidia
+                {{ 'aboutFidia' | translate }}
               </h3>
             </div>
           </a>
@@ -167,7 +167,7 @@
                 >medical_services
               </mat-icon>
               <h3 [style.color]="companyNameColor" class="col col-5 icon-name">
-                Products
+                {{ 'products' | translate }}
               </h3>
             </div>
           </a>
@@ -208,7 +208,7 @@
                 >event
               </mat-icon>
               <h3 [style.color]="companyNameColor" class="col col-5 icon-name">
-                Events
+                {{ 'events' | translate }}
               </h3>
             </div>
           </a>
@@ -229,6 +229,10 @@
         id="sidebar-wrapper"
       >
         <div class="list-group list-group-flush">
+          <div class="languages-container">
+            <img role="button"(click)= "ApiService.getLangService().changeLang('en')"class="languages "src="../assets/languages/united-kingdom (1).png" alt="">
+            <img role="button"(click)= "ApiService.getLangService().changeLang('fr')"class="languages"src="../assets/languages/france (1).png" alt="">
+          </div>
           <div class="company-name sidebar-heading">
             <img src="../assets/icons/InsideJointsLogo.png" class="logo" />
           </div>
@@ -399,6 +403,7 @@
         [style.background]="navbarColor"
         class="navbar fixed-bottom navbar-light"
       >
+
         <a
           [style.background]="listItemBackground"
           routerLink="home"
