@@ -11,6 +11,12 @@
 
 
 }
+.languages{
+  height: auto ;
+   margin:50%  auto;
+   float: left;
+   cursor: pointer;
+ }
 
 .header-container{
   display: flex;
