@@ -6,21 +6,15 @@ body {
   text-decoration: none;
 }
 
-.languages-container{
-  margin: auto auto
+.languages-container {
+  margin: auto auto;
 }
-.languages{
-  height: auto ;
-   margin: auto auto;
-   cursor: pointer;
- }
-
-.icons {
-  /* padding-left:4vw ; */
+.languages {
   height: auto;
-  margin: 0 auto;
-  transform: scale(1.5, 1.5);
+  margin: auto auto;
+  cursor: pointer;
 }
+
 .fas {
   color: #acacac;
 }
@@ -142,14 +136,6 @@ body {
 }
 
 @media (max-width: 700px) {
-  .icons {
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 2vh;
-    display: block;
-    transform: scale(1, 1);
-  }
   .list-group-item {
     /* background:  #005086; */
     align-items: center;
@@ -163,6 +149,17 @@ body {
 @media (min-width: 1400px) {
   .icon-name {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 1400px) {
+  .icons {
+    justify-content: right;
+    justify-self: right;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    transform: scale(1.5, 1.5) !important;
   }
 }
 
@@ -179,17 +176,17 @@ body {
   .icon-name {
     font-size: 1rem;
   }
-  .icons {
-    justify-content: right;
-    justify-self: right;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    text-align: center;
-    transform: scale(2, 2);
-  }
 }
 
 .logo {
   width: 60%;
+}
+.icons {
+  justify-content: right;
+  justify-self: right;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+  transform: scale(2, 2);
 }
