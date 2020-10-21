@@ -89,5 +89,8 @@ export class ManualsPageComponent implements OnInit {
     }
     this.manuals2DArray=  arr
   }
+  goToManualsLink( element ){
+    window.location.href = this.apiService.getAssetsService().getManualsUrl() + element.path ;
+  }
 
 }

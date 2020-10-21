@@ -8,6 +8,7 @@ import { AuthenticationService } from './authentication.service';
 import { JointService } from './joints.service';
 import { LanguageService } from 'typescript';
 import { LanguagesService } from './languages.service';
+import { CompaniesService } from './companies.service';
 
 
 @Injectable({
@@ -17,7 +18,7 @@ export class ApiService {
   constructor(private productService : ProductsService, private conferenceService : ConferencesService,
     private assetsService : AssetsService, private questionsAnswersService : questionsAnswersService,
     private authenticationService: AuthenticationService,private usersService: UsersService,
-    private jointService : JointService ,private langService : LanguagesService) {}
+    private jointService : JointService ,private langService : LanguagesService ,private companiesService : CompaniesService) {}
 
   public getProductsService(): ProductsService
   {
@@ -56,5 +57,9 @@ export class ApiService {
   public getLangService(): LanguagesService
   {
     return this.langService ;
+  }
+  public getCompaniesService() : CompaniesService
+  {
+    return this.companiesService ;
   }
 }

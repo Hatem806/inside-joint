@@ -11,7 +11,7 @@ export class ManualsComponent implements OnInit {
  jointName: string ;
  jointImageSrc : string ;
  title : string ;
- description: string ;
+ htmlFile: string ;
   constructor( public apiService : ApiService, public route : ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -23,7 +23,8 @@ export class ManualsComponent implements OnInit {
 
     this.apiService.getAssetsService().getByPartAndType(this.jointName.toLowerCase(),'manual').subscribe( data => {
       console.log(data.assets)
-      this.description = data.assets[0].description ;
+      this.htmlFile = data.assets[0].path
+
       this.title = data.assets[0].title
 
     })

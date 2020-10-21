@@ -5,7 +5,9 @@
   <div class="joint-white-container">
     <div *ngFor="let row of manuals2DArray; let indexOfElement=index ;"class="row elements-row">
       <div *ngFor="let element of row; let rowIndex=index"class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-        <div role="button"[routerLink]="['manual']"[queryParams]="{bodyPart:jointName,imgSrc:jointImageSrc}" class="row">
+        <div role="button"(click)="goToManualsLink(element)"
+
+         class="row">
           <div *ngIf="!twoElementsARow"class="col col-2 element-number">
             {{indexOfElement+indexOfElement+rowIndex + 1}}
           </div>
