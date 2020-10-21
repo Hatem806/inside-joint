@@ -1,10 +1,12 @@
 <div class="no-gutters">
-  <app-header *ngIf ="apiService.getLangService().lang=='en'"
+  <app-header
+    *ngIf="apiService.getLangService().lang == 'en'"
     [pageImageSource1]="pageImageSrc1"
     [pageImageSource2]="pageImageSrc2"
     [pageName]="pageTitle"
   ></app-header>
-    <app-header *ngIf ="apiService.getLangService().lang!='en'"
+  <app-header
+    *ngIf="apiService.getLangService().lang != 'en'"
     [pageImageSource1]="pageImageSrc1"
     [pageImageSource2]="pageImageSrc2"
     [pageName]="pageTitleFr"
@@ -27,7 +29,7 @@
         </div>
         <div class="col-lg-6 col-12 details-section pr-md-5 pr-lg-4">
           <div class="row">
-            <div class="col details">{{ 'details' | translate }}</div>
+            <div class="col details">{{ "details" | translate }}</div>
           </div>
           <div class="row options-container justify-content-center">
             <div

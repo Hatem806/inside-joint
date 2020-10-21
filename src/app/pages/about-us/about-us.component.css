@@ -6,7 +6,6 @@
 }
 .description {
   font-family: montserrant;
-
   text-align: left;
   color: #6b6c6f;
   padding-top: 1vw;
@@ -47,7 +46,7 @@
     margin-left: 24% !important ;
   }
   .my-container .description {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 /* .bottom-part{
