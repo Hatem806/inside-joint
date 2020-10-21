@@ -1,10 +1,12 @@
 <div class="no-gutters">
-  <app-header *ngIf="apiService.getLangService().lang=='en'"
+  <app-header
+    *ngIf="apiService.getLangService().lang == 'en'"
     [pageImageSource1]="pageImageSrc1"
     [pageImageSource2]="pageImageSrc2"
     [pageName]="pageTitle"
   ></app-header>
-  <app-header *ngIf="apiService.getLangService().lang!='en'"
+  <app-header
+    *ngIf="apiService.getLangService().lang != 'en'"
     [pageImageSource1]="pageImageSrc1"
     [pageImageSource2]="pageImageSrc2"
     [pageName]="pageTitleFr"
@@ -33,7 +35,7 @@
               >
                 <div class="options">
                   <div class="row">
-                    <div role="button" class="col">
+                    <div role="button" class="col text-center">
                       <img
                         class="option-image"
                         src="{{
