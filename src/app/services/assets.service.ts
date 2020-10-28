@@ -65,6 +65,11 @@ export class AssetsService {
   {
     return this.http.get<IAssetsResponse>(`${environment.baseUrl}/${AssetsService._endPoint}/manuals`);
   }
+  public getManual(path): Observable<any>
+  {
+    return this.http.get(`${environment.baseUrl}/uploads/manuals/${path}`);
+  }
+
 
   public getDocuments(): Observable<IAssetsResponse>
   {
