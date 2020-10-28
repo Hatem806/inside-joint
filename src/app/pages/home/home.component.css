@@ -22,8 +22,8 @@
 }
 .knee {
   position: absolute;
-  left: 37%;
-  top: 65%;
+  left: 35%;
+  top: 66%;
 }
 .desc {
   visibility: hidden;
@@ -54,12 +54,12 @@
 }
 .hand {
   position: absolute;
-  left: 26%;
-  top: 48%;
+  left: 22%;
+  top: 49%;
 }
 .elbow {
   position: absolute;
-  left: 28%;
+  left: 25%;
   top: 35%;
 }
 
@@ -80,7 +80,7 @@
 }
 .shoulder {
   position: absolute;
-  top: 20%;
+  top: 23%;
   right: 30%;
 }
 .hip {
@@ -90,7 +90,7 @@
 }
 
 .home-container {
-  width: 90%;
+  width:80%;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
@@ -104,21 +104,35 @@
   display: block;
   margin: 0 auto;
 }
+
+@media (max-width: 1024px) {
+  .dot-container {
+    transform: scale(0.8, 0.8);
+  }
+}
+@media (max-width: 375px) {
+  .dot-container {
+    transform: scale(0.6, 0.6);
+  }
+}
 @media (min-width: 767px) {
   .skeleton-img {
     max-width: 70%;
   }
+  
 }
 @media (min-width: 1024px) {
+  .skeleton-img {
+    max-width: 100%;
+  }
+  
 }
 @media (min-width: 1600px) {
   .skeleton-img {
-    max-width: 80%;
+    max-width: 73%;
   }
 }
-.text-area {
-  margin: 0 auto;
-}
+
 .skeleton-container {
   position: relative;
 }
@@ -128,10 +142,6 @@
     flex-direction: row; /**/
     justify-content: space-between;
     align-items: center !important;
-  }
-
-  .text-area {
-    width: 45%;
   }
 
   .skeleton-container {
@@ -265,6 +275,7 @@
 }
 
 @media (max-width: 2600px) and (min-width: 1700px) {
+  
   .hand {
     position: absolute;
     left: 26%;
