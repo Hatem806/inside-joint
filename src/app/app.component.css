@@ -6,12 +6,21 @@ body {
   text-decoration: none;
 }
 
+
 .languages-container {
   margin: auto auto;
 }
 .languages {
   width: 30px; margin-right: 10px;
   margin-top: 10px;
+/* .languages{
+  height: auto ;
+   margin: auto auto;
+   cursor: pointer;
+ } */
+}
+.icons {
+  /* padding-left:4vw ; */
   height: auto;
   margin: auto auto;
   cursor: pointer;

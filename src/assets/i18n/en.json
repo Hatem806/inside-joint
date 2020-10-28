@@ -9,6 +9,7 @@
   "workplace" : "Workplace",
   "login": "Login",
   "register": "Register",
+
   "signUp": "Sign Up",
   "welcomeToIJ": "Welcome To InsideJoints",
   "loginToYourAccount": "Login to your account",
@@ -42,5 +43,7 @@
   "details" : "Details",
   "welcomeTo": "Welcome To",
   "insideJoints": "Inside Joints"
+
+
 
 }

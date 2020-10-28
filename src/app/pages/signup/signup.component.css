@@ -11,11 +11,13 @@ html {
   clip-path: polygon(53% 0, 100% 50%, 60% 100%, 0 100%, 0 0);
   overflow: hidden;
 }
+
 .languages{
   height: auto ;
    margin:auto auto;
    cursor: pointer;
  }
+
 .logo {
   transform: scale(0.7, 0.7);
 }
