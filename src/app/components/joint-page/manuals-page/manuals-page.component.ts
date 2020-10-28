@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
+
 @Component({
   selector: 'app-manuals-page',
   templateUrl: './manuals-page.component.html',
@@ -14,6 +15,7 @@ export class ManualsPageComponent implements OnInit {
   jointName : string
   manuals2DArray = [] ;
 
+  htmlData ;
   manuals = [] ;
   twoElementsARow : boolean ;
   innerWidth : any ;
@@ -21,6 +23,8 @@ export class ManualsPageComponent implements OnInit {
   constructor(public apiService : ApiService, public route : ActivatedRoute) { }
 
   ngOnInit(): void {
+
+
     this.route.queryParams.subscribe(data => {
       this.jointName = data.bodyPart ;
       this.jointImageSrc = this.apiService.getJointService().jointsImagePath + data.imgSrc ;
@@ -90,6 +94,7 @@ export class ManualsPageComponent implements OnInit {
     this.manuals2DArray=  arr
   }
   goToManualsLink( element ){
+    console.log()
     window.location.href = this.apiService.getAssetsService().getManualsUrl() + element.path ;
   }
 
