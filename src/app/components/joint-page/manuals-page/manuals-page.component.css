@@ -20,3 +20,16 @@
     margin: auto; */
   }
 }
+
+::ng-deep p{
+  font-family: montserrant;
+  font-size: 0.8rem;
+  text-align: left;
+  color : #005086 ;
+}
+::ng-deep strong{
+  font-family: montserrant;
+  font-size: 1rem;
+  text-align: left;
+  color : #83F52C ;
+}

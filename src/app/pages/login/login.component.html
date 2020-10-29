@@ -28,13 +28,6 @@
         placeholder="someone@email.com"
         required
       />
-      <h1 class="login-text2">{{ 'password' | translate}}</h1>
-      <input
-        [(ngModel)]="password"
-        type="password"
-        class="login-input form-control w-100"
-        required
-      />
       <h4 *ngIf="error" class="error">{{ errorMessage }}</h4>
       <div class="buttons">
         <button (click)="login()" type="submit" class="login-button">

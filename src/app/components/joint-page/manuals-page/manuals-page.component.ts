@@ -2,7 +2,7 @@ import { HostListener } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
-
+import { ViewEncapsulation } from '@angular/core'
 
 @Component({
   selector: 'app-manuals-page',
@@ -94,8 +94,8 @@ export class ManualsPageComponent implements OnInit {
     this.manuals2DArray=  arr
   }
   goToManualsLink( element ){
-    console.log()
-    window.location.href = this.apiService.getAssetsService().getManualsUrl() + element.path ;
+    this.apiService.getAssetsService().chosenManual = element ;
+   // window.location.href = this.apiService.getAssetsService().getManualsUrl() + element.path ;
   }
 
 }
