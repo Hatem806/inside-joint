@@ -40,13 +40,13 @@
             <img
               *ngIf="router.url.substring(0, 6) == '/joint'"
               class="company-name"
-              src="../assets/icons/InsideJointsLogo.png"
+              src="../assets/icons/logo-blue.svg"
               alt=""
             />
             <img
               *ngIf="!(router.url.substring(0, 6) == '/joint')"
               class="company-name"
-              src="../assets/icons/InsideJointsLogoWhite.png"
+              src="../assets/icons/logo-white.svg"
               alt=""
             />
           </div>
@@ -139,17 +139,18 @@
             class="list-group-item"
           >
             <div class="row">
-              <mat-icon
+              <i
                 [style.color]="companyNameColor"
                 *ngIf="
                   !(currentRoute == 'Products') &&
                   !(router.url.substring(0, 6) == '/joint')
                 "
                 class="icons col col-4"
-                src="../assets/mainNav/135.png"
+                src="../assets/mainNav/syringe.svg"
                 alt="Products"
-                >medical_services
-              </mat-icon>
+                style="width: 50px; height: 50px;"
+                >
+              </i>
               <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="currentRoute == 'Products'"
