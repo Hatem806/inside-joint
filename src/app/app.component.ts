@@ -20,6 +20,7 @@ export class AppComponent {
   listItemBackground :string
   routesMap = [];
 
+  changeIcon = false ;
   innerWidth : any = window.innerWidth ;
 
   currentRoute: string = "";
@@ -32,6 +33,7 @@ export class AppComponent {
       const browserLang = localStorage.getItem('locale');
       translate.use(browserLang.match(/en|fr/) ?  browserLang : 'en')
     }
+    this.ApiService.getLangService().lang='en'
 
     this.routesMap['/products'] = "Products";
     this.routesMap['/home'] = "Home";

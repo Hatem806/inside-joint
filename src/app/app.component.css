@@ -33,14 +33,17 @@ body {
 .icon-name,
 .icons {
   transition: all 0.3s;
+  fill: white;
 }
 .list-group-item:hover .icon-name {
   color: #efb747 !important;
+  fill:  #efb747 !important;
   text-decoration: none !important ;
 }
 .list-group-item:hover .icons {
   color: #efb747 !important;
   text-decoration: none !important ;
+  fill:  #efb747 !important;
 }
 
 .logout {
@@ -86,7 +89,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* 
+/*
 #sidebar-wrapper .sidebar-heading {
   min-width: 10vh;
 } */
@@ -146,7 +149,7 @@ body {
     margin: auto auto;
     width: auto;
   }
-  
+
 }
 @media (max-width: 1024px) {
   .logo {

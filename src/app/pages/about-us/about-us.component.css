@@ -8,7 +8,6 @@
   font-family: montserrant;
   text-align: left;
   color: #6b6c6f;
-  padding-top: 1vw;
 }
 .title-description {
   min-height: 100% !important ;
@@ -19,9 +18,9 @@
   padding-top: 1em;
 }
 
-.my-container .description {
+/* .my-container .description {
   font-size: 1.2rem;
-}
+} */
 .details {
   font-family: montserrant-bold;
   font-size: 2rem;
@@ -52,9 +51,9 @@
   .my-container {
     margin-left: 24% !important ;
   }
-  .my-container .description {
+  /* .my-container .description {
     font-size: 1.5rem;
-  }
+  } */
 }
 /* .bottom-part{
   height:40vh

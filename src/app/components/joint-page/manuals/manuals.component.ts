@@ -3,7 +3,7 @@ import { ApiService } from 'src/app/services/api.service';
 import { ActivatedRoute } from '@angular/router';
 //import this
 import { DomSanitizer , SafeHtml} from '@angular/platform-browser';
-import { SafeHtmlPipe } from './safe-html-pipe';
+
 
 @Component({
   selector: 'app-manuals',

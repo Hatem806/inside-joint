@@ -8,11 +8,11 @@
     <h1 class="welcome">{{ 'welcomeToIJ' | translate }}</h1>
   </div>
   <div [ngClass]="innerWidth > 767 ? 'split left' : 'col col-12'">
-    <div class="row">
-      <div class="col col-4  rounded float-left logo">
+    <div class="row align-items-center">
+      <div class="col-6  logo">
         <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo" />
       </div>
-      <div class="col col-2 languages-conatiner">
+      <div class="col-6 languages-container">
         <img (click)="ApiService.getLangService().changeLang('en')"class=" languages "src="../assets/languages/united-kingdom (1).png" alt="">
         <img (click)="ApiService.getLangService().changeLang('fr')"class=" languages"src="../assets/languages/france (1).png" alt="">
       </div>

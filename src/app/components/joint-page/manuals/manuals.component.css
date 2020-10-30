@@ -1,6 +1,6 @@
 .no-gutters{
   background:  #005086!important;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .title{

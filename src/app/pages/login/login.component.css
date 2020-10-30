@@ -3,16 +3,14 @@ html {
 }
 
 .logo {
-  margin-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1em;
   transform: scale(0.8, 0.8);
 }
 
 .languages{
- height: auto ;
-  margin: 40%  auto;
-  float: left;
+ height: 35px ;
+  margin-right: 20px;
   cursor: pointer;
 }
 .buttons {
