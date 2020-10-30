@@ -23,6 +23,8 @@ export class AssetsService {
   private static _thumbnailsUrl: string = `${environment.baseUrl}/uploads/thumbnails/`;
   private static assetSubject: Subject<IAsset> = new Subject<IAsset>();
 
+  public chosenManual ;
+
   constructor(private http: HttpClient) {}
 
   public getAssetSubject(): Subject<IAsset>
@@ -65,9 +67,9 @@ export class AssetsService {
   {
     return this.http.get<IAssetsResponse>(`${environment.baseUrl}/${AssetsService._endPoint}/manuals`);
   }
-  public getManual(path): Observable<any>
+  public getManual(path)
   {
-    return this.http.get(`${environment.baseUrl}/uploads/manuals/${path}`);
+    return this.http.get<File>(`${environment.baseUrl}/uploads/manuals/${path}`);
   }
 
 

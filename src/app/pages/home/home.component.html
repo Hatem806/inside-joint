@@ -1,7 +1,7 @@
 <div class="home-container text-center">
   <div class="text-area mx-auto">
-    <h1 class="welcome">{{ 'Please choose a joint' | translate }}</h1>
-    
+    <h1 class="welcome">{{ 'pleaseChooseAJoint' | translate }}</h1>
+
     <h3 class="description"></h3>
   </div>
 
@@ -13,7 +13,7 @@
     />
     <div
       [routerLink]="['/joint']"
-      [queryParams]="{ bodyPart: 'Neck', imgSrc: 'Joints-10.png' }"
+      [queryParams]="{ bodyPart: 'Head', imgSrc: 'Joints-10.png' }"
       class="dot-container neck"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />

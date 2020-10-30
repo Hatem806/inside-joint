@@ -13,7 +13,6 @@ import {IUserResponse} from '../../models/responses/UserResponse'
 export class LoginComponent implements OnInit, OnDestroy
 {
   public email: string;
-  public password: string;
   private user:IUserResponse;
   public errorMessage:string;
   public error :boolean
@@ -58,18 +57,8 @@ export class LoginComponent implements OnInit, OnDestroy
         this.errorMessage = "Adresse e-mail est nécessaire"
       }
     }
-    else if(this.password == null || this.password == "")
-    {
-      if(this.ApiService.getLangService().lang == 'en'){
-        this.errorMessage="Password is required"
-      }
-      else{
-        this.errorMessage = "Mot de passe requis"
-      }
-
-    }
 else{
-    this.ApiService.getAuthenticationService().login(this.email, this.password).subscribe(data => {
+    this.ApiService.getAuthenticationService().login(this.email).subscribe(data => {
 
       console.log(data)
 
@@ -82,7 +71,7 @@ else{
       else
       {
         this.error=true
-        this.errorMessage="Invalid email/password"
+        this.errorMessage="Invalid email"
       }
     })
   }

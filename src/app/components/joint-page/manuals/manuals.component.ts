@@ -3,7 +3,7 @@ import { ApiService } from 'src/app/services/api.service';
 import { ActivatedRoute } from '@angular/router';
 //import this
 import { DomSanitizer , SafeHtml} from '@angular/platform-browser';
-import { SafeHtmlPipe } from './safe-html-pipe';
+
 
 @Component({
   selector: 'app-manuals',
@@ -26,21 +26,22 @@ export class ManualsComponent implements OnInit {
       console.log(this.jointImageSrc)
      })
 
-    this.apiService.getAssetsService().getByPartAndType(this.jointName.toLowerCase(),'manual').subscribe( data => {
-      console.log(data.assets)
+    const data = this.apiService.getAssetsService().chosenManual ;
+      console.log(data)
+      this.htmlFile = data.path
+      this.htmlData = this.sanitizer.bypassSecurityTrustHtml(this.htmlFile);
+      // this.apiService.getAssetsService().getManual( data.assets[3].path).subscribe( response =>{
+      //  console.log(response)
+      //   this.htmlFile = response ;
+      //   this.htmlData = this.sanitizer.bypassSecurityTrustHtml(this.htmlFile);
+      // //  this.safeHtmlContent = SafeHtmlPipe.
+      // })
 
-      this.apiService.getAssetsService().getManual( data.assets[0].path).subscribe( response =>{
-       // console.log(response)
-        this.htmlFile = response ;
-        this.htmlData = this.sanitizer.bypassSecurityTrustHtml(this.htmlFile);
-        //this.safeHtmlContent = SafeHtmlPipe.transftom
-      })
 
 
+      this.title = data.title
 
-      this.title = data.assets[0].title
 
-    })
 
   }
 

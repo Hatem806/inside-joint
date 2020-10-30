@@ -40,6 +40,26 @@ html {
   animation: input_opacity 0.8s cubic-bezier(0.55, 0, 0.1, 1);
   transition: background 0.2s ease-in-out;
 }
+.terms-button {
+  /* padding: 10px; */
+  width: 15rem;
+  height: 4%;
+  border: none;
+  margin: 0 5%;
+  padding: 0.7em 0.5em;
+  /* margin-left: 17pt; */
+  position: relative;
+  border-radius: 2em;
+  background: #efb747;
+  font-family: montserrant-bold;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fafafa;
+  cursor: pointer;
+  opacity: 1;
+  animation: input_opacity 0.8s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: background 0.2s ease-in-out;
+}
 
 .login-button.raised {
   padding: 5px 10px;
@@ -195,9 +215,9 @@ h1.welcome {
   align-self: center;
   text-align: center;
   /* margin: 15vh auto; */
-  width: 90%;
+  width: 95%;
 
-  margin: 5% auto;
+  margin: 0% auto;
 }
 
 .side-img-container {
