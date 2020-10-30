@@ -25,6 +25,7 @@ export class SignupDataComponent implements OnInit, OnDestroy
   public errorMessage:string;
   public error :boolean
 
+  termsAndConditions : boolean  = false ;
 
   innerWidth : any = window.innerWidth
 
@@ -37,6 +38,9 @@ export class SignupDataComponent implements OnInit, OnDestroy
 
   }
 
+  agreeToTermsAndConditions(){
+    this.termsAndConditions = !this.termsAndConditions ;
+  }
   ngOnInit()
   {
 
@@ -66,6 +70,13 @@ this.country='Egypt'
       this.workPlace == undefined  || this.contactNumber == undefined ){
         this.error = true ;
         this.errorMessage = "Please fill all fields"
+        return ;
+      }
+
+      if(!this.termsAndConditions){
+        this.error = true ;
+        this.errorMessage = "Please confirm your agreement to our terms and conditions" ;
+        return ;
       }
     this.date= new Date();
     console.log(this.contactNumber)
