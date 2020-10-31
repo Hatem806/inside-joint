@@ -31,9 +31,24 @@
         <div class="list-group list-group-flush">
           <div class="languages-container">
             <div class="row pt-3">
-              <div class="col-6"><img role="button"(click)= "ApiService.getLangService().changeLang('en')"class="languages "src="../assets/languages/united-kingdom (1).png" alt="">
-                </div>
-                <div class="col-6"><img role="button"(click)= "ApiService.getLangService().changeLang('fr')"class="languages"src="../assets/languages/france (1).png" alt=""></div>
+              <div class="col-6">
+                <img
+                  role="button"
+                  (click)="ApiService.getLangService().changeLang('en')"
+                  class="languages"
+                  src="../assets/languages/united-kingdom (1).png"
+                  alt=""
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  role="button"
+                  (click)="ApiService.getLangService().changeLang('fr')"
+                  class="languages"
+                  src="../assets/languages/france (1).png"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
           <div class="sidebar-heading text-center">
@@ -53,7 +68,7 @@
           <a
             [style.background]="listItemBackground"
             routerLink="home"
-            class="list-group-item"
+            class="list-group-item p-3"
           >
             <div class="row">
               <mat-icon
@@ -87,14 +102,14 @@
                 >home
               </mat-icon>
               <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
-                {{ 'home' | translate }}
+                {{ "home" | translate }}
               </h3>
             </div>
           </a>
           <a
             [style.background]="listItemBackground"
             routerLink="aboutus"
-            class="list-group-item"
+            class="list-group-item p-3"
           >
             <div class="row">
               <mat-icon
@@ -128,7 +143,7 @@
                 >info
               </mat-icon>
               <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
-                {{ 'aboutFidia' | translate }}
+                {{ "aboutFidia" | translate }}
               </h3>
             </div>
           </a>
@@ -136,57 +151,58 @@
             [style.background]="listItemBackground"
             routerLink="products"
             routerLinkActive="active"
-            class="list-group-item"
+            class="list-group-item p-3"
           >
-            <div  (mouseover)="changeIcon=true"
-                  (mouseout)="changeIcon=false"
-                  class="row">
+            <div
+              (mouseover)="changeIcon = true"
+              (mouseout)="changeIcon = false"
+              class="row"
+            >
               <img
                 [style.color]="companyNameColor"
                 *ngIf="
                   !(currentRoute == 'Products') &&
                   !(router.url.substring(0, 6) == '/joint') &&
-                  changeIcon ==false
+                  changeIcon == false
                 "
                 class="icons col col-4"
                 src="../assets/icons/syringeWhite.svg"
                 alt="Products"
-                >
+              />
               <img
                 [style.color]="companyNameColor"
-                *ngIf="currentRoute == 'Products' &&
-                       changeIcon ==false"
-                class=" icons col col-4"
+                *ngIf="currentRoute == 'Products' && changeIcon == false"
+                class="icons col col-4"
                 alt="Products"
                 src="../assets/icons/syringeWhite.svg"
-              >
+              />
               <img
                 [style.color]="companyNameColor"
                 *ngIf="
                   router.url.substring(0, 6) == '/joint' &&
                   !(currentRoute == 'Products') &&
-                   changeIcon ==false
+                  changeIcon == false
                 "
                 class="col col-4 icons"
                 src="../assets/icons/syringeBlue.svg"
                 alt="Products"
-                >
-                <img
+              />
+              <img
                 [style.color]="companyNameColor"
                 *ngIf="changeIcon == true"
                 class="col col-4 icons"
                 src="../assets/icons/syringeGold.svg"
                 alt="Products"
-                >
+              />
               <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
-                {{ 'products' | translate }}
+                {{ "products" | translate }}
               </h3>
             </div>
           </a>
           <a
             [style.background]="listItemBackground"
             routerLink="conferences"
-            class="list-group-item"
+            class="list-group-item p-3"
           >
             <div class="row">
               <mat-icon
@@ -220,7 +236,7 @@
                 >event
               </mat-icon>
               <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
-                {{ 'events' | translate }}
+                {{ "events" | translate }}
               </h3>
             </div>
           </a>
@@ -242,17 +258,34 @@
       >
         <div class="list-group list-group-flush">
           <div class="languages-container">
-            <div class="row mt-3"><div class="col-12 mb-3 text-center"><img role="button"(click)= "ApiService.getLangService().changeLang('en')"class="languages "src="../assets/languages/united-kingdom (1).png" alt="">
-             </div>
-            <div class="col-12 text-center"> <img role="button"(click)= "ApiService.getLangService().changeLang('fr')"class="languages"src="../assets/languages/france (1).png" alt=""></div></div>
+            <div class="row mt-3">
+              <div class="col-12 mb-3 text-center">
+                <img
+                  role="button"
+                  (click)="ApiService.getLangService().changeLang('en')"
+                  class="languages"
+                  src="../assets/languages/united-kingdom (1).png"
+                  alt=""
+                />
+              </div>
+              <div class="col-12 text-center">
+                <img
+                  role="button"
+                  (click)="ApiService.getLangService().changeLang('fr')"
+                  class="languages"
+                  src="../assets/languages/france (1).png"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
           <div class="company-name sidebar-heading text-center">
-            <img src="../assets/icons/InsideJointsLogo.png" class="logo" />
+            <img src="../assets/icons/logo-white.svg" class="logo" />
           </div>
           <a
             [style.background]="listItemBackground"
             routerLink="home"
-            class="list-group-item "
+            class="list-group-item"
           >
             <div class="row justify-content-center">
               <mat-icon
@@ -290,7 +323,7 @@
           <a
             [style.background]="listItemBackground"
             routerLink="aboutus"
-            class="list-group-item "
+            class="list-group-item"
           >
             <div class="row justify-content-center">
               <mat-icon
@@ -329,54 +362,55 @@
             [style.background]="listItemBackground"
             routerLink="products"
             routerLinkActive="active"
-            class="list-group-item "
+            class="list-group-item"
           >
-            <div  (mouseover)="changeIcon=true"
-                  (mouseout)="changeIcon=false"
-                  class="row justify-content-center">
+            <div
+              (mouseover)="changeIcon = true"
+              (mouseout)="changeIcon = false"
+              class="row justify-content-center"
+            >
               <img
                 [style.color]="companyNameColor"
                 *ngIf="
                   !(currentRoute == 'Products') &&
                   !(router.url.substring(0, 6) == '/joint') &&
-                  changeIcon ==false
+                  changeIcon == false
                 "
-                class="icons col col-6"
+                class="icons col-12"
                 src="../assets/icons/syringeWhite.svg"
                 alt="Products"
-                >
+              />
               <img
                 [style.color]="companyNameColor"
-                *ngIf="currentRoute == 'Products' &&
-                       changeIcon ==false"
-                class=" icons col col-6"
+                *ngIf="currentRoute == 'Products' && changeIcon == false"
+                class="icons col col-6"
                 alt="Products"
                 src="../assets/icons/syringeWhite.svg"
-              >
+              />
               <img
                 [style.color]="companyNameColor"
                 *ngIf="
                   router.url.substring(0, 6) == '/joint' &&
                   !(currentRoute == 'Products') &&
-                   changeIcon ==false
+                  changeIcon == false
                 "
                 class="col col-6 icons"
                 src="../assets/icons/syringeBlue.svg"
                 alt="Products"
-                >
-                <img
+              />
+              <img
                 [style.color]="companyNameColor"
                 *ngIf="changeIcon == true"
                 class="col col-6 icons"
                 src="../assets/icons/syringeGold.svg"
                 alt="Products"
-                >
+              />
             </div>
           </a>
           <a
             [style.background]="listItemBackground"
             routerLink="conferences"
-            class="list-group-item "
+            class="list-group-item"
           >
             <div class="row justify-content-center">
               <mat-icon
@@ -423,13 +457,13 @@
           router.url != '/'
         "
         [style.background]="navbarColor"
-        class="navbar fixed-bottom navbar-light"
+        class="navbar fixed-bottom navbar-light row"
+        style="padding: 0rem 1rem !important"
       >
-
         <a
           [style.background]="listItemBackground"
           routerLink="home"
-          class="list-group-item"
+          class="list-group-item col-3"
         >
           <mat-icon
             [style.color]="companyNameColor"
@@ -437,7 +471,7 @@
               !(currentRoute == 'Home') &&
               !(router.url.substring(0, 6) == '/joint')
             "
-            class="icons col col-7"
+            class="icons"
             src="../assets/mainNav/135.png"
             alt="Home"
             >home</mat-icon
@@ -445,7 +479,7 @@
           <mat-icon
             [style.color]="companyNameColor"
             *ngIf="currentRoute == 'Home'"
-            class="material-icons md-36 icons col col-7"
+            class="material-icons icons"
             alt="Home"
           >
             home</mat-icon
@@ -456,7 +490,7 @@
               router.url.substring(0, 6) == '/joint' &&
               !(currentRoute == 'Home')
             "
-            class="col col-7 icons"
+            class="icons"
             src="../assets/icons/135.png"
             alt="Home"
             >home
@@ -465,7 +499,7 @@
         <a
           [style.background]="listItemBackground"
           routerLink="aboutus"
-          class="list-group-item"
+          class="list-group-item col-3"
         >
           <mat-icon
             [style.color]="companyNameColor"
@@ -473,7 +507,7 @@
               !(currentRoute == 'About Us') &&
               !(router.url.substring(0, 6) == '/joint')
             "
-            class="icons col col-7"
+            class="icons"
             src="../assets/mainNav/135.png"
             alt="About Us"
             >info</mat-icon
@@ -481,7 +515,7 @@
           <mat-icon
             [style.color]="companyNameColor"
             *ngIf="currentRoute == 'About Us'"
-            class="material-icons icons col col-7"
+            class="material-icons icons"
             alt="About Us"
           >
             info</mat-icon
@@ -492,7 +526,7 @@
               router.url.substring(0, 6) == '/joint' &&
               !(currentRoute == 'About Us')
             "
-            class="col col-7 icons"
+            class="icons"
             src="../assets/icons/135.png"
             alt="About Us"
             >info
@@ -539,50 +573,49 @@
           [style.background]="listItemBackground"
           routerLink="products"
           routerLinkActive="active"
-          class="list-group-item"
+          class="list-group-item col-3 p-4"
         >
-        <img
-                [style.color]="companyNameColor"
-                *ngIf="
-                  !(currentRoute == 'Products') &&
-                  !(router.url.substring(0, 6) == '/joint') &&
-                  changeIcon ==false
-                "
-                class="icons col col-6"
-                src="../assets/icons/syringeWhite.svg"
-                alt="Products"
-                >
-              <img
-                [style.color]="companyNameColor"
-                *ngIf="currentRoute == 'Products' &&
-                       changeIcon ==false"
-                class=" icons col col-6"
-                alt="Products"
-                src="../assets/icons/syringeWhite.svg"
-              >
-              <img
-                [style.color]="companyNameColor"
-                *ngIf="
-                  router.url.substring(0, 6) == '/joint' &&
-                  !(currentRoute == 'Products') &&
-                   changeIcon ==false
-                "
-                class="col col-6 icons"
-                src="../assets/icons/syringeBlue.svg"
-                alt="Products"
-                >
-                <img
-                [style.color]="companyNameColor"
-                *ngIf="changeIcon == true"
-                class="col col-6 icons"
-                src="../assets/icons/syringeGold.svg"
-                alt="Products"
-                >
+          <img
+            [style.color]="companyNameColor"
+            *ngIf="
+              !(currentRoute == 'Products') &&
+              !(router.url.substring(0, 6) == '/joint') &&
+              changeIcon == false
+            "
+            class="icons"
+            src="../assets/icons/syringeWhite.svg"
+            alt="Products"
+          />
+          <img
+            [style.color]="companyNameColor"
+            *ngIf="currentRoute == 'Products' && changeIcon == false"
+            class="icons"
+            alt="Products"
+            src="../assets/icons/syringeWhite.svg"
+          />
+          <img
+            [style.color]="companyNameColor"
+            *ngIf="
+              router.url.substring(0, 6) == '/joint' &&
+              !(currentRoute == 'Products') &&
+              changeIcon == false
+            "
+            class="icons"
+            src="../assets/icons/syringeBlue.svg"
+            alt="Products"
+          />
+          <img
+            [style.color]="companyNameColor"
+            *ngIf="changeIcon == true"
+            class="icons"
+            src="../assets/icons/syringeGold.svg"
+            alt="Products"
+          />
         </a>
         <a
           [style.background]="listItemBackground"
           routerLink="conferences"
-          class="list-group-item"
+          class="list-group-item col-3"
         >
           <mat-icon
             [style.color]="companyNameColor"
@@ -590,7 +623,7 @@
               !(currentRoute == 'Conferences') &&
               !(router.url.substring(0, 6) == '/joint')
             "
-            class="icons col col-7"
+            class="icons"
             src="../assets/mainNav/135.png"
             alt="Conferences"
             >event</mat-icon
@@ -598,7 +631,7 @@
           <mat-icon
             [style.color]="companyNameColor"
             *ngIf="currentRoute == 'Conferences'"
-            class="material-icons icons col col-7"
+            class="material-icons icons"
             alt="Conferences"
           >
             event</mat-icon
@@ -609,7 +642,7 @@
               router.url.substring(0, 6) == '/joint' &&
               !(currentRoute == 'Conferences')
             "
-            class="col col-7 icons"
+            class="icons"
             src="../assets/icons/135.png"
             alt="Conferences"
             >event
