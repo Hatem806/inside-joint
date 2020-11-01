@@ -19,6 +19,18 @@
         <div class="right-side-container">
           <div class="row joint-image-container">
             <div class="col">
+              <img class="joint-image"src="{{
+                apiService.getAssetsService().getThumbnailsUrl() +
+                  data.thumbnailPath
+              }}" alt="">
+            </div>
+          </div>
+          <div class="row w-100">
+            <div class="col ellipse w-100">
+            </div>
+          </div>
+          <div class="row joint-image-container">
+            <div class="col">
               <img class="joint-image"src="{{jointImageSrc}}" alt="">
             </div>
           </div>
