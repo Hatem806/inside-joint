@@ -6,10 +6,8 @@
 }
 .description {
   font-family: montserrant;
-
   text-align: left;
   color: #6b6c6f;
-  padding-top: 1vw;
 }
 .title-description {
   min-height: 100% !important ;
@@ -17,9 +15,12 @@
 }
 .my-container {
   margin-left: 15% !important ;
-  padding-left: 10% !important ;
   padding-top: 1em;
 }
+
+/* .my-container .description {
+  font-size: 1.2rem;
+} */
 .details {
   font-family: montserrant-bold;
   font-size: 2rem;
@@ -29,11 +30,30 @@
   padding-top: 1em;
   padding-left: 1.5em;
 }
+.view-company-text {
+  color: #6b6c6f !important;
+  position: absolute;
+  top: 62%;
+  left: 21%;
+  text-align: center;
+}
 .wrapper {
   min-height: 100% !important;
 }
 .details-section {
-  padding-right: 10vw;
+  padding-left: 80px;
+}
+
+@media (min-width: 1024px) {
+  .details-section {
+    padding-left: 0px;
+  }
+  .my-container {
+    margin-left: 24% !important ;
+  }
+  /* .my-container .description {
+    font-size: 1.5rem;
+  } */
 }
 /* .bottom-part{
   height:40vh
@@ -44,6 +64,9 @@
 .hover {
   background-color: #005086;
 }
+.options {
+  transition: all 0.2s;
+}
 .options:hover {
   background-color: #005086;
 }
@@ -51,14 +74,40 @@
   min-height: 100vh;
 } */
 .option-image {
-  padding-top: 5vh;
-  /* padding-left: vw; */
+  position: absolute;
+  top: 30%;
+  left: 40%;
 }
-.custom-height {
-  height: 43vh;
+
+@media (max-width: 375px) {
+  
+  .view-company-text {
+    font-size: 15px !important;
+    position: absolute;
+    top: 70% !important;
+    left: 5% !important;
+  }
 }
+@media (max-width: 1366px) {
+  
+  .view-company-text {
+    top: 58%;
+    left: 10%;
+  }
+}
+@media (max-width: 1024px) {
+  .option-image {
+    top: 30%;
+  left: 40%;
+  }
+}
+
 @media (max-width: 767px) {
   .details-section {
+    padding-left: 80px;
+  }
+  .details-section {
+    padding-left: 0px;
     margin-left: 0%;
   }
   .details {
@@ -79,11 +128,7 @@
   /* .page-title{
   font-size: 3rem ;
 } */
-  .my-container {
-    margin-left: 0% !important ;
-    padding-left: 10% !important ;
-    padding-top: 2em;
-  }
+
   .options-container {
     margin-bottom: 30% !important ;
     align-items: center;
@@ -91,24 +136,19 @@
     align-self: center;
     text-align: center;
   }
-  .options {
-    margin: 0 auto;
-    width: 30%;
-    height: 8em;
-  }
-  .option-image {
-    width: 60%;
 
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    text-align: center;
-    margin: auto auto;
-  }
   .custom-height {
     height: auto;
   }
   .details-section {
     padding-right: 0px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .option-image {
+    top: 30%;
+  left: 36%;
   }
 }

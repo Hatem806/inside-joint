@@ -11,6 +11,8 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class ProductsComponent implements OnInit {
   pageTitle = 'Our Products';
+  pageTitleFr = 'Nos produits'
+
   pageImageSrc1 =
     '../../../assets/products-photo/xfidia-slide4.jpg.pagespeed.ic.x0C8HaECKd.png';
   pageImageSrc2 =
@@ -27,7 +29,9 @@ export class ProductsComponent implements OnInit {
 
   videoIconBooleanArray: Boolean[] = [];
   pdfIconBooleanArray: Boolean[] = [];
-  constructor(public apiService: ApiService, private router: RouterModule) {}
+  constructor(public apiService: ApiService, private router: RouterModule) {
+
+  }
 
   ngOnInit(): void {
     this.apiService

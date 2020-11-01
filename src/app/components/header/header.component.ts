@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ export class HeaderComponent implements OnInit {
   @Input() pageImageSource1: string;
   @Input() pageImageSource2: string;
 
-  constructor(public router: Router) {}
+  innerWidth = window.innerWidth ;
+  constructor(public router: Router, public apiService : ApiService) {}
 
   ngOnInit(): void {}
 }

@@ -3,7 +3,7 @@
 
   </app-joint-header>
   <div class="joint-white-container">
-    <div *ngFor="let row of documents2DArray; let indexOfElement=index ;"class="row elements-row">
+    <div *ngFor="let row of documents2DArray; let indexOfElement=index ;"class="row elements-row align-items-start">
       <div *ngFor="let element of row; let rowIndex=index"class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
         <div role="button" (click)="goToDocumentLink(element)" class="row">
           <div *ngIf="!twoElementsARow"class="col col-1 element-number">
@@ -13,18 +13,23 @@
             {{indexOfElement + 1}}
           </div>
           <div class="col col-3">
-            <img class=" element-thumbnail" src="{{../../../../assets/secondaryNav/document@2x.png" alt="">
+            <img class=" element-thumbnail" src="{{apiService.getAssetsService().getThumbnailsUrl() + element.thumbnailPath}}" alt="">
           </div>
           <div class="col col-8">
             <div class="row">
-              <h3 class=" element-title">
+              <h6 class=" element-title">
                 {{element.title}}
-              </h3>
+              </h6>
             </div>
             <div class="row">
-              <h2 class=" element-description">
-                {{element.description}}
-              </h2>
+              <h6 class="small element-description">
+                {{element.publicationYear}}
+              </h6>
+            </div>
+            <div class="row">
+              <h6 class="small element-description">
+                {{element.authorName}}
+              </h6>
             </div>
 
           </div>

@@ -1,21 +1,21 @@
 <div class="no-gutters">
   <div role="button" class="row my-header">
     <div class="row align-items-center justify-content-center text-center">
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-lg-5">
         <div class="joint-name">
           {{ jointName }}
         </div>
       </div>
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-lg-7">
         <div
-          class="row menu-options justify-content-center align-items-center mb-5 mb-lg-0 pr-4 pl-2 p-md-0"
+          class="row menu-options justify-content-center align-items-center pl-2 pr-4 mb-4 mb-lg-0"
         >
           <div
             class="col-4 text-left"
             [routerLink]="['/joint/manuals']"
             [queryParams]="{ bodyPart: jointName, imgSrc: jointImageToManuals }"
           >
-            <div class="row align-items-center justify-content-center">
+            <div class="row align-items-center justify-content-start">
               <img
                 *ngIf="router.url.substring(7, 14) == 'manuals'"
                 class="menu-icons"
@@ -37,7 +37,7 @@
                 "
                 class="mt-2 text-center"
               >
-                Manual
+                {{ 'manuals' | translate }}
               </h3>
             </div>
           </div>
@@ -67,7 +67,7 @@
                 "
                 class="mt-2 text-center"
               >
-                Videos
+              {{ 'videos' | translate }}
               </h3>
             </div>
           </div>
@@ -76,7 +76,7 @@
             [routerLink]="['/joint/evidences']"
             [queryParams]="{ bodyPart: jointName, imgSrc: jointImageToManuals }"
           >
-            <div class="row align-items-center justify-content-center">
+            <div class="row align-items-center justify-content-end">
               <img
                 *ngIf="router.url.substring(7, 16) == 'evidences'"
                 class="menu-icons ev-icon"
@@ -97,7 +97,7 @@
                 "
                 class="mt-2 text-center"
               >
-                Scientific Evidence
+              {{ 'evidences' | translate }}
               </h3>
             </div>
           </div>

@@ -12,6 +12,7 @@ import { link } from 'fs';
 })
 export class ConferencesComponent implements OnInit {
   pageTitle = 'Conferences';
+  pageTitleFr = 'Conférences'
   pageImageSrc1 = '../../../assets/conferences-photo/con1.jpg';
   pageImageSrc2 = '../../../assets/conferences-photo/con2.jpg';
 

@@ -15,7 +15,8 @@
 .menu-options {
   margin: 0 auto;
   background: #ffffff;
-  width: 85%;
+  width: 80%;
+  padding-right: 10px;
   border-radius: 3em;
   height: 75%;
   margin-top: 1%;
@@ -72,9 +73,6 @@
     align-content: center;
     align-self: center;
     text-align: center;
-  }
-  .ev {
-    padding: 0 !important;
   }
 }
 @media (max-width: 1000px) and (min-width: 700px) {

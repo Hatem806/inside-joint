@@ -11,7 +11,12 @@ export class AboutUsComponent implements OnInit {
   changeVideoIcon: boolean;
   changePdfIcon: boolean;
 
+  videoPath : string ;
+  documentPath : string ;
+  aboutUs : string ;
+
   pageTitle: string = 'About Fidia';
+  pageTitleFr : string = 'À propos de Fidia'
   pageImageSrc1 = '../../../assets/about-us-photo/ezgif.com-webp-to-jpg.png';
   pageImageSrc2 = '../../../assets/about-us-photo/ezgif.com-webp-to-jpg-2.png';
 
@@ -21,14 +26,22 @@ export class AboutUsComponent implements OnInit {
     this.changePdfIcon = false;
   }
 
-  ngOnInit(): void {}
-
-  goToVideoLink(videoPath) {
-    window.location.href =
-      this.apiService.getAssetsService().getVideosUrl() + videoPath;
+  ngOnInit(): void {
+    this.apiService.getCompaniesService().get().subscribe( data =>{
+     this.documentPath = data.company.documentPath ;
+     this.videoPath = data.company.videoPath ;
+     this.aboutUs = data.company.aboutUs ;
+    }
+      )
   }
-  goToPdfLink(documentPath) {
+
+  goToVideoLink() {
+
     window.location.href =
-      this.apiService.getConferenceServices().getSchedulesUrl() + documentPath;
+      this.apiService.getAssetsService().getVideosUrl() + this.videoPath;
+  }
+  goToPdfLink() {
+    window.location.href =
+      this.apiService.getAssetsService().getDocumentsUrl() + this.documentPath ;
   }
 }

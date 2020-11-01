@@ -28,11 +28,11 @@
     </div>
 
     <div class="centered px-5 p-lg-0">
-      <div class="login-text">Sign Up to new account.</div>
+      <div class="login-text">{{ 'signUpToNewAccount' | translate }}</div>
       <br />
       <div class="row">
         <div class="col">
-          <h1 class="login-text2">First Name</h1>
+          <h1 class="login-text2">{{ 'firstName' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="firstName"
@@ -40,7 +40,7 @@
             placeholder="First Name"
             required
           />
-          <h1 class="login-text2">Last Name</h1>
+          <h1 class="login-text2">{{ 'lastName' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="lastName"
@@ -48,7 +48,7 @@
             placeholder="Last Name"
             required
           />
-          <h1 class="login-text2">E-mail</h1>
+          <h1 class="login-text2">{{ 'email' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="email"
@@ -56,19 +56,17 @@
             placeholder="someone@email.com"
             required
           />
-          <h1 class="login-text2">Password</h1>
+
+          <h1 class="login-text2">{{ 'workplace' | translate }}</h1>
           <input
             class="login-input"
-            [(ngModel)]="password"
-            type="password"
-            class="login-input"
-            placeholder="password"
+            [(ngModel)]="workPlace"
+            type="string"
+            placeholder="Work Place"
             required
           />
-        </div>
 
-        <div class="col">
-          <h1 class="login-text2">Contact Number</h1>
+          <h1 class="login-text2">{{ 'contactNumber' | translate }}</h1>
           <div class="password-container">
             <input
               override
@@ -85,11 +83,17 @@
               ng2TelInput
             />
           </div>
+
+          <h6 *ngIf="error" class="error">{{ errorMessage }}</h6>
+        </div>
+
+        <div class="col">
+
           <div
             class="country-container"
             style="
               width: 100%;
-              margin-top: 8.15% !important;
+              margin-top: 4.15% !important;
               padding-bottom: 0 !important;
             "
           >
@@ -97,7 +101,7 @@
           </div>
           <!-- <input class="login-input" [(ngModel)]="country" type="text" placeholder="Country"  required /> -->
 
-          <h1 class="login-text2">City</h1>
+          <h1 class="login-text2">{{ 'city' | translate }}</h1>
           <input
             class="login-input"
             [(ngModel)]="city"
@@ -105,22 +109,192 @@
             placeholder="City"
             required
           />
-          <h1 class="login-text2">Work Place</h1>
-          <input
-            class="login-input"
-            [(ngModel)]="workPlace"
-            type="string"
-            placeholder="Work Place"
-            required
-          />
-        </div>
+
+                <form name="tandc" ng-submit="approveTandC()">
+                  <div class="panel panel-default" style="margin-top:20px;">
+                    <div class="panel-body" style="max-height:180px; overflow-y:scroll; background-color:white;">
+                      <div style="font-family: montserrant-italic ; font-size: 0.5rem ; text-align:left;">
+                        Privacy Policy
+
+                        <br>
+
+
+
+                        Last modified: October 28, 2020
+
+                        <br>
+
+                        For your privacy safety, your username, e-mail, workplace, country, and city will be saved at Inside Joint server.
+
+                        <br>
+
+                        This Privacy Policy describes how Fidia Pharma Middle East F.Z.E. (referred to in this Privacy Policy as “Company,” “we,” “us,” or “our”), as the owner of the associated mobile application Inside Joint (the “App”) available for download in the Google Play Store, Apple App Store, or pre-installed on third party devices, collects information when you use the App. It also explains how we, as the “Controller” within the meaning of personal data protection laws, use and disclose the information we collect from you, and your rights in relation to that information.
+
+                        By accessing or using the App, you expressly consent to our collection, storage, use and disclosure of your information as described in this Privacy Policy.
+
+                        Please note that if you disagree with anything in this Privacy Policy, you must not use the App.
+                        <br>
+
+
+                        Information Collected through the App.
+
+                        <br>
+
+                        A. Information You Directly and Voluntarily Provide to Us.
+
+                        If you are a user of the App, we may collect information that you provide to us when you communicate with any of our departments such as customer App or technical Apps.
+
+                        If you sign up to receive access to some of our applications, you will be required to provide an email address as part of the registration process.
+
+                        <br>
+
+                        B. Information Automatically Collected Through the App.
+
+                        We automatically collect information about you when you use the App.
+
+                        If you access the App through a mobile device, we will collect information including, but not limited to: your mobile device’s brand, model, operating system, resolution, screen size, system version, Bluetooth settings, internet connection, the apps you have installed, the apps you have running in the background, along with your account activation time, content displayed to you and whether you clicked on it, your IP address, your mobile country code, and your identity, your Wi-Fi connection information and your device ID and call information.
+
+                        You may be able to limit the amount of information collected from your device (computer, phone, or tablet) with us by adjusting your mobile device’s settings.
+
+                        <br>
+
+                        C. Information Collected by Third Parties through Third Party Links and Content.
+
+                        The App may include links to other websites and other content from third party businesses. We do not have access to or control over the technology that these third parties may use. We are not responsible for the privacy practices of these third parties or the content on any third-party website. You are encouraged to review the privacy policies of the different websites you visit and of the advertisers whose ads you may choose to click while on our App.
+
+                        <br>
+
+                        D. Information Collected by Third Party Analytics Apps.
+
+                        We may work with third party analytics Apps to help us understand how the App is being used, such as tracking the frequency and duration of use of the App. These Apps may collect information about the content you view, what websites you visit immediately prior to and after visiting the App, and your system information and geographic information. The information generated about your use of the App will be transmitted to and stored by the applicable analytics Apps.
+
+
+                        <br>
+
+
+                        How We Use the Information We Collect.
+
+                        <br>
+
+                        We use the information we gather through the App to help us better understand how the App and our products and Apps are being used. By identifying patterns and trends in usage, we are able to better design the App and our products and Apps to improve your experience. We may also use this information for commercial and marketing purposes, as described below.
+
+
+
+                        <br>
+
+                        How We Share Your Information with Third Parties.
+
+                        <br>
+
+                        We also share user information with third parties in some other circumstances as follows:
+
+                        <br>
+
+                        A. Employees, Third-Party Processors and Third-Party App Providers.
+
+                        We disclose your information to our employees, contractors, affiliates, distributors, dealers, vendors and suppliers (“App Providers”) who provide certain Apps to us or on our behalf, such as operating and supporting the App, analyzing data, or performing marketing or consulting Apps. These App Providers will only have access to the information needed to perform these limited functions on our behalf.
+
+                        <br>
+
+
+                        B. Response to Court Orders commanding to give testimony about a matter concerned in an investigation or a legal proceeding such as a trial, or to protect rights and to comply with our policies.
+
+                        To the extent permitted by law, we will disclose your information to government authorities or third parties if:
+
+                        required to do so by law, or in response to a court order or similar request from judicial authority;
+
+                        we believe in our sole discretion that disclosure is reasonably necessary to protect against fraud, to protect the property or other rights of us or other users, third parties or the public at large; or
+
+                        we believe that you have abused the App by using it to attack other systems or to gain unauthorized access to any other system, to engage in spamming or otherwise to violate applicable laws.
+
+                        You should be aware that, following disclosure to any third party, your information may be accessible by others to the extent permitted or required by applicable law, unless specific restrictions have been implemented.
+
+                        <br>
+
+                        C. Business Transfers; Bankruptcy.
+
+                        In the event of a merger, acquisition, bankruptcy or other sale of all or a portion of our assets, any user information owned or controlled by us may be one of the assets transferred to third parties. We reserve the right, as part of this type of transaction, to transfer or assign your information and other information we have collected from users of the App to third parties.
+
+                        Other than to the extent ordered by a bankruptcy or other court, the use and disclosure of all transferred user information will be subject to this Privacy Policy. However, any information you submit or that is collected after this type of transfer may be subject to a new privacy policy adopted by the successor entity.
+
+                        <br>
+
+                        D. Aggregated Information.
+
+                        We may share information relating to users of the App with affiliated or unaffiliated third parties on an anonymous, aggregate basis. While this information will not identify you personally, in some instances these third parties may be able to combine this aggregate information with other data they have about you, or that they receive from third parties, in a manner that allows them to identify you personally.
+
+                        <br>
+
+                        E. Our Affiliates.
+
+                        We may share some or all of your information with our parent company, subsidiaries and corporate affiliates, joint ventures, or other companies under common control with us. If you opt in to receive marketing communications from third parties, we may permit these entities to use your information for their own marketing purposes. If you would like us to stop providing your information to our affiliates for their own marketing purposes, you may opt out by contacting us as provided in the “How to Contact Us” section.
+
+                        <br>
+
+                        F. Third Party Marketing Partners.
+
+                        If you opt in to receive marketing communications from third parties, we may, from time to time, share the information you provide to us with selected third party marketing partners that we believe offer products or Apps that may be of interest to you. If you would like us to stop providing your information to our third party marketing partners, you may opt out by contacting us as provided in the “How to Contact Us” section
+
+
+                        <br>
+                        Children Under Age 18.
+
+                        <br>
+
+                        The App is not intended for children under age 18 or the applicable age of majority without involvement of a parent or guardian. We do not knowingly collect or distribute personal information from or about children under the age of 18.
+
+                        Amendments to this Privacy Policy.
+
+                        We will notify users of changes to this Privacy Policy by posting the amended terms on the App in advance of the effective date of the changes. If you do not agree to the changes, you should discontinue your use of the App prior to the time the modified privacy policy takes effect. If you continue using the App after the modified privacy policy takes effect, you will be bound by the modified privacy policy.
+
+                        <br>
+
+                        Use of Information Outside Your Country of Residence.
+
+                        <br>
+
+                        If you choose to use the App or provide your information to us, your information may be transferred to, processed and maintained on servers or databases located outside of the country or jurisdiction where you are located. Your use of the App represents your consent and agreement to these practices. If you do not want your information transferred to or processed or maintained outside of the country or jurisdiction where you are located, you should not use the App.
+
+                        <br>
+
+                        How to Contact Us.
+
+                        <br>
+
+                        If you have any questions about this Privacy Policy, please feel free to contact us as follows:
+
+                        By email: info@fidiapharma.ae
+
+                        <br>
+
+                        October  © 2020
+
+
+
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <div >
+
+                    <form >
+                      <input (change)="agreeToTermsAndConditions()"class="login-text2"role="button"type="checkbox" name="terms"> I accept the <u>Terms and Conditions</u>
+                      </form>
+                    <button (click)="signUp()" type="submit" class="login-button">
+                      {{ 'signUp' | translate }}
+                    </button>
+                  </div>
+                </form>
+
       </div>
-      <div>
+      <!-- <div class="row">
         <h6 *ngIf="error" class="error">{{ errorMessage }}</h6>
         <button (click)="signUp()" type="submit" class="login-button">
-          SIGN UP
+          {{ 'signUp' | translate }}
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- mz, -->

@@ -2,17 +2,18 @@ html {
   height: 100%;
 }
 
-
-
-
-.logo{
-  margin-left:1rem;
-  margin-top:1rem ;
-  margin-bottom: 1em ;
-  transform: scale(0.8,0.8);
+.logo {
+  margin-top: 1rem;
+  margin-bottom: 1em;
+  transform: scale(0.8, 0.8);
 }
 
-.buttons{
+.languages{
+ height: 35px ;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.buttons {
   margin: 0 auto;
 }
 .login-button {
@@ -20,29 +21,28 @@ html {
   width: 5rem;
   height: 5%;
   border: none;
-  margin : 0 5% ;
-  padding: 0.7em 0.5em ;
+  margin: 0 5%;
+  padding: 0.7em 0.5em;
   /* margin-left: 17pt; */
   position: relative;
   border-radius: 2em;
-  background: #EFB747;
+  background: #efb747;
   font-family: montserrant-bold;
   font-size: 0.8rem;
   font-weight: 500;
-  color: #FAFAFA;
+  color: #fafafa;
   cursor: pointer;
   opacity: 1;
-  animation: input_opacity 0.8s cubic-bezier(.55, 0, .1, 1);
+  animation: input_opacity 0.8s cubic-bezier(0.55, 0, 0.1, 1);
   transition: background 0.2s ease-in-out;
 }
 
 .login-button.raised {
   padding: 5px 10px;
-  color: #E37F00;
-  background: #FAFAFA;
+  color: #e37f00;
+  background: #fafafa;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.137255),
-              0px 1px 5px 0px rgba(0, 0, 0, 0.117647),
-              0px 3px 1px -2px rgba(0, 0, 0, 0.2);
+    0px 1px 5px 0px rgba(0, 0, 0, 0.117647), 0px 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 .login-button:hover {
@@ -50,7 +50,7 @@ html {
 }
 
 .login-button.raised:hover {
-  background: #FDAB43;
+  background: #fdab43;
 }
 
 .login-input {
@@ -59,25 +59,24 @@ html {
   width: 90%;
   height: 2rem;
   margin-bottom: 5%;
-  border: #DFE2E6;
+  border: #dfe2e6;
   border-radius: 25px;
   box-sizing: border-box;
-  background: #FFFFFF;
+  background: #ffffff;
   font-size: 0.8rem;
   font-family: montserrant-bold;
   font-weight: 500;
   opacity: 1;
-  animation: input_opacity 0.8s cubic-bezier(.55, 0, .1, 1);
-  transition: border-bottom 0.2s cubic-bezier(.55, 0, .1, 1);
+  animation: input_opacity 0.8s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: border-bottom 0.2s cubic-bezier(0.55, 0, 0.1, 1);
 }
 .login-input:focus {
-  color:#005086;
-  background: #FFFFFF
-
+  color: #005086;
+  background: #ffffff;
 }
 
-.login-text{
-  color: #E37F00;
+.login-text {
+  color: #e37f00;
   /* margin: left; */
   align-items: center;
   align-content: center;
@@ -87,33 +86,25 @@ html {
   margin-bottom: 1em;
   font-family: montserrant-bold;
   font-size: 1.5rem;
-
 }
-h1.login-text2{
-  color: #6B6C6F;
+h1.login-text2 {
+  color: #6b6c6f;
   align-self: left;
   text-align: left;
-  padding-left: 1em ;
+  padding-left: 1em;
   font-family: montserrant;
   font-size: 1rem;
   font-weight: bold;
 }
 
-
-
-
-h1.welcome{
-  color: #FFFFFF;
+h1.welcome {
+  color: #ffffff;
   font-size: 3rem;
   position: absolute;
   left: 18%;
   top: 23%;
   font-family: montserrant-bold;
-
 }
-
-
-
 
 .split {
   height: 100%;
@@ -129,13 +120,12 @@ h1.welcome{
   right: 0;
   width: 45%;
   background-color: #005086;
-
 }
 
 .left {
   left: 0;
   width: 52%;
-  background-color :#FAFAFA;
+  background-color: #fafafa;
 }
 .centered {
   align-items: center;
@@ -143,18 +133,15 @@ h1.welcome{
   align-self: center;
   text-align: center;
   margin: 15vh auto;
-  width:80% ;
-
-
+  width: 80%;
 }
 
-.side-img-container{
-  height:50% ;
+.side-img-container {
+  height: 50%;
   position: relative;
-  background: #005086;;
+  background: #005086;
 }
 .side-img {
-
   /* position: relative;
   top: 13%;
   left: 50%; */
@@ -162,33 +149,33 @@ h1.welcome{
   text-align: center;
 }
 
-h6.error
-{
- color: #ff0000;
-}
-.error{
-  font-size: 1rem ;
+h6.error {
   color: #ff0000;
 }
-@media(max-width:767px){
-  .side-img-container{
-    height:40vh ;
+.error {
+  font-size: 1rem;
+  color: #ff0000;
+}
+@media (max-width: 768px) {
+  .side-img-container {
+    height: 30vh;
   }
-  .welcome{
-  left: 15% !important;
-  top: 35% !important;
+  .welcome {
+    font-size: 2.3em !important;
+    left: 15% !important;
+    top: 35% !important;
   }
-  .centered{
-    width: 80% ;
+  .login-text {
+    font-size: 1.2rem;
+  }
+  .centered {
+    width: 80%;
     margin: auto auto;
   }
-
 }
-@media(max-width:1023px) and (min-width: 768px){
-  .welcome{
-  left: 8% !important;
-  top: 30% !important;
+@media (max-width: 1023px) and (min-width: 768px) {
+  .welcome {
+    left: 8% !important;
+    top: 30% !important;
   }
-
 }
-

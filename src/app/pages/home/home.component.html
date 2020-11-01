@@ -1,11 +1,11 @@
-<div class="home-container">
-  <div class="text-area px-5">
-    <h1 class="welcome">Welcome To</h1>
-    <h2 class="inside-joints">InsideJoints</h2>
+<div class="home-container text-center">
+  <div class="text-area mx-auto">
+    <h1 class="welcome">{{ 'pleaseChooseAJoint' | translate }}</h1>
+
     <h3 class="description"></h3>
   </div>
 
-  <div class="skeleton-container">
+  <div class="skeleton-container mx-auto">
     <img
       class="skeleton-img"
       src="../../../assets/skeleton/tr.png"
@@ -13,11 +13,11 @@
     />
     <div
       [routerLink]="['/joint']"
-      [queryParams]="{ bodyPart: 'Neck', imgSrc: 'Joints-10.png' }"
+      [queryParams]="{ bodyPart: 'Head', imgSrc: 'Joints-10.png' }"
       class="dot-container neck"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />
-      <p class="desc">Head</p>
+      <p class="desc">{{ 'head' | translate }}</p>
     </div>
     <div
       [routerLink]="['/joint']"
@@ -25,7 +25,7 @@
       class="dot-container hand"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />
-      <p class="desc">Hand</p>
+      <p class="desc">{{ 'hand' | translate }}</p>
     </div>
     <div
       [routerLink]="['/joint']"
@@ -33,7 +33,7 @@
       class="dot-container elbow"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />
-      <p class="desc">Elbow</p>
+      <p class="desc">{{ 'elbow' | translate }}</p>
     </div>
     <div
       [routerLink]="['/joint']"
@@ -41,7 +41,7 @@
       class="dot-container shoulder"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />
-      <p class="desc shoulder-desc">Shoulder</p>
+      <p class="desc shoulder-desc">{{ 'shoulder' | translate }}</p>
     </div>
     <div
       [routerLink]="['/joint']"
@@ -49,7 +49,7 @@
       class="dot-container ankle"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />
-      <p class="desc ankle-desc">Ankle</p>
+      <p class="desc ankle-desc">{{ 'ankle' | translate }}</p>
     </div>
     <div
       [routerLink]="['/joint']"
@@ -57,7 +57,7 @@
       class="dot-container hip"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />
-      <p class="desc hip-desc">Hip</p>
+      <p class="desc hip-desc">{{ 'hip' | translate }}</p>
     </div>
     <div
       [routerLink]="['/joint']"
@@ -65,7 +65,7 @@
       class="dot-container foot"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />
-      <p class="desc">Foot</p>
+      <p class="desc">{{ 'foot' | translate }}</p>
     </div>
     <div
       [routerLink]="['/joint']"
@@ -73,7 +73,7 @@
       class="dot-container knee"
     >
       <img role="button" src="../../../assets/redSpot/Group 1654.png" alt="" />
-      <p class="desc">Knee</p>
+      <p class="desc">{{ 'knee' | translate }}</p>
     </div>
   </div>
 </div>
