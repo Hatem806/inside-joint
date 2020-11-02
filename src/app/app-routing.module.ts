@@ -17,7 +17,6 @@ import { VideosComponent } from './components/joint-page/videos/videos.component
 import { EvidencesComponent } from './components/joint-page/evidences/evidences.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { GuidelinesComponent } from './components/joint-page/guidelines/guidelines.component';
-import { RecommendationsComponent } from './components/joint-page/recommendations/recommendations.component';
 
 
 const routes: Routes = [
@@ -29,7 +28,6 @@ const routes: Routes = [
   { path: "home", component: HomeComponent, canActivate: [AuthGuardService]},
   { path: "aboutus", component: AboutUsComponent, canActivate: [AuthGuardService]},
   {path: "guidelines", component: GuidelinesComponent, canActivate: [AuthGuardService]},
-  {path: "recommendations", component: RecommendationsComponent, canActivate: [AuthGuardService]},
   {path: "joint/manuals", component: ManualsPageComponent, canActivate: [AuthGuardService]},
   {path: "joint/manuals/manual", component: ManualsComponent, canActivate: [AuthGuardService]},
   {path: "joint/videos", component: VideosComponent, canActivate: [AuthGuardService]},
