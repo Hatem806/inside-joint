@@ -58,7 +58,8 @@ export class AppComponent {
 
         }
       }
-      if(this.router.url.substring(0,6)=='/joint'){
+      if(this.router.url.substring(0,6)=='/joint'|| this.router.url.substring(0,11)=='/guidelines'
+      || this.router.url.substring(0,16)=='/recommendations' ){
         this.sidebarColor = "#F2F2F2" ;
         this.navbarColor = "#F2F2F2" ;
         this.companyNameBackground = "#F2F2F2"
