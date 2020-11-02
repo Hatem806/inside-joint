@@ -5,22 +5,36 @@
     "
   >
     <img class="side-img" src="../../../assets/login/sideimage.png" />
-    <h1 class="welcome">{{ 'welcomeToIJ' | translate }}</h1>
+    <h1 class="welcome">{{ "welcomeToIJ" | translate }}</h1>
   </div>
   <div [ngClass]="innerWidth > 767 ? 'split left' : 'col col-12'">
     <div class="row align-items-center">
-      <div class="col-6  logo">
+      <div class="col-6 logo">
         <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo" />
       </div>
       <div class="col-6 languages-container">
-        <img (click)="ApiService.getLangService().changeLang('en')"class=" languages "src="../assets/languages/united-kingdom (1).png" alt="">
-        <img (click)="ApiService.getLangService().changeLang('fr')"class=" languages"src="../assets/languages/france (1).png" alt="">
+        <img
+          (click)="ApiService.getLangService().changeLang('en')"
+          class="languages"
+          src="../assets/languages/asset2.png"
+          style="
+            box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+          "
+          alt=""
+        />
+        <img
+          (click)="ApiService.getLangService().changeLang('fr')"
+          class="languages"
+          src="../assets/languages/asset1.png"
+          alt=""
+        />
       </div>
-      </div>
+    </div>
 
     <div class="centered">
-      <div class="login-text">{{ 'loginToYourAccount' | translate }}</div>
-      <h1 class="login-text2">{{ 'email' | translate}}</h1>
+      <div class="login-text">{{ "loginToYourAccount" | translate }}</div>
+      <h1 class="login-text2">{{ "email" | translate }}</h1>
       <input
         class="login-input form-control w-100"
         [(ngModel)]="email"
@@ -31,10 +45,10 @@
       <h4 *ngIf="error" class="error">{{ errorMessage }}</h4>
       <div class="buttons">
         <button (click)="login()" type="submit" class="login-button">
-          {{ 'login' | translate}}
+          {{ "login" | translate }}
         </button>
         <button (click)="register()" type="submit" class="login-button">
-          {{ 'register' | translate}}
+          {{ "register" | translate }}
         </button>
       </div>
     </div>

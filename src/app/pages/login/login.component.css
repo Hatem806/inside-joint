@@ -8,10 +8,13 @@ html {
   transform: scale(0.8, 0.8);
 }
 
-.languages{
- height: 35px ;
+.languages {
+  height: 35px;
   margin-right: 20px;
   cursor: pointer;
+
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
 }
 .buttons {
   margin: 0 auto;
