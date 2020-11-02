@@ -42,5 +42,7 @@
   "details" : "Détails",
   "welcomeTo": "Bienvenue à",
   "insideJoints": "InsideJoints",
-  "pleaseChooseAJoint": "Veuillez choisir un joint"
+  "pleaseChooseAJoint": "Veuillez choisir un joint",
+  "guidelines": "Lignes directrices",
+  "recommendations": "Recommandations"
 }

@@ -29,7 +29,9 @@ import { ManualsPageComponent } from './components/joint-page/manuals-page/manua
 import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
 import { MatIconModule } from '@angular/material/icon';
 import {TranslateModule , TranslateLoader } from  '@ngx-translate/core'
-import {TranslateHttpLoader} from '@ngx-translate/http-loader'
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { RecommendationsComponent } from './components/joint-page/recommendations/recommendations.component';
+import { GuidelinesComponent } from './components/joint-page/guidelines/guidelines.component'
 export const createTranslateLoader =  (http : HttpClient) => {
   return new TranslateHttpLoader(http ,'../assets/i18n/' ,'.json') ;
 }
@@ -53,7 +55,9 @@ export const createTranslateLoader =  (http : HttpClient) => {
     JointHeaderComponent,
     VideosComponent,
     EvidencesComponent,
-    ManualsPageComponent
+    ManualsPageComponent,
+    RecommendationsComponent,
+    GuidelinesComponent
   ],
   imports: [
     BrowserModule,

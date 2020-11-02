@@ -162,7 +162,7 @@
                 [style.color]="companyNameColor"
                 *ngIf="
                   !(currentRoute == 'Products') &&
-                  !(router.url.substring(0, 6) == '/joint') &&
+                  !(router.url.substring(0, 6) == '/joint' ||  router.url.substring(0,11) == '/guidelines' ||  router.url.substring(0,16) == '/recommendations') &&
                   changeIcon == false
                 "
                 class="icons col col-4"
@@ -171,15 +171,8 @@
               />
               <img
                 [style.color]="companyNameColor"
-                *ngIf="currentRoute == 'Products' && changeIcon == false"
-                class="icons col col-4"
-                alt="Products"
-                src="../assets/icons/syringeWhite.svg"
-              />
-              <img
-                [style.color]="companyNameColor"
                 *ngIf="
-                  router.url.substring(0, 6) == '/joint' &&
+                  (router.url.substring(0, 6) == '/joint' ||  router.url.substring(0,11) == '/guidelines' ||  router.url.substring(0,16) == '/recommendations')&&
                   !(currentRoute == 'Products') &&
                   changeIcon == false
                 "
@@ -240,6 +233,42 @@
               </h3>
             </div>
           </a>
+          <a
+          [style.background]="listItemBackground"
+          routerLink="guidelines"
+          class="list-group-item p-3"
+         >
+          <div class="row">
+            <mat-icon
+              [style.color]="companyNameColor"
+              class="icons col col-4"
+              src="../assets/mainNav/135.png"
+              alt="About Us"
+              >menu_book</mat-icon
+            >
+            <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
+              {{ "guidelines" | translate }}
+            </h3>
+          </div>
+        </a>
+        <a
+        [style.background]="listItemBackground"
+        routerLink="recommendations"
+        class="list-group-item p-3"
+       >
+        <div class="row">
+          <mat-icon
+            [style.color]="companyNameColor"
+            class="icons col col-4"
+            src="../assets/mainNav/135.png"
+            alt="About Us"
+            >check_box</mat-icon
+          >
+          <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
+            {{ "recommendations" | translate }}
+          </h3>
+        </div>
+      </a>
         </div>
       </div>
 
