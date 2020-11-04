@@ -158,7 +158,7 @@
               (mouseout)="changeIcon = false"
               class="row"
             >
-              <img
+              <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="
                   !(currentRoute == 'Products') &&
@@ -166,10 +166,9 @@
                   changeIcon == false
                 "
                 class="icons col col-4"
-                src="../assets/icons/syringeWhite.svg"
                 alt="Products"
-              />
-              <img
+              >medical_services</mat-icon>
+              <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="
                   (router.url.substring(0, 6) == '/joint' ||  router.url.substring(0,11) == '/guidelines' ||  router.url.substring(0,16) == '/recommendations')&&
@@ -177,16 +176,14 @@
                   changeIcon == false
                 "
                 class="col col-4 icons"
-                src="../assets/icons/syringeBlue.svg"
                 alt="Products"
-              />
-              <img
+                >medical_services</mat-icon>
+              <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="changeIcon == true"
                 class="col col-4 icons"
-                src="../assets/icons/syringeGold.svg"
                 alt="Products"
-              />
+                >medical_services</mat-icon>
               <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
                 {{ "products" | translate }}
               </h3>
@@ -381,7 +378,7 @@
               (mouseout)="changeIcon = false"
               class="row justify-content-center"
             >
-              <img
+              <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="
                   !(currentRoute == 'Products') &&
@@ -389,17 +386,17 @@
                   changeIcon == false
                 "
                 class="icons col-12"
-                src="../assets/icons/syringeWhite.svg"
+
                 alt="Products"
-              />
-              <img
+                >medical_services</mat-icon>
+              <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="currentRoute == 'Products' && changeIcon == false"
                 class="icons col col-6"
                 alt="Products"
-                src="../assets/icons/syringeWhite.svg"
-              />
-              <img
+
+                >medical_services</mat-icon>
+              <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="
                   router.url.substring(0, 6) == '/joint' &&
@@ -407,16 +404,14 @@
                   changeIcon == false
                 "
                 class="col col-6 icons"
-                src="../assets/icons/syringeBlue.svg"
                 alt="Products"
-              />
-              <img
+                >medical_services</mat-icon>
+              <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="changeIcon == true"
                 class="col col-6 icons"
-                src="../assets/icons/syringeGold.svg"
                 alt="Products"
-              />
+                >medical_services</mat-icon>
             </div>
           </a>
           <a
@@ -544,7 +539,7 @@
             >info
           </mat-icon>
         </a>
-        <!-- <a
+        <a
         [style.background]="listItemBackground"
         routerLink="products"
         routerLinkActive="active"
@@ -580,50 +575,7 @@
           alt="Products"
           >medical_services
         </mat-icon>
-      </a> -->
-        <a
-          [style.background]="listItemBackground"
-          routerLink="products"
-          routerLinkActive="active"
-          class="list-group-item col-3 p-4"
-        >
-          <img
-            [style.color]="companyNameColor"
-            *ngIf="
-              !(currentRoute == 'Products') &&
-              !(router.url.substring(0, 6) == '/joint') &&
-              changeIcon == false
-            "
-            class="icons"
-            src="../assets/icons/syringeWhite.svg"
-            alt="Products"
-          />
-          <img
-            [style.color]="companyNameColor"
-            *ngIf="currentRoute == 'Products' && changeIcon == false"
-            class="icons"
-            alt="Products"
-            src="../assets/icons/syringeWhite.svg"
-          />
-          <img
-            [style.color]="companyNameColor"
-            *ngIf="
-              router.url.substring(0, 6) == '/joint' &&
-              !(currentRoute == 'Products') &&
-              changeIcon == false
-            "
-            class="icons"
-            src="../assets/icons/syringeBlue.svg"
-            alt="Products"
-          />
-          <img
-            [style.color]="companyNameColor"
-            *ngIf="changeIcon == true"
-            class="icons"
-            src="../assets/icons/syringeGold.svg"
-            alt="Products"
-          />
-        </a>
+      </a>
         <a
           [style.background]="listItemBackground"
           routerLink="conferences"
