@@ -37,10 +37,12 @@
   "videos": "Vidéos",
   "scientificEvidences": "Preuves Scientifiques",
   "scientific": "Scientifique",
-  "evidences": "Preuves",
+  "evidences": "Preuve",
   "thankYou": "Merci",
   "details" : "Détails",
   "welcomeTo": "Bienvenue à",
   "insideJoints": "InsideJoints",
-  "pleaseChooseAJoint": "Veuillez choisir un joint"
+  "pleaseChooseAJoint": "Veuillez choisir un joint",
+  "guidelines": "Lignes directrices et recommandationss",
+  "recommendations": "Recommandations"
 }
