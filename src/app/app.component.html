@@ -17,6 +17,7 @@
     <div class="no-gutters" id="wrapper">
       <app-header *ngIf="router.url == '/home'"></app-header>
       <!-- Sidebar -->
+      <!--  sidebar large screen -->
       <div
         *ngIf="
           innerWidth > 1024 &&
@@ -38,6 +39,7 @@
                   class="languages"
                   src="../assets/languages/asset2.png"
                   alt=""
+                  style="box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)"
                 />
               </div>
               <div class="col-6">
@@ -47,6 +49,7 @@
                   class="languages"
                   src="../assets/languages/asset1.png"
                   alt=""
+                  style="box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)"
                 />
               </div>
             </div>
@@ -186,6 +189,7 @@
                 class="col col-4 icons"
                 src="../assets/icons/syringeBlue.svg"
                 alt="Products"
+                style="width: 50px !important"
               />
               <img
                 [style.color]="companyNameColor"
@@ -242,8 +246,9 @@
           </a>
         </div>
       </div>
+      <!--  sidebar large screen -->
 
-      <!-- Sidebar -->
+      <!-- white sidebar ipad screen -->
       <div
         *ngIf="
           innerWidth <= 1024 &&
@@ -266,6 +271,7 @@
                   class="languages"
                   src="../assets/languages/asset2.png"
                   alt=""
+                  style="box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)"
                 />
               </div>
               <div class="col-12 text-center">
@@ -275,6 +281,7 @@
                   class="languages"
                   src="../assets/languages/asset1.png"
                   alt=""
+                  style="box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)"
                 />
               </div>
             </div>
@@ -447,7 +454,9 @@
           </a>
         </div>
       </div>
+      <!-- white sidebar ipad screen -->
 
+      <!-- white bottom bar iphone screen -->
       <nav
         *ngIf="
           innerWidth < 700 &&
@@ -649,6 +658,7 @@
           </mat-icon>
         </a>
       </nav>
+      <!-- white bottom bar iphone screen -->
 
       <div
         *ngIf="ApiService.getAuthenticationService().isAuthenticated()"

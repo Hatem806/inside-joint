@@ -1,4 +1,4 @@
-<div class="no-gutters">
+<div class="no-gutters custom-padding">
   <app-header
     *ngIf="apiService.getLangService().lang == 'en'"
     [pageImageSource1]="pageImageSrc1"
@@ -19,62 +19,98 @@
             <div class="row">
               <div class="col">
                 <h5 class="description">
-                  Privately held, fully integrated Italian multinational company, with R&D, manufacturing, marketing and sales capabilities. The Company was founded in 1946 and is headquartered in Abano Terme (a short distance from Venice). Fidia’s overall objective is establishing its leadership, through an extensive product portfolio mainly based on hyaluronic acid (HA) in joint care, advanced wound care ophthalmology, aesthetic and autologous biological therapy, thereby providing patients and healthcare professionals with a variety of treatment options, such as pharmaceutical products, medical devices and food supplements. Over 55 years of R&D have placed Fidia at the forefront in the production of natural and functionalized HA, with different ranges of MW (1,100 patents). Manufacturing operations - located in Italy - are inspected and approved by major international health authorities, including the US and Korean FDA, the Brazilian ANVISA and G-MED Notified Body, and comply with the strictest international regulations and safety standards. Fidia extends its global reach through local partners in 100+ countries worldwide, as well as wholly-owned subsidiaries in USA, Germany, Austria, Spain, France, Russia, Czech Republic, Slovakia, Romania, Egypt and Middle East.
+                  Privately held, fully integrated Italian multinational
+                  company, with R&D, manufacturing, marketing and sales
+                  capabilities. The Company was founded in 1946 and is
+                  headquartered in Abano Terme (a short distance from Venice).
+                  <br /><br />
+                  Fidia’s overall objective is establishing its leadership,
+                  through an extensive product portfolio mainly based on
+                  hyaluronic acid (HA) in joint care, advanced wound care
+                  ophthalmology, aesthetic and autologous biological therapy,
+                  thereby providing patients and healthcare professionals with a
+                  variety of treatment options, such as pharmaceutical products,
+                  medical devices and food supplements.<br /><br />
+                  Over 55 years of R&D have placed Fidia at the forefront in the
+                  production of natural and functionalized HA, with different
+                  ranges of MW (1,100 patents).<br /><br />
+                  Manufacturing operations - located in Italy - are inspected
+                  and approved by major international health authorities,
+                  including the US and Korean FDA, the Brazilian ANVISA and
+                  G-MED Notified Body, and comply with the strictest
+                  international regulations and safety standards. Fidia extends
+                  its global reach through local partners in 100+ countries
+                  worldwide, as well as wholly-owned subsidiaries in USA,
+                  Germany, Austria, Spain, France, Russia, Czech Republic,
+                  Slovakia, Romania, Egypt and Middle East.
                 </h5>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-5 col-12 details-section pr-md-5 pr-lg-4">
+        <div class="col-lg-5 col-12 details-section">
           <div class="row">
             <div class="col details">{{ "details" | translate }}</div>
           </div>
           <div class="row options-container justify-content-center">
             <div
               role="button"
-              class="col-5 offset-1 options"
+              class="col-5 offset-1 options card text-center"
               (mouseover)="changePdfIcon = true"
               (mouseout)="changePdfIcon = false"
-              (click) = "goToPdfLink()"
+              (click)="goToPdfLink()"
             >
-              <img
-                class="option-image"
-                *ngIf="!changePdfIcon"
-                src="../../../assets/icons/pdf.png"
-                alt="Download pdf"
-                style="width: 53px"
-              />
-              <img
-                class="hover option-image"
-                *ngIf="changePdfIcon"
-                src="../../../assets/icons/pdf-1.png"
-                alt="Download pdf"
-                style="width: 53px"
-              />
-              <h5 class="view-company-text">View company profile</h5>
+              <div class="card-body">
+                <div class="row h-100 align-items-center">
+                  <div class="col-12">
+                    <img
+                      class="option-image"
+                      *ngIf="!changePdfIcon"
+                      src="../../../assets/icons/pdf.png"
+                      alt="Download pdf"
+                      style="width: 53px"
+                    />
+                    <img
+                      class="hover option-image"
+                      *ngIf="changePdfIcon"
+                      src="../../../assets/icons/pdf-1.png"
+                      alt="Download pdf"
+                      style="width: 53px"
+                    />
+                    <h5 class="view-company-text mt-3">View company profile</h5>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div
               role="button"
-              class="col-5 offset-1 options"
+              class="col-5 offset-1 options card text-center"
               (mouseover)="changeVideoIcon = true"
               (mouseout)="changeVideoIcon = false"
-              (click)= "goToVideoLink()"
+              (click)="goToVideoLink()"
             >
-              <img
-                class="video-icon option-image"
-                *ngIf="!changeVideoIcon"
-                src="../../../assets/icons/128.png"
-                alt="Video"
-              />
-              <img
-                class="video-icon hover option-image"
-                *ngIf="changeVideoIcon"
-                src="../../../assets/icons/asset-1.png"
-                alt=""
-              />
-              <h5 class="view-company-text">View company video</h5>
-
+              <div class="card-body">
+                <div class="row h-100 align-items-center">
+                  <div class="col-12">
+                    <img
+                      class="video-icon option-image"
+                      *ngIf="!changeVideoIcon"
+                      src="../../../assets/icons/128.png"
+                      alt="Video"
+                      style="width: 53px"
+                    />
+                    <img
+                      class="video-icon hover option-image"
+                      *ngIf="changeVideoIcon"
+                      src="../../../assets/icons/asset-1.png"
+                      alt="Video"
+                      style="width: 53px"
+                    />
+                    <h5 class="view-company-text mt-3">View company video</h5>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

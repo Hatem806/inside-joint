@@ -18,6 +18,10 @@
   padding-top: 1em;
 }
 
+.card {
+  height: 250px !important;
+}
+
 /* .my-container .description {
   font-size: 1.2rem;
 } */
@@ -30,23 +34,26 @@
   padding-top: 1em;
   padding-left: 1.5em;
 }
-.view-company-text {
+/* .view-company-text {
   color: #6b6c6f !important;
   position: absolute;
   top: 62%;
   left: 21%;
   text-align: center;
-}
+} */
 .wrapper {
   min-height: 100% !important;
 }
-.details-section {
+/* .details-section {
   padding-left: 80px;
-}
+} */
 
 @media (min-width: 1024px) {
-  .details-section {
+  /* .details-section {
     padding-left: 0px;
+  } */
+  .custom-padding {
+    padding-bottom: 30px;
   }
   .my-container {
     margin-left: 24% !important ;
@@ -73,43 +80,35 @@
 /* .no-gutters{
   min-height: 100vh;
 } */
-.option-image {
-  position: absolute;
-  top: 30%;
-  left: 40%;
-}
 
 @media (max-width: 375px) {
-  
   .view-company-text {
-    font-size: 15px !important;
-    position: absolute;
-    top: 70% !important;
-    left: 5% !important;
+    font-size: 100%;
+  }
+  .custom-padding {
+    padding-bottom: 120px;
+  }
+  .card {
+    height: 180px !important;
   }
 }
-@media (max-width: 1366px) {
-  
-  .view-company-text {
-    top: 58%;
-    left: 10%;
-  }
-}
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .option-image {
     top: 30%;
-  left: 40%;
+    left: 40%;
   }
+} */
+@media (max-width: 1366px) {
 }
 
 @media (max-width: 767px) {
-  .details-section {
+  /* .details-section {
     padding-left: 80px;
   }
   .details-section {
     padding-left: 0px;
     margin-left: 0%;
-  }
+  } */
   .details {
     padding-left: 0px !important;
     padding-bottom: 5%;
@@ -129,26 +128,25 @@
   font-size: 3rem ;
 } */
 
-  .options-container {
+  /* .options-container {
     margin-bottom: 30% !important ;
     align-items: center;
     align-content: center;
     align-self: center;
     text-align: center;
-  }
+  } */
 
   .custom-height {
     height: auto;
   }
-  .details-section {
+  /* .details-section {
     padding-right: 0px;
-  }
-  
+  } */
 }
 
 @media (max-width: 768px) {
   .option-image {
     top: 30%;
-  left: 36%;
+    left: 36%;
   }
 }
