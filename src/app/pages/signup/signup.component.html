@@ -15,7 +15,7 @@
             <div class="col-9 col-md-6">
               <div class="row">
                 <img src="../../../assets/fidiaLogo/Group -1.png" alt="" />
-            </div>
+              </div>
             </div>
           </div>
         </div>
@@ -23,8 +23,10 @@
       <div
         class="row justify-content-center align-items-center full-height-desktop h-75"
       >
-        <div class="col-12 pt-4 pb-5">
-          <h1 class="welcome pb-4">{{ 'pleaseAnswerQuestions' | translate }}</h1>
+        <div class="col-8 pt-4 pb-5">
+          <h1 class="welcome pb-4">
+            {{ "pleaseAnswerQuestions" | translate }}
+          </h1>
         </div>
       </div>
     </div>
@@ -32,7 +34,7 @@
 
   <div class="col col-md-6 col-xs-12">
     <div class="centered">
-      <h1 class="login-text2">{{ 'usingIAHA' | translate }}</h1>
+      <h1 class="login-text2">{{ "usingIAHA" | translate }}</h1>
       <div class="inlineRadio" *ngFor="let item of iaha">
         <input
           role="button"
@@ -45,7 +47,7 @@
       </div>
       <br />
       <br />
-      <h1 class="login-text2">{{ 'whichJoints' | translate }}</h1>
+      <h1 class="login-text2">{{ "whichJoints" | translate }}</h1>
       <div class="row" *ngFor="let jointRow of joints">
         <div class="col" *ngFor="let joint of jointRow">
           <label>
@@ -62,7 +64,7 @@
       </div>
       <br />
       <br />
-      <h1 class="login-text2">{{ 'injectionsPerMonth' | translate }}</h1>
+      <h1 class="login-text2">{{ "injectionsPerMonth" | translate }}</h1>
       <div class="inlineRadio" *ngFor="let item of injections">
         <input
           role="button"
@@ -74,7 +76,9 @@
         {{ item.name }}
       </div>
       <h6 *ngIf="error" class="error">{{ errorMessage }}</h6>
-      <button (click)="next()" type="submit" class="login-button">{{ 'next' | translate }}</button>
+      <button (click)="next()" type="submit" class="login-button">
+        {{ "next" | translate }}
+      </button>
     </div>
   </div>
 </div>

@@ -5,7 +5,9 @@ body {
   font-family: montserrant-bold;
   text-decoration: none;
 }
-
+a {
+  text-decoration: none !important;
+}
 .languages-container {
   margin: auto auto;
 }
@@ -92,6 +94,7 @@ body {
   width: fit-content;
   align-items: center;
   justify-content: center;
+  user-select: none !important;
 }
 /*
 #sidebar-wrapper .sidebar-heading {

@@ -1,24 +1,33 @@
 <div class="header-container">
-  <div class="logo">
-    <img src="../../../assets/fidiaLogo/Group 1689.png" alt="Fidia Logo" />
-  </div>
-  <div *ngIf="innerWidth <= 700" class="languages-conatiner">
-    <img
-      (click)="apiService.getLangService().changeLang('en')"
-      class="languages"
-      src="../assets/languages/asset2.png"
-      alt=""
-    />
-    <img
-      (click)="apiService.getLangService().changeLang('fr')"
-      class="languages"
-      src="../assets/languages/asset1.png"
-      alt=""
-    />
-  </div>
-
-  <div class="page-name">
-    {{ pageName }}
+  <div class="row no-gutters align-items-center justify-content-center">
+    <div class="col-3 col-lg-1">
+      <img
+        src="../../../assets/fidiaLogo/Group 1689.png"
+        alt="Fidia Logo"
+        class="w-100"
+      />
+    </div>
+    <div class="col-4">
+      <div *ngIf="innerWidth <= 700" class="languages-conatiner text-right">
+        <img
+          (click)="apiService.getLangService().changeLang('en')"
+          class="languages"
+          src="../assets/languages/asset2.png"
+          alt=""
+        />
+        <img
+          (click)="apiService.getLangService().changeLang('fr')"
+          class="languages"
+          src="../assets/languages/asset1.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="col-5 text-right">
+      <div class="page-name">
+        {{ pageName }}
+      </div>
+    </div>
   </div>
 </div>
 

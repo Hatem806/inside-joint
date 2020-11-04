@@ -1,4 +1,4 @@
-<div class="no-gutters">
+<div class="no-gutters custom-padding">
   <app-header
     *ngIf="apiService.getLangService().lang == 'en'"
     [pageImageSource1]="pageImageSrc1"
@@ -25,56 +25,69 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-5 col-12 details-section pr-md-5 pr-lg-4">
+        <div class="col-lg-5 col-12 details-section">
           <div class="row">
             <div class="col details">{{ "details" | translate }}</div>
           </div>
           <div class="row options-container justify-content-center">
             <div
               role="button"
-              class="col-5 offset-1 options"
+              class="col-5 offset-1 options card text-center"
               (mouseover)="changePdfIcon = true"
               (mouseout)="changePdfIcon = false"
-              (click) = "goToPdfLink()"
+              (click)="goToPdfLink()"
             >
-              <img
-                class="option-image"
-                *ngIf="!changePdfIcon"
-                src="../../../assets/icons/pdf.png"
-                alt="Download pdf"
-                style="width: 53px"
-              />
-              <img
-                class="hover option-image"
-                *ngIf="changePdfIcon"
-                src="../../../assets/icons/pdf-1.png"
-                alt="Download pdf"
-                style="width: 53px"
-              />
-              <h5 class="view-company-text">View company profile</h5>
+              <div class="card-body">
+                <div class="row h-100 align-items-center">
+                  <div class="col-12">
+                    <img
+                      class="option-image"
+                      *ngIf="!changePdfIcon"
+                      src="../../../assets/icons/pdf.png"
+                      alt="Download pdf"
+                      style="width: 53px"
+                    />
+                    <img
+                      class="hover option-image"
+                      *ngIf="changePdfIcon"
+                      src="../../../assets/icons/pdf-1.png"
+                      alt="Download pdf"
+                      style="width: 53px"
+                    />
+                    <h5 class="view-company-text mt-3">View company profile</h5>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div
               role="button"
-              class="col-5 offset-1 options"
+              class="col-5 offset-1 options card text-center"
               (mouseover)="changeVideoIcon = true"
               (mouseout)="changeVideoIcon = false"
-              (click)= "goToVideoLink()"
+              (click)="goToVideoLink()"
             >
-              <img
-                class="video-icon option-image"
-                *ngIf="!changeVideoIcon"
-                src="../../../assets/icons/128.png"
-                alt="Video"
-              />
-              <img
-                class="video-icon hover option-image"
-                *ngIf="changeVideoIcon"
-                src="../../../assets/icons/asset-1.png"
-                alt=""
-              />
-              <h5 class="view-company-text">View company video</h5>
-
+              <div class="card-body">
+                <div class="row h-100 align-items-center">
+                  <div class="col-12">
+                    <img
+                      class="video-icon option-image"
+                      *ngIf="!changeVideoIcon"
+                      src="../../../assets/icons/128.png"
+                      alt="Video"
+                      style="width: 53px"
+                    />
+                    <img
+                      class="video-icon hover option-image"
+                      *ngIf="changeVideoIcon"
+                      src="../../../assets/icons/asset-1.png"
+                      alt="Video"
+                      style="width: 53px"
+                    />
+                    <h5 class="view-company-text mt-3">View company video</h5>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
