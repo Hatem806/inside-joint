@@ -359,35 +359,10 @@
             <div
               class="row justify-content-center"
             >
-              <mat-icon
-                [style.color]="companyNameColor"
-                *ngIf="
-                  !(currentRoute == 'Products') &&
-                  !(router.url.substring(0, 6) == '/joint')
-                "
-                class="icons col-12"
 
-                alt="Products"
-                >medical_services</mat-icon>
               <mat-icon
                 [style.color]="companyNameColor"
-                *ngIf="currentRoute == 'Products' "
-                class="icons col col-6"
-                alt="Products"
-
-                >medical_services</mat-icon>
-              <mat-icon
-                [style.color]="companyNameColor"
-                *ngIf="
-                  router.url.substring(0, 6) == '/joint' &&
-                  !(currentRoute == 'Products')
-                "
-                class="col col-6 icons"
-                alt="Products"
-                >medical_services</mat-icon>
-              <mat-icon
-                [style.color]="companyNameColor"
-                class="col col-6 icons"
+                class="col col-12 icons"
                 alt="Products"
                 >medical_services</mat-icon>
             </div>
@@ -430,6 +405,22 @@
               </mat-icon>
             </div>
           </a>
+          <a
+          [style.background]="listItemBackground"
+          routerLink="guidelines"
+          class="list-group-item p-3"
+         >
+          <div class="row">
+            <mat-icon
+              [style.color]="companyNameColor"
+              class="icons col col-12"
+              src="../assets/mainNav/135.png"
+              alt="About Us"
+              >menu_book</mat-icon
+            >
+
+          </div>
+        </a>
         </div>
       </div>
       <!-- white sidebar ipad screen -->
@@ -592,6 +583,21 @@
             >event
           </mat-icon>
         </a>
+        <a
+        [style.background]="listItemBackground"
+        routerLink="guidelines"
+        class="list-group-item p-3"
+       >
+        <div class="row">
+          <mat-icon
+            [style.color]="companyNameColor"
+            class="icons col col-4"
+            src="../assets/mainNav/135.png"
+            alt="About Us"
+            >menu_book</mat-icon
+          >
+        </div>
+      </a>
       </nav>
       <!-- white bottom bar iphone screen -->
 

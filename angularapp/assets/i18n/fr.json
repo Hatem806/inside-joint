@@ -10,7 +10,7 @@
   "login" : "S'identifier",
   "register": "S'inscrire",
   "signUp": "S'inscrire",
-  "welcomeToIJ": "Bienvenue chez InsideJoints",
+  "welcomeToIJ": "Bienvenue chez InsideJoint",
   "loginToYourAccount": "Connectez-vous à votre compte",
   "usingIAHA": "Utilisez-vous A.H.I.A. ?",
   "whichJoints": "Dans quelle(s) articulation(s) ?",
@@ -37,9 +37,12 @@
   "videos": "Vidéos",
   "scientificEvidences": "Preuves Scientifiques",
   "scientific": "Scientifique",
-  "evidences": "Preuves",
+  "evidences": "Preuve",
   "thankYou": "Merci",
   "details" : "Détails",
   "welcomeTo": "Bienvenue à",
-  "insideJoints": "InsideJoints"
+  "insideJoints": "InsideJoints",
+  "pleaseChooseAJoint": "Veuillez choisir un joint",
+  "guidelines": "Lignes directrices et recommandationss",
+  "recommendations": "Recommandations"
 }

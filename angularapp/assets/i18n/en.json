@@ -9,8 +9,9 @@
   "workplace" : "Workplace",
   "login": "Login",
   "register": "Register",
+
   "signUp": "Sign Up",
-  "welcomeToIJ": "Welcome To InsideJoints",
+  "welcomeToIJ": "Welcome To InsideJoint",
   "loginToYourAccount": "Login to your account",
   "usingIAHA": "Are you using I.A.H.A ?",
   "whichJoints": "In which joint(s) ?.",
@@ -36,11 +37,16 @@
   "manuals": "Manuals",
   "videos": "Videos",
   "scientificEvidences": "Preuves Scientfic Evidences",
-  "evidences": "Evidences",
+  "evidences": "Evidence",
   "scientific":"Scientific",
   "thankYou": "Thank You",
   "details" : "Details",
   "welcomeTo": "Welcome To",
-  "insideJoints": "Inside Joints"
+  "insideJoints": "Inside Joints",
+  "pleaseChooseAJoint": "Please choose a joint",
+  "guidelines": "Guidelines",
+  "recommendations": "Recommandations"
+
+
 
 }
