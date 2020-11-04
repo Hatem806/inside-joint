@@ -136,7 +136,7 @@
 }
 
 .options {
-  width: 130vw;
+  margin-left: 16.5vw;
   box-shadow: none;
 }
 @media (max-width: 550px) {
@@ -164,5 +164,14 @@
   .no-gutters {
     height: 200vh !important;
     margin-bottom: 30px;
+  }
+}
+.card-width {
+  margin-left: 4.5vw;
+}
+
+@media (max-width: 375px) {
+  .card-width {
+    margin-left: auto;
   }
 }

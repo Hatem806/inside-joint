@@ -17,6 +17,7 @@ export class ManualsComponent implements OnInit {
  htmlFile
  htmlData
  safeHtmlContent : string ;
+ data ;
   constructor( public apiService : ApiService, public route : ActivatedRoute, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
@@ -26,9 +27,9 @@ export class ManualsComponent implements OnInit {
       console.log(this.jointImageSrc)
      })
 
-    const data = this.apiService.getAssetsService().chosenManual ;
-      console.log(data)
-      this.htmlFile = data.path
+     this.data = this.apiService.getAssetsService().chosenManual ;
+      console.log(this.data)
+      this.htmlFile = this.data.path
       this.htmlData = this.sanitizer.bypassSecurityTrustHtml(this.htmlFile);
       // this.apiService.getAssetsService().getManual( data.assets[3].path).subscribe( response =>{
       //  console.log(response)
@@ -39,7 +40,7 @@ export class ManualsComponent implements OnInit {
 
 
 
-      this.title = data.title
+      this.title = this.data.title
 
 
 
