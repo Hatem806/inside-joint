@@ -31,6 +31,7 @@ export class AboutUsComponent implements OnInit {
      this.documentPath = data.company.documentPath ;
      this.videoPath = data.company.videoPath ;
      this.aboutUs = data.company.aboutUs ;
+      console.log(this.aboutUs)
     }
       )
   }

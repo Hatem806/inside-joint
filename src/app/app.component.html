@@ -157,34 +157,10 @@
             class="list-group-item p-3"
           >
             <div
-              (mouseover)="changeIcon = true"
-              (mouseout)="changeIcon = false"
               class="row"
             >
               <mat-icon
                 [style.color]="companyNameColor"
-                *ngIf="
-                  !(currentRoute == 'Products') &&
-                  !(router.url.substring(0, 6) == '/joint' ||  router.url.substring(0,11) == '/guidelines' ||  router.url.substring(0,16) == '/recommendations') &&
-                  changeIcon == false
-                "
-                class="icons col col-4"
-                alt="Products"
-              >medical_services</mat-icon>
-              <mat-icon
-                [style.color]="companyNameColor"
-                *ngIf="
-                  (router.url.substring(0, 6) == '/joint' ||  router.url.substring(0,11) == '/guidelines' ||  router.url.substring(0,16) == '/recommendations')&&
-                  !(currentRoute == 'Products') &&
-                  changeIcon == false
-                "
-                class="col col-4 icons"
-                style="width: 50px !important"
-                alt="Products"
-                >medical_services</mat-icon>
-              <mat-icon
-                [style.color]="companyNameColor"
-                *ngIf="changeIcon == true"
                 class="col col-4 icons"
                 alt="Products"
                 >medical_services</mat-icon>
@@ -381,16 +357,13 @@
             class="list-group-item"
           >
             <div
-              (mouseover)="changeIcon = true"
-              (mouseout)="changeIcon = false"
               class="row justify-content-center"
             >
               <mat-icon
                 [style.color]="companyNameColor"
                 *ngIf="
                   !(currentRoute == 'Products') &&
-                  !(router.url.substring(0, 6) == '/joint') &&
-                  changeIcon == false
+                  !(router.url.substring(0, 6) == '/joint')
                 "
                 class="icons col-12"
 
@@ -398,7 +371,7 @@
                 >medical_services</mat-icon>
               <mat-icon
                 [style.color]="companyNameColor"
-                *ngIf="currentRoute == 'Products' && changeIcon == false"
+                *ngIf="currentRoute == 'Products' "
                 class="icons col col-6"
                 alt="Products"
 
@@ -407,15 +380,13 @@
                 [style.color]="companyNameColor"
                 *ngIf="
                   router.url.substring(0, 6) == '/joint' &&
-                  !(currentRoute == 'Products') &&
-                  changeIcon == false
+                  !(currentRoute == 'Products')
                 "
                 class="col col-6 icons"
                 alt="Products"
                 >medical_services</mat-icon>
               <mat-icon
                 [style.color]="companyNameColor"
-                *ngIf="changeIcon == true"
                 class="col col-6 icons"
                 alt="Products"
                 >medical_services</mat-icon>
