@@ -1,18 +1,31 @@
 <div class="no-gutters">
-  <app-header [pageName]="pageTitle"  [pageImageSource]="pageImageSrc"></app-header>
+  <app-header
+    [pageName]="pageTitle"
+    [pageImageSource1]="pageImageSrc1"
+    [pageImageSource2]="pageImageSrc2"
+  ></app-header>
   <div class="questions-container">
-      <div class="row w-100" *ngFor="let question of questions; let indexOfElements=index ;">
-        <app-question [questionNumber]="indexOfElements+1"[questionIndex]="indexOfElements" class="w-100"[title]="question.title" [answers]="question.answers"></app-question>
+    <div
+      class="row w-100"
+      *ngFor="let question of questions; let indexOfElements = index"
+    >
+      <app-question
+        [questionNumber]="indexOfElements + 1"
+        [questionIndex]="indexOfElements"
+        class="w-100"
+        [title]="question.title"
+        [answers]="question.answers"
+      ></app-question>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h6 *ngIf="error" class="error">{{ errorMessage }}</h6>
       </div>
-      <div class="row">
-        <div class="col">
-          <h6 *ngIf="error" class="error" >{{errorMessage}}</h6>
-        </div>
-        <div class="col">
-          <button (click)="submitResults()" type="button" class=" btn btn-primary"> Submit </button>
-        </div>
+      <div class="col">
+        <button (click)="submitResults()" type="button" class="btn btn-primary">
+          Submit
+        </button>
       </div>
-
+    </div>
   </div>
 </div>
-

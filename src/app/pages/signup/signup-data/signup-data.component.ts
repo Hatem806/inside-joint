@@ -14,7 +14,6 @@ import {Data} from '../../../models/Data'
 export class SignupDataComponent implements OnInit, OnDestroy
 {
   public email: string ;
-  public password: string;
   public lastName:string;
   public firstName:string;
   public country:string;
@@ -26,6 +25,7 @@ export class SignupDataComponent implements OnInit, OnDestroy
   public errorMessage:string;
   public error :boolean
 
+  termsAndConditions : boolean  = false ;
 
   innerWidth : any = window.innerWidth
 
@@ -38,6 +38,9 @@ export class SignupDataComponent implements OnInit, OnDestroy
 
   }
 
+  agreeToTermsAndConditions(){
+    this.termsAndConditions = !this.termsAndConditions ;
+  }
   ngOnInit()
   {
 
@@ -64,20 +67,27 @@ this.country='Egypt'
   {
     console.log(this.city)
     if(this.city == undefined || this.firstName == undefined || this.lastName == undefined || this.email == undefined || this.country == undefined ||
-      this.workPlace == undefined || this.password == undefined || this.contactNumber == undefined ){
+      this.workPlace == undefined  || this.contactNumber == undefined ){
         this.error = true ;
         this.errorMessage = "Please fill all fields"
+        return ;
+      }
+
+      if(!this.termsAndConditions){
+        this.error = true ;
+        this.errorMessage = "Please confirm your agreement to our terms and conditions" ;
+        return ;
       }
     this.date= new Date();
     console.log(this.contactNumber)
-    this.user={city:this.city,firstname:this.firstName,lastname:this.lastName,email:this.email,mobileNumber:this.contactNumber,password:this.password
+    this.user={city:this.city,firstname:this.firstName,lastname:this.lastName,email:this.email,mobileNumber:this.contactNumber
       ,country:this.country,language:null,workplace:this.workPlace,isUsingIAHA:this.data.storage.isUsingIaha,whichJoints:this.data.storage.whichJoints,rangeOfInjectionsPerMonth:this.data.storage.rangeOfInjectionsPerMonth,createdAt:this.date,updatedAt:this.date}
       console.log(this.user)
       this.ApiService.getUsersService().create(this.user).subscribe(data => {
         console.log(data)
       if(data.success == true )
       {
-        this.ApiService.getAuthenticationService().login(this.email, this.password).subscribe(data => {
+        this.ApiService.getAuthenticationService().login(this.email).subscribe(data => {
 
 
             if(data.success == true)

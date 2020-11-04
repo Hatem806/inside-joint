@@ -5,7 +5,6 @@ export interface IUser
     lastname: string;
     email: string;
     mobileNumber: string;
-    password: string;
     country: string;
     city: string;
     language: string;
@@ -25,7 +24,6 @@ export class User
     lastname: string;
     email: string;
     mobileNumber: string;
-    password: string;
     country: string;
     city: string;
     language: string;

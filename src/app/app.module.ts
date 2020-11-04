@@ -9,7 +9,7 @@ import { AboutUsComponent } from '../app/pages/about-us/about-us.component';
 import { HomeComponent } from '../app/pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ConferenceComponent } from './pages/conferences/conference/conference.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { QuestionComponent } from './components/question/question.component';
 import { QuestionsComponent } from './pages/conferences/questions/questions.component';
@@ -28,6 +28,12 @@ import {Ng2TelInputModule} from 'ng2-tel-input';
 import { ManualsPageComponent } from './components/joint-page/manuals-page/manuals-page.component';
 import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
 import { MatIconModule } from '@angular/material/icon';
+import {TranslateModule , TranslateLoader } from  '@ngx-translate/core'
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { GuidelinesComponent } from './components/joint-page/guidelines/guidelines.component'
+export const createTranslateLoader =  (http : HttpClient) => {
+  return new TranslateHttpLoader(http ,'../assets/i18n/' ,'.json') ;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +54,8 @@ import { MatIconModule } from '@angular/material/icon';
     JointHeaderComponent,
     VideosComponent,
     EvidencesComponent,
-    ManualsPageComponent
+    ManualsPageComponent,
+    GuidelinesComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +66,14 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     Ng2TelInputModule,
     MatSelectCountryModule,
-    MatIconModule
+    MatIconModule ,
+    TranslateModule.forRoot({
+      loader : {
+        provide : TranslateLoader ,
+        useFactory : createTranslateLoader ,
+        deps : [HttpClient]
+      }
+    })
   ],
   providers: [DatePipe,Data],
   bootstrap: [AppComponent]

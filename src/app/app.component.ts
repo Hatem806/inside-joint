@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { ApiService } from './services/api.service';
+import {TranslateService} from '@ngx-translate/core';
 import { ThrowStmt } from '@angular/compiler';
 
 @Component({
@@ -19,12 +20,20 @@ export class AppComponent {
   listItemBackground :string
   routesMap = [];
 
+  changeIcon = false ;
   innerWidth : any = window.innerWidth ;
 
   currentRoute: string = "";
-  constructor( public router: Router,public ApiService:ApiService)
+  constructor( public router: Router,public ApiService:ApiService ,private translate : TranslateService)
   {
+    translate.addLangs(['en', 'fr' ]) ;
+    translate.setDefaultLang('en') ;
 
+    if(localStorage.getItem('locale')){
+      const browserLang = localStorage.getItem('locale');
+      translate.use(browserLang.match(/en|fr/) ?  browserLang : 'en')
+    }
+    this.ApiService.getLangService().lang='en'
 
     this.routesMap['/products'] = "Products";
     this.routesMap['/home'] = "Home";
@@ -49,7 +58,8 @@ export class AppComponent {
 
         }
       }
-      if(this.router.url.substring(0,6)=='/joint'){
+      if(this.router.url.substring(0,6)=='/joint'|| this.router.url.substring(0,11)=='/guidelines'
+      || this.router.url.substring(0,16)=='/recommendations' ){
         this.sidebarColor = "#F2F2F2" ;
         this.navbarColor = "#F2F2F2" ;
         this.companyNameBackground = "#F2F2F2"
@@ -75,4 +85,5 @@ export class AppComponent {
   goToLogin(){
     this.router.navigateByUrl('login');
   }
+
 }

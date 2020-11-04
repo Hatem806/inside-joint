@@ -14,9 +14,9 @@ export class AuthenticationService {
 
   constructor(private sessionStorageService: SessionStorageService,private http: HttpClient) { }
 
-  public login(email, password): Observable<IUserResponse>
+  public login(email): Observable<IUserResponse>
   {
-    return this.http.post<IUserResponse>(`${environment.baseUrl}/${AuthenticationService._endPoint}`,{email :email,password:password});
+    return this.http.post<IUserResponse>(`${environment.baseUrl}/${AuthenticationService._endPoint}`,{email :email});
   }
 
 

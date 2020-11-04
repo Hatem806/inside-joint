@@ -1,19 +1,35 @@
-.no-gutters{
-  background:  #005086!important;
-  height: 100vh;
-
+.no-gutters {
+  background: #005086 !important;
+  min-height: 100vh;
+  padding-bottom: 30px;
 }
-@media(max-width:700px){
-  .joint-white-container{
-
+@media (max-width: 700px) {
+  .no-gutters {
+    height: 100% !important;
+    padding-bottom: 30px;
+  }
+  .joint-white-container {
     width: 95%;
     margin: 0 auto;
-    margin-bottom: 13% ;
+    margin-bottom: 22%;
   }
-  .element-thumbnail{
+  .element-thumbnail {
     height: 5rem;
-    width: 4rem ;
+    width: 4rem;
     /* display: block;
     margin: auto; */
   }
+}
+
+::ng-deep p {
+  font-family: montserrant;
+  font-size: 0.8rem;
+  text-align: left;
+  color: #005086;
+}
+::ng-deep strong {
+  font-family: montserrant;
+  font-size: 1rem;
+  text-align: left;
+  color: #e37f00;
 }
