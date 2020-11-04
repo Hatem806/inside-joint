@@ -9,6 +9,7 @@
   "workplace" : "Workplace",
   "login": "Login",
   "register": "Register",
+
   "signUp": "Sign Up",
   "welcomeToIJ": "Welcome To InsideJoint",
   "loginToYourAccount": "Login to your account",
@@ -45,5 +46,7 @@
   "pleaseChooseAJoint": "Please choose a joint",
   "guidelines": "Guidelines",
   "recommendations": "Recommandations"
+
+
 
 }
