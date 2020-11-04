@@ -69,27 +69,29 @@ img {
 }
 
 .arrow-left {
-  padding-right: 0px !important;
-  padding-left: 1vw !important ;
-  margin-right: auto;
+  padding-right: 1vw !important;
+  padding-left: 0px !important ;
   margin-left: auto;
-  top: 50%;
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
   display: block;
+  width: 40px;
 }
 .arrow-right {
   padding-right: 0px !important;
-  padding-left: 0vw !important ;
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-  top: 50%;
+  padding-left: 1vw !important ;
   margin-right: auto;
-  margin-left: auto;
   display: block;
+  width: 40px;
 }
 
-.options {
+@media (max-width: 376px) {
+  .arrow-left {
+    width: 20px;
+  }
+  .arrow-right {
+    width: 20px;
+  }
+}
+/* .options {
   border-radius: 10px;
   border-width: 1px 1px;
   box-shadow: 0px 1px 20px 1px #acacac;
@@ -97,7 +99,7 @@ img {
   border-bottom: 1px !important ;
   height: 30vh;
   padding: 0px !important;
-}
+} */
 
 .option-details {
   font-family: montserrant-bold;
@@ -196,9 +198,9 @@ body {
 .page-cont {
   margin-left: 10%;
 }
-.options-container {
+/* .options-container {
   padding-bottom: 20px;
-}
+} */
 
 @media (max-width: 768px) {
   /* .elements-row{
@@ -216,12 +218,11 @@ body {
   }
   .joint-white-container {
     border-radius: 25px;
-    margin-bottom: 18% !important;
   }
 }
 /* tablet sizes */
 @media (max-width: 1024px) and (min-width: 768px) {
-  .options {
+  /* .options {
     border-radius: 10px;
     border-width: 1px 1px;
     box-shadow: 0px 1px 20px 1px #acacac;
@@ -229,29 +230,22 @@ body {
     border-bottom: 1px !important ;
     height: 16em;
     padding: 0px !important;
-  }
+  } */
+}
+.options {
+  border-radius: 10px;
+  border-width: 1px 1px;
+  box-shadow: 5px 1px 20px 1px #acacac;
+  border-top: 0px !important;
+  border-bottom: 1px !important ;
 }
 /* phone sizes */
 @media (max-width: 700px) {
-  .options {
-    border-radius: 10px;
-    border-width: 1px 1px;
-    box-shadow: 5px 1px 20px 1px #acacac;
-    border-top: 0px !important;
-    border-bottom: 1px !important ;
-    width: 25%;
-    height: 10rem;
-    padding: 0px !important;
-  }
-  .options-container {
-    margin: 0 !important ;
-  }
-
   .option-details {
     font-size: 0.8rem;
   }
   .page-cont {
-    margin: 0px !important ;
+    margin: 0px;
   }
   .page-title {
     padding-left: 0.5em;
