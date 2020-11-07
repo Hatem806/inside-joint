@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./joint-page.component.css']
 })
 export class JointPageComponent implements OnInit {
-  @Input() jointName : string  ;
+  public jointName : string  ;
   public jointImageSrc: string ;
   public jointImageToManuals : string ;
 
@@ -17,13 +18,21 @@ export class JointPageComponent implements OnInit {
   evidencesChangeIcon : boolean ;
 
   innerWidth : any = window.innerWidth ;
-  constructor(private route : ActivatedRoute ,private apiService : ApiService ) { }
+  constructor(private route : ActivatedRoute ,public apiService : ApiService , private translate : TranslateService) { }
 
   ngOnInit( ): void {
     this.route.queryParams.subscribe(data => {
      this.jointName = data.bodyPart ;
      this.jointImageSrc = this.apiService.getJointService().jointsImagePath + data.imgSrc ;
      this.jointImageToManuals = data.imgSrc ;
+
+     this.translate.get(this.jointName.toLocaleLowerCase()).subscribe( result => {
+      this.apiService.getJointService().jointName = result ;
+    })
+
+     this.apiService.getJointService().jointNameEn = data.bodyPart.toLowerCase() ;
+
+
     })
     console.log(this.jointName)
   }

@@ -1,6 +1,7 @@
 .no-gutters {
   background: #005086 !important;
   min-height: 100vh;
+  padding-bottom: 30px;
 }
 
 .title {
@@ -32,21 +33,24 @@
 }
 .joint-image-container {
   padding-bottom: 5%;
+  max-height: 25vh;
 }
 .joint-image-name {
   font-family: montserrant-bold;
   font-size: 2rem;
   color: #005086;
-  padding-top: 5%;
-  margin-left: 1rem;
 }
-
+.joint-image2 {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+}
 .ellipse {
   align-items: center;
   align-content: center;
   align-self: center;
   text-align: center;
-  margin-left: 7.55em;
 }
 @media (max-width: 700px) {
   .joint-white-container {
@@ -55,14 +59,13 @@
     margin-bottom: 13%;
   }
 }
-@media (max-width: 1024px) and (min-width: 700px) {
-  .ellipse {
-    margin-left: 5em;
+@media (max-width: 400px) {
+  .title {
+    font-size: 2rem;
   }
 }
-@media (max-width: 699px) {
-  .ellipse {
-    padding: 0.5em 2em;
-    margin-left: 10em;
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
   }
 }

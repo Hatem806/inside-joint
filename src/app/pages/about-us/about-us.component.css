@@ -5,9 +5,11 @@
   margin-left: 0px !important;
 }
 .description {
+  margin-top: 5%;
   font-family: montserrant;
   text-align: left;
   color: #6b6c6f;
+  font-size: 1rem;
 }
 .title-description {
   min-height: 100% !important ;
@@ -76,6 +78,7 @@
 }
 .options:hover {
   background-color: #005086;
+  transform: scale(1.05);
 }
 /* .no-gutters{
   min-height: 100vh;

@@ -39,7 +39,6 @@
                   class="languages"
                   src="../assets/languages/asset2.png"
                   alt=""
-                  style="box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)"
                 />
               </div>
               <div class="col-6">
@@ -49,7 +48,6 @@
                   class="languages"
                   src="../assets/languages/asset1.png"
                   alt=""
-                  style="box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5)"
                 />
               </div>
             </div>
@@ -71,7 +69,7 @@
           <a
             [style.background]="listItemBackground"
             routerLink="home"
-            class="list-group-item p-3"
+            class="list-group-item p-3 mb-3"
           >
             <div class="row">
               <mat-icon
@@ -112,7 +110,7 @@
           <a
             [style.background]="listItemBackground"
             routerLink="aboutus"
-            class="list-group-item p-3"
+            class="list-group-item p-3 mb-3"
           >
             <div class="row">
               <mat-icon
@@ -154,16 +152,15 @@
             [style.background]="listItemBackground"
             routerLink="products"
             routerLinkActive="active"
-            class="list-group-item p-3"
+            class="list-group-item p-3 mb-3"
           >
-            <div
-              class="row"
-            >
+            <div class="row">
               <mat-icon
                 [style.color]="companyNameColor"
                 class="col col-4 icons"
                 alt="Products"
-                >medical_services</mat-icon>
+                >medical_services</mat-icon
+              >
               <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
                 {{ "products" | translate }}
               </h3>
@@ -172,7 +169,7 @@
           <a
             [style.background]="listItemBackground"
             routerLink="conferences"
-            class="list-group-item p-3"
+            class="list-group-item p-3 mb-3"
           >
             <div class="row">
               <mat-icon
@@ -211,24 +208,23 @@
             </div>
           </a>
           <a
-          [style.background]="listItemBackground"
-          routerLink="guidelines"
-          class="list-group-item p-3"
-         >
-          <div class="row">
-            <mat-icon
-              [style.color]="companyNameColor"
-              class="icons col col-4"
-              src="../assets/mainNav/135.png"
-              alt="About Us"
-              >menu_book</mat-icon
-            >
-            <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
-              {{ "guidelines" | translate }}
-            </h3>
-          </div>
-        </a>
-
+            [style.background]="listItemBackground"
+            routerLink="guidelines"
+            class="list-group-item p-3 mb-3"
+          >
+            <div class="row">
+              <mat-icon
+                [style.color]="companyNameColor"
+                class="icons col col-4"
+                src="../assets/mainNav/135.png"
+                alt="About Us"
+                >menu_book</mat-icon
+              >
+              <h3 [style.color]="companyNameColor" class="col col-8 icon-name">
+                {{ "guidelines" | translate }}
+              </h3>
+            </div>
+          </a>
         </div>
       </div>
       <!--  sidebar large screen -->
@@ -277,7 +273,7 @@
           <a
             [style.background]="listItemBackground"
             routerLink="home"
-            class="list-group-item"
+            class="list-group-item mb-3"
           >
             <div class="row justify-content-center">
               <mat-icon
@@ -315,7 +311,7 @@
           <a
             [style.background]="listItemBackground"
             routerLink="aboutus"
-            class="list-group-item"
+            class="list-group-item mb-3"
           >
             <div class="row justify-content-center">
               <mat-icon
@@ -354,23 +350,21 @@
             [style.background]="listItemBackground"
             routerLink="products"
             routerLinkActive="active"
-            class="list-group-item"
+            class="list-group-item mb-3"
           >
-            <div
-              class="row justify-content-center"
-            >
-
+            <div class="row justify-content-center">
               <mat-icon
                 [style.color]="companyNameColor"
                 class="col col-12 icons"
                 alt="Products"
-                >medical_services</mat-icon>
+                >medical_services</mat-icon
+              >
             </div>
           </a>
           <a
             [style.background]="listItemBackground"
             routerLink="conferences"
-            class="list-group-item"
+            class="list-group-item mb-3"
           >
             <div class="row justify-content-center">
               <mat-icon
@@ -406,21 +400,20 @@
             </div>
           </a>
           <a
-          [style.background]="listItemBackground"
-          routerLink="guidelines"
-          class="list-group-item p-3"
-         >
-          <div class="row">
-            <mat-icon
-              [style.color]="companyNameColor"
-              class="icons col col-12"
-              src="../assets/mainNav/135.png"
-              alt="About Us"
-              >menu_book</mat-icon
-            >
-
-          </div>
-        </a>
+            [style.background]="listItemBackground"
+            routerLink="guidelines"
+            class="list-group-item mb-3"
+          >
+            <div class="row">
+              <mat-icon
+                [style.color]="companyNameColor"
+                class="icons col col-12"
+                src="../assets/mainNav/135.png"
+                alt="About Us"
+                >menu_book</mat-icon
+              >
+            </div>
+          </a>
         </div>
       </div>
       <!-- white sidebar ipad screen -->
@@ -436,168 +429,66 @@
         "
         [style.background]="navbarColor"
         class="navbar fixed-bottom navbar-light row"
-        style="padding: 0rem 1rem !important"
+        style="padding: 0.5rem 1rem !important"
       >
         <a
           [style.background]="listItemBackground"
           routerLink="home"
-          class="list-group-item col-3"
+          class="list-group-item col"
         >
-          <mat-icon
-            [style.color]="companyNameColor"
-            *ngIf="
-              !(currentRoute == 'Home') &&
-              !(router.url.substring(0, 6) == '/joint')
-            "
-            class="icons"
-            src="../assets/mainNav/135.png"
-            alt="Home"
-            >home</mat-icon
-          >
-          <mat-icon
-            [style.color]="companyNameColor"
-            *ngIf="currentRoute == 'Home'"
-            class="material-icons icons"
-            alt="Home"
-          >
-            home</mat-icon
-          >
-          <mat-icon
-            [style.color]="companyNameColor"
-            *ngIf="
-              router.url.substring(0, 6) == '/joint' &&
-              !(currentRoute == 'Home')
-            "
-            class="icons"
-            src="../assets/icons/135.png"
-            alt="Home"
+          <mat-icon [style.color]="companyNameColor" class="icons" alt="Home"
             >home
           </mat-icon>
         </a>
         <a
           [style.background]="listItemBackground"
           routerLink="aboutus"
-          class="list-group-item col-3"
+          class="list-group-item col"
         >
           <mat-icon
             [style.color]="companyNameColor"
-            *ngIf="
-              !(currentRoute == 'About Us') &&
-              !(router.url.substring(0, 6) == '/joint')
-            "
             class="icons"
-            src="../assets/mainNav/135.png"
-            alt="About Us"
-            >info</mat-icon
-          >
-          <mat-icon
-            [style.color]="companyNameColor"
-            *ngIf="currentRoute == 'About Us'"
-            class="material-icons icons"
-            alt="About Us"
-          >
-            info</mat-icon
-          >
-          <mat-icon
-            [style.color]="companyNameColor"
-            *ngIf="
-              router.url.substring(0, 6) == '/joint' &&
-              !(currentRoute == 'About Us')
-            "
-            class="icons"
-            src="../assets/icons/135.png"
             alt="About Us"
             >info
           </mat-icon>
         </a>
         <a
-        [style.background]="listItemBackground"
-        routerLink="products"
-        routerLinkActive="active"
-        class="list-group-item"
-      >
-        <mat-icon
-          [style.color]="companyNameColor"
-          *ngIf="
-            !(currentRoute == 'Products') &&
-            !(router.url.substring(0, 6) == '/joint')
-          "
-          class="icons col col-7"
-          src="../assets/mainNav/135.png"
-          alt="Products"
-          >medical_services
-        </mat-icon>
-        <mat-icon
-          [style.color]="companyNameColor"
-          *ngIf="currentRoute == 'Products'"
-          class="material-icons icons col col-7"
-          alt="Products"
+          [style.background]="listItemBackground"
+          routerLink="products"
+          routerLinkActive="active"
+          class="list-group-item col"
         >
-          medical_services
-        </mat-icon>
-        <mat-icon
-          [style.color]="companyNameColor"
-          *ngIf="
-            router.url.substring(0, 6) == '/joint' &&
-            !(currentRoute == 'Products')
-          "
-          class="col col-7 icons"
-          src="../assets/icons/135.png"
-          alt="Products"
-          >medical_services
-        </mat-icon>
-      </a>
+          <mat-icon
+            [style.color]="companyNameColor"
+            class="icons"
+            alt="Products"
+            >medical_services
+          </mat-icon>
+        </a>
         <a
           [style.background]="listItemBackground"
           routerLink="conferences"
-          class="list-group-item col-3"
+          class="list-group-item col"
         >
           <mat-icon
             [style.color]="companyNameColor"
-            *ngIf="
-              !(currentRoute == 'Conferences') &&
-              !(router.url.substring(0, 6) == '/joint')
-            "
             class="icons"
-            src="../assets/mainNav/135.png"
-            alt="Conferences"
-            >event</mat-icon
-          >
-          <mat-icon
-            [style.color]="companyNameColor"
-            *ngIf="currentRoute == 'Conferences'"
-            class="material-icons icons"
-            alt="Conferences"
-          >
-            event</mat-icon
-          >
-          <mat-icon
-            [style.color]="companyNameColor"
-            *ngIf="
-              router.url.substring(0, 6) == '/joint' &&
-              !(currentRoute == 'Conferences')
-            "
-            class="icons"
-            src="../assets/icons/135.png"
             alt="Conferences"
             >event
           </mat-icon>
         </a>
         <a
-        [style.background]="listItemBackground"
-        routerLink="guidelines"
-        class="list-group-item p-3"
-       >
-        <div class="row">
+          [style.background]="listItemBackground"
+          routerLink="guidelines"
+          class="list-group-item col"
+        >
           <mat-icon
             [style.color]="companyNameColor"
-            class="icons col col-4"
-            src="../assets/mainNav/135.png"
-            alt="About Us"
+            class="icons"
+            alt="Guidelines"
             >menu_book</mat-icon
           >
-        </div>
-      </a>
+        </a>
       </nav>
       <!-- white bottom bar iphone screen -->
 

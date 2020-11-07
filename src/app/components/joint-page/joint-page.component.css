@@ -83,7 +83,7 @@
   justify-items: center;
   color: white;
   font-size: 1.5rem;
-
+  margin-top: 20px;
   opacity: 1 !important;
   visibility: visible;
 }
@@ -97,11 +97,6 @@
   font-family: montserrant-bold;
   color: #005086;
   font-size: 2rem;
-  display: block;
-  align-items: center;
-  margin-top: 30%;
-  align-self: center;
-  text-align: center;
 }
 @media (max-width: 1024px) and (min-width: 768px) {
   .joint-container {
@@ -173,5 +168,30 @@
 @media (max-width: 375px) {
   .card-width {
     margin-left: auto;
+  }
+}
+.test {
+  background: #005086 !important;
+  min-height: 100vh;
+}
+.custom-card {
+  border-radius: 50% !important;
+  width: 150px !important;
+  height: 150px !important;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.custom-card:hover {
+  background-color: #efb747;
+}
+
+@media (min-width: 1360px) {
+  .test-image {
+    transform: scale(1.3, 1.3);
+  }
+  .custom-card {
+    width: 200px !important;
+    height: 200px !important;
   }
 }

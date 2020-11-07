@@ -17,7 +17,10 @@ a {
   width: 30px;
   margin-right: 10px;
   margin-top: 10px;
-/* .languages{
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+
+  /* .languages{
   height: auto ;
    margin: auto auto;
    cursor: pointer;
@@ -29,6 +32,7 @@ a {
   margin: auto auto;
   cursor: pointer;
 
+  border-radius: 50%;
 }
 
 .fas {
@@ -85,7 +89,7 @@ a {
 }
 
 #sidebar-wrapper {
-  width: 11% !important ;
+  width: 13% !important ;
   min-height: 100vh !important;
   margin-left: -15rem;
   margin-right: 0px !important;
@@ -213,5 +217,5 @@ a {
   align-content: center;
   align-self: center;
   text-align: center;
-  transform: scale(2, 2);
+  transform: scale(1.8, 1.8);
 }

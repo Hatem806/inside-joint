@@ -1,108 +1,104 @@
-<div class="no-gutters">
-  <div class="row justify-content-center mb-lg-5 card-width">
-    <div class="col-12 col-md-3 mt-5 pt-lg-5">
-      <div class="joint-container">
-        <div class="row">
-          <div class="col">
-            <img class="joint-image" src="{{ jointImageSrc }}" alt="" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="joint-name-2">
-              {{ jointName }}
+<div class="test row align-items-center pb-5 pb-lg-0">
+  <div class="row justify-content-center mt-5 ml-md-5">
+    <div class="col-9 col-md-4 col-xl-3">
+      <div class="card text-center p-md-4" style="border-radius: 2vw">
+        <div class="card-body">
+          <div class="row h-100 align-items-center">
+            <div class="col-12">
+              <img class="" src="{{ jointImageSrc }}" alt="" />
+              <h5 class="mt-5 pt-md-5 joint-name-2"> {{ apiService.getJointService().jointName}}</h5>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="row justify-content-center options">
-    <div class="col-7 col-md-3 ml-5 ml-lg-0 my-4 my-lg-0 pl-3 pl-lg-0">
-      <div
-        role="button"
-        [routerLink]="['manuals']"
-        [queryParams]="{ bodyPart: jointName, imgSrc: jointImageToManuals }"
-        class=""
-        (mouseover)="manualsChangeIcon = true"
-        (mouseout)="manualsChangeIcon = false"
-      >
-        <div class="row justify-content-start">
-          <div class="manuals my-container pl-4 pt-5">
-            <img
-              class="my-image manuals-image ml-3 pl-1 mt-1"
-              src="../../../assets/secondaryNav/books-stack-of-three.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="col-7">
-          <div class="mt-3">
-            <div class="option-desc">{{ "manuals" | translate }}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-7 col-md-3 ml-4 ml-lg-0 mb-4 mb-lg-0">
-      <div
-        role="button"
-        [routerLink]="['videos']"
-        [queryParams]="{ bodyPart: jointName }"
-        class=""
-        (mouseover)="videosChangeIcon = true"
-        (mouseout)="videosChangeIcon = false"
-      >
-        <div class="row justify-content-start">
-          <div class="col-12">
-            <div class="my-container p-5">
-              <div class="videos">
-                <img
-                  class="my-image vid"
-                  src="../../../assets/secondaryNav/85.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-9 col-lg-5 col-xl-3">
-            <div class="mt-3 ml-xl-4">
-              <div class="option-desc text-center">
-                {{ "videos" | translate }}
+  <div class="row justify-content-center mb-5 ml-md-5">
+    <div class="col-7 col-md-3 mt-5 mt-xl-0 text-center">
+      <div class="row justify-content-center">
+        <div class="col-9 text-center d-flex justify-content-center">
+          <div
+            class="card text-center custom-card"
+            role="button"
+            [routerLink]="['manuals']"
+            [queryParams]="{ bodyPart: jointName, imgSrc: jointImageToManuals }"
+            (mouseover)="manualsChangeIcon = true"
+            (mouseout)="manualsChangeIcon = false"
+          >
+            <div class="card-body">
+              <div class="row h-100 align-items-center">
+                <div class="col-12">
+                  <img
+                    class="test-image"
+                    src="../../../assets/secondaryNav/books-stack-of-three.png"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-7 col-md-3 ml-4 ml-lg-0 mb-4 mb-lg-0">
-      <div
-        role="button"
-        [routerLink]="['evidences']"
-        [queryParams]="{ bodyPart: jointName }"
-        class=""
-        (mouseover)="evidencesChangeIcon = true"
-        (mouseout)="evidencesChangeIcon = false"
-      >
-        <div class="my-container ev p-5">
-          <div class="evidences">
-            <img
-              class="my-image ev-image ml-2"
-              src="../../../assets/secondaryNav/document.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="col-7 col-lg-4 col-xl-3">
-          <div class="mt-3">
-            <div class="option-desc pb-5 ml-2 text-center">
-              {{ "scientific" | translate }} <br />
-              {{ "evidence" | translate }}
+      <h5 class="option-desc">{{ "manuals" | translate }}</h5>
+    </div>
+    <div class="col-7 col-md-3 mt-5 mt-xl-0 text-center">
+      <div class="row justify-content-center">
+        <div class="col-9 d-flex justify-content-center">
+          <div
+            class="card text-center custom-card"
+            role="button"
+            [routerLink]="['videos']"
+            [queryParams]="{ bodyPart: jointName }"
+            (mouseover)="videosChangeIcon = true"
+            (mouseout)="videosChangeIcon = false"
+          >
+            <div class="card-body">
+              <div class="row h-100 align-items-center">
+                <div class="col-12">
+                  <img
+                    class="test-image"
+                    src="../../../assets/secondaryNav/85.png"
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <h5 class="option-desc">{{ "videos" | translate }}</h5>
+    </div>
+    <div class="col-7 col-md-3 mt-5 mt-xl-0 text-center">
+      <div class="row justify-content-center">
+        <div class="col-9 d-flex justify-content-center">
+          <div
+            class="card text-center custom-card"
+            [routerLink]="['evidences']"
+            [queryParams]="{ bodyPart: jointName }"
+            (mouseover)="evidencesChangeIcon = true"
+            (mouseout)="evidencesChangeIcon = false"
+          >
+            <div class="card-body">
+              <div class="row h-100 align-items-center">
+                <div class="col-12">
+                  <img
+                    class="test-image"
+                    src="../../../assets/secondaryNav/document.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="option-desc">
+        {{ "scientific" | translate }} <br />
+        {{ "evidence" | translate }}
+      </h5>
     </div>
   </div>
 </div>

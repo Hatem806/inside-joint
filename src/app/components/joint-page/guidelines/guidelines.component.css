@@ -1,18 +1,18 @@
-.page-title{
-
+.page-title {
   font-family: montserrant-bold;
   color: white;
   font-size: 2rem;
-  display: block;
-  margin: auto;
-  width: 100%;
-  text-align: left;
-  align-items: left;
-  align-content: left;
+  padding-top: 2%;
+  margin-left: 10%;
 }
-@media(min-width:1024px){
-  .page-title{
-    margin-left:10%;
+@media (min-width: 1024px) {
+  .page-title {
+    margin-left: 14%;
+  }
+}
+@media (max-width: 375px) {
+  .page-title {
+    margin-left: 0%;
   }
 }
 .no-gutters {
@@ -26,7 +26,7 @@
 }
 @media (max-width: 700px) {
   .joint-white-container {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 13%;
   }

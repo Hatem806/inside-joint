@@ -22,8 +22,8 @@
 }
 .knee {
   position: absolute;
-  left: 35%;
-  top: 66%;
+  left: 31%;
+  top: 64%;
 }
 .desc {
   visibility: hidden;
@@ -54,43 +54,43 @@
 }
 .hand {
   position: absolute;
-  left: 22%;
-  top: 49%;
+  left: 17%;
+  top: 47%;
 }
 .elbow {
   position: absolute;
-  left: 25%;
-  top: 35%;
+  left: 20%;
+  top: 33%;
 }
 
 .ankle {
   position: absolute;
   bottom: 10%;
-  right: 39%;
+  right: 34%;
 }
 .foot {
   position: absolute;
-  bottom: 8%;
-  left: 37%;
+  bottom: 6%;
+  left: 32%;
 }
 .neck {
   position: absolute;
   top: 8%;
-  left: 43%;
+  left: 38%;
 }
 .shoulder {
   position: absolute;
-  top: 23%;
-  right: 30%;
+  top: 20%;
+  right: 27%;
 }
 .hip {
   position: absolute;
-  top: 43%;
-  right: 36%;
+  top: 41%;
+  right: 33%;
 }
 
 .home-container {
-  width:80%;
+  width: 80%;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
@@ -100,7 +100,7 @@
 
 .skeleton-img {
   /* transform: scale(0.6,0.6) ; */
-  max-width: 80%;
+  max-height: 85vh;
   display: block;
   margin: 0 auto;
 }
@@ -115,22 +115,20 @@
     transform: scale(0.6, 0.6);
   }
 }
-@media (min-width: 767px) {
+@media (max-width: 375px) {
   .skeleton-img {
-    max-width: 70%;
+    max-height: 80vh;
   }
-  
 }
 @media (min-width: 1024px) {
-  .skeleton-img {
+  /* .skeleton-img {
     max-width: 100%;
-  }
-  
+  } */
 }
 @media (min-width: 1600px) {
-  .skeleton-img {
+  /* .skeleton-img {
     max-width: 73%;
-  }
+  } */
 }
 
 .skeleton-container {
@@ -205,7 +203,7 @@
     left: 40%;
   }
   .elbow {
-    left: 26%;
+    left: 25%;
     top: 32%;
   }
   .hand {
@@ -233,89 +231,88 @@
 @media (max-width: 768px) and (min-width: 500px) {
   .hand {
     position: absolute;
-    left: 28%;
+    left: 19%;
     top: 48%;
   }
   .elbow {
     position: absolute;
-    left: 30%;
+    left: 22%;
     top: 34%;
   }
 
   .ankle {
     position: absolute;
     bottom: 10%;
-    right: 40%;
+    right: 36%;
   }
   .foot {
     position: absolute;
     bottom: 7.5%;
-    left: 38%;
+    left: 35%;
   }
   .neck {
     position: absolute;
     top: 8%;
-    left: 43%;
+    left: 41%;
   }
   .shoulder {
     position: absolute;
     top: 20.5%;
-    right: 33%;
+    right: 29%;
   }
   .hip {
     position: absolute;
-    top: 45%;
-    right: 36%;
+    top: 44%;
+    right: 35%;
   }
   .knee {
     position: absolute;
-    left: 38%;
+    left: 34%;
     top: 65%;
   }
 }
 
 @media (max-width: 2600px) and (min-width: 1700px) {
-  
   .hand {
     position: absolute;
-    left: 26%;
+    left: 18%;
     top: 49%;
   }
   .elbow {
     position: absolute;
-    left: 29%;
-    top: 35%;
+    left: 21%;
+    top: 34%;
   }
 
   .ankle {
     position: absolute;
     bottom: 10%;
-    right: 40%;
+    right: 36%;
   }
   .foot {
     position: absolute;
-    bottom: 8.5%;
-    left: 38%;
+    bottom: 7.5%;
+    left: 34%;
   }
   .neck {
     position: absolute;
     top: 8%;
-    left: 42.5%;
+    left: 40%;
   }
   .shoulder {
     position: absolute;
     top: 21.5%;
-    right: 32.5%;
+    right: 28.5%;
   }
   .hip {
     position: absolute;
-    top: 45%;
+    top: 43%;
     right: 36%;
   }
   .knee {
     position: absolute;
-    left: 37%;
-    top: 65.5%;
+    left: 33%;
+    top: 64.5%;
   }
 }
 @media (min-width: 1600px) {

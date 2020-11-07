@@ -8,6 +8,9 @@ import { environment } from '../../environments/environment.prod';
   providedIn: 'root'
 })
 export class JointService {
+
+  public jointName ;
+  public jointNameEn ;
   private static _endPoint: string = "v1/joints";
   public jointsImagePath = '../../../assets/joints/' ;
 
