@@ -114,21 +114,24 @@
   .dot-container {
     transform: scale(0.6, 0.6);
   }
+  .welcome {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 375px) {
   .skeleton-img {
     max-height: 80vh;
   }
 }
-@media (min-width: 1024px) {
-  /* .skeleton-img {
-    max-width: 100%;
-  } */
+@media (max-width: 1024px) {
+  .welcome {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 1600px) {
-  /* .skeleton-img {
-    max-width: 73%;
-  } */
+  .welcome {
+    font-size: 3.5rem;
+  }
 }
 
 .skeleton-container {
@@ -147,12 +150,7 @@
     position: relative;
   }
 
-  .welcome {
-    font-family: montserrant-bold;
-    font: italic;
-    font-size: 3.5rem;
-    color: #005086;
-  }
+  
   .inside-joints {
     font-family: montserrant-bold-italic;
     font: italic;
@@ -181,9 +179,7 @@
   .text-area {
     width: 100%;
   }
-  .welcome {
-    font-size: 2rem;
-  }
+  
   .inside-joints {
     font-family: montserrant-bold-italic;
     font: italic;

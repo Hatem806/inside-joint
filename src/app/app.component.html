@@ -54,13 +54,13 @@
           </div>
           <div class="sidebar-heading text-center">
             <img
-              *ngIf="router.url.substring(0, 6) == '/joint'"
+              *ngIf="router.url.includes('guidelines') || router.url.includes('joint')"
               class="company-name"
               src="../assets/icons/logo-blue.svg"
               alt=""
             />
             <img
-              *ngIf="!(router.url.substring(0, 6) == '/joint')"
+              *ngIf="!(router.url.includes('guidelines') || router.url.includes('joint'))"
               class="company-name"
               src="../assets/icons/logo-white.svg"
               alt=""
@@ -267,8 +267,19 @@
               </div>
             </div>
           </div>
-          <div class="company-name sidebar-heading text-center">
-            <img src="../assets/icons/logo-white.svg" class="logo" />
+          <div class="sidebar-heading text-center">
+            <img
+              *ngIf="router.url.includes('guidelines') || router.url.includes('joint')"
+              class="company-name"
+              src="../assets/icons/logo-blue.svg"
+              alt=""
+            />
+            <img
+              *ngIf="!(router.url.includes('guidelines') || router.url.includes('joint'))"
+              class="company-name"
+              src="../assets/icons/logo-white.svg"
+              alt=""
+            />
           </div>
           <a
             [style.background]="listItemBackground"
